@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele Bottino | Portfolio Ufficiale 2026</title>
+    <script src="https://cdn.tiny.cloud/1/pyqtr6vo921dsnp62ryf0ikm8nci6jd88s5zwhxudh8m8oh2/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+    <style>
+        :root { --bg: #030303; --accent: #007aff; --text: #ffffff; --dim: #909090; --border: #1f1f1f; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0;
+            background-image: linear-gradient(to left, rgba(3,3,3,0.85), rgba(3,3,3,1)), 
+            url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.12"><path d="M50 12c-8 0-15 7-15 15s7 15 15 15 15-7 15-15-7-15-15-15zm0 35c-12 0-30 6-30 18v10h60v-10c0-12-18-18-30-18z" fill="white"/></svg>');
+            background-attachment: fixed; background-position: right center; background-repeat: no-repeat; background-size: 40% auto;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 40px; margin-bottom: 40px; }
+        h1 { font-size: 4.5rem; letter-spacing: -2px; margin: 0; }
+        .editor-box { border: 1px solid var(--border); margin-top: 20px; border-radius: 4px; }
+        section { margin-bottom: 60px; }
+        h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #0a0a0a; padding: 25px; border: 1px solid var(--border); }
+        .nav-btn { display: inline-block; padding: 10px 20px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; margin-top: 15px; font-size: 0.8rem; }
+    </style>
+    <script>
+      tinymce.init({
+        selector: '#bio-editor',
+        plugins: 'link lists table code wordcount',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter | bullist numlist | code',
+        skin: "oxide-dark", content_css: "dark", height: 300
+      });
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Michele<br>Bottino</h1>
+        <div class="editor-box">
+            <textarea id="bio-editor">Autore e ricercatore indipendente (Catania, 1972). Analisi di fonti primarie, geopolitica e creazione di testi musicali.</textarea>
+        </div>
+    </header>
+    <section>
+        <h2>Bibliografia Selezionata</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>EUROPA: Anatomia di un crimine</h3>
+                <p>ISBN: 979-8335804790</p>
+                <a href="https://www.amazon.it/dp/B0DF65D7S4" class="nav-btn">AMAZON STORE</a>
+            </div>
+            <div class="card">
+                <h3>L'Uomo Consapevole</h3>
+                <p>ISBN: 979-8327178380</p>
+                <a href="https://www.amazon.it/dp/B0D5S7M5G8" class="nav-btn">AMAZON STORE</a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
