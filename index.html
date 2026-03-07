@@ -3,170 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bottino | Autore, Scrittore e Ricercatore Indipendente</title>
+    <title>Michele Bottino | Official Identity 2026</title>
     
-    <meta name="description" content="Profilo ufficiale di Michele Bottino. Ricerca storica archivistica (XIV-XVIII sec), saggistica sulla consapevolezza e produzione musicale.">
-    <meta name="author" content="Michele Bottino">
-    <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://michelebottino-autor.github.io/michelebottino/#person",
-      "name": "Michele Bottino",
-      "birthDate": "1972",
-      "jobTitle": "Autore, Scrittore, Ricercatore Indipendente",
-      "url": "https://michelebottino-autor.github.io/michelebottino/",
-      "sameAs": [
-        "https://orcid.org/0009-0009-2797-9267",
-        "https://zenodo.org/search?q=Michele%20Bottino",
-        "https://www.amazon.it/Michele-Bottino/e/B00J22P0M2"
-      ]
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     
     <style>
         :root { 
-            --bg-deep: #000000;
-            --bg-gradient: radial-gradient(circle at 50% -20%, #001a33 0%, #000000 85%);
+            --bg: #000;
             --accent: #007aff; 
             --text-main: #ffffff; 
-            --text-dim: #b0b0b5; 
-            --border: rgba(255, 255, 255, 0.1); 
+            --text-dim: rgba(255, 255, 255, 0.4);
+            --border: rgba(255, 255, 255, 0.08);
+            --card-bg: #050505;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
-            background: var(--bg-deep);
-            background-image: var(--bg-gradient);
-            background-attachment: fixed;
+            background-color: var(--bg);
             color: var(--text-main); 
             font-family: 'Inter', sans-serif; 
-            line-height: 1.8; 
-            -webkit-font-smoothing: antialiased; 
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        header { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.85); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: center; gap: 30px; padding: 20px; }
-        nav a { color: var(--text-dim); text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
-        nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
-
-        .hero { padding: 140px 10% 100px; }
-        h1 { font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: -4px; line-height: 0.9; margin-bottom: 15px; font-weight: 700; }
-        .h-subtitle { font-size: 1.25rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* BOX BIOGRAFIA CONTINUA ED ELEGANTE */
-        .bio-section { 
-            padding: 120px 10%; 
-            background: #000000; 
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+        header { 
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
         }
-        
-        .bio-content { 
-            max-width: 900px; 
-            margin: 0 auto; 
+        .logo { font-weight: 900; font-size: 1rem; letter-spacing: 2px; }
+        nav a { color: var(--text-dim); text-decoration: none; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
+        nav a:hover { color: #fff; }
+
+        /* Hero */
+        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%; }
+        .hero-tag { font-size: 0.7rem; color: var(--accent); letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
+        .hero-title { font-size: clamp(3rem, 12vw, 8rem); font-weight: 900; letter-spacing: -6px; line-height: 0.85; }
+
+        /* BOX BIOGRAFIA ELEGANTE */
+        .bio-container { padding: 100px 10%; background: var(--bg); }
+        .bio-box { 
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 80px;
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        }
+        .bio-box::before {
+            content: "THE EVOLUTION";
+            position: absolute; top: -10px; left: 40px;
+            background: var(--accent); color: #fff;
+            padding: 4px 12px; font-size: 0.6rem; font-weight: 900; letter-spacing: 2px;
+        }
+        .bio-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+        .bio-heading { font-family: 'Playfair Display', serif; font-size: 2.5rem; line-height: 1.1; font-style: italic; }
+        .bio-body { font-size: 1.05rem; color: var(--text-dim); line-height: 1.8; font-weight: 300; }
+        .bio-body strong { color: #fff; font-weight: 500; }
+
+        /* SEZIONE CONTATTI */
+        .contact-section { padding: 120px 10%; border-top: 1px solid var(--border); text-align: center; }
+        .contact-label { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 40px; display: block; }
+        .contact-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+        .contact-item { text-decoration: none; color: #fff; }
+        .contact-item h4 { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .contact-item p { font-size: 1.2rem; font-weight: 600; transition: 0.3s; }
+        .contact-item:hover p { color: var(--accent); }
+
+        /* COPYRIGHT PROFESSIONALE */
+        .copyright-box { 
+            padding: 100px 10% 50px; border-top: 1px solid var(--border); 
+            font-size: 0.75rem; color: #444; line-height: 1.8; text-align: center;
+        }
+        .copyright-box strong { color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        footer { 
+            padding: 40px 10%; display: flex; justify-content: space-between; 
+            font-size: 0.6rem; color: #222; text-transform: uppercase; letter-spacing: 2px;
         }
 
-        h2 { 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            color: var(--accent); 
-            margin-bottom: 50px; 
-            text-align: center;
-        }
-
-        /* Testo senza interruzioni (No salti riga) */
-        .narrative-text { 
-            font-size: 1.2rem; 
-            font-weight: 300;
-            color: #e0e0e0;
-            text-align: justify; 
-            text-justify: inter-word;
-            hyphens: auto;
-            line-height: 2.1; /* Aumentato per eleganza e respiro */
-        }
-
-        .highlight { color: #ffffff; font-weight: 500; }
-
-        /* Griglia dati integrata nel flusso */
-        .data-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 50px; 
-            margin-top: 80px; 
-            padding-top: 60px; 
-            border-top: 1px solid var(--border); 
-        }
-        dt { color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        dd { font-size: 1.1rem; font-weight: 400; color: #ffffff; }
-
-        footer { padding: 80px 10%; text-align: center; font-size: 0.75rem; color: var(--text-dim); }
-        .footer-links a { color: var(--accent); text-decoration: none; margin: 0 15px; transition: 0.3s; }
-        .footer-links a:hover { text-decoration: underline; }
-
-        @media (max-width: 768px) { 
-            .narrative-text { text-align: left; font-size: 1.1rem; } 
-            .hero { padding: 100px 5% 60px; }
+        @media (max-width: 900px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .bio-box { padding: 40px 20px; }
+            .contact-grid { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
-<body itemscope itemtype="https://schema.org/Person">
+<body>
 
     <header>
-        <nav aria-label="Navigazione principale">
-            <a href="index.html" class="active">Home</a>
+        <div class="logo">MICHELE BOTTINO</div>
+        <nav>
+            <a href="#bio">Biografia</a>
             <a href="libri.html">Libri</a>
             <a href="ricerca.html">Ricerca</a>
-            <a href="musica.html">Musica</a>
+            <a href="#contact">Contatti</a>
         </nav>
     </header>
 
-    <main id="main-content">
+    <main>
         <section class="hero">
-            <h1 itemprop="name">Michele Bottino</h1>
-            <p class="h-subtitle" itemprop="jobTitle">Autore • Scrittore • Ricercatore</p>
+            <span class="hero-tag">Identità Digitale 2026</span>
+            <h1 class="hero-title">Scrittura.<br>Analisi.</h1>
         </section>
 
-        <section class="bio-section">
-            <div class="bio-content">
-                <h2>Profilo Professionale</h2>
-                
-                <article class="narrative-text">
-                    Nato a <span class="highlight" itemprop="birthPlace">Catania nel 1972</span>, Michele Bottino ha tracciato un percorso intellettuale che dal <span class="highlight">2010</span> unisce con rigore la profondità della parola alla precisione dell'indagine documentale. La sua identità si declina anzitutto come <span class="highlight">Autore</span>, mente generatrice di concetti che trovano espressione nella saggistica e nella parola cantata, seguita dalla figura dello <span class="highlight">Scrittore</span>, impegnato a tradurre visioni complesse in una bibliografia che spazia dalla geopolitica alla metafisica. Al centro della sua produzione risiede la ricerca della <span class="highlight">consapevolezza</span>, intesa come pilastro fondamentale per il risveglio critico dell'individuo. Questo impegno si completa nella veste di <span class="highlight">Ricercatore Indipendente</span>, dedicata all'analisi scientifica d'archivio e alla trascrizione diplomatica del <span class="highlight" itemprop="knowsAbout">Corpus Ecclesiasticum</span> tra il <time datetime="1300">XIV</time> e il <time datetime="1700">XVIII secolo</time>, con un focus specialistico sui cicli socio-economici e lo studio dei Processi 184-334, consolidando la sua posizione nella comunità scientifica internazionale attraverso l'identificativo <span class="highlight">ORCID: 0009-0009-2797-9267</span>.
-                </article>
-
-                <dl class="data-grid">
-                    <div>
-                        <dt>Identità Scientifica</dt>
-                        <dd>ORCID & Zenodo Verified</dd>
+        <section class="bio-container" id="bio">
+            <div class="bio-box">
+                <div class="bio-grid">
+                    <div class="bio-heading">
+                        Dall'urgenza della parola al rigore della prova.
                     </div>
-                    <div>
-                        <dt>Produzione Letteraria</dt>
-                        <dd>9 Opere Pubblicate</dd>
+                    <div class="bio-body">
+                        <p>
+                            <strong>Michele Bottino nasce scrittore.</strong> Nel 2010, il suo percorso ha origine con la pubblicazione di opere saggistiche tese a esplorare le profondità della consapevolezza e le dinamiche del potere. Attraverso 9 volumi, la sua voce si è distinta per una ricerca incessante della verità nascosta dietro le narrazioni ufficiali.
+                        </p>
+                        <br>
+                        <p>
+                            Questa stessa fame di verità ha dettato la sua evoluzione professionale. Sentendo la necessità di ancorare le proprie intuizioni a fondamenta inoppugnabili, Bottino è approdato alla <strong>ricerca archivistica</strong> e all'esegesi diplomatica di protocolli notarili del XV e XVI secolo. 
+                        </p>
+                        <br>
+                        <p>
+                            Oggi, il suo "metodo blindato" fonde la sensibilità dell'autore con le competenze certificate nel 2026 in <strong>Criminologia</strong>, <strong>Psicologia del Cybercrime</strong> e <strong>Digital Humanities</strong> (The Open University). Una sintesi multidisciplinare dove ogni parola è figlia di un documento certificato.
+                        </p>
                     </div>
-                    <div>
-                        <dt>Produzione Artistica</dt>
-                        <dd>11 Composizioni (2025-2026)</dd>
-                    </div>
-                </dl>
+                </div>
             </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <span class="contact-label">Canali Ufficiali</span>
+            <div class="contact-grid">
+                <a href="https://www.facebook.com/michelebottinoautor" class="contact-item" target="_blank">
+                    <h4>Social Identity</h4>
+                    <p>Facebook Official</p>
+                </a>
+                <div class="contact-item">
+                    <h4>Professional Network</h4>
+                    <p>In Veritate Victoria</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>Italy / Global Research</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="copyright-box">
+            <p>
+                <strong>Copyright © 2010 - 2026 Michele Bottino.</strong><br>
+                Tutti i diritti sono riservati. Le opere letterarie, i protocolli di ricerca archivistica, le trascrizioni diplomatiche e i progetti musicali contenuti in questo dominio sono protetti dalle leggi internazionali sulla proprietà intellettuale. Ogni utilizzo non autorizzato sarà perseguito legalmente. Le certificazioni accademiche e i meriti internazionali citati sono supportati da documentazione verificabile.
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Michele Bottino. <a href="privacy.html" style="color:inherit;">Privacy Policy</a></p>
-        <nav class="footer-links" aria-label="Link esterni professionali">
-            <a href="https://orcid.org/0009-0009-2797-9267" rel="noopener me external" target="_blank">ORCID</a>
-            <a href="https://zenodo.org/search?q=Michele%20Bottino" rel="noopener me external" target="_blank">Zenodo</a>
-            <a href="https://www.amazon.it/Michele-Bottino/e/B00J22P0M2" rel="noopener external" target="_blank">Amazon Author</a>
-        </nav>
+        <div>Aggiornamento: Marzo 2026</div>
+        <div>Michele Bottino Identity Project</div>
     </footer>
 
 </body>
