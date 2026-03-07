@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca Scientifica e Archivistica | Michele Bottino • Trascrizione Diplomatica</title>
+    <meta name="description" content="Profilo scientifico ufficiale di Michele Bottino. Analisi diplomatica, esegesi delle fonti primarie e ricerca storica sul territorio siciliano tra il XIV e il XVII secolo.">
+    <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/ricerca.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --bg-deep: #000000;
+            --bg-gradient: radial-gradient(circle at 50% -20%, #001a33 0%, #000000 85%);
+            --accent: #007aff; 
+            --text-main: #ffffff; 
+            --text-dim: #b0b0b5; 
+            --border: rgba(255, 255, 255, 0.1); 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background: var(--bg-deep);
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            -webkit-font-smoothing: antialiased; 
+        }
+        header { border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.85); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: center; gap: 30px; padding: 20px; }
+        nav a { color: var(--text-dim); text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        nav a.active { color: var(--accent); border-bottom: 2px solid var(--accent); }
+        
+        .container { max-width: 950px; margin: 0 auto; padding: 80px 5%; }
+        
+        .section-intro { margin-bottom: 140px; text-align: center; }
+        .section-intro h1 { font-size: 3.5rem; letter-spacing: -3px; margin-bottom: 30px; font-weight: 700; }
+        .section-intro p { font-size: 1.25rem; color: var(--text-dim); font-weight: 300; line-height: 2.2; max-width: 850px; margin: 0 auto; text-align: justify; }
+
+        .orcid-badge { display: inline-flex; align-items: center; gap: 12px; margin-top: 50px; padding: 15px 35px; border: 1px solid var(--accent); border-radius: 4px; color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.4s; letter-spacing: 1.5px; }
+        .orcid-badge:hover { background: var(--accent); box-shadow: 0 0 25px rgba(0,122,255,0.4); }
+
+        .research-list { display: flex; flex-direction: column; gap: 120px; }
+        .research-item { padding-bottom: 100px; border-bottom: 1px solid var(--border); }
+        .research-item:last-child { border-bottom: none; }
+
+        .research-tag { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px; font-weight: 700; margin-bottom: 30px; display: block; }
+        h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 35px; color: #fff; letter-spacing: -1px; line-height: 1.3; }
+        
+        .research-extended-desc { font-size: 1.15rem; font-weight: 300; color: #e0e0e0; text-align: justify; line-height: 2.1; margin-bottom: 50px; }
+
+        .methodology-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+        .method-card { background: rgba(255,255,255,0.03); padding: 30px; border-radius: 8px; border: 1px solid var(--border); }
+        .method-card h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 15px; }
+        .method-card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.7; margin: 0; }
+
+        .archive-ref { font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; color: #777; background: #111; padding: 15px; border-radius: 4px; border-left: 2px solid #444; margin-top: 20px; }
+
+        .doi-button { display: inline-block; margin-top: 30px; color: var(--accent); text-decoration: none; font-family: monospace; font-size: 0.9rem; border: 1px solid var(--accent); padding: 12px 25px; border-radius: 4px; transition: 0.3s; }
+        .doi-button:hover { background: var(--accent); color: #fff; }
+
+        footer { padding: 80px 10% 40px; text-align: center; font-size: 0.75rem; color: var(--text-dim); border-top: 1px solid var(--border); margin-top: 120px; }
+
+        @media (max-width: 768px) {
+            .methodology-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <a href="libri.html">Libri</a>
+            <a href="ricerca.html" class="active">Ricerca</a>
+            <a href="musica.html">Musica</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-intro">
+            <h1>Profilo Scientifico</h1>
+            <p>
+                L'indagine di Michele Bottino si definisce attraverso un paradigma di ricerca archivistica "blindata", dove l'evidenza del documento primario prevale su ogni stratificazione bibliografica successiva. Il lavoro si concentra sulla decodifica delle strutture di potere e delle dinamiche territoriali della Sicilia tra il XIV e il XVII secolo, utilizzando gli strumenti della trascrizione diplomatica, della paleografia e della microtoponomastica critica per restituire verità storica a contesti spesso alterati dalla tradizione orale.
+            </p>
+            <a href="https://orcid.org/0009-0009-2797-9267" class="orcid-badge" target="_blank">
+                ORCID iD: 0009-0009-2797-9267
+            </a>
+        </section>
+
+        <div class="research-list">
+            
+            <article class="research-item">
+                <span class="research-tag">Settore M-STO/02 • Storia Moderna</span>
+                <h2>L’Egemonia dell’Oro Bianco: Sintesi Documentaria e Critica</h2>
+                <div class="research-extended-desc">
+                    Questo contributo analizza l'industria della canna da zucchero come elemento cardine della giurisdizione feudale nel territorio di Calatabiano. Attraverso lo studio dei processi per investitura, la ricerca dimostra come la gestione dell'"oro bianco" abbia dettato le linee di successione e le trasformazioni del demanio, influenzando direttamente i rapporti tra la Curia Regia e l'aristocrazia locale. Lo studio integra l'analisi economica con quella giuridica, fornendo un quadro organico della continuità patrimoniale del feudo.
+                </div>
+                
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <h3>Analisi d'Archivio</h3>
+                        <p>Esegesi dei processi d'investitura e dei registri di cancelleria conservati presso l'Archivio di Stato di Palermo e Catania.</p>
+                    </div>
+                    <div class="method-card">
+                        <h3>Evidenze Documentali</h3>
+                        <p>Ricostruzione delle fasce processuali attraverso l'esame dei mazzi e dei faldoni originali del XV e XVI secolo.</p>
+                    </div>
+                </div>
+
+                <div class="archive-ref">
+                    Riferimenti Archivistici: Archivio di Stato di Palermo, Processo 184 e Processo 334.
+                </div>
+                
+                <a href="https://doi.org/10.5281/zenodo.18805142" class="doi-button" target="_blank">DOI: 10.5281/zenodo.18805142</a>
+            </article>
+
+            <article class="research-item">
+                <span class="research-tag">Archivistica • Storia Ecclesiastica</span>
+                <h2>Corpus Storico Integrale delle Chiese Medievali di Calatabiano</h2>
+                <div class="research-extended-desc">
+                    Un'opera di censimento e analisi sistematica che ricostruisce la mappa sacra del territorio attraverso fonti notarili e privilegi papali. Lo studio non si limita alla descrizione architettonica, ma indaga la funzione politica dei benefici ecclesiastici e il ruolo della Chiesa come ente legittimatore della gerarchia feudale. La trascrizione di mandati inediti ha permesso di identificare siti religiosi scomparsi, restituendo una visione integrale della spiritualità materiale del Medioevo siciliano.
+                </div>
+
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <h3>Trascrizione Diplomatica</h3>
+                        <p>Analisi testuale di bolle e mandati pro-vicaria, con particolare attenzione alle formule giuridiche di legittimazione.</p>
+                    </div>
+                    <div class="method-card">
+                        <h3>Indagine Territoriale</h3>
+                        <p>Incrocio tra microtoponomastica d'archivio e rilievi cartografici storici per la localizzazione degli edifici sacri.</p>
+                    </div>
+                </div>
+                
+                <a href="https://doi.org/10.5281/zenodo.18822734" class="doi-button" target="_blank">DOI: 10.5281/zenodo.18822734</a>
+            </article>
+
+            <article class="research-item">
+                <span class="research-tag">Paleografia • Investigazione Storica</span>
+                <h2>Il Vangelo Protocol: Dalla Narrazione alla Prova</h2>
+                <div class="research-extended-desc">
+                    In questa "investigazione diplomatica", l'autore affronta un caso di manipolazione della memoria storica. Analizzando i protocolli notarili messinesi del 1484, la ricerca smonta la tesi della fondazione tardo-cinquecentesca della Chiesa del SS. Crocifisso attribuita ai Cruyllas, dimostrando invece la paternità dei Mirulla. L'opera evidenzia come l'analisi dei caratteri estrinseci della scrittura e delle filigrane possa ribaltare verità consolidate fondate su cronache locali non documentate.
+                </div>
+
+                <div class="methodology-grid">
+                    <div class="method-card">
+                        <h3>Metodologia Paleografica</h3>
+                        <p>Studio dei protocolli notarili (es. Notaio G. di Giovanni, 1484) e analisi della scrittura mercantesca e cancelleresca.</p>
+                    </div>
+                    <div class="method-card">
+                        <h3>Esame dei Supporti</h3>
+                        <p>Rilevamento delle filigrane cartacee (filigrana a corona del siracusano) per la validazione cronologica degli atti.</p>
+                    </div>
+                </div>
+
+                <div class="archive-ref">
+                    Fisicità del Documento: Analisi delle filigrane e dei caratteri estrinseci dei protocolli dell'Archivio di Stato di Messina.
+                </div>
+                
+                <a href="https://doi.org/10.5281/zenodo.14934053" class="doi-button" target="_blank">DOI: 10.5281/zenodo.14934053</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Michele Bottino • Identità Scientifica Digitale</p>
+    </footer>
+
+</body>
+</html>
