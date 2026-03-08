@@ -1,183 +1,193 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information & Contact Hub – Michele Bottino</title>
+    <title>ADC | Terminale Operativo</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&family=Fira+Code:wght@300;500&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        :root { --gold: #f0e68c; --accent: #66ccff; --bg-dark: #050505; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #e5e7eb; overflow-x: hidden; }
-        
-        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%); z-index: -1; }
-        h1, h2, .serif { font-family: 'Cinzel', serif; }
+        :root { --gold: #f0e68c; --accent: #66ccff; --bg: #050505; }
+        body { background: var(--bg); color: #e5e7eb; font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow-x: hidden; }
         .mono { font-family: 'Fira Code', monospace; }
-
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-        }
-
-        .input-field {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .input-field:focus {
-            border-color: var(--gold);
-            background: rgba(240, 230, 140, 0.05);
-            outline: none;
-            box-shadow: 0 0 15px rgba(240, 230, 140, 0.1);
-        }
-
-        .submit-btn {
-            background: linear-gradient(90deg, var(--gold) 0%, #d4c570 100%);
-            color: black;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.4s;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 25px rgba(240, 230, 140, 0.4);
-        }
-
-        .file-custom {
-            border: 2px dashed rgba(255, 255, 255, 0.1);
-            transition: 0.3s;
-        }
-
-        .file-custom:hover {
-            border-color: var(--accent);
-            background: rgba(102, 204, 255, 0.05);
-        }
-
-        .back-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
-        .back-btn:hover { background: var(--gold); color: black; }
         
-        .info-pill {
-            background: rgba(240, 230, 140, 0.05);
-            border: 1px solid rgba(240, 230, 140, 0.1);
-            padding: 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
+        .panel-core { background: rgba(15, 15, 15, 0.9); backdrop-filter: blur(40px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 2rem; }
+
+        input, textarea, select { 
+            background: rgba(255, 255, 255, 0.02) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.08) !important; 
+            color: white !important; 
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        input:focus, textarea:focus { border-color: var(--gold) !important; outline: none; background: rgba(255, 255, 255, 0.04) !important; }
+
+        .btn-action { border: 1px solid var(--gold); color: var(--gold); transition: 0.4s; letter-spacing: 0.2em; }
+        .btn-action:hover:not(:disabled) { background: var(--gold); color: black; box-shadow: 0 0 20px rgba(240, 230, 140, 0.2); }
+
+        /* Animation for real actions */
+        @keyframes pulse-green { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        .active-node { animation: pulse-green 2s infinite; color: #4ade80; }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-10">
 
-    <div class="bg-gradient"></div>
-
-    <div class="max-w-4xl mx-auto px-6 py-12">
-        
-        <div class="flex justify-between items-center mb-16" data-aos="fade-down">
-            <a href="index.html" class="back-btn px-6 py-2 rounded-full text-sm">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Home
-            </a>
-            <div class="text-right">
-                <h1 class="text-3xl font-bold text-[#f0e68c]">Information Hub</h1>
-                <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Canale Criptato e Scambio Dati</p>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-12">
+    <div class="max-w-5xl w-full panel-core overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-12">
             
-            <div class="md:col-span-1 space-y-6" data-aos="fade-right">
-                <div>
-                    <h3 class="mono text-xs text-[#66ccff] mb-2 font-bold">// DATA RECEIVER</h3>
-                    <p class="text-sm font-bold">Michele Bottino</p>
-                    <p class="text-xs text-gray-400">Researcher & Author</p>
+            <div class="lg:col-span-4 p-10 bg-black/40 border-r border-white/5 flex flex-col justify-between">
+                <div class="space-y-10">
+                    <header>
+                        <h1 class="text-[#f0e68c] font-bold text-xl tracking-tighter uppercase">ADC System</h1>
+                        <p class="text-[9px] mono opacity-30 mt-1">Node: 2026_MARCH_8</p>
+                    </header>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl border border-white/5 bg-white/[0.01]">
+                            <p class="text-[10px] mono uppercase opacity-40 mb-2">Session ID</p>
+                            <div class="flex items-center justify-between">
+                                <span id="sessionID" class="text-[10px] mono text-[#66ccff]">ADC-XXXX-XXXX</span>
+                                <button onclick="copySession()" title="Copia ID" class="hover:text-white transition opacity-30"><i class="fa-regular fa-copy"></i></button>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl border border-white/5">
+                            <p class="text-[10px] mono uppercase opacity-40 mb-1">Status</p>
+                            <p class="text-[10px] mono active-node uppercase">● Ready_to_Transmit</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="space-y-3">
-                    <h3 class="mono text-xs text-[#66ccff] mb-2 font-bold">// AMBITI DI INTERAZIONE</h3>
-                    <div class="info-pill">
-                        <i class="fa-solid fa-circle-info mr-2 gold-accent"></i> Richiesta Informazioni
-                    </div>
-                    <div class="info-pill">
-                        <i class="fa-solid fa-database mr-2 gold-accent"></i> Scambio Dati Scientifici
-                    </div>
-                    <div class="info-pill">
-                        <i class="fa-solid fa-scroll mr-2 gold-accent"></i> Segnalazioni d'Archivio
-                    </div>
-                    <div class="info-pill">
-                        <i class="fa-solid fa-pen-fancy mr-2 gold-accent"></i> Proposte & Collaborazioni
-                    </div>
-                </div>
-
-                <div class="p-4 glass-panel border-l-2 border-[#f0e68c] mt-8">
-                    <p class="text-[10px] leading-relaxed opacity-60 italic">
-                        "L'indagine della parola non si ferma mai. Ogni informazione condivisa è un tassello verso la conoscenza."
-                    </p>
+                <div class="text-[9px] mono opacity-20 uppercase leading-relaxed mt-12">
+                    L'invio di documenti protetti richiede la selezione del modulo "Collaborazione".
                 </div>
             </div>
 
-            <div class="md:col-span-2" data-aos="fade-left">
-                <form action="https://formspree.io/f/michelebottino.adc@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-6">
+            <div class="lg:col-span-8 p-10 md:p-14 relative">
+                <form id="operativeForm" action="https://formspree.io/f/michelebottino.adc@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-8">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Identità / Nome</label>
-                            <input type="text" name="name" placeholder="Inserisci il tuo nome" required class="input-field w-full p-3 rounded-xl text-sm">
+                    <input type="hidden" name="_subject" id="emailSubject" value="Nuova Comunicazione ADC">
+                    <input type="text" name="_gotcha" style="display:none"> <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40">Tipo Richiesta</label>
+                            <select name="type" id="requestType" onchange="updateContext()" class="w-full px-5 py-4 rounded-xl text-sm appearance-none">
+                                <option value="Informazioni">Richiesta Informazioni</option>
+                                <option value="Collaborazione">Collaborazione Scientifica</option>
+                            </select>
                         </div>
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Canale di Risposta (Email)</label>
-                            <input type="email" name="_replyto" placeholder="tua@email.com" required class="input-field w-full p-3 rounded-xl text-sm">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40">Identificativo</label>
+                            <input type="text" name="name" id="name" required placeholder="Nome o Ente" class="w-full px-5 py-4 rounded-xl text-sm">
                         </div>
                     </div>
 
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Tipologia Messaggio</label>
-                        <select name="subject" class="input-field w-full p-3 rounded-xl text-sm italic">
-                            <option>Richiesta Informazioni Generali</option>
-                            <option>Scambio Dati / Ricerca Scientifica</option>
-                            <option>Segnalazione Documentale / Archivio</option>
-                            <option>Proposta Letteraria / Editoriale</option>
-                            <option>Collaborazione Musicale</option>
-                            <option>Altro</option>
-                        </select>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest opacity-40">Email Certificata</label>
+                        <input type="email" name="email" id="email" required placeholder="michele@esempio.it" class="w-full px-5 py-4 rounded-xl text-sm">
                     </div>
 
-                    <div>
-                        <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Contenuto della Comunicazione</label>
-                        <textarea name="message" rows="5" placeholder="Descrivi qui la tua richiesta o le informazioni che desideri condividere..." required class="input-field w-full p-4 rounded-2xl text-sm"></textarea>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest opacity-40">Dettagli Messaggio</label>
+                        <textarea name="message" id="message" rows="5" required placeholder="Inserisci il contenuto della comunicazione..." class="w-full px-5 py-4 rounded-xl text-sm"></textarea>
                     </div>
 
-                    <div class="file-custom p-6 rounded-2xl text-center">
-                        <i class="fa-solid fa-paperclip text-2xl mb-3 opacity-30"></i>
-                        <p class="text-[10px] uppercase mb-4 opacity-50">Allega Documenti, Foto o PDF (Max 10MB)</p>
-                        <input type="file" name="attachment" class="text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-[#f0e68c]/10 file:text-[#f0e68c] hover:file:bg-[#f0e68c]/20">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest opacity-40">Documentazione Asset (Max 10MB)</label>
+                        <label class="flex items-center gap-4 p-6 border-2 border-dashed border-white/5 rounded-xl cursor-pointer hover:border-[#66ccff] transition-all group">
+                            <input type="file" name="attachment" id="fileIn" class="hidden">
+                            <i class="fa-solid fa-file-arrow-up text-xl opacity-20 group-hover:text-[#66ccff]"></i>
+                            <span id="fileLabel" class="text-[10px] mono opacity-40 uppercase">Seleziona PDF o Immagine</span>
+                        </label>
                     </div>
 
-                    <button type="submit" class="submit-btn w-full py-4 rounded-2xl flex items-center justify-center gap-3">
-                        Invia Protocollo <i class="fa-solid fa-satellite-dish"></i>
+                    <button type="submit" id="submitBtn" class="btn-action w-full py-5 rounded-xl font-bold uppercase text-[11px]">
+                        Esegui Trasmissione <i class="fa-solid fa-paper-plane ml-2 opacity-50"></i>
                     </button>
-
-                    <input type="text" name="_gotcha" style="display:none">
                 </form>
+
+                <div id="successOverlay" class="hidden absolute inset-0 bg-black/95 flex flex-col items-center justify-center text-center p-10 z-50">
+                    <i class="fa-solid fa-check-circle text-4xl text-[#4ade80] mb-6"></i>
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-[#f5f5dc] mb-4">Trasmissione Completata</h2>
+                    <p class="text-[10px] mono opacity-40 uppercase max-w-xs leading-relaxed">Il pacchetto dati è stato acquisito dall'archivio centrale ADC. Riceverai risposta entro 48h operative.</p>
+                </div>
             </div>
-
         </div>
-
-        <footer class="mt-20 text-center text-gray-600 text-[10px] tracking-widest uppercase">
-            Encrypted Exchange Portal © 2010/2026 Michele Bottino
-        </footer>
-
     </div>
 
-    <script>AOS.init({ duration: 800, once: true });</script>
+    <script>
+        const form = document.getElementById('operativeForm');
+        const sessionSpan = document.getElementById('sessionID');
+        const fileIn = document.getElementById('fileIn');
+        const fileLabel = document.getElementById('fileLabel');
+
+        // 1. AZIONE REALE: Generazione Session ID
+        const generateID = () => `ADC-${Math.random().toString(36).substr(2, 4).toUpperCase()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}`;
+        sessionSpan.innerText = generateID();
+
+        function copySession() {
+            navigator.clipboard.writeText(sessionSpan.innerText);
+            alert("ID Sessione Copiato: " + sessionSpan.innerText);
+        }
+
+        // 2. AZIONE REALE: Recupero Draft (Local Storage)
+        window.onload = () => {
+            ['name', 'email', 'message'].forEach(id => {
+                const saved = localStorage.getItem('draft_' + id);
+                if (saved) document.getElementById(id).value = saved;
+            });
+        };
+
+        // Salvataggio automatico durante la scrittura
+        form.addEventListener('input', (e) => {
+            if (['name', 'email', 'message'].includes(e.target.id)) {
+                localStorage.setItem('draft_' + e.target.id, e.target.value);
+            }
+        });
+
+        // 3. AZIONE REALE: Validazione File
+        fileIn.onchange = () => {
+            const file = fileIn.files[0];
+            if (file) {
+                if (file.size > 10 * 1024 * 1024) {
+                    alert("ERRORE: File superiore a 10MB.");
+                    fileIn.value = "";
+                } else {
+                    fileLabel.innerText = file.name + " (" + (file.size/1024).toFixed(1) + " KB)";
+                    fileLabel.style.color = "#f0e68c";
+                }
+            }
+        };
+
+        // 4. AZIONE REALE: Invio AJAX (No Redirect)
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "CRITTOGRAFIA E INVIO...";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    localStorage.clear();
+                    document.getElementById('successOverlay').classList.remove('hidden');
+                } else { throw new Error(); }
+            } catch (err) {
+                alert("Errore di rete. Verificare l'endpoint o la connessione.");
+                btn.disabled = false;
+                btn.innerText = "RIPROVA TRASMISSIONE";
+            }
+        };
+
+        function updateContext() {
+            const type = document.getElementById('requestType').value;
+            document.getElementById('emailSubject').value = `ADC [${type.toUpperCase()}]`;
+        }
+    </script>
 </body>
 </html>
