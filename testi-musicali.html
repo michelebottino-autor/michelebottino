@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Hub – Michele Bottino</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { --gold: #f0e68c; --accent: #66ccff; --bg-dark: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #e5e7eb; overflow-x: hidden; }
+        
+        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%); z-index: -1; }
+        h1, h2, h3, .serif { font-family: 'Cinzel', serif; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+
+        .track-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .track-item:hover {
+            background: rgba(102, 204, 255, 0.05);
+            padding-left: 10px;
+        }
+
+        .gold-accent { color: var(--gold); }
+        .accent-text { color: var(--accent); }
+        
+        .back-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .back-btn:hover { background: var(--gold); color: black; }
+
+        .streaming-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: 12px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .streaming-btn:hover {
+            background: #1DB954; /* Spotify Green */
+            color: white;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6" data-aos="fade-down">
+            <a href="index.html" class="back-btn px-6 py-2 rounded-full text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Torna alla Home
+            </a>
+            <div class="md:text-right">
+                <h1 class="text-3xl font-bold gold-accent">Lyrics Hub</h1>
+                <p class="text-xs uppercase tracking-[0.3em] opacity-50 text-[#66ccff]">Autore e Paroliere</p>
+            </div>
+        </div>
+
+        <section class="glass-panel p-8 mb-12" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="text-4xl accent-text opacity-50">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold mb-4">La Parola in Musica</h2>
+                    <p class="text-gray-400 leading-relaxed italic">
+                        "Scrivere testi musicali significa dare un ritmo alle emozioni e una melodia ai pensieri. Ogni canzone è un'indagine sull'animo umano, tradotta in versi e note."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="md:col-span-2 glass-panel p-8" data-aos="fade-right">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fa-solid fa-music mr-4 gold-accent"></i> Repertorio Selezionato
+                </h2>
+                
+                <div class="space-y-2">
+                    <div class="track-item flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-bold block">Nel respiro di te</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Testo di Michele Bottino</span>
+                        </div>
+                        <i class="fa-solid fa-play text-xs opacity-20"></i>
+                    </div>
+
+                    <div class="track-item flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-bold block">Un’altra Notte a Metà</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Testo di Michele Bottino</span>
+                        </div>
+                        <i class="fa-solid fa-play text-xs opacity-20"></i>
+                    </div>
+
+                    <div class="track-item flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-bold block">Riconquistarti</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Testo di Michele Bottino</span>
+                        </div>
+                        <i class="fa-solid fa-play text-xs opacity-20"></i>
+                    </div>
+
+                    <div class="track-item flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-bold block">Casanova</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Testo di Michele Bottino</span>
+                        </div>
+                        <i class="fa-solid fa-play text-xs opacity-20"></i>
+                    </div>
+
+                    <div class="track-item flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-bold block">Notte di Mezza Estate</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Testo di Michele Bottino</span>
+                        </div>
+                        <i class="fa-solid fa-play text-xs opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6" data-aos="fade-left">
+                <div class="glass-panel p-6">
+                    <h3 class="text-sm font-bold mb-4 uppercase tracking-widest text-center">Digital Store</h3>
+                    <div class="space-y-4">
+                        <a href="https://itunes.apple.com/us/artist/michele-bottino/1815506113" target="_blank" class="streaming-btn">
+                            <i class="fa-brands fa-spotify text-xl"></i>
+                            <span class="text-xs font-bold">Spotify Artist</span>
+                        </a>
+                        <a href="#" target="_blank" class="streaming-btn">
+                            <i class="fa-brands fa-apple text-xl"></i>
+                            <span class="text-xs font-bold">Apple Music</span>
+                        </a>
+                        <a href="#" target="_blank" class="streaming-btn">
+                            <i class="fa-brands fa-youtube text-xl"></i>
+                            <span class="text-xs font-bold">YouTube Music</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 border-l-2 border-[#66ccff]">
+                    <h3 class="text-xs font-bold mb-2 uppercase">Copyright & Licensing</h3>
+                    <p class="text-[10px] text-gray-400">Tutti i testi sono depositati e protetti. Per collaborazioni editoriali o licenze d'uso, contattare l'autore.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-16 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+            Official Lyrics Archive © 2010/2026 Michele Bottino
+        </footer>
+
+    </div>
+
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
