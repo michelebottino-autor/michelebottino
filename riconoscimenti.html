@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive Merit – Michele Bottino</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { --gold: #f0e68c; --accent: #66ccff; --bg-dark: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #e5e7eb; overflow-x: hidden; }
+        
+        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%); z-index: -1; }
+        h1, h2, h3, .serif { font-family: 'Cinzel', serif; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+
+        .merit-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(240, 230, 140, 0.02) 100%);
+            border: 1px solid rgba(240, 230, 140, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .merit-card:hover {
+            border-color: var(--gold);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .gold-accent { color: var(--gold); }
+        .accent-text { color: var(--accent); }
+        
+        .back-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .back-btn:hover { background: var(--gold); color: black; }
+
+        .seal-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(240, 230, 140, 0.3));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6" data-aos="fade-down">
+            <a href="index.html" class="back-btn px-6 py-2 rounded-full text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Torna alla Home
+            </a>
+            <div class="md:text-right">
+                <h1 class="text-3xl font-bold gold-accent">Archive Merit</h1>
+                <p class="text-xs uppercase tracking-[0.3em] opacity-50 text-[#66ccff]">Riconoscimenti Onorifici e Accademici</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+            
+            <div class="merit-card" data-aos="zoom-in">
+                <div class="seal-icon gold-accent">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h2 class="text-xl font-bold mb-2">Medaglia di Riconoscimento Franco-Brasiliana</h2>
+                <p class="text-[#f0e68c] font-bold text-sm mb-4">CLASSE ORO</p>
+                <p class="text-xs text-gray-400 mb-6 italic">Conferita dall'Institut Humaniste de Paris per meriti culturali e sociali.</p>
+                <div class="text-[10px] uppercase tracking-widest opacity-50">Ottobre 2013 | Parigi</div>
+            </div>
+
+            <div class="merit-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="seal-icon gold-accent">
+                    <i class="fa-solid fa-scroll"></i>
+                </div>
+                <h2 class="text-xl font-bold mb-2">Doutor Honoris Causa em Direitos Humanos</h2>
+                <p class="text-[#f0e68c] font-bold text-sm mb-4">ECCELLENZA UMANITARIA</p>
+                <p class="text-xs text-gray-400 mb-6 italic">College Baptist Church, Brasile. Riconoscimento per l'impegno nei diritti civili.</p>
+                <div class="text-[10px] uppercase tracking-widest opacity-50">Dicembre 2013 | Brasile</div>
+            </div>
+
+        </div>
+
+        <section class="glass-panel p-8 md:p-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-10 border-b border-white/10 pb-4">Timeline dei Riconoscimenti</h2>
+            
+            <div class="space-y-12">
+                <div class="flex gap-6 items-start">
+                    <div class="text-xl font-bold gold-accent pt-1">2013</div>
+                    <div>
+                        <h3 class="text-lg font-bold">Inclusione nell'Albo d'Oro dell'Umanità</h3>
+                        <p class="text-sm text-gray-400">Riconoscimento internazionale per la dedizione alle scienze umanistiche e ai servizi sociali.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 items-start border-l-2 border-white/5 pl-6">
+                    <div class="text-xl font-bold opacity-30 pt-1">2011</div>
+                    <div>
+                        <h3 class="text-lg font-bold">Apostille Internazionale dello Stato di New York</h3>
+                        <p class="text-sm text-gray-400">Certificazione di autenticità e riconoscimento internazionale dei titoli accademici in ambito umanistico.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 items-start border-l-2 border-white/5 pl-6">
+                    <div class="text-xl font-bold opacity-30 pt-1">2010</div>
+                    <div>
+                        <h3 class="text-lg font-bold">Inizio attività di Ricerca Indipendente</h3>
+                        <p class="text-sm text-gray-400">Apertura degli archivi per lo studio del territorio di Calatabiano (CT) e della Sicilia medievale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up">
+            <div class="p-4 border border-white/5 rounded-xl text-center bg-white/2">
+                <i class="fa-solid fa-fingerprint mb-2 opacity-30"></i>
+                <p class="text-[10px] uppercase tracking-tighter">Verified Academic Profile</p>
+            </div>
+            <div class="p-4 border border-white/5 rounded-xl text-center bg-white/2">
+                <i class="fa-solid fa-stamp mb-2 opacity-30"></i>
+                <p class="text-[10px] uppercase tracking-tighter">Legalized Documents</p>
+            </div>
+            <div class="p-4 border border-white/5 rounded-xl text-center bg-white/2">
+                <i class="fa-solid fa-earth-europe mb-2 opacity-30"></i>
+                <p class="text-[10px] uppercase tracking-tighter">International Merit</p>
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+            Official Merit Record © 2010/2026 Michele Bottino
+        </footer>
+
+    </div>
+
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
