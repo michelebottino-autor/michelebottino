@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information & Contact Hub – Michele Bottino</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&family=Fira+Code:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { --gold: #f0e68c; --accent: #66ccff; --bg-dark: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #e5e7eb; overflow-x: hidden; }
+        
+        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%); z-index: -1; }
+        h1, h2, .serif { font-family: 'Cinzel', serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+
+        .input-field {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-color: var(--gold);
+            background: rgba(240, 230, 140, 0.05);
+            outline: none;
+            box-shadow: 0 0 15px rgba(240, 230, 140, 0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(90deg, var(--gold) 0%, #d4c570 100%);
+            color: black;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(240, 230, 140, 0.4);
+        }
+
+        .file-custom {
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .file-custom:hover {
+            border-color: var(--accent);
+            background: rgba(102, 204, 255, 0.05);
+        }
+
+        .back-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .back-btn:hover { background: var(--gold); color: black; }
+        
+        .info-pill {
+            background: rgba(240, 230, 140, 0.05);
+            border: 1px solid rgba(240, 230, 140, 0.1);
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        
+        <div class="flex justify-between items-center mb-16" data-aos="fade-down">
+            <a href="index.html" class="back-btn px-6 py-2 rounded-full text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Home
+            </a>
+            <div class="text-right">
+                <h1 class="text-3xl font-bold text-[#f0e68c]">Information Hub</h1>
+                <p class="text-[10px] uppercase tracking-[0.3em] opacity-50">Canale Criptato e Scambio Dati</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            
+            <div class="md:col-span-1 space-y-6" data-aos="fade-right">
+                <div>
+                    <h3 class="mono text-xs text-[#66ccff] mb-2 font-bold">// DATA RECEIVER</h3>
+                    <p class="text-sm font-bold">Michele Bottino</p>
+                    <p class="text-xs text-gray-400">Researcher & Author</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="mono text-xs text-[#66ccff] mb-2 font-bold">// AMBITI DI INTERAZIONE</h3>
+                    <div class="info-pill">
+                        <i class="fa-solid fa-circle-info mr-2 gold-accent"></i> Richiesta Informazioni
+                    </div>
+                    <div class="info-pill">
+                        <i class="fa-solid fa-database mr-2 gold-accent"></i> Scambio Dati Scientifici
+                    </div>
+                    <div class="info-pill">
+                        <i class="fa-solid fa-scroll mr-2 gold-accent"></i> Segnalazioni d'Archivio
+                    </div>
+                    <div class="info-pill">
+                        <i class="fa-solid fa-pen-fancy mr-2 gold-accent"></i> Proposte & Collaborazioni
+                    </div>
+                </div>
+
+                <div class="p-4 glass-panel border-l-2 border-[#f0e68c] mt-8">
+                    <p class="text-[10px] leading-relaxed opacity-60 italic">
+                        "L'indagine della parola non si ferma mai. Ogni informazione condivisa è un tassello verso la conoscenza."
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2" data-aos="fade-left">
+                <form action="https://formspree.io/f/michelebottino.adc@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Identità / Nome</label>
+                            <input type="text" name="name" placeholder="Inserisci il tuo nome" required class="input-field w-full p-3 rounded-xl text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Canale di Risposta (Email)</label>
+                            <input type="email" name="_replyto" placeholder="tua@email.com" required class="input-field w-full p-3 rounded-xl text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Tipologia Messaggio</label>
+                        <select name="subject" class="input-field w-full p-3 rounded-xl text-sm italic">
+                            <option>Richiesta Informazioni Generali</option>
+                            <option>Scambio Dati / Ricerca Scientifica</option>
+                            <option>Segnalazione Documentale / Archivio</option>
+                            <option>Proposta Letteraria / Editoriale</option>
+                            <option>Collaborazione Musicale</option>
+                            <option>Altro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest mb-2 opacity-50">Contenuto della Comunicazione</label>
+                        <textarea name="message" rows="5" placeholder="Descrivi qui la tua richiesta o le informazioni che desideri condividere..." required class="input-field w-full p-4 rounded-2xl text-sm"></textarea>
+                    </div>
+
+                    <div class="file-custom p-6 rounded-2xl text-center">
+                        <i class="fa-solid fa-paperclip text-2xl mb-3 opacity-30"></i>
+                        <p class="text-[10px] uppercase mb-4 opacity-50">Allega Documenti, Foto o PDF (Max 10MB)</p>
+                        <input type="file" name="attachment" class="text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-[#f0e68c]/10 file:text-[#f0e68c] hover:file:bg-[#f0e68c]/20">
+                    </div>
+
+                    <button type="submit" class="submit-btn w-full py-4 rounded-2xl flex items-center justify-center gap-3">
+                        Invia Protocollo <i class="fa-solid fa-satellite-dish"></i>
+                    </button>
+
+                    <input type="text" name="_gotcha" style="display:none">
+                </form>
+            </div>
+
+        </div>
+
+        <footer class="mt-20 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+            Encrypted Exchange Portal © 2010/2026 Michele Bottino
+        </footer>
+
+    </div>
+
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
