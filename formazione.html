@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence & Skills – Michele Bottino</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { --gold: #f0e68c; --accent: #66ccff; --bg-dark: #050505; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: #e5e7eb; overflow-x: hidden; }
+        
+        .bg-gradient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%); z-index: -1; }
+        h1, h2, .serif { font-family: 'Cinzel', serif; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+        }
+
+        .skill-tag {
+            background: rgba(102, 204, 255, 0.1);
+            border: 1px solid rgba(102, 204, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+
+        .gold-accent { color: var(--gold); }
+        .back-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
+        .back-btn:hover { background: var(--gold); color: black; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-gradient"></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        
+        <div class="flex justify-between items-center mb-12" data-aos="fade-down">
+            <a href="index.html" class="back-btn px-6 py-2 rounded-full text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Torna alla Home
+            </a>
+            <div class="text-right">
+                <h1 class="text-3xl font-bold gold-accent">Intelligence & Skills</h1>
+                <p class="text-xs uppercase tracking-[0.3em] opacity-50">Curriculum Accademico e Tecnico</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+
+            <section class="glass-panel p-8 md:p-12" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-8 flex items-center">
+                    <i class="fa-solid fa-medal mr-4 gold-accent"></i> Titoli Onorifici e Accademici
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="border-l-2 border-[#f0e68c] pl-6 py-2">
+                        <h3 class="text-xl font-bold">Dottorato Honoris Causa in Diritti Umani</h3>
+                        <p class="text-gray-400">College Baptist Church, Brasile | 2013</p>
+                        <p class="mt-2 text-sm italic">Conferito per l'impegno profuso nei servizi sociali e umanitari.</p>
+                    </div>
+
+                    <div class="border-l-2 border-gray-600 pl-6 py-2">
+                        <h3 class="text-xl font-bold">Riconoscimento in Scienze Umanistiche</h3>
+                        <p class="text-gray-400">Newark International University | 2011</p>
+                        <p class="mt-2 text-sm italic italic">Titolo corredato da Apostille Internazionale dello Stato di New York.</p>
+                    </div>
+
+                    <div class="border-l-2 border-gray-600 pl-6 py-2">
+                        <h3 class="text-xl font-bold">Medaglia d’Oro Franco-Brasiliana</h3>
+                        <p class="text-gray-400">Institut Humaniste de Paris | 2013</p>
+                        <p class="mt-2 text-sm italic">Riconoscimento internazionale per meriti culturali.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <section class="glass-panel p-8" data-aos="fade-right">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-user-shield mr-3 gold-accent"></i> Digital Intelligence
+                    </h2>
+                    <p class="text-sm text-gray-400 mb-6">Certificazioni e studi nel campo della sicurezza informatica e analisi forense.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex flex-col">
+                            <span class="font-bold">Sicurezza Informatica ed Ethical Hacking</span>
+                            <span class="text-xs opacity-60">Accademia Domani / Udemy (2018)</span>
+                        </li>
+                        <li class="flex flex-col">
+                            <span class="font-bold">Cybercrime & Psicologia Forense</span>
+                            <span class="text-xs opacity-60">Open University (UK)</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="glass-panel p-8" data-aos="fade-left">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-magnifying-glass-chart mr-3 gold-accent"></i> Ricerca Forense
+                    </h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Criminologia</span>
+                        <span class="skill-tag">Digital Humanities</span>
+                        <span class="skill-tag">Scienze Forensi</span>
+                        <span class="skill-tag">Analisi dei Dati</span>
+                        <span class="skill-tag">Prosopografia</span>
+                        <span class="skill-tag">Verifica delle Fonti</span>
+                    </div>
+                    <p class="mt-6 text-sm text-gray-400">
+                        Applicazione del rigore scientifico e metodologico alla ricerca storica e alla narrativa investigativa.
+                    </p>
+                </section>
+            </div>
+
+            <section class="glass-panel p-8 border-t-4 border-[#66ccff]" data-aos="fade-up">
+                <h2 class="text-xl font-bold mb-4">Metodologia Investigativa</h2>
+                <p class="text-gray-300 italic">
+                    "La precisione del dato incrociata con la profondità dell'analisi umanistica permette di ricostruire verità che il tempo ha tentato di occultare."
+                </p>
+            </section>
+
+        </div>
+
+        <footer class="mt-12 text-center text-gray-600 text-[10px] tracking-widest uppercase">
+            Intelligence Report Profile © 2010/2026 Michele Bottino
+        </footer>
+
+    </div>
+
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
