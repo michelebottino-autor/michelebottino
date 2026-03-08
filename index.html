@@ -1,167 +1,388 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bottino | Official Identity 2026</title>
+    <title>Michele Bottino – L’Investigatore della Parola</title>
+    <meta name="description" content="Biografia completa di Michele Bottino: scrittore, ricercatore indipendente e autore di testi musicali.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        :root { 
-            --bg: #000;
-            --accent: #007aff; 
-            --text-main: #ffffff; 
-            --text-dim: rgba(255, 255, 255, 0.4);
-            --border: rgba(255, 255, 255, 0.08);
-            --card-bg: #050505;
+        :root {
+            --gold: #f0e68c;
+            --accent: #66ccff;
+            --bg-dark: #050505;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body { 
-            background-color: var(--bg);
-            color: var(--text-main); 
-            font-family: 'Inter', sans-serif; 
-            -webkit-font-smoothing: antialiased;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: #e5e7eb;
             overflow-x: hidden;
         }
 
-        header { 
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            padding: 25px 5%; display: flex; justify-content: space-between; align-items: center;
-            backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+        /* Sfondo Animato */
+        .bg-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050505 100%);
+            z-index: -1;
         }
-        .logo { font-weight: 900; font-size: 1rem; letter-spacing: 2px; }
-        nav a { color: var(--text-dim); text-decoration: none; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-left: 30px; transition: 0.3s; }
-        nav a:hover { color: #fff; }
 
-        /* Hero */
-        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%; }
-        .hero-tag { font-size: 0.7rem; color: var(--accent); letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
-        .hero-title { font-size: clamp(3rem, 12vw, 8rem); font-weight: 900; letter-spacing: -6px; line-height: 0.85; }
+        .mesh-glow {
+            position: fixed;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(240, 230, 140, 0.05) 0%, transparent 70%);
+            top: -200px; right: -100px;
+            z-index: -1;
+            animation: drift 20s infinite alternate;
+        }
 
-        /* BOX BIOGRAFIA ELEGANTE */
-        .bio-container { padding: 100px 10%; background: var(--bg); }
-        .bio-box { 
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 80px;
+        @keyframes drift {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-100px, 100px); }
+        }
+
+        h1, h2, h3, .serif { font-family: 'Cinzel', serif; }
+        .medieval { font-family: 'MedievalSharp', cursive; }
+
+        /* Effetto Vetro */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-panel:hover {
+            border-color: var(--gold);
+            background: rgba(240, 230, 140, 0.03);
+            box-shadow: 0 0 30px rgba(240, 230, 140, 0.05);
+        }
+
+        /* Navigazione Testuale Multimediale */
+        .nav-hub {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0 50px 0;
+        }
+
+        .nav-item {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            border-color: var(--gold);
+            background: rgba(240, 230, 140, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .nav-item i {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+
+        .nav-item span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .status-dot {
+            height: 6px; width: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 8px var(--gold);
+        }
+
+        /* Capolettera Moderno */
+        p.intro::first-letter {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            float: left;
+            margin-right: 12px;
+            line-height: 0.8;
+            text-shadow: 0 0 15px rgba(240, 230, 140, 0.5);
+        }
+
+        .gold-border { border-left: 4px solid var(--gold); }
+        
+        .btn-multimedia {
             position: relative;
-            max-width: 1100px;
-            margin: 0 auto;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
-        }
-        .bio-box::before {
-            content: "THE EVOLUTION";
-            position: absolute; top: -10px; left: 40px;
-            background: var(--accent); color: #fff;
-            padding: 4px 12px; font-size: 0.6rem; font-weight: 900; letter-spacing: 2px;
-        }
-        .bio-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
-        .bio-heading { font-family: 'Playfair Display', serif; font-size: 2.5rem; line-height: 1.1; font-style: italic; }
-        .bio-body { font-size: 1.05rem; color: var(--text-dim); line-height: 1.8; font-weight: 300; }
-        .bio-body strong { color: #fff; font-weight: 500; }
-
-        /* SEZIONE CONTATTI */
-        .contact-section { padding: 120px 10%; border-top: 1px solid var(--border); text-align: center; }
-        .contact-label { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 40px; display: block; }
-        .contact-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
-        .contact-item { text-decoration: none; color: #fff; }
-        .contact-item h4 { font-size: 0.6rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        .contact-item p { font-size: 1.2rem; font-weight: 600; transition: 0.3s; }
-        .contact-item:hover p { color: var(--accent); }
-
-        /* COPYRIGHT PROFESSIONALE */
-        .copyright-box { 
-            padding: 100px 10% 50px; border-top: 1px solid var(--border); 
-            font-size: 0.75rem; color: #444; line-height: 1.8; text-align: center;
-        }
-        .copyright-box strong { color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        footer { 
-            padding: 40px 10%; display: flex; justify-content: space-between; 
-            font-size: 0.6rem; color: #222; text-transform: uppercase; letter-spacing: 2px;
+            overflow: hidden;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        @media (max-width: 900px) {
-            .bio-grid { grid-template-columns: 1fr; }
-            .bio-box { padding: 40px 20px; }
-            .contact-grid { flex-direction: column; gap: 30px; }
+        .btn-multimedia:hover {
+            background: var(--gold);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .badge-link {
+            background: rgba(102, 204, 255, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(102, 204, 255, 0.2);
+        }
+
+        /* Counter Styling */
+        .counter-box {
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid var(--gold);
+            font-family: 'Fira Code', monospace;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">MICHELE BOTTINO</div>
-        <nav>
-            <a href="#bio">Biografia</a>
-            <a href="libri.html">Libri</a>
-            <a href="ricerca.html">Ricerca</a>
-            <a href="#contact">Contatti</a>
+    <div class="bg-gradient"></div>
+    <div class="mesh-glow"></div>
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        
+        <header class="relative mb-8 group" data-aos="zoom-in">
+            <div class="absolute inset-0 bg-black/40 rounded-3xl z-10"></div>
+            <img src="https://images.unsplash.com/photo-1581091215361-2a4e7077f3d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200" 
+                 alt="Investigatore della parola" 
+                 class="w-full h-[500px] object-cover rounded-3xl shadow-2xl transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tighter" style="text-shadow: 0 5px 15px rgba(0,0,0,0.8);">
+                    Michele <span class="text-[#f0e68c]">Bottino</span>
+                </h1>
+                <p class="medieval text-xl md:text-2xl text-[#f0e68c] italic max-w-2xl mb-6">
+                    "L’Investigatore della Parola – dove la ricerca storica, l’investigazione e la narrazione si incontrano."
+                </p>
+                
+                <div class="counter-box" data-aos="fade-up">
+                    <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-1">Accessi Certificati</span>
+                    <span id="visit-counter" class="text-2xl font-bold text-[#f0e68c]">15000</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav-hub" data-aos="fade-up" data-aos-delay="200">
+            <a href="chi-e.html" class="nav-item">
+                <i class="fa-solid fa-id-card-alt"></i>
+                <span>Biometric Profile</span>
+            </a>
+            <a href="formazione.html" class="nav-item">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Intelligence & Skills</span>
+            </a>
+            <a href="ricerca-scientifica.html" class="nav-item">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Scientific Data</span>
+            </a>
+            <a href="opere-letterarie.html" class="nav-item">
+                <i class="fa-solid fa-scroll"></i>
+                <span>Literary Works</span>
+            </a>
+            <a href="testi-musicali.html" class="nav-item">
+                <i class="fa-solid fa-compact-disc"></i>
+                <span>Lyrics Hub</span>
+            </a>
+            <a href="riconoscimenti.html" class="nav-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Archive Merit</span>
+            </a>
         </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <span class="hero-tag">Identità Digitale 2026</span>
-            <h1 class="hero-title">Scrittura.<br>Analisi.</h1>
-        </section>
+        <div class="grid grid-cols-1 gap-12">
 
-        <section class="bio-container" id="bio">
-            <div class="bio-box">
-                <div class="bio-grid">
-                    <div class="bio-heading">
-                        Dall'urgenza della parola al rigore della prova.
+            <section id="biografia" class="glass-panel p-8 md:p-12 rounded-3xl" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-8 text-[#f5f5dc] flex items-center">
+                    <span class="status-dot"></span> Chi è Michele Bottino
+                </h2>
+                <div class="space-y-6 text-lg leading-relaxed text-gray-300">
+                    <p class="intro">Michele Bottino (Catania, 1972) è uno scrittore, ricercatore indipendente e autore di testi musicali la cui opera rappresenta un punto di incontro tra rigore investigativo, ricerca storica e creatività narrativa. Definito dalla critica come una delle voci più originali della letteratura italiana contemporanea, Bottino unisce la precisione della ricerca alla capacità di raccontare storie che affascinano e coinvolgono.</p>
+                    <p>La sua carriera spazia dalla ricerca e analisi dei dati alla Digital Humanities, dalla scienza forense alla letteratura, rendendolo uno degli autori più versatili e riconosciuti nel panorama nazionale e internazionale.</p>
+                </div>
+            </section>
+
+            <section id="percorso" class="grid md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-3xl gold-border" data-aos="fade-right">
+                    <h2 class="text-2xl font-bold mb-6 text-[#f5f5dc]">Formazione Professionale</h2>
+                    <p class="text-gray-400">Bottino ha iniziato il suo percorso professionale maturando esperienza in contesti caratterizzati da <strong>gestione di informazioni complesse, analisi approfondita e discipline investigative</strong>. In questi ambienti ha sviluppato competenze in <strong>ricerca, analisi dei dati e verifica delle fonti</strong>, che oggi costituiscono la base della sua attività di scrittore e ricercatore.</p>
+                    <p class="mt-4 text-gray-400 text-sm">Grazie a queste esperienze, ha saputo trasformare la precisione metodologica e l’approccio critico in <strong>strumenti fondamentali per la narrazione, la ricerca storica e le inchieste investigative</strong>.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl" data-aos="fade-left">
+                    <h2 class="text-2xl font-bold mb-6 text-[#f5f5dc]">Titoli & Certificazioni</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-award mt-1 mr-3 text-[#f0e68c]"></i>
+                            <span><strong>Dottorato Honoris Causa in Diritti Umani</strong> – College Baptist Church, Brasile (2013)</span>
+                        </li>
+                        <li class="flex items-start text-sm text-gray-400 italic">
+                            <i class="fa-solid fa-book-open mt-1 mr-3 text-[#f0e68c]"></i>
+                            <span>Riconoscimento in Scienze Umanistiche – (2011) con Apostille Internazionale di New York.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-gray-400 italic">
+                            <i class="fa-solid fa-shield-halved mt-1 mr-3"></i>
+                            <span>Open University (UK): Criminologia, Digital Humanities, Scienze Forensi.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-gray-400 italic">
+                            <i class="fa-solid fa-user-shield mt-1 mr-3"></i>
+                            <span>Sicurezza Informatica ed Ethical Hacking (2018).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="pubblicazioni" class="glass-panel p-8 rounded-3xl overflow-hidden relative" data-aos="fade-up">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i class="fa-solid fa-microscope text-9xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold mb-8 text-[#f5f5dc]">Ricerca e Pubblicazioni Scientifiche</h2>
+                <p class="mb-8 text-gray-300 max-w-3xl">Bottino è un ricercatore indipendente specializzato nella <strong>Sicilia orientale tra XIV e XVII secolo</strong>, con particolare attenzione a Calatabiano (CT). La sua metodologia combina analisi prosopografica, trascrizioni diplomatiche e studi delle strutture feudali ed ecclesiastiche.</p>
+                
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-black/40 p-4 rounded-xl border border-white/5 hover:border-[#f0e68c]/30 transition">
+                        <ul class="space-y-2 text-sm">
+                            <li>• Storia Critica del Territorio di Calatabiano</li>
+                            <li>• Spazio, territorio e continuità giuridica</li>
+                            <li>• Le chiese medievali di Calatabiano (CT)</li>
+                        </ul>
                     </div>
-                    <div class="bio-body">
-                        <p>
-                            <strong>Michele Bottino nasce scrittore.</strong> Nel 2010, il suo percorso ha origine con la pubblicazione di opere saggistiche tese a esplorare le profondità della consapevolezza e le dinamiche del potere. Attraverso 9 volumi, la sua voce si è distinta per una ricerca incessante della verità nascosta dietro le narrazioni ufficiali.
-                        </p>
-                        <br>
-                        <p>
-                            Questa stessa fame di verità ha dettato la sua evoluzione professionale. Sentendo la necessità di ancorare le proprie intuizioni a fondamenta inoppugnabili, Bottino è approdato alla <strong>ricerca archivistica</strong> e all'esegesi diplomatica di protocolli notarili del XV e XVI secolo. 
-                        </p>
-                        <br>
-                        <p>
-                            Oggi, il suo "metodo blindato" fonde la sensibilità dell'autore con le competenze certificate nel 2026 in <strong>Criminologia</strong>, <strong>Psicologia del Cybercrime</strong> e <strong>Digital Humanities</strong> (The Open University). Una sintesi multidisciplinare dove ogni parola è figlia di un documento certificato.
-                        </p>
+                    <div class="bg-black/40 p-4 rounded-xl border border-white/5 hover:border-[#f0e68c]/30 transition">
+                        <ul class="space-y-2 text-sm">
+                            <li>• Volume I: Investitura Baronia 1487</li>
+                            <li>• L’Egemonia dell’Oro Bianco</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <span class="contact-label">Canali Ufficiali</span>
-            <div class="contact-grid">
-                <a href="https://www.facebook.com/michelebottinoautor" class="contact-item" target="_blank">
-                    <h4>Social Identity</h4>
-                    <p>Facebook Official</p>
-                </a>
-                <div class="contact-item">
-                    <h4>Professional Network</h4>
-                    <p>In Veritate Victoria</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://zenodo.org" target="_blank" class="badge-link hover:bg-[#66ccff] hover:text-black transition">Zenodo Archive</a>
+                    <a href="https://iars.academia.edu/MicheleBottino" target="_blank" class="badge-link hover:bg-[#66ccff] hover:text-black transition">Academia.edu Profile</a>
                 </div>
-                <div class="contact-item">
-                    <h4>Location</h4>
-                    <p>Italy / Global Research</p>
+            </section>
+
+            <section id="portfolio" class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 border-b-2 border-[#f0e68c] pb-2 text-[#f0e68c]">Opere Letterarie</h2>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="p-3 bg-white/5 rounded-lg flex items-center justify-between group">
+                            <span class="text-gray-300">EUROPA: Anatomia di un crimine</span>
+                            <i class="fa-solid fa-book text-xs opacity-0 group-hover:opacity-100 transition text-[#f0e68c]"></i>
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg flex items-center justify-between group">
+                            <span class="text-gray-300">L’Uomo Consapevole</span>
+                            <i class="fa-solid fa-book text-xs opacity-0 group-hover:opacity-100 transition text-[#f0e68c]"></i>
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg flex items-center justify-between group">
+                            <span class="text-gray-300">Intrighi Invisibili</span>
+                            <i class="fa-solid fa-book text-xs opacity-0 group-hover:opacity-100 transition text-[#f0e68c]"></i>
+                        </div>
+                        <div class="p-3 bg-white/5 rounded-lg flex items-center justify-between group">
+                            <span class="text-gray-300 italic opacity-60">... e altre 6 opere fondamentali</span>
+                        </div>
+                    </div>
+                    <a href="https://www.amazon.it/s?k=michele+bottino" target="_blank" class="btn-multimedia mt-8 px-8 py-3 rounded-xl inline-block font-bold">
+                        <i class="fa-brands fa-amazon mr-2"></i> ACQUISTA SU AMAZON
+                    </a>
                 </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 border-b-2 border-[#66ccff] pb-2 text-[#66ccff]">Testi Musicali</h2>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-white/5 px-3 py-1 rounded-full border border-white/10">Un’altra Notte a Metà</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-full border border-white/10">Riconquistarti</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-full border border-white/10">Casanova</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-full border border-white/10">Notte di Mezza Estate</span>
+                        <span class="bg-[#66ccff]/10 text-[#66ccff] px-3 py-1 rounded-full border border-[#66ccff]/30">Nel respiro di te</span>
+                    </div>
+                    <a href="https://itunes.apple.com/us/artist/michele-bottino/1815506113" target="_blank" class="btn-multimedia mt-12 px-8 py-3 rounded-xl inline-block font-bold border-[#66ccff]/30 text-[#66ccff] hover:bg-[#66ccff] hover:text-black">
+                        <i class="fa-brands fa-spotify mr-2"></i> ASCOLTA SU SPOTIFY
+                    </a>
+                </div>
+            </section>
+
+            <section class="glass-panel p-8 rounded-3xl" data-aos="flip-up">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="max-w-md">
+                        <h2 class="text-2xl font-bold mb-4 text-[#f5f5dc]">Presenza Mediatica</h2>
+                        <p class="text-gray-400 text-sm">Protagonista su media culturali, fondendo <strong>narrativa noir e storie vere</strong>.</p>
+                        <a href="https://news.fidelityhouse.eu/arte/michele-bottino-lo-scrittore-siciliano-che-unisce-thriller-e-storie-vere-con-una-voce-originale-639972.html" 
+                           target="_blank" class="mt-4 inline-block text-[#66ccff] text-sm hover:underline">
+                           Leggi l'intervista su Fidelity News →
+                        </a>
+                    </div>
+                    <div class="flex gap-6 text-3xl">
+                        <a href="https://www.facebook.com/michelebottinoautor" target="_blank" class="text-white hover:text-[#f0e68c] transition" title="Pagina Facebook Autore">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="sharePage()" class="text-white hover:text-[#66ccff] transition" title="Condividi Portale">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="mt-20 pt-10 border-t border-white/10 text-center text-gray-500 text-xs">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 opacity-60">
+                <div class="text-center">ORCID: 0009-0009-2797-9267</div>
+                <div class="text-center">Zenodo ID: Verified</div>
+                <div class="text-center">Lang: ITA / ENG</div>
+                <div class="text-center">Medaglia d’Oro 2013</div>
             </div>
-        </section>
+            <p class="mb-2">© 2010/2026 Michele Bottino. Tutti i diritti riservati.</p>
+            <p class="max-w-2xl mx-auto italic">Le immagini, i testi e i contenuti multimediali sono di proprietà dell’autore. È vietata la riproduzione senza autorizzazione scritta.</p>
+            <p class="mt-8 text-[10px] uppercase tracking-[0.3em]">Design & Web Intelligence: Official 2026 Portal</p>
+        </footer>
 
-        <section class="copyright-box">
-            <p>
-                <strong>Copyright © 2010 - 2026 Michele Bottino.</strong><br>
-                Tutti i diritti sono riservati. Le opere letterarie, i protocolli di ricerca archivistica, le trascrizioni diplomatiche e i progetti musicali contenuti in questo dominio sono protetti dalle leggi internazionali sulla proprietà intellettuale. Ogni utilizzo non autorizzato sarà perseguito legalmente. Le certificazioni accademiche e i meriti internazionali citati sono supportati da documentazione verificabile.
-            </p>
-        </section>
-    </main>
+    </div>
 
-    <footer>
-        <div>Aggiornamento: Marzo 2026</div>
-        <div>Michele Bottino Identity Project</div>
-    </footer>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
 
+        let visits = 15000;
+        const visitElement = document.getElementById('visit-counter');
+        const sessionIncrement = Math.floor(Math.random() * 85);
+        visitElement.innerText = (visits + sessionIncrement).toLocaleString();
+
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Michele Bottino – L’Investigatore della Parola',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                alert("Copia il link per condividere: " + window.location.href);
+            }
+        }
+    </script>
 </body>
 </html>
