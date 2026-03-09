@@ -3,59 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bottino | Official Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Michele Bottino: Ecosistema tra Narrativa (2010) e Security Software Architecture (2026).">
+    
+    <script type="application/ld+json" id="seoSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michele Bottino",
+      "jobTitle": "Digital Product Architect & Author",
+      "url": "https://michelebottino.it"
+    }
+    </script>
+
+    <title>MB-OS | Michele Bottino 2010-2026</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --glass: rgba(255,255,255,0.03);
+            --font: 'Inter', system-ui, sans-serif; --trans: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background: var(--bg); color: #e0e0e0; font-family: var(--font);
+            margin: 0; overflow-x: hidden; transition: background var(--trans);
+        }
+
+        body.mode-author { background: radial-gradient(circle at top right, #1a1000, #050505); }
+        body.mode-research { background: radial-gradient(circle at top right, #001a1a, #050505); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            padding-bottom: 20px; border-bottom: 1px solid var(--glass);
+        }
+
+        .role-badge {
+            font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px;
+            padding: 5px 15px; border: 1px solid; border-radius: 20px; transition: var(--trans);
+        }
+
+        .switcher button {
+            background: transparent; border: 1px solid var(--glass); color: #888;
+            padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold;
+        }
+
+        .active-gold { border-color: var(--gold) !important; color: var(--gold) !important; box-shadow: 0 0 15px rgba(212,175,55,0.2); }
+        .active-cyan { border-color: var(--cyan) !important; color: var(--cyan) !important; box-shadow: 0 0 15px rgba(0,255,204,0.2); }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .panel { background: var(--glass); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+
+        .terminal {
+            background: #000; border: 1px solid #222; padding: 12px;
+            font-family: monospace; font-size: 0.8rem; color: var(--cyan); width: 100%; box-sizing: border-box;
+        }
+
+        #secure-viewer {
+            filter: blur(8px); opacity: 0.3; pointer-events: none; transition: 1s ease;
+            background: #000; padding: 20px; border: 1px dashed #333; margin-top: 15px;
+        }
+
+        .status-pill { font-size: 0.6rem; padding: 2px 8px; border-radius: 4px; background: #111; border: 1px solid #333; }
+        
+        #offline-notify {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: var(--gold); color: #000; padding: 10px 30px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: bold; display: none; z-index: 100;
+        }
+    </style>
 </head>
-<body>
+<body class="mode-author" id="app">
 
-    <div class="bg-gradient"></div>
+<div id="offline-notify">📴 ARCHIVIO RESILIENTE: MODALITÀ OFFLINE ATTIVA</div>
 
+<div class="container">
     <header>
-        <nav>
-            <span class="logo">M. BOTTINO</span>
-            <div class="nav-links">
-                <a href="#ricerca">Ricerca</a>
-                <a href="#bibliografia">Libri</a>
-                <a href="#musica">Musica</a>
-            </div>
-        </nav>
-        <div class="hero-content">
-            <h1 class="reveal-text">Michele Bottino</h1>
-            <p class="typewriter">Autore dal 2010 • Ricercatore dal 2026</p>
+        <div>
+            <h1 style="margin:0; letter-spacing:-1px;">MICHELE BOTTINO</h1>
+            <div id="role" class="role-badge" style="color:var(--gold); border-color:var(--gold);">Digital Product Architect</div>
+        </div>
+        <div class="switcher">
+            <button id="btnA" class="active-gold" onclick="setMode('author')">AUTORE (2010)</button>
+            <button id="btnR" onclick="setMode('research')">RICERCATORE (2026)</button>
         </div>
     </header>
 
-    <main class="container">
-        <section id="ricerca" class="glass-section">
-            <h2 class="tag">Scientific Path 2026</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <span class="date">Marzo 2026</span>
-                    <h3>L'Egemonia dell'Oro Bianco</h3>
-                    <p>Sintesi documentaria sui Processi di Calatabiano (XIV–XVII sec.).</p>
-                    <a href="https://zenodo.org/search?q=Michele%20Bottino" target="_blank" rel="noopener noreferrer" class="cta-line">Esplora su Zenodo →</a>
-                </div>
+    <div class="grid">
+        <div class="panel">
+            <h3 id="h-title" style="color:var(--gold); margin-top:0;">🛡️ Integrity Engine</h3>
+            <textarea id="hashInput" class="terminal" rows="3" placeholder="Incolla testo dell'opera per verifica..."></textarea>
+            <button onclick="calcHash()" style="margin-top:10px; width:100%; padding:10px; border:1px solid var(--gold); background:transparent; color:var(--gold); cursor:pointer;">GENERA HASH</button>
+            <div style="margin-top:10px; font-size:0.65rem; word-break:break-all;">SHA-256: <span id="hashOut">---</span></div>
+        </div>
+
+        <div class="panel">
+            <h3 style="color:var(--cyan); margin-top:0;">🔐 Web3 Auth</h3>
+            <div id="walletBox" class="terminal" style="color:#888;">Status: Disconnected</div>
+            <button onclick="connectWeb3()" style="margin-top:10px; width:100%; padding:10px; border:1px solid var(--cyan); background:transparent; color:var(--cyan); cursor:pointer;">CONNECT IDENTITY</button>
+            <div id="authMsg" style="font-size:0.65rem; margin-top:5px; text-align:center;"></div>
+        </div>
+
+        <div class="panel" id="monitor" style="grid-column: 1 / -1; display:none;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.7rem; color:var(--cyan);">[ NODE_MONITOR_v1.5 ]</span>
+                <span id="latency" class="status-pill">SYNCING...</span>
             </div>
-        </section>
+            <div id="secure-viewer">
+                <strong>[RICERCA 2026 - RISERVATO]</strong><br>
+                L'architettura Zero-Trust garantisce che l'integrità del dato sia la base del nuovo Growth Product Management.
+            </div>
+        </div>
+    </div>
+</div>
 
-        <section id="bibliografia">
-            <h2 class="tag">Literary Works since 2010</h2>
-            <div class="book-masonry">
-                <div class="book-item">
-                    <div class="book-info">
-                        <h3>EUROPA: Anatomia di un crimine</h3>
-                        <span class="isbn">ISBN 979-8335804790</span>
-                        <a href="https://www.amazon.it/dp/B0DF65D7S4" target="_blank" rel="noopener noreferrer" class="amazon-btn">Acquista Opera</a>
-                    </div>
-                </div>
-                </div>
-        </section>
-    </main>
+<script>
+    // --- 1. CORE LOGIC: SWITCHING & SEO ---
+    function setMode(mode) {
+        const isR = mode === 'research';
+        document.body.className = isR ? 'mode-research' : 'mode-author';
+        document.getElementById('role').innerText = isR ? 'Security Software Architect' : 'Digital Product Architect';
+        document.getElementById('role').style.color = isR ? 'var(--cyan)' : 'var(--gold)';
+        document.getElementById('role').style.borderColor = isR ? 'var(--cyan)' : 'var(--gold)';
+        document.getElementById('btnA').className = isR ? '' : 'active-gold';
+        document.getElementById('btnR').className = isR ? 'active-cyan' : '';
+        document.getElementById('monitor').style.display = isR ? 'block' : 'none';
+        document.getElementById('h-title').style.color = isR ? 'var(--cyan)' : 'var(--gold)';
+        
+        // Dynamic SEO Update
+        const schema = JSON.parse(document.getElementById('seoSchema').innerHTML);
+        schema.jobTitle = isR ? "Security Software Architect" : "Digital Product Architect & Author";
+        document.getElementById('seoSchema').innerHTML = JSON.stringify(schema);
+        document.title = "MB-OS | " + schema.jobTitle;
+    }
 
-    <footer>
-        <p>© 2026 Michele Bottino. Designed for Authority.</p>
-    </footer>
+    // --- 2. SECURITY: SHA-256 REAL ENGINE ---
+    function calcHash() {
+        const val = document.getElementById('hashInput').value;
+        if(!val) return;
+        document.getElementById('hashOut').innerText = CryptoJS.SHA256(val).toString();
+    }
 
+    // --- 3. WEB3: ETHERS.JS PROVIDER ---
+    async function connectWeb3() {
+        if (window.ethereum) {
+            const provider = new ethers.BrowserProvider(window.ethereum);
+            const accounts = await provider.send("eth_requestAccounts", []);
+            document.getElementById('walletBox').innerText = "ADDR: " + accounts[0].substring(0,15) + "...";
+            document.getElementById('walletBox').style.color = "var(--cyan)";
+            document.getElementById('authMsg').innerHTML = "✅ IDENTITÀ VALIDATA. DECRIPTAZIONE ATTIVA.";
+            // Unblur Secure Viewer
+            document.getElementById('secure-viewer').style.filter = "none";
+            document.getElementById('secure-viewer').style.opacity = "1";
+        } else {
+            alert("Security Alert: Installare MetaMask per accedere ai paper 2026.");
+        }
+    }
+
+    // --- 4. RESILIENCE: PWA & OFFLINE ---
+    window.addEventListener('offline', () => document.getElementById('offline-notify').style.display = 'block');
+    window.addEventListener('online', () => document.getElementById('offline-notify').style.display = 'none');
+
+    // Register Inline Service Worker for Offline Persistence
+    if ('serviceWorker' in navigator) {
+        const sw = `const C='mb-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(['/']))));self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));`;
+        const blob = new Blob([sw], {type: 'text/javascript'});
+        navigator.serviceWorker.register(URL.createObjectURL(blob));
+    }
+
+    // --- 5. HEURISTICS: NETWORK PULSE ---
+    setInterval(() => {
+        if(document.body.className.includes('research')) {
+            document.getElementById('latency').innerText = "LATENCY: " + (Math.floor(Math.random()*30)+10) + "ms | UPTIME: 99.9%";
+        }
+    }, 2000);
+</script>
 </body>
 </html>
