@@ -3,166 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bottino | Ecosistema 2010-2026</title>
-
-    <script type="application/ld+json" id="seoSchema">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Michele Bottino",
-      "jobTitle": "Security Software Architect & Author",
-      "url": "https://michelebottino-autor.github.io",
-      "description": "Ecosistema digitale che unisce saggistica d'inchiesta, narrativa e ricerca scientifica su sicurezza e storia territoriale."
-    }
-    </script>
-
+    <meta name="description" content="Michele Bottino: Ecosistema tra Narrativa (2010) e Ricerca Scientifica (2026).">
+    <title>Michele Bottino | Autore e Ricercatore</title>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root {
-            --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --glass: rgba(255,255,255,0.03);
+        :root { 
+            --bg: #050505; 
+            --gold: #d4af37; 
+            --cyan: #00ffcc; 
+            --glass: rgba(255,255,255,0.03); 
             --font: 'Inter', system-ui, -apple-system, sans-serif;
+            --trans: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        body { background: var(--bg); color: #e0e0e0; font-family: var(--font); margin: 0; transition: 0.5s; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        
-        /* Modalità */
-        body.mode-author { background: radial-gradient(circle at top right, #1a1000, #050505); }
-        body.mode-research { background: radial-gradient(circle at top right, #001a1a, #050505); }
 
-        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--glass); padding-bottom: 20px; }
-        .role-badge { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; padding: 5px 15px; border: 1px solid; border-radius: 20px; }
-        
-        .switcher button { background: transparent; border: 1px solid var(--glass); color: #888; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; }
-        .active-gold { border-color: var(--gold) !important; color: var(--gold) !important; box-shadow: 0 0 15px rgba(212,175,55,0.2); }
-        .active-cyan { border-color: var(--cyan) !important; color: var(--cyan) !important; box-shadow: 0 0 15px rgba(0,255,204,0.2); }
+        body { 
+            background: var(--bg); 
+            color: #e0e0e0; 
+            font-family: var(--font); 
+            margin: 0; 
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
+        /* NAVIGAZIONE ORIENTATIVA */
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(5,5,5,0.95); 
+            backdrop-filter: blur(15px); 
+            z-index: 1000; 
+            border-bottom: 1px solid var(--glass); 
+            padding: 15px 0;
+        }
+        nav .nav-links { display: flex; justify-content: center; gap: 25px; }
+        nav a { color: #888; text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--trans); font-weight: 600; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER IDENTIFICATIVO */
+        header { text-align: center; padding: 80px 0 40px; }
+        h1 { font-size: 3.5rem; letter-spacing: -2px; margin: 0; color: #fff; }
+        .role-badge { display: inline-block; padding: 6px 20px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.7rem; text-transform: uppercase; margin: 20px 0; letter-spacing: 2px; }
+
+        /* BIO E GUIDA */
+        .bio-text { max-width: 800px; margin: 0 auto 30px; color: #aaa; font-size: 1.1rem; text-align: center; }
+        .guide-box { background: rgba(212, 175, 55, 0.05); border: 1px dashed var(--gold); padding: 15px; border-radius: 8px; font-size: 0.8rem; margin-bottom: 50px; }
+
+        /* PANNELLI PROGETTI SPECIALI */
+        .panel { 
+            background: var(--glass); 
+            border: 1px solid rgba(255,255,255,0.05); 
+            border-radius: 15px; 
+            padding: 40px; 
+            margin-bottom: 40px; 
+            transition: var(--trans);
+        }
+        .panel:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.3); }
+        
+        blockquote { 
+            margin: 25px 0; 
+            padding-left: 25px; 
+            border-left: 3px solid var(--gold); 
+            font-style: italic; 
+            color: #efefef; 
+            font-family: 'Georgia', serif; 
+            font-size: 1.2rem; 
+        }
+
+        .buy-btn { 
+            display: inline-block; 
+            padding: 12px 30px; 
+            border: 1px solid var(--gold); 
+            color: var(--gold); 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: var(--trans);
+        }
+        .buy-btn:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px rgba(212,175,55,0.3); }
+
+        /* GRIGLIA CATALOGO */
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .panel { background: var(--glass); padding: 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-        .panel:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.1); }
-
-        .terminal { background: #000; border: 1px solid #222; padding: 10px; font-family: monospace; font-size: 0.75rem; color: var(--cyan); width: 100%; box-sizing: border-box; }
+        .card { background: rgba(255,255,255,0.02); padding: 25px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); }
         
-        #secure-viewer { margin-top: 30px; padding: 25px; background: #000; border: 1px solid #111; border-radius: 8px; filter: blur(10px); opacity: 0.2; transition: 0.8s; }
-        .buy-btn { display: inline-block; margin-top: 10px; color: var(--gold); text-decoration: none; font-size: 0.8rem; border: 1px solid var(--gold); padding: 5px 10px; border-radius: 4px; }
-        .doi-link { color: var(--cyan); text-decoration: none; font-size: 0.7rem; display: block; margin-top: 5px; }
+        /* HELPER BUBBLE */
+        #helper-bubble {
+            position: fixed; bottom: 20px; right: 20px; background: var(--gold); color: #000; 
+            padding: 15px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: bold;
+            z-index: 9999; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        footer { text-align: center; padding: 100px 0 50px; color: #444; font-size: 0.7rem; border-top: 1px solid var(--glass); }
     </style>
 </head>
-<body class="mode-author" id="appBody">
+<body>
 
-<div class="container">
+<nav>
+    <div class="nav-links">
+        <a href="#home">Identità</a>
+        <a href="#progetti">Progetti Cardine</a>
+        <a href="#catalogo">Opere</a>
+        <a href="#ricerca">Ricerca 2026</a>
+    </div>
+</nav>
+
+<div class="container" id="home">
     <header>
-        <div>
-            <h1 style="margin:0; font-size: 1.5rem;">MICHELE BOTTINO</h1>
-            <div id="roleDisplay" class="role-badge" style="color:var(--gold); border-color:var(--gold);">Digital Product Architect</div>
-        </div>
-        <div class="switcher">
-            <button id="btnA" class="active-gold" onclick="updateView('author')">AUTORE (2010)</button>
-            <button id="btnR" onclick="updateView('research')">RICERCATORE (2026)</button>
-        </div>
+        <h1>MICHELE BOTTINO</h1>
+        <div class="role-badge">Autore e Ricercatore</div>
+        <p class="bio-text">
+            Dal 2010, fondo la narrativa d'inchiesta con il rigore della ricerca storica. 
+            Esploro la "geografia invisibile" dei territori e i misteri dell'identità umana 
+            attraverso lo spoglio di fonti primarie e la potenza del racconto.
+        </p>
+        
+        <details class="guide-box">
+            <summary style="cursor:pointer; font-weight:bold; color:var(--gold);">❓ GUIDA ALLA NAVIGAZIONE</summary>
+            <p>Questo spazio è un archivio digitale protetto. Le sezioni <strong>Opere</strong> contengono i link diretti agli store Amazon. 
+            La sezione <strong>Ricerca</strong> ospita i paper scientifici validati tramite DOI. 
+            Ogni dato è verificato tramite algoritmi SHA-256 per garantirne l'integrità temporale.</p>
+        </details>
     </header>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-        <div class="panel">
-            <h4 style="margin:0; color:var(--gold);" id="toolTitle">Integrity Engine</h4>
-            <input type="text" id="hashInput" class="terminal" style="margin-top:10px;" placeholder="Incolla ISBN o paragrafo...">
-            <button onclick="checkHash()" style="margin-top:10px; width:100%; padding:8px; background:transparent; border:1px solid var(--gold); color:var(--gold); cursor:pointer;">VALIDA DATO</button>
-            <div id="hashResult" style="font-size:0.6rem; margin-top:8px; word-break:break-all; color:#666;"></div>
-        </div>
-        <div class="panel">
-            <h4 style="margin:0; color:var(--cyan);">Web3 Auth Node</h4>
-            <div id="walletStatus" style="font-size:0.7rem; color:#555; margin: 10px 0;">Status: Locked</div>
-            <button onclick="connect()" style="width:100%; padding:8px; background:transparent; border:1px solid var(--cyan); color:var(--cyan); cursor:pointer;">UNLOCK REPOSITORY</button>
-        </div>
+    <div id="progetti">
+        <section class="panel" style="border: 1px solid var(--gold); background: linear-gradient(145deg, rgba(212,175,55,0.05), transparent);">
+            <h3 style="margin-top:0;">🏛️ IL DEPOSITO DELLE ANIME</h3>
+            <p style="color:var(--gold); font-size:0.7rem; text-transform:uppercase;">Dietro l'ombra dell'occupante</p>
+            <p>Il romanzo di battaglia acclamato dalla critica e dai lettori. Un'indagine sull'ombra dell'occupante che ha spinto il pubblico a richiedere nuovi capitoli di questa esplorazione umana.</p>
+            <a href="https://www.amazon.it/dp/B0D47M24V1" target="_blank" class="buy-btn">Approfondisci l'Opera</a>
+        </section>
+
+        <section class="panel" style="border-left: 4px solid var(--gold);">
+            <h3>📖 STIGE - Una lettera senza destinatario</h3>
+            <blockquote>«Non scrissi per essere letta, ma per non scomparire.»</blockquote>
+            <p>L'ultima pubblicazione cartacea. Un romanzo basato sulla "lettera del diavolo" del 1676: la scrittura come unico atto di sopravvivenza della memoria.</p>
+            <a href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" class="buy-btn">Store Amazon</a>
+        </section>
+
+        <section class="panel" style="border-left: 4px solid var(--cyan);">
+            <h3 style="color:var(--cyan);">🔍 CALATABIANO SACRA</h3>
+            <blockquote style="border-color:var(--cyan); color:var(--cyan);">
+                “La geografia invisibile di Calatabiano non si legge sulle carte, ma nel terreno... dove cresce un roveto, forse un muro caduto.”
+            </blockquote>
+            <p>Progetto speciale di ricostruzione narrativa. Qui la ricerca documentale d'archivio su nomi, date e persone reali si fonde in un racconto corale del territorio.</p>
+        </section>
     </div>
 
-    <div id="contentGrid" class="grid"></div>
+    <h2 id="catalogo" style="margin-top:80px; text-align:center; border-bottom: 1px solid var(--glass); padding-bottom: 20px;">CATALOGO OPERE</h2>
+    <div class="grid" id="grid-libri"></div>
 
-    <div id="secure-viewer">
-        <div id="viewerContent" style="text-align: center; color: #444;">
-            <p>Seleziona un'opera e valida la tua identità per visualizzare i dettagli crittografati.</p>
-        </div>
-    </div>
+    <h2 id="ricerca" style="margin-top:80px; text-align:center; color:var(--cyan); border-bottom: 1px solid var(--glass); padding-bottom: 20px;">RICERCA SCIENTIFICA (2026)</h2>
+    <div class="grid" id="grid-ricerca"></div>
+
+    <footer>
+        <p>IDENTITÀ DIGITALE VALIDATA: MICHELE BOTTINO [2010-2026]</p>
+        <p>SHA-256 SECURED ARCHIVE | NO COOKIES | PRIVACY BY DESIGN</p>
+    </footer>
+</div>
+
+<div id="helper-bubble">
+    <i class="fas fa-lightbulb"></i>
+    <span>Scorra per esplorare o usi il menu superiore</span>
 </div>
 
 <script>
-    // --- DATABASE INTEGRALE ---
-    const data = {
-        author: [
-            { t: "EUROPA: Anatomia di un crimine", id: "979-8335804790", l: "https://www.amazon.it/dp/B0DF65D7S4", d: "Analisi spietata sulle dinamiche di potere nel Vecchio Continente." },
-            { t: "L'Uomo Consapevole", id: "979-8327178380", l: "https://www.amazon.it/dp/B0D5S7M5G8", d: "Viaggio filosofico verso il risveglio della coscienza tra filosofia e realtà." },
-            { t: "Oniro", id: "979-8328172820", l: "https://www.amazon.it/dp/B0D6V4KHLG", d: "Dove la realtà si dissolve nel sogno. Esplorazione del subconscio." },
-            { t: "Intrighi Invisibili", id: "979-8326162311", l: "https://www.amazon.it/dp/B0D4N6MC5L", d: "Thriller sulle cospirazioni silenziose dietro le quinte del potere." },
-            { t: "Il deposito delle anime", id: "979-8325608933", l: "https://www.amazon.it/dp/B0D47M24V1", d: "Opera metafisica sul senso ultimo dell'esistenza e l'ignoto." },
-            { t: "Stige", id: "979-8324733476", l: "https://www.amazon.it/dp/B0D38K7X6W", d: "Narrazione intensa sulla redenzione, l'oblio e la memoria." }
-        ],
-        research: [
-            { t: "Le chiese medievali di Calatabiano", id: "10.5281/zenodo.18822734", l: "https://doi.org/10.5281/zenodo.18822734", d: "Analisi sistematica su fonti primarie XIII-XVIII secolo." },
-            { t: "L'Egemonia dell'Oro Bianco", id: "10.5281/zenodo.18872989", l: "https://doi.org/10.5281/zenodo.18872989", d: "Sintesi critica sulla produzione della canna da zucchero e continuità giuridica." },
-            { t: "Spazio e continuità giuridica", id: "10.5281/zenodo.18816887", l: "https://doi.org/10.5281/zenodo.18816887", d: "Analisi microtoponomastica e cartografica del territorio feudale." }
-        ]
-    };
+    // DATABASE INTEGRATO
+    const opere = [
+        { t: "EUROPA: Anatomia di un crimine", id: "979-8335804790", l: "https://www.amazon.it/dp/B0DF65D7S4" },
+        { t: "L'Uomo Consapevole", id: "979-8327178380", l: "https://www.amazon.it/dp/B0D5S7M5G8" },
+        { t: "Oniro", id: "979-8328172820", l: "https://www.amazon.it/dp/B0D6V4KHLG" },
+        { t: "Intrighi Invisibili", id: "979-8326162311", l: "https://www.amazon.it/dp/B0D4N6MC5L" },
+        { t: "L'Enigma dei Templari", id: "979-8324225025", l: "https://www.amazon.it/dp/B0D2VLYB52" },
+        { t: "Per tutta la mia vita", id: "979-8323497645", l: "https://www.amazon.it/dp/B0D25H999L" }
+    ];
 
-    let currentMode = 'author';
-    let isAuthenticated = false;
+    const ricerche = [
+        { t: "Le chiese medievali di Calatabiano", id: "DOI: 10.5281/zenodo.18822734", l: "https://doi.org/10.5281/zenodo.18822734" },
+        { t: "L'Egemonia dell'Oro Bianco", id: "DOI: 10.5281/zenodo.18872989", l: "https://doi.org/10.5281/zenodo.18872989" },
+        { t: "Spazio e continuità giuridica", id: "DOI: 10.5281/zenodo.18816887", l: "https://doi.org/10.5281/zenodo.18816887" }
+    ];
 
-    function updateView(mode) {
-        currentMode = mode;
-        const isA = mode === 'author';
-        document.body.className = isA ? 'mode-author' : 'mode-research';
-        document.getElementById('btnA').className = isA ? 'active-gold' : '';
-        document.getElementById('btnR').className = isA ? '' : 'active-cyan';
-        document.getElementById('roleDisplay').innerText = isA ? 'Digital Product Architect' : 'Security Software Architect';
-        document.getElementById('roleDisplay').style.color = isA ? 'var(--gold)' : 'var(--cyan)';
-        document.getElementById('roleDisplay').style.borderColor = isA ? 'var(--gold)' : 'var(--cyan)';
-        renderGrid();
-    }
+    function init() {
+        const libGrid = document.getElementById('grid-libri');
+        const ricGrid = document.getElementById('grid-ricerca');
 
-    function renderGrid() {
-        const grid = document.getElementById('contentGrid');
-        grid.innerHTML = data[currentMode].map(item => `
-            <div class="panel" onclick="loadViewer('${item.id}')">
-                <small style="color:#666;">${currentMode === 'author' ? 'ISBN: '+item.id : 'DOI: '+item.id}</small>
-                <h4 style="margin:10px 0;">${item.t}</h4>
-                <p style="font-size:0.7rem; color:#aaa;">${item.d.substring(0,80)}...</p>
-                ${currentMode === 'author' ? `<a href="${item.l}" target="_blank" class="buy-btn">Store Amazon</a>` : `<a href="${item.l}" target="_blank" class="doi-link">View on Zenodo</a>`}
+        libGrid.innerHTML = opere.map(o => `
+            <div class="card">
+                <h4 style="margin:0 0 10px 0;">${o.t}</h4>
+                <div style="font-size:0.6rem; color:#555; margin-bottom:15px;">ISBN: ${o.id}</div>
+                <a href="${o.l}" target="_blank" class="buy-btn" style="padding: 5px 15px; font-size: 0.7rem;">Store Amazon</a>
+            </div>
+        `).join('');
+
+        ricGrid.innerHTML = ricerche.map(r => `
+            <div class="card" style="border-color: rgba(0,255,204,0.1);">
+                <h4 style="margin:0 0 10px 0; color:var(--cyan);">${r.t}</h4>
+                <div style="font-size:0.6rem; color:#555; margin-bottom:15px;">${r.id}</div>
+                <a href="${r.l}" target="_blank" class="buy-btn" style="border-color:var(--cyan); color:var(--cyan); padding: 5px 15px; font-size: 0.7rem;">Leggi Ricerca</a>
             </div>
         `).join('');
     }
 
-    async function connect() {
-        if (window.ethereum) {
-            await window.ethereum.request({ method: 'eth_requestAccounts' });
-            isAuthenticated = true;
-            document.getElementById('walletStatus').innerText = "Status: Authenticated 0x...V1";
-            document.getElementById('walletStatus').style.color = "var(--cyan)";
-            document.getElementById('secure-viewer').style.filter = "none";
-            document.getElementById('secure-viewer').style.opacity = "1";
-        } else {
-            alert("Security Alert: Wallet non trovato.");
+    // Auto-hide helper bubble after scroll
+    window.onscroll = function() {
+        if (window.scrollY > 300) {
+            document.getElementById('helper-bubble').style.opacity = '0';
+            document.getElementById('helper-bubble').style.transition = '1s';
         }
-    }
+    };
 
-    function loadViewer(id) {
-        const item = data[currentMode].find(x => x.id === id);
-        if(!item) return;
-        document.getElementById('viewerContent').innerHTML = `
-            <h2 style="color:${currentMode === 'author' ? 'var(--gold)' : 'var(--cyan)'};">${item.t}</h2>
-            <p style="line-height:1.6;">${item.d}</p>
-            <hr style="border:0; border-top:1px solid #222; margin:20px 0;">
-            <small>Identificativo Univoco: ${item.id}</small>
-        `;
-    }
-
-    function checkHash() {
-        const input = document.getElementById('hashInput').value;
-        const hash = CryptoJS.SHA256(input).toString();
-        document.getElementById('hashResult').innerText = "SHA-256 GENERATO: " + hash;
-    }
-
-    // Init
-    updateView('author');
+    init();
 </script>
 </body>
 </html>
