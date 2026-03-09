@@ -3,137 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Michele Bottino | Archivio 2026</title>
+    <title>Michele Bottino | Archivio Strutturato</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;700&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Parisienne&display=swap" rel="stylesheet">
     
     <style>
-        :root { --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --music: #ff00ff; --glass: rgba(255,255,255,0.03); }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg); color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        :root { 
+            --bg-deep: #050505; 
+            --bg-light: #121212; /* Nero più chiaro per profondità */
+            --gold: #d4af37; 
+            --cyan: #00ffcc; 
+            --music: #ff00ff; 
+            --glass: rgba(255,255,255,0.04); 
+        }
 
-        /* MONOGRAMMA MB - FILIGRANA INTRECCIATA */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background: radial-gradient(circle at top, var(--bg-light) 0%, var(--bg-deep) 100%); 
+            color: #e0e0e0; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden; 
+            scroll-behavior: smooth;
+        }
+
+        /* MONOGRAMMA FILIGRANA */
         .watermark-wrap { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; display: flex; justify-content: center; align-items: center; }
-        .mb-sigillo { font-family: 'Parisienne', cursive; font-size: 32vw; color: var(--gold); opacity: 0.06; filter: blur(2px); white-space: nowrap; letter-spacing: -25px; transform: translateY(-5%); }
+        .mb-sigillo { font-family: 'Parisienne', cursive; font-size: 30vw; color: var(--gold); opacity: 0.05; filter: blur(2px); white-space: nowrap; letter-spacing: -20px; }
+
+        /* NAV & MENU */
+        nav { position: sticky; top: 0; background: rgba(18,18,18,0.9); backdrop-filter: blur(15px); z-index: 2000; padding: 18px 25px; border-bottom: 1px solid rgba(212,175,55,0.15); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: 700; font-size: 0.85rem; letter-spacing: 2px; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+        .hamburger { font-size: 1.4rem; color: var(--gold); cursor: pointer; }
+        
+        .nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--bg-deep); display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.5s; z-index: 2050; }
+        .nav-menu.active { right: 0; }
+        .nav-menu a { font-family: 'Cinzel', serif; font-size: 1.6rem; color: #fff; text-decoration: none; margin: 15px 0; letter-spacing: 3px; }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
-        nav { position: sticky; top: 0; background: rgba(5,5,5,0.95); backdrop-filter: blur(15px); z-index: 1000; padding: 20px; border-bottom: 1px solid rgba(212,175,55,0.1); display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
+        header { text-align: center; padding: 100px 10px 50px; }
+        h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 8vw, 3.8rem); color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .badge { display: inline-block; padding: 6px 20px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.6rem; text-transform: uppercase; margin: 20px 0; letter-spacing: 2px; background: rgba(212,175,55,0.05); }
 
-        header { text-align: center; padding: 120px 10px 60px; }
-        h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 8vw, 3.8rem); color: #fff; margin-bottom: 15px; letter-spacing: 2px; }
-        .badge { display: inline-block; padding: 6px 22px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.6rem; text-transform: uppercase; margin: 15px 0; letter-spacing: 3px; }
+        .bio-box { background: var(--glass); padding: 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 60px; line-height: 1.8; text-align: center; color: #ccc; }
 
-        .bio-text { max-width: 800px; margin: 40px auto; text-align: center; line-height: 1.8; color: #bbb; font-weight: 300; font-size: 1.05rem; background: var(--glass); padding: 30px; border-radius: 15px; }
+        h2 { font-family: 'Cinzel', serif; font-size: 1rem; text-transform: uppercase; color: var(--gold); margin: 60px 0 30px; letter-spacing: 3px; display: flex; align-items: center; }
+        h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin-left: 15px; opacity: 0.2; }
 
-        h2 { font-family: 'Cinzel', serif; font-size: 1rem; text-transform: uppercase; color: var(--gold); margin: 80px 0 30px; letter-spacing: 4px; border-left: 4px solid var(--gold); padding-left: 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 4px; backdrop-filter: blur(10px); transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        /* GRID & CARDS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .card { 
+            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); 
+            padding: 25px; border-radius: 12px; transition: 0.4s; 
+            display: none; /* Nascondiamo di base, JavaScript le mostrerà */
+            backdrop-filter: blur(5px);
+        }
+        .card.visible { display: flex; flex-direction: column; justify-content: space-between; animation: fadeIn 0.6s ease forwards; }
 
-        .links-group { display: flex; gap: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
-        .links-group a { color: #888; text-decoration: none; font-size: 1.3rem; transition: 0.3s; }
-        .links-group a:hover { color: var(--gold); }
-        
-        .btn-action { display: block; text-align: center; padding: 14px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.7rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; margin-top: 20px; }
-        .btn-action:hover { background: var(--gold); color: #000; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        footer { text-align: center; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 80px; }
+        .btn-expand { 
+            display: block; width: fit-content; margin: 30px auto; padding: 12px 30px; 
+            background: transparent; border: 1px solid var(--gold); color: var(--gold); 
+            font-family: 'Cinzel'; font-size: 0.7rem; cursor: pointer; border-radius: 4px; transition: 0.3s;
+        }
+        .btn-expand:hover { background: var(--gold); color: #000; box-shadow: 0 0 15px rgba(212,175,55,0.3); }
+
+        .btn-card { display: block; text-align: center; padding: 12px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.65rem; font-weight: bold; border-radius: 4px; margin-top: 15px; text-transform: uppercase; }
+
+        footer { text-align: center; padding: 100px 0; opacity: 0.5; font-size: 0.7rem; letter-spacing: 1px; }
+
+        /* STILE ACADEMIA/ORCID */
+        .ac-wrap { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .ac-tag { padding: 8px 15px; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none; font-size: 0.7rem; border-radius: 4px; }
     </style>
 </head>
 <body>
 
     <div class="watermark-wrap"><div class="mb-sigillo">MB</div></div>
 
-    <nav><div class="logo">MICHELE BOTTINO | ARCHIVE</div><i class="fas fa-bars" style="color:var(--gold)"></i></nav>
+    <nav>
+        <div class="logo">MICHELE BOTTINO</div>
+        <div class="hamburger" id="hamBtn"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <div class="nav-menu" id="sideMenu">
+        <a href="#ricerca" onclick="toggleMenu()">Ricerca</a>
+        <a href="#libri" onclick="toggleMenu()">Libri</a>
+        <a href="#musica" onclick="toggleMenu()">Musica</a>
+    </div>
 
     <div class="container">
         <header>
             <h1>MICHELE BOTTINO</h1>
             <div class="badge">Digital Product Architect • Autore • Ricercatore</div>
-            <div class="bio-text">
-                Autore dal <strong>2010</strong> e Ricercatore dal <strong>2026</strong>. <br><br>
-                Come <strong>Digital Product Architect</strong> e <strong>Security Software Architect</strong>, incarno la convergenza tra la costruzione tecnica degli ecosistemi web, l'estetica della comunicazione e la protezione dell'ingegno. Questo archivio è la sintesi di un percorso che unisce la narrazione letteraria alla ricerca scientifica territoriale.
+            <div class="bio-box">
+                <strong>Evoluzione Professionale:</strong> Autore (2010) — Ricercatore (2026).<br>
+                Sintesi tra Security Software Architecture e ricerca storica territoriale. 
+                Un ecosistema digitale protetto per la conservazione dell'ingegno intellettuale.
             </div>
         </header>
 
         <section id="ricerca">
-            <h2>🔬 Repository Scientifico 2026</h2>
-            <div style="margin-bottom:30px; display:flex; gap:15px;">
-                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:0.8rem; border:1px solid var(--cyan); padding:10px 20px; border-radius:5px;">ORCID Profile</a>
-                <a href="https://www.academia.edu/" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:0.8rem; border:1px solid var(--cyan); padding:10px 20px; border-radius:5px;">Academia.edu</a>
+            <h2>🔬 Repository Scientifico</h2>
+            <div class="ac-wrap">
+                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" class="ac-tag">ORCID</a>
+                <a href="https://www.academia.edu/" target="_blank" class="ac-tag">Academia.edu</a>
             </div>
-            <div class="grid" id="ricerca-grid"></div>
+            <div class="grid" id="grid-ricerca"></div>
+            <button class="btn-expand" onclick="showMore('grid-ricerca')">Espandi Archivio Ricerca</button>
         </section>
 
         <section id="libri">
-            <h2>📚 Produzione Letteraria (2010-2026)</h2>
-            <div class="grid" id="libri-grid"></div>
+            <h2>📚 Produzione Letteraria</h2>
+            <div class="grid" id="grid-libri"></div>
+            <button class="btn-expand" onclick="showMore('grid-libri')">Vedi Catalogo Completo</button>
         </section>
 
         <section id="musica">
-            <h2>🎵 Parolistica & Media</h2>
-            <div class="grid" id="musica-grid"></div>
+            <h2>🎵 Sezione Parolistica</h2>
+            <div class="grid" id="grid-musica"></div>
+            <button class="btn-expand" onclick="showMore('grid-musica')">Mostra Altri Brani</button>
         </section>
 
         <footer>
-            <p>© 2026 MICHELE BOTTINO | ARCHIVE SECURED</p>
+            <p>© 2026 MICHELE BOTTINO | DIGITAL ARCHIVE SECURED</p>
         </footer>
     </div>
 
 <script>
-    const dbRicerca = [
-        { t: "L'Egemonia dell'Oro Bianco", d: "DOI: 10.5281/zenodo.18872989", u: "https://zenodo.org/records/18872989" },
-        { t: "Calatabiano: spazio e territorio", d: "DOI: 10.5281/zenodo.18816887", u: "https://zenodo.org/records/18816887" },
-        { t: "Il Testimone di Pietra (Vol. I)", d: "DOI: 10.5281/zenodo.14934053", u: "https://doi.org/10.5281/zenodo.14934053" },
-        { t: "Investigazione Mirulla 1484", d: "Dataset CERN/Zenodo", u: "https://zenodo.org/" },
-        { t: "Le chiese medievali", d: "DOI: 10.5281/zenodo.18822734", u: "https://doi.org/10.5281/zenodo.18822734" },
-        { t: "Storia Critica del Territorio", d: "DOI: 10.5281/zenodo.18805142", u: "https://doi.org/10.5281/zenodo.18805142" },
-        { t: "Investitura Baronia 1487", d: "DOI: 10.5281/zenodo.18812067", u: "https://doi.org/10.5281/zenodo.18812067" }
-    ];
+    // MENU LOGIC
+    const hamBtn = document.getElementById('hamBtn');
+    const sideMenu = document.getElementById('sideMenu');
+    function toggleMenu() {
+        sideMenu.classList.toggle('active');
+        hamBtn.innerHTML = sideMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    }
+    hamBtn.onclick = toggleMenu;
 
-    const dbLibri = [
-        { t: "Il deposito delle anime", d: "Dietro l'ombra dell'occupante", u: "https://www.amazon.it/dp/B0D47M24V1" },
-        { t: "Stige", d: "Una lettera senza destinatario", u: "https://www.amazon.it/dp/B0D38K7X6W" },
-        { t: "EUROPA: Anatomia di un crimine", d: "Inchiesta narrativa", u: "#" },
-        { t: "L'Uomo Consapevole", d: "Saggio filosofico", u: "#" },
-        { t: "Oniro", d: "Dove la realtà si dissolve", u: "#" },
-        { t: "Intrighi Invisibili", d: "L'oscura verità", u: "#" },
-        { t: "Calatabiano Sacra", d: "Il mistero della fede", u: "#" },
-        { t: "L’Enigma dei Templari", d: "Alla ricerca della verità", u: "#" },
-        { t: "Per tutta la mia vita", d: "Un racconto d’amore", u: "#" }
-    ];
+    // DATABASE COMPLETO
+    const data = {
+        ricerca: [
+            { t: "L'Egemonia dell'Oro Bianco", d: "DOI: 10.5281/zenodo.18872989", u: "https://zenodo.org/records/18872989" },
+            { t: "Calatabiano: spazio e territorio", d: "DOI: 10.5281/zenodo.18816887", u: "https://zenodo.org/records/18816887" },
+            { t: "Il Testimone di Pietra", d: "DOI: 10.5281/zenodo.14934053", u: "https://doi.org/10.5281/zenodo.14934053" },
+            { t: "Investitura Baronia 1487", d: "DOI: 10.5281/zenodo.18812067", u: "#" },
+            { t: "Le chiese medievali", d: "DOI: 10.5281/zenodo.18822734", u: "#" }
+        ],
+        libri: [
+            { t: "Il deposito delle anime", d: "Dietro l'ombra dell'occupante", u: "https://www.amazon.it/dp/B0D47M24V1" },
+            { t: "Stige", d: "Lettera senza destinatario", u: "https://www.amazon.it/dp/B0D38K7X6W" },
+            { t: "EUROPA: Anatomia di un crimine", d: "Inchiesta narrativa", u: "#" },
+            { t: "Oniro", d: "Realtà dissolta", u: "#" },
+            { t: "L'Enigma dei Templari", d: "Mistero Storico", u: "#" },
+            { t: "Intrighi Invisibili", d: "Verità celate", u: "#" }
+        ],
+        musica: [
+            { t: "Un’altra Notte a Metà", u: "#" },
+            { t: "Riconquistarti", u: "#" },
+            { t: "Casanova", u: "#" },
+            { t: "Stige Theme", u: "#" }
+        ]
+    };
 
-    const dbMusica = [
-        { t: "Un’altra Notte a Metà", yt: "#", sp: "#" },
-        { t: "Riconquistarti", yt: "#", sp: "#" },
-        { t: "Casanova", yt: "#", sp: "#" },
-        { t: "Stige Theme", yt: "#", sp: "#" }
-    ];
-
-    // Rendering
-    document.getElementById('ricerca-grid').innerHTML = dbRicerca.map(r => `
-        <div class="card" style="border-bottom: 2px solid var(--cyan);">
-            <h3 style="font-size:0.95rem;">${r.t}</h3>
-            <code style="font-size:0.6rem; color:var(--cyan); margin:10px 0; display:block;">${r.d}</code>
-            <a href="${r.u}" target="_blank" class="btn-action" style="border-color:var(--cyan); color:var(--cyan);">Apri Paper</a>
-        </div>`).join('');
-
-    document.getElementById('libri-grid').innerHTML = dbLibri.map(l => `
-        <div class="card">
-            <h3 style="font-size:1rem;">${l.t}</h3><p style="font-size:0.75rem; color:#777; margin:10px 0;">${l.d}</p>
-            <a href="${l.u}" target="_blank" class="btn-action">Vedi Opera</a>
-        </div>`).join('');
-
-    document.getElementById('musica-grid').innerHTML = dbMusica.map(m => `
-        <div class="card" style="border-left: 2px solid var(--music);">
-            <h3>${m.t}</h3>
-            <div class="links-group">
-                <a href="${m.yt}" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="${m.sp}" target="_blank"><i class="fab fa-spotify"></i></a>
+    // FUNZIONE PER GENERARE CARDS
+    function render(sectionId, items) {
+        const container = document.getElementById(sectionId);
+        container.innerHTML = items.map((item, index) => `
+            <div class="card ${index < 2 ? 'visible' : ''}">
+                <h3 style="font-size:0.9rem; color:white;">${item.t}</h3>
+                <p style="font-size:0.7rem; color:#888; margin:10px 0;">${item.d || 'Media Content'}</p>
+                <a href="${item.u}" target="_blank" class="btn-card">Dettagli</a>
             </div>
-        </div>`).join('');
+        `).join('');
+    }
+
+    // FUNZIONE ESPANDI
+    function showMore(id) {
+        const cards = document.querySelectorAll(`#${id} .card`);
+        cards.forEach(c => c.classList.add('visible'));
+        event.target.style.display = 'none'; // Nasconde il tasto dopo il clic
+    }
+
+    // INIZIALIZZAZIONE
+    render('grid-ricerca', data.ricerca);
+    render('grid-libri', data.libri);
+    render('grid-musica', data.musica);
 </script>
 </body>
 </html>
