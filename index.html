@@ -4,34 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#050505">
-    <title>Michele Bottino | Archivio 2026</title>
+    <title>Michele Bottino | Digital Product Architect & Autore</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root { --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --music: #ff00ff; --glass: rgba(255,255,255,0.03); }
-        body { background: var(--bg); color: #e0e0e0; font-family: 'Inter', sans-serif; margin: 0; padding-top: env(safe-area-inset-top); overflow-x: hidden; line-height: 1.6; scroll-behavior: smooth; }
-        
-        nav { position: sticky; top: 0; background: rgba(5,5,5,0.98); backdrop-filter: blur(15px); z-index: 2000; border-bottom: 1px solid var(--glass); padding: calc(15px + env(safe-area-inset-top)) 20px 15px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-text { color: var(--gold); font-weight: 800; letter-spacing: 2px; font-size: 0.9rem; }
-        .hamburger { cursor: pointer; color: var(--gold); font-size: 1.5rem; }
-        .nav-links { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: rgba(5,5,5,0.99); display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.4s; z-index: 1999; }
-        .nav-links.active { right: 0; }
-        .nav-links a { font-size: 1.5rem; margin: 15px 0; color: #fff; text-decoration: none; text-transform: uppercase; }
+        :root { 
+            --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --music: #ff00ff;
+            --glass: rgba(255,255,255,0.03); --font: 'Inter', sans-serif;
+        }
 
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body { 
+            background: var(--bg); color: #e0e0e0; font-family: var(--font); 
+            margin: 0; padding-top: env(safe-area-inset-top); overflow-x: hidden;
+            line-height: 1.6; scroll-behavior: smooth;
+        }
+
+        /* NAVIGATION & MOBILE OVERLAY */
+        nav { 
+            position: sticky; top: 0; background: rgba(5,5,5,0.95); 
+            backdrop-filter: blur(15px); z-index: 2000; 
+            border-bottom: 1px solid var(--glass); 
+            padding: calc(15px + env(safe-area-inset-top)) 20px 15px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo-text { color: var(--gold); font-weight: 800; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase; }
+
+        .hamburger { cursor: pointer; color: var(--gold); font-size: 1.5rem; transition: 0.3s; z-index: 2001; }
+
+        .nav-links { 
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+            background: rgba(5,5,5,0.98); backdrop-filter: blur(25px);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1999;
+        }
+        .nav-links.active { right: 0; }
+        .nav-links a { 
+            font-size: 1.6rem; margin: 15px 0; color: #fff; text-decoration: none; 
+            text-transform: uppercase; font-weight: 700; letter-spacing: 2px;
+        }
+
+        /* CONTAINER & HEADER */
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
         header { text-align: center; padding: 60px 10px 40px; }
         h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); letter-spacing: -2px; color: #fff; margin: 0; }
-        .role-badge { display: inline-block; padding: 5px 15px; border: 1px solid var(--gold); color: var(--gold); border-radius: 20px; font-size: 0.65rem; text-transform: uppercase; margin: 15px 0; }
-        
-        .panel { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; padding: 30px 20px; margin-bottom: 30px; }
+        .role-badge { 
+            display: inline-block; padding: 6px 18px; border: 1px solid var(--gold); 
+            color: var(--gold); border-radius: 30px; font-size: 0.65rem; 
+            text-transform: uppercase; margin: 20px 0; letter-spacing: 1.5px;
+        }
+
+        .bio-box { max-width: 800px; margin: 0 auto 50px; color: #999; text-align: center; font-size: 1rem; }
+
+        /* GRID SYSTEM */
+        h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: rgba(255,255,255,0.02); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        
+        .panel { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; padding: 35px 25px; margin-bottom: 30px; }
+        .card { 
+            background: rgba(255,255,255,0.01); padding: 25px; border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.05); transition: 0.4s;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); background: rgba(255,255,255,0.03); }
 
-        .buy-btn { display: inline-block; padding: 12px 20px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; text-align: center; cursor: pointer; transition: 0.3s; width: 100%; box-sizing: border-box; }
+        /* BUTTONS */
+        .buy-btn { 
+            display: inline-block; padding: 12px 20px; border: 1px solid var(--gold); 
+            color: var(--gold); text-decoration: none; border-radius: 4px; 
+            font-size: 0.7rem; font-weight: bold; text-transform: uppercase; 
+            text-align: center; cursor: pointer; transition: 0.3s; width: 100%;
+        }
         .buy-btn:hover { background: var(--gold); color: #000; }
-        .load-more { margin: 30px auto; display: block; width: 220px; background: transparent; }
+        
+        .load-more-container { text-align: center; margin: 40px 0; }
+        .btn-outline { background: transparent; border: 1px solid #333; color: #888; padding: 10px 30px; border-radius: 30px; cursor: pointer; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
-        input, textarea { width: 100%; background: var(--glass); border: 1px solid #333; padding: 12px; color: #fff; border-radius: 4px; font-family: inherit; margin-top: 10px; }
+        /* CONTACT FORM FIX */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr; } }
+        
+        input, textarea { 
+            width: 100%; background: rgba(255,255,255,0.02); border: 1px solid #222; 
+            padding: 15px; color: #fff; border-radius: 8px; font-family: inherit;
+        }
+        input:focus, textarea:focus { border-color: var(--gold); outline: none; }
+
+        /* FOOTER & ANALYTICS */
         footer { text-align: center; padding: 80px 0; border-top: 1px solid var(--glass); }
+        .visitor-counter { margin-top: 30px; opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -41,7 +107,7 @@
     <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     <div class="nav-links" id="navLinks">
         <a href="#home">Identità</a>
-        <a href="#progetti">Opere</a>
+        <a href="#opere">Opere</a>
         <a href="#musica">Parolistica</a>
         <a href="#ricerca">Ricerca</a>
         <a href="#contatti">Contatti</a>
@@ -51,49 +117,56 @@
 <div class="container" id="home">
     <header>
         <h1>MICHELE BOTTINO</h1>
-        <div class="role-badge">Autore & Ricercatore</div>
-        <p style="max-width: 800px; margin: 0 auto; color: #888;">
-            Inizio carriera autore: 2010. Inizio carriera ricercatore: 2026. <br>
-            Un ecosistema digitale che fonde narrazione e documentazione scientifica.
-        </p>
+        <div class="role-badge">Digital Product Architect • Autore</div>
+        <div class="bio-box">
+            Inizio carriera Autore: <strong>2010</strong>. Inizio carriera Ricercatore: <strong>2026</strong>.
+            Un sistema ibrido che integra la costruzione tecnica web, l'estetica grafica e la psicologia della comunicazione pubblicitaria.
+        </div>
     </header>
 
-    <h2 id="progetti" style="color:var(--gold); margin-top:60px;">📚 OPERE LETTERARIE</h2>
+    <h2 id="opere" style="color:var(--gold);">📚 Catalogo Editoriale</h2>
     <div class="grid" id="grid-libri"></div>
-    <button id="btn-more-books" class="buy-btn load-more">Mostra altre opere</button>
+    <div class="load-more-container">
+        <button id="btn-load-libri" class="btn-outline">Esplora altre opere</button>
+    </div>
 
-    <h2 id="musica" style="color:var(--music); margin-top:60px;">🎵 PAROLISTICA</h2>
+    <h2 id="musica" style="color:var(--music);">🎵 Parolistica & Testi</h2>
     <div class="grid" id="grid-musica"></div>
-    <button id="btn-more-music" class="buy-btn load-more">Mostra altri titoli</button>
+    <div class="load-more-container">
+        <button id="btn-load-musica" class="btn-outline">Vedi altri titoli</button>
+    </div>
 
-    <h2 id="ricerca" style="color:var(--cyan); margin-top:60px;">🔬 RICERCA SCIENTIFICA</h2>
+    <h2 id="ricerca" style="color:var(--cyan);">🔬 Ricerca Scientifica 2026</h2>
     <div class="grid" id="grid-ricerca"></div>
 
-    <section class="panel" style="border: 1px dashed var(--cyan); margin-top: 60px;">
-        <h3 style="color:var(--cyan); font-size: 1rem;">ARCHITETTURA PROTETTA</h3>
-        <p style="font-size:0.75rem; color:#aaa;">Sistema originale MB-DPA 2026. Tutti i diritti riservati.</p>
+    <section class="panel" style="border: 1px dashed var(--cyan); margin-top: 80px; text-align: center;">
+        <h3 style="color:var(--cyan); margin:0; font-size:0.9rem;">ARCHITETTURA ORIGINALE PROTETTA</h3>
+        <p style="font-size:0.7rem; color:#666; margin-top:10px;">Sistema MB-DPA-2026. Tutela della proprietà intellettuale via marcatura temporale digitale.</p>
     </section>
 
-    <section id="contatti" class="panel" style="margin-top:60px; border-top:2px solid var(--gold);">
-        <h2 style="text-align:center;">CONTATTO</h2>
+    <section id="contatti" class="panel" style="margin-top: 40px; border-top: 2px solid var(--gold);">
+        <h2 style="text-align:center; color:#fff;">CONTATTO DIRETTO</h2>
         <form action="https://formspree.io/f/xeoqnora" method="POST">
-            <input type="text" name="name" placeholder="Nome" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="4" placeholder="Messaggio..." required></textarea>
-            <button type="submit" class="buy-btn" style="margin-top:15px; background:var(--gold); color:#000; border:none; padding:15px;">Invia</button>
+            <div class="contact-grid">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <textarea name="message" rows="5" placeholder="In cosa posso esserti utile?" required></textarea>
+            <button type="submit" class="buy-btn" style="margin-top:20px; background:var(--gold); color:#000; border:none; padding:18px; font-size:0.8rem;">Invia Messaggio</button>
         </form>
     </section>
 
     <footer>
-        <p>© 2026 MICHELE BOTTINO</p>
-        <div style="margin-top:20px;">
+        <p>© 2026 MICHELE BOTTINO | Tutti i diritti riservati</p>
+        <p style="font-size:0.6rem; color:#444; margin-top:5px;">CC BY-NC-ND 4.0 International License</p>
+        <div class="visitor-counter">
             <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmichele-bottino-autor.github.io&count_bg=%23D4AF37&title_bg=%23333333&title=VISITS" alt="Visits">
         </div>
     </footer>
 </div>
 
 <script>
-    // MENU
+    /* 1. LOGICA NAVIGAZIONE */
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
@@ -107,68 +180,83 @@
         hamburger.querySelector('i').classList.remove('fa-times');
     }));
 
-    // DATA
-    const libri = [
-        { t: "Il deposito delle anime", d: "Dietro l'ombra dell'occupante", u: "https://www.amazon.it/dp/B0D47M24V1" },
-        { t: "Stige", d: "Una lettera senza destinatario", u: "https://www.amazon.it/dp/B0D38K7X6W" },
-        { t: "Europa: Anatomia di un crimine", d: "Inchiesta narrativa", u: "#" },
-        { t: "L'Uomo Consapevole", d: "Saggio", u: "#" },
-        { t: "Oniro", d: "Dove la realtà si dissolve", u: "#" },
-        { t: "Intrighi Invisibili", d: "L'oscura verità", u: "#" }
+    /* 2. DATABASE COMPLETO (INTEGRATO DA MEMORIA) */
+    const dbLibri = [
+        { t: "Il deposito delle anime", d: "Dietro l'ombra dell'occupante", link: "https://www.amazon.it/dp/B0D47M24V1" },
+        { t: "Stige", d: "Una lettera senza destinatario", link: "https://www.amazon.it/dp/B0D38K7X6W" },
+        { t: "EUROPA: Anatomia di un crimine", d: "Inchiesta narrativa", link: "#" },
+        { t: "L'Uomo Consapevole", d: "Saggio filosofico", link: "#" },
+        { t: "Oniro", d: "Dove la realtà si dissolve", link: "#" },
+        { t: "Intrighi Invisibili", d: "L'oscura verità", link: "#" },
+        { t: "Calatabiano Sacra", d: "Il mistero della fede", link: "#" },
+        { t: "L'Enigma dei Templari", d: "Ricerca storica", link: "#" },
+        { t: "Per tutta la mia vita", d: "Racconto", link: "#" }
     ];
 
-    const canzoni = [
-        { t: "Un’altra Notte a Metà", s: "#" },
-        { t: "Riconquistarti", s: "#" },
-        { t: "Casanova", s: "#" },
-        { t: "Stige Theme", s: "#" }
+    const dbMusica = [
+        { t: "Un’altra Notte a Metà", s: "spotify:album:7tevKrkG2G5bKmBJr6scgH" },
+        { t: "Riconquistarti", s: "spotify:album:7B6tNtPLvcgXLrWbCJrLON" },
+        { t: "Casanova", s: "spotify:album:2jEcc8ueUmrZ5Y835vT8KP" },
+        { t: "Stige (Official Theme)", s: "#" },
+        { t: "Parolistica Vol.1", s: "#" }
     ];
 
-    const ricerca = [
-        { t: "Le chiese medievali di Calatabiano", id: "DOI: 10.5281/zenodo.18822734", l: "https://doi.org/10.5281/zenodo.18822734" }
+    const dbRicerca = [
+        { t: "Le chiese medievali di Calatabiano", id: "DOI: 10.5281/zenodo.18822734", l: "https://doi.org/10.5281/zenodo.18822734" },
+        { t: "L'Egemonia dell'Oro Bianco", id: "DOI: 10.5281/zenodo.18872989", l: "https://doi.org/10.5281/zenodo.18872989" }
     ];
 
-    let showAllBooks = false;
-    let showAllMusic = false;
+    /* 3. LOGICA DI RENDERING ASINCRONO */
+    let expandedLibri = false;
+    let expandedMusica = false;
 
-    function renderBooks() {
-        const limit = showAllBooks ? libri.length : 2;
-        document.getElementById('grid-libri').innerHTML = libri.slice(0, limit).map(l => `
-            <div class="card" style="border-top: 3px solid var(--gold);">
-                <h4 style="margin:0;">${l.t}</h4>
-                <p style="font-size:0.7rem; color:#888;">${l.d}</p>
-                <a href="${l.u}" target="_blank" class="buy-btn" style="margin-top:10px;">Dettagli</a>
+    function renderLibri() {
+        const target = document.getElementById('grid-libri');
+        const list = expandedLibri ? dbLibri : dbLibri.slice(0, 3);
+        target.innerHTML = list.map(l => `
+            <div class="card" style="border-top: 2px solid var(--gold);">
+                <div>
+                    <h3 style="margin:0; font-size:1.1rem; color:#fff;">${l.t}</h3>
+                    <p style="font-size:0.75rem; color:#777; margin:10px 0 20px;">${l.d}</p>
+                </div>
+                <a href="${l.link}" target="_blank" rel="noopener" class="buy-btn">Dettagli Opera</a>
             </div>
         `).join('');
-        document.getElementById('btn-more-books').innerText = showAllBooks ? "Mostra meno" : "Mostra altre opere";
+        document.getElementById('btn-load-libri').innerText = expandedLibri ? "Mostra Meno" : "Esplora Altre Opere";
     }
 
-    function renderMusic() {
-        const limit = showAllMusic ? canzoni.length : 3;
-        document.getElementById('grid-musica').innerHTML = canzoni.slice(0, limit).map(c => `
+    function renderMusica() {
+        const target = document.getElementById('grid-musica');
+        const list = expandedMusica ? dbMusica : dbMusica.slice(0, 3);
+        target.innerHTML = list.map(m => `
             <div class="card" style="border-left: 3px solid var(--music);">
-                <h4 style="margin:0;">${c.t}</h4>
-                <div style="margin-top:15px;"><a href="${c.s}" target="_blank" style="color:var(--music);"><i class="fab fa-spotify"></i> Ascolta</a></div>
+                <h3 style="margin:0; font-size:1rem; color:#fff;">${m.t}</h3>
+                <div style="margin-top:20px; display:flex; gap:15px; font-size:1.3rem;">
+                    <a href="${m.s}" target="_blank" rel="noopener" style="color:#1DB954;"><i class="fab fa-spotify"></i></a>
+                    <a href="#" target="_blank" rel="noopener" style="color:#ff0000;"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         `).join('');
-        document.getElementById('btn-more-music').innerText = showAllMusic ? "Mostra meno" : "Mostra altri titoli";
+        document.getElementById('btn-load-musica').innerText = expandedMusica ? "Mostra Meno" : "Vedi Altri Titoli";
     }
 
-    document.getElementById('btn-more-books').addEventListener('click', () => { showAllBooks = !showAllBooks; renderBooks(); });
-    document.getElementById('btn-more-music').addEventListener('click', () => { showAllMusic = !showAllMusic; renderMusic(); });
+    /* 4. INITIALIZATION */
+    document.getElementById('btn-load-libri').addEventListener('click', () => { expandedLibri = !expandedLibri; renderLibri(); });
+    document.getElementById('btn-load-musica').addEventListener('click', () => { expandedMusica = !expandedMusica; renderMusica(); });
 
     function init() {
-        renderBooks();
-        renderMusic();
-        document.getElementById('grid-ricerca').innerHTML = ricerca.map(r => `
-            <div class="card" style="border-color:rgba(0,255,204,0.1);">
-                <h4 style="margin:0; color:var(--cyan);">${r.t}</h4>
-                <small style="color:#666;">${r.id}</small>
-                <a href="${r.l}" target="_blank" class="buy-btn" style="margin-top:10px; border-color:var(--cyan); color:var(--cyan);">Leggi</a>
+        renderLibri();
+        renderMusica();
+        document.getElementById('grid-ricerca').innerHTML = dbRicerca.map(r => `
+            <div class="card" style="border-bottom: 2px solid var(--cyan);">
+                <h3 style="margin:0; font-size:1rem; color:var(--cyan);">${r.t}</h3>
+                <code style="font-size:0.6rem; color:#555; display:block; margin:10px 0;">${r.id}</code>
+                <a href="${r.l}" target="_blank" rel="noopener" class="buy-btn" style="border-color:var(--cyan); color:var(--cyan);">Accedi al Paper</a>
             </div>
         `).join('');
     }
-    init();
+    
+    window.onload = init;
 </script>
 </body>
 </html>
