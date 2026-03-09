@@ -2,77 +2,67 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bottino | Autore • Ricercatore • Paroliere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#050505">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Michele Bottino | Identità Digitale Protetta</title>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root { 
             --bg: #050505; --gold: #d4af37; --cyan: #00ffcc; --music: #ff00ff;
             --glass: rgba(255,255,255,0.03); --font: 'Inter', sans-serif;
-            --trans: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body { 
             background: var(--bg); color: #e0e0e0; font-family: var(--font); 
-            margin: 0; line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden;
+            margin: 0; padding-top: env(safe-area-inset-top); overflow-x: hidden;
+            line-height: 1.6; scroll-behavior: smooth;
         }
 
-        /* NAVIGAZIONE */
+        /* NAVIGATION - SAFE AREA OPTIMIZED */
         nav { 
-            position: sticky; top: 0; background: rgba(5,5,5,0.95); 
+            position: sticky; top: 0; background: rgba(5,5,5,0.98); 
             backdrop-filter: blur(15px); z-index: 1000; 
-            border-bottom: 1px solid var(--glass); padding: 15px 0;
+            border-bottom: 1px solid var(--glass); 
+            padding: calc(20px + env(safe-area-inset-top)) 0 15px 0; 
         }
-        nav .nav-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        nav a { color: #888; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; transition: var(--trans); font-weight: 600; }
-        nav a:hover { color: var(--gold); }
+        .nav-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+        .nav-links a { color: #888; text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* HEADER */
-        header { text-align: center; padding: 80px 0 40px; }
-        h1 { font-size: clamp(2rem, 8vw, 3.5rem); letter-spacing: -2px; margin: 0; color: #fff; }
-        .role-badge { display: inline-block; padding: 6px 20px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.7rem; text-transform: uppercase; margin: 20px 0; letter-spacing: 2px; }
+        /* HEADER - CLAMP FOR MOBILE SCALING */
+        header { text-align: center; padding: clamp(30px, 8vh, 60px) 10px 40px; }
+        h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); letter-spacing: -2px; color: #fff; margin: 0; line-height: 1.1; }
+        .role-badge { display: inline-block; padding: 5px 15px; border: 1px solid var(--gold); color: var(--gold); border-radius: 20px; font-size: 0.65rem; text-transform: uppercase; margin: 15px 0; letter-spacing: 1.5px; }
 
-        /* SEZIONI E PANNELLI */
-        .panel { 
-            background: var(--glass); border: 1px solid rgba(255,255,255,0.05); 
-            border-radius: 15px; padding: 40px; margin-bottom: 40px; transition: var(--trans);
-        }
-        .panel:hover { border-color: rgba(212, 175, 55, 0.3); }
+        /* PANELS & CARDS */
+        .panel { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); border-radius: 15px; padding: 30px 20px; margin-bottom: 30px; }
+        h3 { font-size: clamp(1.2rem, 5vw, 1.6rem); margin-bottom: 10px; color: #fff; }
+        blockquote { margin: 20px 0; padding-left: 15px; border-left: 2px solid var(--gold); font-style: italic; color: #eee; font-size: 0.95rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: rgba(255,255,255,0.02); padding: 25px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-3px); }
+
+        /* FORM CONTATTI - RESPONSIVE STACKING */
+        .contact-grid { display: flex; flex-direction: column; gap: 15px; }
+        @media (min-width: 600px) { .contact-grid { flex-direction: row; } }
         
-        blockquote { 
-            margin: 25px 0; padding-left: 25px; border-left: 3px solid var(--gold); 
-            font-style: italic; color: #efefef; font-family: 'Georgia', serif; font-size: 1.1rem; 
-        }
-
-        .buy-btn { 
-            display: inline-block; padding: 10px 20px; border: 1px solid var(--gold); 
-            color: var(--gold); text-decoration: none; border-radius: 4px; 
-            font-weight: bold; text-transform: uppercase; font-size: 0.7rem; transition: var(--trans);
-        }
-        .buy-btn:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px rgba(212,175,55,0.2); }
-
-        /* GRIGLIE */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: rgba(255,255,255,0.02); padding: 25px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); transition: var(--trans); }
-        .card:hover { transform: translateY(-5px); border-color: var(--gold); }
-
-        /* MUSICA */
-        .music-card { border-left: 3px solid var(--music); }
-        .music-links { display: flex; gap: 12px; margin-top: 15px; }
+        input, textarea { width: 100%; background: var(--glass); border: 1px solid #333; padding: 12px; color: #fff; border-radius: 4px; box-sizing: border-box; font-family: inherit; }
+        
+        .buy-btn { display: inline-block; padding: 12px 25px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; text-align: center; transition: 0.3s; }
+        .buy-btn:hover { background: var(--gold); color: #000; }
 
         /* HELPER BUBBLE */
-        #helper-bubble {
-            position: fixed; bottom: 20px; right: 20px; background: var(--gold); color: #000; 
-            padding: 12px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: bold;
-            z-index: 9999; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+        #helper-bubble { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; padding: 10px 20px; border-radius: 50px; font-size: 0.7rem; font-weight: bold; z-index: 9999; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        footer { text-align: center; padding: 80px 0 40px; color: #444; font-size: 0.7rem; border-top: 1px solid var(--glass); }
+        /* FOOTER & VISITOR COUNTER */
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid var(--glass); }
+        .visitor-box { margin-top: 25px; opacity: 0.7; font-size: 0.6rem; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -80,146 +70,116 @@
 <nav>
     <div class="nav-links">
         <a href="#home">Identità</a>
-        <a href="#progetti">Progetti Cardine</a>
+        <a href="#progetti">Opere</a>
         <a href="#musica">Parolistica</a>
-        <a href="#catalogo">Opere</a>
         <a href="#ricerca">Ricerca 2026</a>
         <a href="#contatti">Contatti</a>
-        <a href="javascript:void(0)" onclick="alert('Area Doc in fase di attivazione (Rilascio 2026)')" style="color:var(--cyan);">Area Doc 🔐</a>
     </div>
 </nav>
 
 <div class="container" id="home">
     <header>
         <h1>MICHELE BOTTINO</h1>
-        <div class="role-badge">Autore • Ricercatore • Paroliere</div>
-        <p style="max-width: 800px; margin: 0 auto; color: #888;">
-            Fondendo la narrativa d'inchiesta (2010) con il rigore della ricerca storica (2026). 
-            Dalla potenza della parola scritta alla metrica della canzone internazionale.
+        <div class="role-badge">Autore e Ricercatore</div>
+        <p style="max-width: 700px; margin: 0 auto; color: #888; font-size: 0.95rem;">
+            Dalla narrativa d'inchiesta alla ricerca storica documentale. 
+            Architettura digitale originale basata sulla convergenza di metadati ISBN, DOI e ISRC.
         </p>
     </header>
 
     <div id="progetti">
-        <section class="panel" style="border: 1px solid var(--gold); background: linear-gradient(145deg, rgba(212,175,55,0.08), transparent);">
+        <section class="panel" style="border: 1px solid var(--gold); background: linear-gradient(145deg, rgba(212,175,55,0.05), transparent);">
             <h3>🏛️ IL DEPOSITO DELLE ANIME</h3>
-            <p style="color:var(--gold); font-size:0.6rem; text-transform:uppercase; font-weight:bold;">Dietro l'ombra dell'occupante</p>
+            <p style="color:var(--gold); font-size:0.6rem; text-transform:uppercase; font-weight:bold; letter-spacing:1px;">Dietro l'ombra dell'occupante</p>
             <blockquote>
                 “Una struttura che funge da anticamera... tra le quali mura ben presto udiremo le voci di quelle anime che avrebbero dovuto trovare quella tanto decantata serenità.”
             </blockquote>
-            <a href="https://www.amazon.it/dp/B0D47M24V1" target="_blank" class="buy-btn">Acquista Opera</a>
-        </section>
-
-        <section class="panel" style="border-left: 4px solid var(--gold);">
-            <h3>📖 STIGE - Una lettera senza destinatario</h3>
-            <blockquote>«Non scrissi per essere letta, ma per non scomparire.»</blockquote>
-            <a href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" class="buy-btn">Dettagli Amazon</a>
-        </section>
-
-        <section class="panel" style="border-left: 4px solid var(--cyan);">
-            <h3 style="color:var(--cyan);">🔍 CALATABIANO SACRA</h3>
-            <blockquote style="border-color:var(--cyan); color:var(--cyan);">
-                “La geografia invisibile di Calatabiano non si legge sulle carte, ma nel terreno...”
-            </blockquote>
-            <p style="font-size:0.8rem; color:#888;">Ricostruzione d'archivio e narrativa del territorio.</p>
-            <a href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank" class="buy-btn" style="border-color:var(--cyan); color:var(--cyan);">Esplora</a>
+            <a href="https://www.amazon.it/dp/B0D47M24V1" target="_blank" rel="noopener" class="buy-btn">Acquista su Amazon</a>
         </section>
     </div>
 
-    <h2 id="musica" style="color: var(--music); margin-top: 80px; border-bottom: 1px solid rgba(255,0,255,0.1); padding-bottom: 10px;">🎵 PAROLISTICA & DISCOGRAFIA</h2>
-    <p style="font-size: 0.7rem; color: #666; margin-bottom: 20px;">Testi di Michele Bottino | Distribuzione TuneCore</p>
+    <h2 id="musica" style="color: var(--music); margin-top: 60px; border-bottom: 1px solid rgba(255,0,255,0.1); padding-bottom: 10px;">🎵 PAROLISTICA & TESTI</h2>
     <div class="grid" id="grid-musica"></div>
 
-    <h2 id="catalogo" style="margin-top: 80px; border-bottom: 1px solid var(--glass); padding-bottom: 10px;">📚 CATALOGO OPERE</h2>
-    <div class="grid" id="grid-libri"></div>
-
-    <h2 id="ricerca" style="margin-top: 80px; color: var(--cyan); border-bottom: 1px solid rgba(0,255,204,0.1); padding-bottom: 10px;">🔬 RICERCA SCIENTIFICA (2026)</h2>
+    <h2 id="ricerca" style="margin-top: 60px; color: var(--cyan); border-bottom: 1px solid rgba(0,255,204,0.1); padding-bottom: 10px;">🔬 RICERCA SCIENTIFICA (2026)</h2>
     <div class="grid" id="grid-ricerca"></div>
 
-    <section id="contatti" class="panel" style="margin-top: 80px; border-top: 2px solid var(--gold);">
-        <h2 style="text-align: center;">CONTATTO DIRETTO</h2>
-        <form action="https://formspree.io/f/xeoqnora" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <input type="text" name="name" placeholder="Nome" required style="background:var(--glass); border:1px solid #333; padding:12px; color:#fff; border-radius:4px;">
-                <input type="email" name="_replyto" placeholder="Email" required style="background:var(--glass); border:1px solid #333; padding:12px; color:#fff; border-radius:4px;">
+    <section class="panel" style="border: 1px dashed var(--cyan); margin-top: 60px; background: rgba(0, 255, 204, 0.02);">
+        <h3 style="color:var(--cyan);"><i class="fas fa-certificate"></i> ARCHITETTURA PROTETTA</h3>
+        <p style="font-size:0.8rem; color:#aaa;">
+            Sistema originale di aggregazione asincrona concepito da <strong>Michele Bottino</strong>. 
+            Questa architettura integra protocolli di protezione dati e flussi accademico-multimediali non replicabili.
+        </p>
+        <p style="font-size:0.6rem; color:var(--cyan); text-transform:uppercase;">© 2026 Registro Digitale MB-DPA - Tutti i diritti riservati.</p>
+    </section>
+
+    <section id="contatti" class="panel" style="margin-top: 40px; border-top: 2px solid var(--gold);">
+        <h2 style="text-align: center; margin-bottom: 30px;">CONTATTO DIRETTO</h2>
+        <form action="https://formspree.io/f/xeoqnora" method="POST">
+            <div class="contact-grid">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
-            <textarea name="message" rows="5" placeholder="Messaggio..." required style="background:var(--glass); border:1px solid #333; padding:12px; color:#fff; border-radius:4px;"></textarea>
-            <button type="submit" class="buy-btn" style="width:100%; cursor:pointer; background:var(--gold); color:#000;">Invia Messaggio</button>
+            <textarea name="message" rows="5" placeholder="Il tuo messaggio..." style="margin-top:15px;" required></textarea>
+            <button type="submit" class="buy-btn" style="width:100%; margin-top:15px; background:var(--gold); color:#000; border:none; padding:15px; cursor:pointer;">Invia Messaggio</button>
         </form>
     </section>
 
     <footer>
-        <p>IDENTITÀ DIGITALE VALIDATA: MICHELE BOTTINO [2010-2026]</p>
-        <p>SHA-256 SECURED ARCHIVE | michelebottino.adc@gmail.com</p>
+        <p style="font-size:0.7rem; color:#444;">IDENTITÀ DIGITALE VALIDATA: MICHELE BOTTINO [2010-2026]</p>
+        <p style="font-size:0.6rem; color:var(--gold); margin-top:5px;">
+            <i class="fab fa-creative-commons"></i> Architettura Digitale Protetta via CC BY-NC-ND 4.0
+        </p>
+        
+        <div class="visitor-box">
+            <p>VISITE ALL'ARCHIVIO:</p>
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fmichele-bottino-autor.github.io&count_bg=%23D4AF37&title_bg=%23333333&icon=&icon_color=%23E7E7E7&title=VISITS&edge_flat=false" alt="Visitor Counter">
+        </div>
     </footer>
 </div>
 
-<div id="helper-bubble">
-    <i class="fas fa-lightbulb"></i>
-    <span>Scorra per esplorare la musica e le opere</span>
-</div>
+<div id="helper-bubble"><i class="fas fa-arrow-down"></i><span>Esplora il Catalogo</span></div>
 
 <script>
     const canzoni = [
-        { t: "Un’altra Notte a Metà", d: "31/05/2025", s: "spotify:album:7tevKrkG2G5bKmBJr6scgH", a: "http://itunes.apple.com/album/id1818425032?ls=1&app=itunes" },
-        { t: "Riconquistarti", d: "28/05/2025", s: "spotify:album:7B6tNtPLvcgXLrWbCJrLON", a: "https://itunes.apple.com/us/artist/michele-bottino/1815506113" },
-        { t: "Casanova", d: "28/05/2025", s: "spotify:album:2jEcc8ueUmrZ5Y835vT8KP", a: "http://itunes.apple.com/album/id1817369701?ls=1&app=itunes" },
-        { t: "Notte Di Mezza Estate", d: "22/05/2025", s: "spotify:album:2yElqeuU1aoQ8UCL4nR7Xr", a: "http://itunes.apple.com/album/id1816151787?ls=1&app=itunes" },
-        { t: "Dovevi solo Aspettare", d: "21/05/2025", s: "spotify:album:3uHSU60JiEDFXs9NDy5Dr6", a: "http://itunes.apple.com/album/id1815850386?ls=1&app=itunes" },
-        { t: "Parlami Ancora", d: "20/05/2025", s: "spotify:album:1WVY3UCIUbmW7SVeductj1", a: "http://itunes.apple.com/album/id1815573200?ls=1&app=itunes" },
-        { t: "Vivo da Re", d: "20/05/2025", s: "spotify:album:461KE91YZOtRMhFUG5JWX7", a: "http://itunes.apple.com/album/id1815850449?ls=1&app=itunes" },
-        { t: "Spento ma resto vivo", d: "14/05/2025", s: "spotify:album:6Otbon2kqQPYYRH0GtbLeu", a: "http://itunes.apple.com/album/id1815573121?ls=1&app=itunes" },
-        { t: "Un Sogno che resta", d: "12/05/2025", s: "spotify:album:7qGzhaDTGtrkvSiGNzf8i0", a: "http://itunes.apple.com/album/id1815573377?ls=1&app=itunes" },
-        { t: "Nel respiro di te", d: "07/05/2025", s: "spotify:album:663LDTIugQh9te8WN6vUEC", a: "http://itunes.apple.com/album/id1815573344?ls=1&app=itunes" },
-        { t: "Senza fare Rumore", d: "01/05/2025", s: "spotify:album:4RcMK7n1kYBpMacyODsWeE", a: "http://itunes.apple.com/album/id1815572791?ls=1&app=itunes" }
-    ];
-
-    const libri = [
-        { t: "EUROPA: Anatomia di un crimine", id: "979-8335804790", l: "https://www.amazon.it/dp/B0DF65D7S4" },
-        { t: "L'Uomo Consapevole", id: "979-8327178380", l: "https://www.amazon.it/dp/B0D5S7M5G8" },
-        { t: "Oniro", id: "979-8328172820", l: "https://www.amazon.it/dp/B0D6V4KHLG" },
-        { t: "Intrighi Invisibili", id: "979-8326162311", l: "https://www.amazon.it/dp/B0D4N6MC5L" },
-        { t: "L'Enigma dei Templari", id: "979-8324225025", l: "https://www.amazon.it/dp/B0D2VLYB52" },
-        { t: "Per tutta la mia vita", id: "979-8323497645", l: "https://www.amazon.it/dp/B0D25H999L" }
+        { t: "Un’altra Notte a Metà", s: "spotify:album:7tevKrkG2G5bKmBJr6scgH", a: "http://itunes.apple.com/album/id1818425032?ls=1&app=itunes" },
+        { t: "Riconquistarti", s: "spotify:album:7B6tNtPLvcgXLrWbCJrLON", a: "https://itunes.apple.com/us/artist/michele-bottino/1815506113" },
+        { t: "Casanova", s: "spotify:album:2jEcc8ueUmrZ5Y835vT8KP", a: "http://itunes.apple.com/album/id1817369701?ls=1&app=itunes" }
     ];
 
     const ricerca = [
         { t: "Le chiese medievali di Calatabiano", id: "DOI: 10.5281/zenodo.18822734", l: "https://doi.org/10.5281/zenodo.18822734" },
-        { t: "L'Egemonia dell'Oro Bianco", id: "DOI: 10.5281/zenodo.18872989", l: "https://doi.org/10.5281/zenodo.18872989" },
-        { t: "Spazio e continuità giuridica", id: "DOI: 10.5281/zenodo.18816887", l: "https://doi.org/10.5281/zenodo.18816887" }
+        { t: "L'Egemonia dell'Oro Bianco", id: "DOI: 10.5281/zenodo.18872989", l: "https://doi.org/10.5281/zenodo.18872989" }
     ];
 
     function init() {
         document.getElementById('grid-musica').innerHTML = canzoni.map(c => `
-            <div class="card music-card">
+            <div class="card" style="border-left:3px solid var(--music);">
                 <h4 style="margin:0;">${c.t}</h4>
-                <small style="color:var(--gold); font-size:0.6rem;">AUTORE TESTI</small><br>
-                <small style="color:#666;">Rel: ${c.d}</small>
-                <div class="music-links">
-                    <a href="${c.a}" target="_blank"><i class="fab fa-apple"></i></a>
-                    <a href="Https://youtube.com/channel/UCxnPYKas6JqM9h5HrAqwrpQ?si=_EZbVduvknMEFwp7" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="${c.s}" target="_blank"><i class="fab fa-spotify"></i></a>
+                <small style="color:var(--gold); font-size:0.6rem;">TESTO: MICHELE BOTTINO</small>
+                <div style="margin-top:15px; display:flex; gap:12px; font-size:1.2rem;">
+                    <a href="${c.s}" target="_blank" rel="noopener" style="color:#1DB954;"><i class="fab fa-spotify"></i></a>
+                    <a href="${c.a}" target="_blank" rel="noopener" style="color:#fc3c44;"><i class="fab fa-apple"></i></a>
+                    <a href="Https://youtube.com/channel/UCxnPYKas6JqM9h5HrAqwrpQ?si=_EZbVduvknMEFwp7" target="_blank" rel="noopener" style="color:#ff0000;"><i class="fab fa-youtube"></i></a>
                 </div>
-            </div>
-        `).join('');
-
-        document.getElementById('grid-libri').innerHTML = libri.map(b => `
-            <div class="card">
-                <h4 style="margin:0;">${b.t}</h4>
-                <small style="color:#666;">ISBN: ${b.id}</small><br>
-                <a href="${b.l}" target="_blank" class="buy-btn" style="margin-top:15px; display:block;">Amazon</a>
             </div>
         `).join('');
 
         document.getElementById('grid-ricerca').innerHTML = ricerca.map(r => `
             <div class="card" style="border-color:rgba(0,255,204,0.1);">
                 <h4 style="margin:0; color:var(--cyan);">${r.t}</h4>
-                <small style="color:#666;">${r.id}</small><br>
-                <a href="${r.l}" target="_blank" class="buy-btn" style="margin-top:15px; border-color:var(--cyan); color:var(--cyan); display:block;">Leggi Paper</a>
+                <small style="color:#666;">${r.id}</small>
+                <a href="${r.l}" target="_blank" rel="noopener" class="buy-btn" style="margin-top:15px; border-color:var(--cyan); color:var(--cyan); display:block;">Leggi (Nuova Tab)</a>
             </div>
         `).join('');
     }
 
-    window.onscroll = () => { if(window.scrollY > 400) document.getElementById('helper-bubble').style.display = 'none'; };
+    window.onscroll = () => { 
+        if(window.scrollY > 150) {
+            document.getElementById('helper-bubble').style.opacity = '0';
+            setTimeout(() => { document.getElementById('helper-bubble').style.display = 'none'; }, 500);
+        }
+    };
     init();
 </script>
 </body>
