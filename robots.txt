@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://michelebottino-autor.github.io/michelebottino/sitemap.xml
