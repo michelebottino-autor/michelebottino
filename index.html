@@ -13,49 +13,38 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: var(--bg); color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* MONOGRAMMA MB - POSIZIONAMENTO FISSO E CENTRATO */
+        /* MONOGRAMMA MB - FILIGRANA INTRECCIATA */
         .watermark-wrap { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; display: flex; justify-content: center; align-items: center; }
-        .mb-sigillo { 
-            font-family: 'Parisienne', cursive; font-size: 35vw; color: var(--gold); opacity: 0.05; 
-            filter: blur(2px); white-space: nowrap; letter-spacing: -20px; 
-            transform: translateY(-5%);
-        }
+        .mb-sigillo { font-family: 'Parisienne', cursive; font-size: 32vw; color: var(--gold); opacity: 0.06; filter: blur(2px); white-space: nowrap; letter-spacing: -25px; transform: translateY(-5%); }
 
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 10; }
         nav { position: sticky; top: 0; background: rgba(5,5,5,0.95); backdrop-filter: blur(15px); z-index: 1000; padding: 20px; border-bottom: 1px solid rgba(212,175,55,0.1); display: flex; justify-content: space-between; align-items: center; }
         .logo { font-family: 'Cinzel', serif; color: var(--gold); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
 
-        header { text-align: center; padding: 120px 10px 80px; }
+        header { text-align: center; padding: 120px 10px 60px; }
         h1 { font-family: 'Cinzel', serif; font-size: clamp(2.2rem, 8vw, 3.8rem); color: #fff; margin-bottom: 15px; letter-spacing: 2px; }
-        .badge { display: inline-block; padding: 6px 22px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.6rem; text-transform: uppercase; margin: 15px 0; letter-spacing: 3px; box-shadow: 0 0 15px rgba(212,175,55,0.1); }
+        .badge { display: inline-block; padding: 6px 22px; border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; font-size: 0.6rem; text-transform: uppercase; margin: 15px 0; letter-spacing: 3px; }
+
+        .bio-text { max-width: 800px; margin: 40px auto; text-align: center; line-height: 1.8; color: #bbb; font-weight: 300; font-size: 1.05rem; background: var(--glass); padding: 30px; border-radius: 15px; }
 
         h2 { font-family: 'Cinzel', serif; font-size: 1rem; text-transform: uppercase; color: var(--gold); margin: 80px 0 30px; letter-spacing: 4px; border-left: 4px solid var(--gold); padding-left: 15px; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 4px; backdrop-filter: blur(10px); transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { border-color: var(--gold); transform: translateY(-8px); background: rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .card { background: var(--glass); border: 1px solid rgba(255,255,255,0.05); padding: 30px; border-radius: 4px; backdrop-filter: blur(10px); transition: 0.4s; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
 
-        .academic-links { display: flex; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
-        .ac-btn { padding: 12px 25px; border: 1px solid var(--cyan); color: var(--cyan); text-decoration: none; font-size: 0.75rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; transition: 0.3s; background: rgba(0,255,204,0.02); }
-        .ac-btn:hover { background: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0,255,204,0.3); }
+        .links-group { display: flex; gap: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .links-group a { color: #888; text-decoration: none; font-size: 1.3rem; transition: 0.3s; }
+        .links-group a:hover { color: var(--gold); }
+        
+        .btn-action { display: block; text-align: center; padding: 14px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.7rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; margin-top: 20px; }
+        .btn-action:hover { background: var(--gold); color: #000; }
 
-        .links-group { display: flex; gap: 20px; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-        .links-group a { color: #aaa; text-decoration: none; font-size: 1.4rem; transition: 0.3s; }
-        .links-group a:hover { transform: scale(1.2); }
-        .fa-youtube:hover { color: #ff0000; }
-        .fa-spotify:hover { color: #1DB954; }
-        .fa-amazon:hover { color: #FF9900; }
-
-        .btn-action { display: block; text-align: center; padding: 14px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.7rem; font-weight: bold; border-radius: 4px; text-transform: uppercase; margin-top: 20px; transition: 0.4s; }
-        .btn-action:hover { background: var(--gold); color: #000; box-shadow: 0 0 20px rgba(212,175,55,0.4); }
-
-        footer { text-align: center; padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 100px; }
-        .status-badge { font-family: 'Cinzel', serif; font-size: 0.65rem; color: var(--gold); letter-spacing: 3px; margin-top: 20px; opacity: 0.6; }
+        footer { text-align: center; padding: 100px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 80px; }
     </style>
 </head>
 <body>
 
-    <div class="watermark-wrap"><div class="mb-sigillo" id="parallax-sigillo">MB</div></div>
+    <div class="watermark-wrap"><div class="mb-sigillo">MB</div></div>
 
     <nav><div class="logo">MICHELE BOTTINO | ARCHIVE</div><i class="fas fa-bars" style="color:var(--gold)"></i></nav>
 
@@ -63,20 +52,23 @@
         <header>
             <h1>MICHELE BOTTINO</h1>
             <div class="badge">Digital Product Architect • Autore • Ricercatore</div>
-            <p style="color:#aaa; font-weight:300; letter-spacing: 1px;">Sintesi tra costruzione digitale e indagine intellettuale.</p>
+            <div class="bio-text">
+                Autore dal <strong>2010</strong> e Ricercatore dal <strong>2026</strong>. <br><br>
+                Come <strong>Digital Product Architect</strong> e <strong>Security Software Architect</strong>, incarno la convergenza tra la costruzione tecnica degli ecosistemi web, l'estetica della comunicazione e la protezione dell'ingegno. Questo archivio è la sintesi di un percorso che unisce la narrazione letteraria alla ricerca scientifica territoriale.
+            </div>
         </header>
 
         <section id="ricerca">
-            <h2>🔬 Repository Scientifico</h2>
-            <div class="academic-links">
-                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" class="ac-btn"><i class="fab fa-orcid"></i> ORCID</a>
-                <a href="https://www.academia.edu/" target="_blank" class="ac-btn"><i class="fas fa-university"></i> Academia.edu</a>
+            <h2>🔬 Repository Scientifico 2026</h2>
+            <div style="margin-bottom:30px; display:flex; gap:15px;">
+                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:0.8rem; border:1px solid var(--cyan); padding:10px 20px; border-radius:5px;">ORCID Profile</a>
+                <a href="https://www.academia.edu/" target="_blank" style="color:var(--cyan); text-decoration:none; font-size:0.8rem; border:1px solid var(--cyan); padding:10px 20px; border-radius:5px;">Academia.edu</a>
             </div>
             <div class="grid" id="ricerca-grid"></div>
         </section>
 
         <section id="libri">
-            <h2>📚 Produzione Letteraria</h2>
+            <h2>📚 Produzione Letteraria (2010-2026)</h2>
             <div class="grid" id="libri-grid"></div>
         </section>
 
@@ -86,45 +78,52 @@
         </section>
 
         <footer>
-            <p>© 2026 MICHELE BOTTINO</p>
-            <div class="status-badge">INTELLECTUAL PROPERTY PROTECTED</div>
+            <p>© 2026 MICHELE BOTTINO | ARCHIVE SECURED</p>
         </footer>
     </div>
 
 <script>
-    // Database integrato
     const dbRicerca = [
         { t: "L'Egemonia dell'Oro Bianco", d: "DOI: 10.5281/zenodo.18872989", u: "https://zenodo.org/records/18872989" },
-        { t: "Investitura Baronia 1487", d: "DOI: 10.5281/zenodo.18812067", u: "https://doi.org/10.5281/zenodo.18812067" },
-        { t: "Testimone di Pietra", d: "DOI: 10.5281/zenodo.14934053", u: "https://doi.org/10.5281/zenodo.14934053" },
-        { t: "Calatabiano: spazio e territorio", d: "DOI: 10.5281/zenodo.18816887", u: "https://zenodo.org/records/18816887" }
+        { t: "Calatabiano: spazio e territorio", d: "DOI: 10.5281/zenodo.18816887", u: "https://zenodo.org/records/18816887" },
+        { t: "Il Testimone di Pietra (Vol. I)", d: "DOI: 10.5281/zenodo.14934053", u: "https://doi.org/10.5281/zenodo.14934053" },
+        { t: "Investigazione Mirulla 1484", d: "Dataset CERN/Zenodo", u: "https://zenodo.org/" },
+        { t: "Le chiese medievali", d: "DOI: 10.5281/zenodo.18822734", u: "https://doi.org/10.5281/zenodo.18822734" },
+        { t: "Storia Critica del Territorio", d: "DOI: 10.5281/zenodo.18805142", u: "https://doi.org/10.5281/zenodo.18805142" },
+        { t: "Investitura Baronia 1487", d: "DOI: 10.5281/zenodo.18812067", u: "https://doi.org/10.5281/zenodo.18812067" }
     ];
 
     const dbLibri = [
         { t: "Il deposito delle anime", d: "Dietro l'ombra dell'occupante", u: "https://www.amazon.it/dp/B0D47M24V1" },
         { t: "Stige", d: "Una lettera senza destinatario", u: "https://www.amazon.it/dp/B0D38K7X6W" },
-        { t: "EUROPA", d: "Anatomia di un crimine", u: "#" },
-        { t: "L'Uomo Consapevole", d: "Percorso di risveglio", u: "#" }
+        { t: "EUROPA: Anatomia di un crimine", d: "Inchiesta narrativa", u: "#" },
+        { t: "L'Uomo Consapevole", d: "Saggio filosofico", u: "#" },
+        { t: "Oniro", d: "Dove la realtà si dissolve", u: "#" },
+        { t: "Intrighi Invisibili", d: "L'oscura verità", u: "#" },
+        { t: "Calatabiano Sacra", d: "Il mistero della fede", u: "#" },
+        { t: "L’Enigma dei Templari", d: "Alla ricerca della verità", u: "#" },
+        { t: "Per tutta la mia vita", d: "Un racconto d’amore", u: "#" }
     ];
 
     const dbMusica = [
-        { t: "Un’altra Notte a Metà", yt: "#", sp: "#", am: "#" },
-        { t: "Riconquistarti", yt: "#", sp: "#", am: "#" },
-        { t: "Casanova", yt: "#", sp: "#", am: "#" }
+        { t: "Un’altra Notte a Metà", yt: "#", sp: "#" },
+        { t: "Riconquistarti", yt: "#", sp: "#" },
+        { t: "Casanova", yt: "#", sp: "#" },
+        { t: "Stige Theme", yt: "#", sp: "#" }
     ];
 
-    // Rendering dinamico
+    // Rendering
     document.getElementById('ricerca-grid').innerHTML = dbRicerca.map(r => `
         <div class="card" style="border-bottom: 2px solid var(--cyan);">
-            <h3>${r.t}</h3>
-            <code style="font-size:0.6rem; color:var(--cyan); margin:15px 0; display:block;">${r.d}</code>
-            <a href="${r.u}" target="_blank" class="btn-action" style="border-color:var(--cyan); color:var(--cyan);">Accedi al Paper</a>
+            <h3 style="font-size:0.95rem;">${r.t}</h3>
+            <code style="font-size:0.6rem; color:var(--cyan); margin:10px 0; display:block;">${r.d}</code>
+            <a href="${r.u}" target="_blank" class="btn-action" style="border-color:var(--cyan); color:var(--cyan);">Apri Paper</a>
         </div>`).join('');
 
     document.getElementById('libri-grid').innerHTML = dbLibri.map(l => `
         <div class="card">
-            <h3>${l.t}</h3><p style="font-size:0.75rem; color:#888; margin:10px 0;">${l.d}</p>
-            <a href="${l.u}" target="_blank" class="btn-action">Amazon Store</a>
+            <h3 style="font-size:1rem;">${l.t}</h3><p style="font-size:0.75rem; color:#777; margin:10px 0;">${l.d}</p>
+            <a href="${l.u}" target="_blank" class="btn-action">Vedi Opera</a>
         </div>`).join('');
 
     document.getElementById('musica-grid').innerHTML = dbMusica.map(m => `
@@ -133,15 +132,8 @@
             <div class="links-group">
                 <a href="${m.yt}" target="_blank"><i class="fab fa-youtube"></i></a>
                 <a href="${m.sp}" target="_blank"><i class="fab fa-spotify"></i></a>
-                <a href="${m.am}" target="_blank"><i class="fab fa-amazon"></i></a>
             </div>
         </div>`).join('');
-
-    // Effetto Parallax per il sigillo
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        document.getElementById('parallax-sigillo').style.transform = `translateY(${scrolled * 0.1}px)`;
-    });
 </script>
 </body>
 </html>
