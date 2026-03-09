@@ -1,0 +1,51 @@
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #e0d7c1; /* Old Parchment */
+    --accent-teal: #008b8b;
+    --accent-gold: #b8860b;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-teal);
+}
+
+.academic-block {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    border-left: 5px solid var(--accent-gold);
+}
+
+.literary-block {
+    padding: 60px 20px;
+}
+
+.btn-academic {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-teal);
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.book-card {
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    border-color: var(--accent-gold);
+}
