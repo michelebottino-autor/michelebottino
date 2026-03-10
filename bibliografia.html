@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bibliografia | Michele Bottino</title>
+
+<meta name="description" content="Catalogo completo delle opere di Michele Bottino con sinossi, ISBN e collegamenti Amazon.">
+
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/bibliografia.html">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:#e5e5e5;
+line-height:1.7;
+}
+
+header{
+background:#000;
+padding:20px;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:#c9a43b;
+margin-right:15px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.books{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+.book{
+background:#141414;
+border:1px solid #222;
+padding:20px;
+display:flex;
+flex-direction:column;
+}
+
+.book img{
+width:100%;
+max-width:260px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.book h3{
+margin:0 0 10px 0;
+color:#c9a43b;
+}
+
+.book .isbn{
+font-size:13px;
+color:#aaa;
+margin-bottom:15px;
+}
+
+.book p{
+font-size:14px;
+margin-bottom:15px;
+}
+
+.book button{
+background:none;
+border:1px solid #c9a43b;
+color:#c9a43b;
+padding:6px 12px;
+font-size:12px;
+cursor:pointer;
+margin-bottom:15px;
+}
+
+.book button:hover{
+background:#c9a43b;
+color:#000;
+}
+
+.book a{
+display:inline-block;
+color:#c9a43b;
+border:1px solid #c9a43b;
+padding:10px 16px;
+text-decoration:none;
+font-size:13px;
+margin-top:auto;
+}
+
+.book a:hover{
+background:#c9a43b;
+color:#000;
+}
+
+footer{
+margin-top:60px;
+padding:20px;
+border-top:1px solid #222;
+text-align:center;
+font-size:13px;
+color:#888;
+}
+
+.hidden{
+display:none;
+}
+
+</style>
+
+<script>
+
+function toggleSynopsis(id){
+
+let el=document.getElementById(id)
+
+if(el.classList.contains("hidden")){
+el.classList.remove("hidden")
+}else{
+el.classList.add("hidden")
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="biografia.html">Biografia</a>
+<a href="curriculum.html">Formazione</a>
+<a href="ricerca.html">Ricerca</a>
+<a href="pubblicazioni.html">Pubblicazioni</a>
+<a href="bibliografia.html">Libri</a>
+<a href="musica.html">Musica</a>
+<a href="media.html">Media</a>
+<a href="contatti.html">Contatti</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Catalogo delle opere</h1>
+
+<div class="books">
+
+<!-- EUROPA -->
+
+<div class="book" itemscope itemtype="https://schema.org/Book">
+
+<img src="https://m.media-amazon.com/images/P/B0DF65D7S4.01._SX350_.jpg">
+
+<h3 itemprop="name">EUROPA: Anatomia di un crimine</h3>
+
+<div class="isbn">ISBN 979-8335804790</div>
+
+<p>Un'analisi documentata sulle dinamiche di potere che governano il Vecchio Continente.</p>
+
+<button onclick="toggleSynopsis('s1')">Leggi sinossi</button>
+
+<p id="s1" class="hidden">
+Il saggio esplora le zone d'ombra della politica e dell'economia, mettendo a nudo
+i meccanismi che spesso sacrificano la sovranità dei popoli sull'altare di interessi
+sovranazionali.
+</p>
+
+<a href="https://www.amazon.it/dp/B0DF65D7S4" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- L'UOMO CONSAPEVOLE -->
+
+<div class="book" itemscope itemtype="https://schema.org/Book">
+
+<img src="https://m.media-amazon.com/images/P/B0D5S7M5G8.01._SX350_.jpg">
+
+<h3>L’Uomo Consapevole</h3>
+
+<div class="isbn">ISBN 979-8327178380</div>
+
+<p>Un viaggio filosofico verso il risveglio della coscienza.</p>
+
+<button onclick="toggleSynopsis('s2')">Leggi sinossi</button>
+
+<p id="s2" class="hidden">
+L'opera invita il lettore a scardinare i condizionamenti sociali e mentali per
+ritrovare la propria essenza autentica.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D5S7M5G8" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- ONIRO -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D6V4KHLG.01._SX350_.jpg">
+
+<h3>Oniro</h3>
+
+<div class="isbn">ISBN 979-8328172820</div>
+
+<p>Un racconto dove sogno e realtà si intrecciano.</p>
+
+<button onclick="toggleSynopsis('s3')">Leggi sinossi</button>
+
+<p id="s3" class="hidden">
+I limiti tra veglia e dimensione onirica si fanno labili, portando il lettore
+a interrogarsi su cosa sia davvero reale.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D6V4KHLG" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- INTRIGHI INVISIBILI -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D4N6MC5L.01._SX350_.jpg">
+
+<h3>Intrighi Invisibili</h3>
+
+<div class="isbn">ISBN 979-8326162311</div>
+
+<p>Thriller investigativo sulle reti di potere.</p>
+
+<button onclick="toggleSynopsis('s4')">Leggi sinossi</button>
+
+<p id="s4" class="hidden">
+Una narrazione che porta alla luce un'oscura realtà nascosta dietro gli eventi globali.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D4N6MC5L" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- IL DEPOSITO DELLE ANIME -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D47M24V1.01._SX350_.jpg">
+
+<h3>Il deposito delle anime</h3>
+
+<div class="isbn">ISBN 979-8325608933</div>
+
+<p>Una riflessione spirituale sul destino delle anime.</p>
+
+<button onclick="toggleSynopsis('s5')">Leggi sinossi</button>
+
+<p id="s5" class="hidden">
+Un'opera metafisica che indaga ciò che risiede dietro le quinte della vita materiale.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D47M24V1" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- CALATABIANO SACRA -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D3LYP2K7.01._SX350_.jpg">
+
+<h3>Calatabiano Sacra</h3>
+
+<div class="isbn">ISBN 979-8325126840</div>
+
+<p>Una ricerca storica e spirituale sulle radici di un territorio.</p>
+
+<button onclick="toggleSynopsis('s6')">Leggi sinossi</button>
+
+<p id="s6" class="hidden">
+Il libro ricostruisce le radici sacre di una comunità attraverso tradizioni,
+archeologia e spiritualità.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- STIGE -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D38K7X6W.01._SX350_.jpg">
+
+<h3>Stige</h3>
+
+<div class="isbn">ISBN 979-8324733476</div>
+
+<p>Una confessione intensa tra memoria e dolore.</p>
+
+<button onclick="toggleSynopsis('s7')">Leggi sinossi</button>
+
+<p id="s7" class="hidden">
+Una narrazione drammatica che attraversa simbolicamente il fiume dell'oblio.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- L'ENIGMA -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D2VLYB52.01._SX350_.jpg">
+
+<h3>L’Enigma</h3>
+
+<div class="isbn">ISBN 979-8324225025</div>
+
+<p>Un saggio investigativo sui misteri storici.</p>
+
+<button onclick="toggleSynopsis('s8')">Leggi sinossi</button>
+
+<p id="s8" class="hidden">
+Analisi di simboli e documenti che sfidano le interpretazioni ufficiali.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D2VLYB52" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+<!-- PER TUTTA LA MIA VITA -->
+
+<div class="book">
+
+<img src="https://m.media-amazon.com/images/P/B0D25H999L.01._SX350_.jpg">
+
+<h3>Per tutta la mia vita</h3>
+
+<div class="isbn">ISBN 979-8323497645</div>
+
+<p>Un racconto intimo sull’amore.</p>
+
+<button onclick="toggleSynopsis('s9')">Leggi sinossi</button>
+
+<p id="s9" class="hidden">
+Una storia che celebra la forza dei legami umani più profondi.
+</p>
+
+<a href="https://www.amazon.it/dp/B0D25H999L" target="_blank">Acquista su Amazon</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Official Web Site  
+<br>
+https://michelebottino-autor.github.io/michelebottino
+
+</footer>
+
+</body>
+</html>
