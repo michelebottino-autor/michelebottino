@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti | Michele Bottino</title>
+  <meta
+    name="description"
+    content="Contatti ufficiali di Michele Bottino. Pagina di contatto del sito ufficiale autore e ricercatore."
+  />
+  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/contatti.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contatti | Michele Bottino" />
+  <meta property="og:description" content="Contatti ufficiali di Michele Bottino." />
+  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/contatti.html" />
+  <meta property="og:site_name" content="Michele Bottino" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contatti | Michele Bottino" />
+  <meta name="twitter:description" content="Contatti ufficiali di Michele Bottino." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michele Bottino",
+    "url": "https://michelebottino-autor.github.io/michelebottino",
+    "email": "michelebottino.adc@gmail.com",
+    "sameAs": [
+      "https://orcid.org/0009-0009-2797-9267",
+      "https://iars.academia.edu/MicheleBottino"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #121212;
+      --surface-2: #171717;
+      --text: #e7e7e7;
+      --muted: #9b9b9b;
+      --accent: #b8952e;
+      --border: #262626;
+      --focus: #d1ac3f;
+      --danger: #d36a6a;
+      --success: #7abf84;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 8px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid #141414;
+      background: linear-gradient(180deg, #0c0c0c 0%, #0a0a0a 100%);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0;
+    }
+
+    .brand-subtitle {
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .hero {
+      padding: 72px 0 38px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--accent);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      color: #cfcfcf;
+      font-size: 1rem;
+      max-width: 70ch;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-meta {
+      padding: 24px;
+    }
+
+    .contact-meta h2,
+    .form-panel h2 {
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .meta-item {
+      padding: 14px 0;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .meta-item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .meta-label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .meta-value {
+      color: #e5e5e5;
+      font-size: 0.97rem;
+      word-break: break-word;
+    }
+
+    .meta-value a {
+      color: #d9d9d9;
+      border-bottom: 1px solid transparent;
+    }
+
+    .meta-value a:hover,
+    .meta-value a:focus-visible {
+      color: #fff;
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+
+    .content-section {
+      padding: 18px 0 90px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .form-panel {
+      padding: 28px;
+    }
+
+    .section-note {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.86rem;
+      color: #e1e1e1;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #2b2b2b;
+      background: var(--surface-2);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 14px 14px;
+      font: inherit;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    textarea {
+      min-height: 190px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #777;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--focus);
+      box-shadow: 0 0 0 3px rgba(184, 149, 46, 0.16);
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: -2px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 6px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #111;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      opacity: 0.96;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .status {
+      font-size: 0.88rem;
+      color: var(--muted);
+      min-height: 1.3em;
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    .status.success {
+      color: var(--success);
+    }
+
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
+
+    .info-panel {
+      padding: 28px;
+    }
+
+    .info-panel h3 {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .info-panel p {
+      margin: 0 0 14px;
+      color: #c9c9c9;
+      font-size: 0.94rem;
+    }
+
+    .info-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .list {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .list li {
+      color: #d4d4d4;
+      font-size: 0.92rem;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+
+    .site-footer {
+      border-top: 1px solid #151515;
+      padding: 28px 0 42px;
+      color: #6f6f6f;
+      font-size: 0.82rem;
+    }
+
+    .site-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .content-grid,
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+
+      .site-header-inner {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column;
+      }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="https://michelebottino-autor.github.io/michelebottino">
+        <p class="brand-title">Michele Bottino</p>
+        <p class="brand-subtitle">Official Web Site</p>
+      </a>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="biografia.html">Biografia</a>
+        <a href="ricerca.html">Ricerca</a>
+        <a href="bibliografia.html">Libri</a>
+        <a href="musica.html">Musica</a>
+        <a href="contatti.html" aria-current="page">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Contatti ufficiali</span>
+          <h1>Contatti</h1>
+          <p class="lead">
+            Pagina di contatto ufficiale del sito di Michele Bottino. I messaggi possono
+            essere inviati tramite modulo oppure direttamente via posta elettronica.
+          </p>
+        </div>
+
+        <aside class="panel contact-meta" aria-labelledby="contact-meta-title">
+          <h2 id="contact-meta-title">Riferimenti</h2>
+          <div class="meta-list">
+            <div class="meta-item">
+              <span class="meta-label">Email ufficiale</span>
+              <div class="meta-value">
+                <a id="emailLinkTop" href="#">Caricamento indirizzo…</a>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">Sito ufficiale</span>
+              <div class="meta-value">
+                <a href="https://michelebottino-autor.github.io/michelebottino" target="_blank" rel="noopener noreferrer">
+                  michelebottino-autor.github.io/michelebottino
+                </a>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">ORCID</span>
+              <div class="meta-value">
+                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">
+                  0009-0009-2797-9267
+                </a>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-label">Academia.edu</span>
+              <div class="meta-value">
+                <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">
+                  iars.academia.edu/MicheleBottino
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <section class="panel form-panel" aria-labelledby="contact-form-title">
+          <h2 id="contact-form-title">Invia un messaggio</h2>
+          <p class="section-note">
+            Su GitHub Pages il modulo può essere usato in modo nativo solo con apertura del client email
+            dell’utente, oppure collegato a un servizio esterno di gestione form. In questa versione il
+            sistema prepara automaticamente un messaggio email verso il contatto ufficiale. 1
+          </p>
+
+          <form id="contactForm" novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="nome">Nome e cognome</label>
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="120"
+                  placeholder="Inserisci il tuo nome"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="180"
+                  placeholder="Inserisci il tuo indirizzo email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="oggetto">Oggetto</label>
+                <input
+                  id="oggetto"
+                  name="oggetto"
+                  type="text"
+                  maxlength="180"
+                  placeholder="Oggetto del messaggio"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="tipologia">Tipologia richiesta</label>
+                <input
+                  id="tipologia"
+                  name="tipologia"
+                  type="text"
+                  maxlength="120"
+                  placeholder="Ricerca, editoria, collaborazioni, informazioni"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="messaggio">Messaggio</label>
+              <textarea
+                id="messaggio"
+                name="messaggio"
+                maxlength="5000"
+                placeholder="Scrivi qui il tuo messaggio"
+                required
+              ></textarea>
+              <div class="hint">Lunghezza massima consigliata: 5000 caratteri.</div>
+            </div>
+
+            <div class="field honeypot" aria-hidden="true">
+              <label for="website">Non compilare questo campo</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn">Invia messaggio</button>
+              <a class="btn btn-secondary" id="directMailBtn" href="#">Scrivi direttamente via email</a>
+            </div>
+
+            <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <aside class="panel info-panel" aria-labelledby="contact-info-title">
+          <h3 id="contact-info-title">Informazioni operative</h3>
+          <p>
+            Questa pagina è progettata per un sito statico pubblicato su GitHub Pages. Per un invio
+            completamente automatico senza client email è necessario collegare il modulo a un servizio
+            esterno dedicato oppure a un backend separato. 2
+          </p>
+          <p>
+            La struttura qui adottata mantiene un’impostazione corretta anche senza backend: validazione
+            dei campi, protezione antispam di base tramite honeypot e invio tramite email precompilata.
+          </p>
+
+          <ul class="list" aria-label="Caratteristiche pagina contatti">
+            <li>Email ufficiale integrata nel markup semantico.</li>
+            <li>Modulo compatibile con GitHub Pages.</li>
+            <li>Protezione antispam di base senza esporre l’indirizzo in chiaro nel codice statico iniziale.</li>
+            <li>Struttura pronta a essere collegata in seguito a un servizio form dedicato.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div>© 2026 Michele Bottino</div>
+      <div>
+        Official Web Site —
+        <a href="https://michelebottino-autor.github.io/michelebottino">
+          michelebottino-autor.github.io/michelebottino
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const emailUser = "michelebottino.adc";
+      const emailDomain = "gmail.com";
+      const officialEmail = `${emailUser}@${emailDomain}`;
+
+      const emailLinkTop = document.getElementById("emailLinkTop");
+      const directMailBtn = document.getElementById("directMailBtn");
+      const form = document.getElementById("contactForm");
+      const statusBox = document.getElementById("formStatus");
+
+      const safeMailHref = `mailto:${officialEmail}`;
+
+      emailLinkTop.textContent = officialEmail;
+      emailLinkTop.href = safeMailHref;
+
+      directMailBtn.href = safeMailHref;
+
+      function setStatus(message, type = "") {
+        statusBox.textContent = message;
+        statusBox.className = "status" + (type ? ` ${type}` : "");
+      }
+
+      function sanitizeText(value) {
+        return value.replace(/\r/g, "").trim();
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = sanitizeText(document.getElementById("nome").value);
+        const email = sanitizeText(document.getElementById("email").value);
+        const oggetto = sanitizeText(document.getElementById("oggetto").value);
+        const tipologia = sanitizeText(document.getElementById("tipologia").value);
+        const messaggio = sanitizeText(document.getElementById("messaggio").value);
+        const website = sanitizeText(document.getElementById("website").value);
+
+        if (website !== "") {
+          setStatus("Invio non valido.", "error");
+          return;
+        }
+
+        if (!nome || !email || !oggetto || !messaggio) {
+          setStatus("Compila tutti i campi obbligatori.", "error");
+          return;
+        }
+
+        if (!isValidEmail(email)) {
+          setStatus("Inserisci un indirizzo email valido.", "error");
+          return;
+        }
+
+        const subject = encodeURIComponent(`[Contatto sito] ${oggetto}`);
+        const body = encodeURIComponent(
+`Nome: ${nome}
+Email: ${email}
+Tipologia: ${tipologia || "Non specificata"}
+
+Messaggio:
+${messaggio}
+
+---
+Messaggio generato dal sito ufficiale:
+https://michelebottino-autor.github.io/michelebottino`
+        );
+
+        const mailtoUrl = `mailto:${officialEmail}?subject=${subject}&body=${body}`;
+
+        setStatus("Apertura del client email in corso…", "success");
+        window.location.href = mailtoUrl;
+      });
+    })();
+  </script>
+</body>
+</html>
