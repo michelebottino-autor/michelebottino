@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pubblicazioni | Michele Bottino</title>
+
+<meta name="description" content="Archivio delle pubblicazioni scientifiche di Michele Bottino. Saggi e studi documentari con DOI, pubblicati su Zenodo e collegati al profilo ORCID dell’autore.">
+<meta name="author" content="Michele Bottino">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/pubblicazioni.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pubblicazioni | Michele Bottino">
+<meta property="og:description" content="Archivio delle pubblicazioni scientifiche di Michele Bottino con DOI e riferimenti Zenodo.">
+<meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/pubblicazioni.html">
+<meta property="og:site_name" content="Michele Bottino">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pubblicazioni | Michele Bottino">
+<meta name="twitter:description" content="Archivio delle pubblicazioni scientifiche di Michele Bottino.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:#e5e5e5;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.75;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+background:#000;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-wrap{
+max-width:1180px;
+margin:auto;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.site-name{
+font-size:15px;
+font-weight:bold;
+letter-spacing:1px;
+color:#fff;
+text-transform:uppercase;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+}
+
+nav a{
+color:#c9a43b;
+font-size:14px;
+transition:0.2s ease;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+.hero{
+background:linear-gradient(180deg, #000 0%, #0b0b0b 100%);
+padding:95px 20px 70px 20px;
+border-bottom:1px solid #1c1c1c;
+}
+
+.hero-inner{
+max-width:980px;
+margin:auto;
+}
+
+.hero-kicker{
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#c9a43b;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.05;
+margin-bottom:18px;
+color:#fff;
+}
+
+.hero p{
+font-size:18px;
+color:#d2d2d2;
+max-width:860px;
+}
+
+.container{
+max-width:980px;
+margin:auto;
+padding:70px 20px;
+}
+
+.section{
+margin-bottom:28px;
+}
+
+.section-kicker{
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#c9a43b;
+margin-bottom:10px;
+display:block;
+}
+
+h2{
+font-size:28px;
+color:#fff;
+margin-bottom:18px;
+}
+
+h3{
+font-size:21px;
+color:#c9a43b;
+margin-bottom:12px;
+}
+
+p{
+font-size:17px;
+color:#e2e2e2;
+margin-bottom:18px;
+}
+
+.intro{
+font-size:19px;
+color:#cfcfcf;
+}
+
+.panel{
+background:#141414;
+border:1px solid #222;
+padding:24px;
+margin:28px 0;
+}
+
+.panel p{
+font-size:15px;
+color:#d7d7d7;
+margin-bottom:12px;
+}
+
+.panel p:last-child{
+margin-bottom:0;
+}
+
+.pub-list{
+display:grid;
+gap:26px;
+margin-top:24px;
+}
+
+.pub-card{
+background:#141414;
+border:1px solid #222;
+padding:24px;
+}
+
+.pub-meta{
+font-size:13px;
+color:#9f9f9f;
+margin-bottom:10px;
+}
+
+.pub-doi{
+font-size:14px;
+color:#c9a43b;
+margin-bottom:14px;
+word-break:break-word;
+}
+
+.pub-card p{
+font-size:15px;
+color:#d8d8d8;
+margin-bottom:14px;
+}
+
+.pub-card p:last-child{
+margin-bottom:0;
+}
+
+.links{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+margin-top:14px;
+}
+
+.links a{
+color:#c9a43b;
+font-size:14px;
+}
+
+.links a:hover{
+color:#fff;
+}
+
+footer{
+margin-top:40px;
+padding:32px 20px 40px 20px;
+border-top:1px solid #222;
+text-align:center;
+font-size:13px;
+color:#999;
+}
+
+footer p{
+margin-bottom:8px;
+}
+
+@media(max-width:820px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p,
+.intro,
+p{
+font-size:16px;
+}
+
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Pubblicazioni | Michele Bottino",
+  "url":"https://michelebottino-autor.github.io/michelebottino/pubblicazioni.html",
+  "about":{
+    "@type":"Person",
+    "name":"Michele Bottino",
+    "birthDate":"1972",
+    "birthPlace":{
+      "@type":"Place",
+      "name":"Catania, Italia"
+    },
+    "jobTitle":[
+      "Autore",
+      "Ricercatore indipendente",
+      "Saggista",
+      "Autore di testi musicali"
+    ],
+    "sameAs":[
+      "https://orcid.org/0009-0009-2797-9267",
+      "https://iars.academia.edu/MicheleBottino"
+    ]
+  }
+}
+</script>
+
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="site-name">Michele Bottino</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="biografia.html">Biografia</a>
+      <a href="curriculum.html">Formazione</a>
+      <a href="ricerca.html">Ricerca</a>
+      <a href="pubblicazioni.html">Pubblicazioni</a>
+      <a href="bibliografia.html">Libri</a>
+      <a href="musica.html">Musica</a>
+      <a href="media.html">Media</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Archivio scientifico</div>
+    <h1>Pubblicazioni</h1>
+    <p>
+      Questa sezione raccoglie le principali pubblicazioni scientifiche e documentarie di Michele Bottino, archiviate su Zenodo, collegate a DOI e integrate nel profilo ORCID dell’autore.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="section">
+    <span class="section-kicker">Impostazione</span>
+    <h2>Profilo della produzione scientifica</h2>
+
+    <p class="intro">
+      Le pubblicazioni qui raccolte documentano una linea di ricerca indipendente fondata sull’analisi diretta delle fonti primarie e sulla ricostruzione critica delle strutture territoriali, giuridiche, ecclesiastiche ed economiche della Sicilia orientale.
+    </p>
+
+    <p>
+      I contributi sono organizzati come archivio di studi documentari e articoli di ricerca, con particolare attenzione al territorio di Calatabiano. La loro pubblicazione su Zenodo consente tracciabilità stabile, assegnazione di DOI e integrazione nel sistema pubblico della diffusione scientifica.
+    </p>
+
+    <div class="panel">
+      <p><strong>Piattaforma di riferimento:</strong> Zenodo</p>
+      <p><strong>Identificatore accademico collegato:</strong> ORCID 0009-0009-2797-9267</p>
+      <p><strong>Ambito prevalente:</strong> storia territoriale, continuità giuridica, topografia ecclesiastica, processi d’investitura, economia documentata del territorio</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="section-kicker">Record con DOI</span>
+    <h2>Archivio delle pubblicazioni</h2>
+
+    <div class="pub-list">
+
+      <article class="pub-card">
+        <div class="pub-meta">Journal article · Open · Pubblicato il 28/02/2026</div>
+        <h3>Storia Critica del Territorio di Calatabiano (XIV–XVII Secolo)</h3>
+        <div class="pub-doi">DOI: 10.5281/zenodo.18805142</div>
+        <p>
+          La ricerca offre una ricostruzione critica e documentaria del territorio di Calatabiano tra XIV e XVII secolo, con particolare attenzione alla continuità giuridica, alle strutture feudali, ai rapporti con il potere regio e alle dinamiche ecclesiastiche locali.
+        </p>
+        <p>
+          L’indagine si fonda esclusivamente su fonti primarie archivistiche — atti notarili, pergamene, registri della Real Cancelleria, documentazione patrimoniale e atti di natura giudiziaria — analizzate secondo metodo storico-critico e confronto interno delle attestazioni.
+        </p>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.18805142" target="_blank" rel="noopener noreferrer">Apri DOI</a>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-meta">Journal article · Open · Pubblicato il 28/02/2026</div>
+        <h3>Calatabiano: spazio, territorio e continuità giuridica (XIV–XVII secolo)</h3>
+        <div class="pub-doi">DOI: 10.5281/zenodo.18816887</div>
+        <p>
+          Questo articolo offre un’analisi critica e documentata del territorio di Calatabiano tra il XIV e il XVII secolo, concentrandosi sulla continuità giuridica e sulle strutture insediative.
+        </p>
+        <p>
+          L’indagine si basa su atti notarili, privilegi, bolla papale e documenti di cancelleria regionale. Ogni fonte è trascritta, identificata e sottoposta a esegesi critica, con indicazione precisa del valore attestativo e dei limiti interpretativi.
+        </p>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.18816887" target="_blank" rel="noopener noreferrer">Apri DOI</a>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-meta">Journal article · Open · Pubblicato il 01/03/2026</div>
+        <h3>Le chiese medievali di Calatabiano (CT): evidenze documentarie e continuità istituzionale, XIII–XVIII secolo</h3>
+        <div class="pub-doi">DOI: 10.5281/zenodo.18822734</div>
+        <p>
+          L’articolo presenta un’analisi sistematica delle chiese medievali di Calatabiano, fondata esclusivamente su fonti primarie documentarie e archivistiche. Il corpus comprende atti notarili, privilegi regii, bolle papali, registri ecclesiastici, trasunti, pergamene e testimonianze epigrafiche e topografiche certe.
+        </p>
+        <p>
+          La ricerca ricostruisce l’elenco delle strutture religiose documentate tra XIII e XVIII secolo, con indicazione precisa di ubicazione, tipologia, funzioni, presbiteri, cappellani e soggetti coinvolti nella gestione dei beni ecclesiastici.
+        </p>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.18822734" target="_blank" rel="noopener noreferrer">Apri DOI</a>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-meta">Journal · Open · Versione 2.0 · Pubblicato il 01/03/2026</div>
+        <h3>Calatabiano, Volume I: Investitura e gestione della Baronia nel 1487 (Processi 334 e 184)</h3>
+        <div class="pub-doi">DOI: 10.5281/zenodo.18812067</div>
+        <p>
+          Il volume documenta e analizza integralmente i Processi 334 e 184 relativi alla Baronia di Calatabiano. Il lavoro comprende trascrizioni diplomatiche complete dei fascicoli, trascrizione delle marginalia, analisi prosopografica dei testimoni e dei funzionari coinvolti e studio dei cespiti produttivi.
+        </p>
+        <p>
+          L’analisi mette in luce la continuità istituzionale tra l’investitura dei Mirulla e la gestione economica dei beni baronali, evidenziando i legami tra nobiltà messinese, notaio regio e Curia del Real Patrimonio.
+        </p>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.18812067" target="_blank" rel="noopener noreferrer">Apri DOI</a>
+        </div>
+      </article>
+
+      <article class="pub-card">
+        <div class="pub-meta">Journal · Open · Pubblicato il 05/03/2026</div>
+        <h3>L’Egemonia dell’Oro Bianco: Sintesi documentaria e critica dei Processi 184-334 e del Corpus Ecclesiasticum di Calatabiano (XIV–XVII sec.)</h3>
+        <div class="pub-doi">DOI: 10.5281/zenodo.18872989</div>
+        <p>
+          Il saggio offre una ricostruzione organica e multidimensionale del territorio di Calatabiano, integrando quattro filoni di ricerca documentaria fondati esclusivamente su fonti primarie.
+        </p>
+        <p>
+          Attraverso l’incrocio dei dati estratti dai Processi 184 e 334 e dallo spoglio del Corpus Ecclesiasticum, il lavoro mostra come la produzione della canna da zucchero abbia costituito il fulcro della continuità giuridica e patrimoniale del feudo tra tardo Medioevo e inizio dell’Età Moderna.
+        </p>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.18872989" target="_blank" rel="noopener noreferrer">Apri DOI</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="section-kicker">Riferimenti pubblici</span>
+    <h2>Identificazione e accesso</h2>
+
+    <p>
+      L’archivio delle pubblicazioni scientifiche è collegato alla presenza digitale pubblica dell’autore, attraverso ORCID, Academia.edu e il sito ufficiale. In questo modo la produzione di ricerca rimane inserita in un sistema di identificazione coerente e verificabile.
+    </p>
+
+    <div class="panel">
+      <p><strong>ORCID:</strong> 0009-0009-2797-9267</p>
+      <p><strong>Academia.edu:</strong> iars.academia.edu/MicheleBottino</p>
+      <p><strong>Official Web Site:</strong> michelebottino-autor.github.io/michelebottino</p>
+    </div>
+
+    <div class="links">
+      <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">ORCID</a>
+      <a href="https://iars.academia
