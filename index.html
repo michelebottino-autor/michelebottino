@@ -1,1002 +1,262 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michele Bottino | Official Web Site</title>
 
-  <meta
-    name="description"
-    content="Official Web Site di Michele Bottino. Autore, ricercatore indipendente e saggista. Archivio ufficiale di biografia, ricerca storico-documentaria, pubblicazioni scientifiche, bibliografia e produzione musicale."
-  />
-  <meta
-    name="keywords"
-    content="Michele Bottino, autore, ricercatore indipendente, saggista, Calatabiano, Zenodo, ORCID, bibliografia, musica, pubblicazioni scientifiche"
-  />
-  <meta name="author" content="Michele Bottino" />
-  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Michele Bottino | Official Web Site</title>
+
+<meta name="description" content="Official Web Site di Michele Bottino. Autore, ricercatore indipendente e saggista. Archivio ufficiale di biografia, ricerca documentaria, pubblicazioni e produzione musicale.">
+
+<meta name="keywords" content="Michele Bottino, autore, ricercatore indipendente, saggista, pubblicazioni, ricerca storica, bibliografia, musica">
+
+<meta name="author" content="Michele Bottino">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Michele Bottino | Official Web Site">
+<meta property="og:description" content="Archivio ufficiale delle opere, delle pubblicazioni e della ricerca di Michele Bottino.">
+<meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/">
+<meta property="og:site_name" content="Michele Bottino">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michele Bottino | Official Web Site">
+<meta name="twitter:description" content="Autore, ricercatore indipendente e saggista. Archivio ufficiale delle opere e della ricerca.">
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Person",
+"name":"Michele Bottino",
+"givenName":"Michele",
+"familyName":"Bottino",
+"birthDate":"1972",
+"birthPlace":{
+"@type":"Place",
+"name":"Catania, Italia"
+},
+"jobTitle":[
+"Autore",
+"Ricercatore indipendente",
+"Saggista",
+"Autore di testi musicali"
+],
+"url":"https://michelebottino-autor.github.io/michelebottino/",
+"email":"michelebottino.adc@gmail.com",
+"sameAs":[
+"https://orcid.org/0009-0009-2797-9267",
+"https://iars.academia.edu/MicheleBottino"
+]
+}
+</script>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:#e5e5e5;
+line-height:1.7;
+}
+
+header{
+background:#000;
+padding:20px;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:#c9a43b;
+margin-right:15px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
+}
+
+.hero{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+max-width:800px;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+border-top:1px solid #222;
+}
+
+.section h2{
+color:#c9a43b;
+font-size:26px;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:#141414;
+padding:25px;
+border:1px solid #222;
+}
+
+.card h3{
+margin-top:0;
+}
+
+.card a{
+color:#c9a43b;
+text-decoration:none;
+}
+
+.card a:hover{
+color:white;
+}
+
+footer{
+margin-top:60px;
+padding:20px;
+border-top:1px solid #222;
+text-align:center;
+font-size:13px;
+color:#888;
+}
+
+</style>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Michele Bottino | Official Web Site" />
-  <meta
-    property="og:description"
-    content="Archivio ufficiale delle opere, delle pubblicazioni scientifiche e della produzione autoriale di Michele Bottino."
-  />
-  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino" />
-  <meta property="og:site_name" content="Michele Bottino" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Michele Bottino | Official Web Site" />
-  <meta
-    name="twitter:description"
-    content="Autore, ricercatore indipendente e saggista. Archivio digitale delle opere e della ricerca."
-  />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://michelebottino-autor.github.io/michelebottino/#person",
-        "name": "Michele Bottino",
-        "givenName": "Michele",
-        "familyName": "Bottino",
-        "birthDate": "1972",
-        "birthPlace": {
-          "@type": "Place",
-          "name": "Catania, Italia"
-        },
-        "jobTitle": [
-          "Autore",
-          "Ricercatore indipendente",
-          "Saggista",
-          "Autore di testi musicali"
-        ],
-        "url": "https://michelebottino-autor.github.io/michelebottino",
-        "email": "michelebottino.adc@gmail.com",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "ORCID",
-          "value": "0009-0009-2797-9267"
-        },
-        "sameAs": [
-          "https://orcid.org/0009-0009-2797-9267",
-          "https://iars.academia.edu/MicheleBottino"
-        ],
-        "description": "Autore, ricercatore indipendente e saggista italiano. La sua attività si sviluppa tra ricerca storico-documentaria, produzione editoriale e scrittura musicale."
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://michelebottino-autor.github.io/michelebottino/#website",
-        "url": "https://michelebottino-autor.github.io/michelebottino",
-        "name": "Michele Bottino | Official Web Site",
-        "publisher": {
-          "@id": "https://michelebottino-autor.github.io/michelebottino/#person"
-        },
-        "inLanguage": "it-IT"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://michelebottino-autor.github.io/michelebottino/#webpage",
-        "url": "https://michelebottino-autor.github.io/michelebottino",
-        "name": "Michele Bottino | Official Web Site",
-        "isPartOf": {
-          "@id": "https://michelebottino-autor.github.io/michelebottino/#website"
-        },
-        "about": {
-          "@id": "https://michelebottino-autor.github.io/michelebottino/#person"
-        },
-        "inLanguage": "it-IT"
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --bg-soft: #101010;
-      --surface: #141414;
-      --surface-2: #191919;
-      --text: #e5e5e5;
-      --muted: #9e9e9e;
-      --gold: #b8952e;
-      --gold-soft: rgba(184, 149, 46, 0.12);
-      --border: #252525;
-      --line: #1f1f1f;
-      --shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
-      --radius: 10px;
-      --max: 1240px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #0b0b0b 0%, #090909 100%);
-      color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.72;
-      letter-spacing: 0.01em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(100% - 32px, var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(10, 10, 10, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #151515;
-    }
-
-    .site-header-inner {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .brand-title {
-      margin: 0;
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .brand-subtitle {
-      margin: 0;
-      font-size: 0.7rem;
-      color: var(--gold);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .nav a {
-      color: var(--muted);
-      font-size: 0.92rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      color: var(--gold);
-      outline: none;
-    }
-
-    .hero {
-      padding: 88px 0 60px;
-      border-bottom: 1px solid #121212;
-      background:
-        radial-gradient(circle at top left, rgba(184,149,46,0.08), transparent 28%),
-        radial-gradient(circle at top right, rgba(184,149,46,0.05), transparent 26%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--gold);
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.24em;
-    }
-
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2.4rem, 4.8vw, 4.8rem);
-      line-height: 1.02;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.04em;
-    }
-
-    .hero-subtitle {
-      margin: 0 0 22px;
-      font-size: 1rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .lead {
-      margin: 0 0 16px;
-      max-width: 76ch;
-      color: #d4d4d4;
-      font-size: 1rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 8px;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: #111;
-      font-weight: 700;
-      transition: transform 0.16s ease, opacity 0.2s ease, background 0.2s ease;
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-1px);
-      opacity: 0.96;
-      outline: none;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .hero-card,
-    .feature-card,
-    .record-card,
-    .section-panel,
-    .cta-panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 26px;
-    }
-
-    .hero-card h2,
-    .section-title {
-      margin: 0 0 16px;
-      font-size: 1.08rem;
-      color: #fff;
-    }
-
-    .identity-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .identity-item {
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-    }
-
-    .identity-item:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .identity-label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.72rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-    }
-
-    .identity-value {
-      color: #ddd;
-      font-size: 0.95rem;
-      word-break: break-word;
-    }
-
-    .identity-value a {
-      border-bottom: 1px solid transparent;
-    }
-
-    .identity-value a:hover,
-    .identity-value a:focus-visible {
-      color: #fff;
-      border-bottom-color: var(--gold);
-      outline: none;
-    }
-
-    section.section {
-      padding: 68px 0;
-      border-bottom: 1px solid #121212;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 26px;
-    }
-
-    .section-kicker {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: var(--gold);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .section-intro {
-      margin: 0;
-      max-width: 74ch;
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .grid-4,
-    .grid-3,
-    .grid-2 {
-      display: grid;
-      gap: 18px;
-    }
-
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .feature-card,
-    .record-card,
-    .section-panel {
-      padding: 22px;
-    }
-
-    .feature-card h3,
-    .record-card h3 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-      color: #fff;
-      line-height: 1.35;
-    }
-
-    .feature-card p,
-    .record-card p,
-    .section-panel p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .feature-card p:last-child,
-    .record-card p:last-child,
-    .section-panel p:last-child {
-      margin-bottom: 0;
-    }
-
-    .card-meta,
-    .record-footer {
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-    }
-
-    .card-meta {
-      font-size: 0.78rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .record-footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .record-id {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.78rem;
-      color: var(--gold);
-      word-break: break-word;
-    }
-
-    .record-link {
-      font-size: 0.88rem;
-      color: #d8d8d8;
-      border-bottom: 1px solid transparent;
-    }
-
-    .record-link:hover,
-    .record-link:focus-visible {
-      color: #fff;
-      border-bottom-color: var(--gold);
-      outline: none;
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .mini-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .mini-item:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-
-    .mini-item span:first-child {
-      color: #d7d7d7;
-      font-size: 0.93rem;
-    }
-
-    .mini-item span:last-child {
-      color: var(--gold);
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-
-    .cta-panel {
-      padding: 28px;
-      background: linear-gradient(180deg, #121212 0%, #151515 100%);
-    }
-
-    .cta-panel p {
-      margin: 0 0 18px;
-      color: #d3d3d3;
-      font-size: 0.96rem;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer {
-      padding: 30px 0 44px;
-      color: #6f6f6f;
-      font-size: 0.84rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 16px;
-      border-top: 1px solid #151515;
-      padding-top: 24px;
-    }
-
-    .footer a {
-      color: #8b8b8b;
-    }
-
-    .footer a:hover,
-    .footer a:focus-visible {
-      color: #fff;
-      outline: none;
-    }
-
-    @media (max-width: 1180px) {
-      .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .hero-grid,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .site-header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 14px 0;
-      }
-
-      .nav {
-        gap: 14px;
-      }
-
-      .hero {
-        padding-top: 54px;
-      }
-
-      .section-head {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .grid-4,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
-
-      .mini-item {
-        flex-direction: column;
-        gap: 4px;
-      }
-    }
-  </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a class="brand" href="https://michelebottino-autor.github.io/michelebottino">
-        <p class="brand-title">Michele Bottino</p>
-        <p class="brand-subtitle">Official Web Site</p>
-      </a>
 
-      <nav class="nav" aria-label="Navigazione principale">
-        <a href="index.html">Home</a>
-        <a href="biografia.html">Biografia</a>
-        <a href="curriculum.html">Formazione</a>
-        <a href="ricerca.html">Ricerca</a>
-        <a href="pubblicazioni.html">Pubblicazioni</a>
-        <a href="bibliografia.html">Libri</a>
-        <a href="musica.html">Musica</a>
-        <a href="media.html">Media</a>
-        <a href="contatti.html">Contatti</a>
-      </nav>
-    </div>
-  </header>
+<header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Archivio ufficiale</span>
-          <h1>Michele Bottino</h1>
-          <p class="hero-subtitle">Autore · Ricercatore indipendente · Saggista</p>
+<nav>
 
-          <p class="lead">
-            Michele Bottino (Catania, 1972) è autore, ricercatore indipendente e saggista.
-            La sua attività si colloca all’intersezione tra ricerca storico-documentaria,
-            analisi investigativa, produzione saggistica e narrativa, e scrittura musicale.
-          </p>
+<a href="index.html">Home</a>
+<a href="biografia.html">Biografia</a>
+<a href="curriculum.html">Formazione</a>
+<a href="ricerca.html">Ricerca</a>
+<a href="pubblicazioni.html">Pubblicazioni</a>
+<a href="bibliografia.html">Libri</a>
+<a href="musica.html">Musica</a>
+<a href="media.html">Media</a>
+<a href="contatti.html">Contatti</a>
 
-          <p class="lead">
-            Il suo lavoro integra studio delle fonti archivistiche, metodo storico-critico
-            e strumenti digitali applicati alla ricerca umanistica, con particolare attenzione
-            alla Sicilia tra tardo Medioevo e prima Età Moderna.
-          </p>
+</nav>
 
-          <div class="hero-actions">
-            <a class="btn" href="pubblicazioni.html">Archivio scientifico</a>
-            <a class="btn btn-secondary" href="bibliografia.html">Catalogo editoriale</a>
-            <a class="btn btn-secondary" href="musica.html">Produzione musicale</a>
-          </div>
-        </div>
+</header>
 
-        <aside class="hero-card" aria-labelledby="hero-card-title">
-          <h2 id="hero-card-title">Identificatori e riferimenti</h2>
-          <div class="identity-list">
-            <div class="identity-item">
-              <span class="identity-label">Official Web Site</span>
-              <div class="identity-value">
-                <a href="https://michelebottino-autor.github.io/michelebottino" target="_blank" rel="noopener noreferrer">
-                  michelebottino-autor.github.io/michelebottino
-                </a>
-              </div>
-            </div>
+<section class="hero">
 
-            <div class="identity-item">
-              <span class="identity-label">ORCID</span>
-              <div class="identity-value">
-                <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">
-                  0009-0009-2797-9267
-                </a>
-              </div>
-            </div>
+<h1>Michele Bottino</h1>
 
-            <div class="identity-item">
-              <span class="identity-label">Academia.edu</span>
-              <div class="identity-value">
-                <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">
-                  iars.academia.edu/MicheleBottino
-                </a>
-              </div>
-            </div>
+<p>
+Autore, saggista e ricercatore indipendente.
+Il sito raccoglie le informazioni principali sulla produzione editoriale,
+le attività di ricerca documentaria e le pubblicazioni dell’autore,
+insieme alla discografia e ai riferimenti pubblici.
+</p>
 
-            <div class="identity-item">
-              <span class="identity-label">Email ufficiale</span>
-              <div class="identity-value">
-                <a href="mailto:michelebottino.adc@gmail.com">michelebottino.adc@gmail.com</a>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
+</section>
 
-    <section class="section" id="profilo">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Profilo</span>
-            <h2 class="section-title">Quadro generale</h2>
-          </div>
-          <p class="section-intro">
-            Il sito è organizzato come archivio unitario della presenza autoriale, documentaria ed editoriale.
-          </p>
-        </div>
+<section class="section">
 
-        <div class="grid-4">
-          <article class="feature-card">
-            <h3>Biografia</h3>
-            <p>
-              Profilo ufficiale dell’autore, con inquadramento generale dell’attività
-              tra ricerca storico-documentaria, produzione editoriale e scrittura musicale.
-            </p>
-            <div class="card-meta">Profilo pubblico</div>
-          </article>
+<h2>Sezioni del sito</h2>
 
-          <article class="feature-card">
-            <h3>Formazione</h3>
-            <p>
-              Percorsi di studio, certificazioni tecniche, riconoscimenti documentati
-              e presenza accademica digitale, esposti con formulazione rigorosa e non ambigua.
-            </p>
-            <div class="card-meta">Formazione e documentazione</div>
-          </article>
+<div class="cards">
 
-          <article class="feature-card">
-            <h3>Ricerca</h3>
-            <p>
-              Ambiti, fonti e metodo della ricerca storico-documentaria sulla Sicilia orientale,
-              con particolare attenzione al territorio di Calatabiano.
-            </p>
-            <div class="card-meta">Metodo e fonti</div>
-          </article>
+<div class="card">
+<h3>Biografia</h3>
+<p>Profilo dell’autore e percorso di attività.</p>
+<a href="biografia.html">Apri pagina</a>
+</div>
 
-          <article class="feature-card">
-            <h3>Rassegna media</h3>
-            <p>
-              Archivio degli articoli, delle segnalazioni e dei riferimenti pubblici relativi
-              all’attività autoriale e culturale.
-            </p>
-            <div class="card-meta">Rassegna stampa</div>
-          </article>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<h3>Formazione</h3>
+<p>Percorso formativo e attività di studio.</p>
+<a href="curriculum.html">Apri pagina</a>
+</div>
 
-    <section class="section" id="ricerca-home">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Ricerca storico-documentaria</span>
-            <h2 class="section-title">Asse scientifico del sito</h2>
-          </div>
-          <p class="section-intro">
-            La ricerca costituisce uno dei nuclei centrali dell’archivio e si fonda su fonti primarie e metodo critico.
-          </p>
-        </div>
+<div class="card">
+<h3>Ricerca</h3>
+<p>Attività di ricerca documentaria e metodologie.</p>
+<a href="ricerca.html">Apri pagina</a>
+</div>
 
-        <div class="grid-2">
-          <div class="section-panel">
-            <p>
-              L’attività di ricerca di Michele Bottino si concentra principalmente sull’analisi delle fonti archivistiche
-              relative alla storia territoriale della Sicilia orientale tra XIV e XVII secolo, con particolare attenzione
-              a Calatabiano e alla sua evoluzione istituzionale, economica ed ecclesiastica.
-            </p>
-            <p>
-              Il lavoro si fonda su trascrizione diplomatica dei documenti, analisi prosopografica,
-              studio della microtoponomastica storica e ricostruzione delle strutture feudali e istituzionali.
-            </p>
-          </div>
+<div class="card">
+<h3>Pubblicazioni</h3>
+<p>Archivio delle pubblicazioni scientifiche.</p>
+<a href="pubblicazioni.html">Apri pagina</a>
+</div>
 
-          <div class="feature-card">
-            <h3>Assi principali di ricerca</h3>
-            <div class="mini-list">
-              <div class="mini-item">
-                <span>Continuità giuridica del territorio</span>
-                <span>XIV–XVII sec.</span>
-              </div>
-              <div class="mini-item">
-                <span>Strutture feudali e patrimoniali</span>
-                <span>Analisi strutturale</span>
-              </div>
-              <div class="mini-item">
-                <span>Topografia ecclesiastica</span>
-                <span>Fonti religiose</span>
-              </div>
-              <div class="mini-item">
-                <span>Reti prosopografiche</span>
-                <span>Soggetti e relazioni</span>
-              </div>
-              <div class="mini-item">
-                <span>Microtoponomastica storica</span>
-                <span>Spazio e pertinenze</span>
-              </div>
-            </div>
-            <div class="record-footer">
-              <div class="record-id">Archivio scientifico con DOI</div>
-              <a class="record-link" href="ricerca.html">Apri sezione ricerca</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<h3>Libri</h3>
+<p>Opere editoriali e catalogo bibliografico.</p>
+<a href="bibliografia.html">Apri pagina</a>
+</div>
 
-    <section class="section" id="pubblicazioni-home">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Pubblicazioni scientifiche</span>
-            <h2 class="section-title">Record con DOI</h2>
-          </div>
-          <p class="section-intro">
-            Le pubblicazioni sono archiviate su Zenodo e collegate al profilo ORCID dell’autore.
-          </p>
-        </div>
+<div class="card">
+<h3>Musica</h3>
+<p>Produzione musicale e singoli pubblicati.</p>
+<a href="musica.html">Apri pagina</a>
+</div>
 
-        <div class="grid-3">
-          <article class="record-card">
-            <h3>Storia Critica del Territorio di Calatabiano (XIV–XVII Secolo)</h3>
-            <p>
-              Ricostruzione critica e documentaria del territorio di Calatabiano,
-              con particolare attenzione alla continuità giuridica e alle strutture feudali.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">DOI: 10.5281/zenodo.18805142</div>
-              <a class="record-link" href="https://doi.org/10.5281/zenodo.18805142" target="_blank" rel="noopener noreferrer">Apri DOI</a>
-            </div>
-          </article>
+<div class="card">
+<h3>Media</h3>
+<p>Articoli e riferimenti pubblici.</p>
+<a href="media.html">Apri pagina</a>
+</div>
 
-          <article class="record-card">
-            <h3>Le chiese medievali di Calatabiano (CT)</h3>
-            <p>
-              Studio sistematico delle strutture ecclesiastiche documentate tra XIII e XVIII secolo,
-              fondato su fonti primarie archivistiche.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">DOI: 10.5281/zenodo.18822734</div>
-              <a class="record-link" href="https://doi.org/10.5281/zenodo.18822734" target="_blank" rel="noopener noreferrer">Apri DOI</a>
-            </div>
-          </article>
+<div class="card">
+<h3>Contatti</h3>
+<p>Riferimenti ufficiali dell’autore.</p>
+<a href="contatti.html">Apri pagina</a>
+</div>
 
-          <article class="record-card">
-            <h3>L'Egemonia dell'Oro Bianco</h3>
-            <p>
-              Sintesi documentaria e critica dei Processi 184-334 e del Corpus Ecclesiasticum di Calatabiano,
-              con focus sulla produzione della canna da zucchero.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">DOI: 10.5281/zenodo.18872989</div>
-              <a class="record-link" href="https://doi.org/10.5281/zenodo.18872989" target="_blank" rel="noopener noreferrer">Apri DOI</a>
-            </div>
-          </article>
-        </div>
+</div>
 
-        <div class="cta-actions" style="margin-top:24px;">
-          <a class="btn" href="pubblicazioni.html">Vedi tutte le pubblicazioni</a>
-        </div>
-      </div>
-    </section>
+</section>
 
-    <section class="section" id="editoria-home">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Catalogo editoriale</span>
-            <h2 class="section-title">Bibliografia essenziale</h2>
-          </div>
-          <p class="section-intro">
-            Il catalogo bibliografico raccoglie opere con ISBN in ambito saggistico, narrativo e introspettivo.
-          </p>
-        </div>
+<footer>
 
-        <div class="grid-3">
-          <article class="record-card">
-            <h3>EUROPA: Anatomia di un crimine</h3>
-            <p>
-              Saggio dedicato alle dinamiche di potere politico ed economico nel contesto europeo.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">ISBN-13: 979-8335804790</div>
-              <a class="record-link" href="https://www.amazon.it/dp/B0DF65D7S4" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
-            </div>
-          </article>
+<p>
+Official Web Site<br>
+https://michelebottino-autor.github.io/michelebottino
+</p>
 
-          <article class="record-card">
-            <h3>Calatabiano Sacra</h3>
-            <p>
-              Opera dedicata alla dimensione religiosa, storica e simbolica del territorio di Calatabiano.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">ISBN-13: 979-8325126840</div>
-              <a class="record-link" href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
-            </div>
-          </article>
+<p>
+Email: michelebottino.adc@gmail.com
+</p>
 
-          <article class="record-card">
-            <h3>Stige: Una lettera senza destinatario</h3>
-            <p>
-              Narrazione drammatica e introspettiva costruita attorno a memoria, dolore e redenzione.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">ISBN-13: 979-8324733476</div>
-              <a class="record-link" href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
-            </div>
-          </article>
-        </div>
+<p>
+© Michele Bottino
+</p>
 
-        <div class="cta-actions" style="margin-top:24px;">
-          <a class="btn" href="bibliografia.html">Apri bibliografia completa</a>
-        </div>
-      </div>
-    </section>
+</footer>
 
-    <section class="section" id="musica-home">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Produzione musicale</span>
-            <h2 class="section-title">Singoli 2025</h2>
-          </div>
-          <p class="section-intro">
-            La sezione musicale raccoglie i singoli distribuiti tramite TuneCore con testi di Michele Bottino.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="record-card">
-            <h3>Un’altra Notte a Metà</h3>
-            <p>Singolo pubblicato il 31/05/2025. Testi di Michele Bottino.</p>
-            <div class="record-footer">
-              <div class="record-id">UPC: 859708060164 · Release ID: 1232306426</div>
-              <a class="record-link" href="https://web.tunecore.it/albums/1232306426" target="_blank" rel="noopener noreferrer">TuneCore</a>
-            </div>
-          </article>
-
-          <article class="record-card">
-            <h3>Riconquistarti</h3>
-            <p>Singolo pubblicato il 28/05/2025. Testi di Michele Bottino.</p>
-            <div class="record-footer">
-              <div class="record-id">UPC: 859707617000 · Release ID: 1232291774</div>
-              <a class="record-link" href="https://web.tunecore.it/albums/1232291774" target="_blank" rel="noopener noreferrer">TuneCore</a>
-            </div>
-          </article>
-
-          <article class="record-card">
-            <h3>Casanova</h3>
-            <p>Singolo pubblicato il 28/05/2025. Testi di Michele Bottino.</p>
-            <div class="record-footer">
-              <div class="record-id">UPC: 859707617109 · Release ID: 1232294112</div>
-              <a class="record-link" href="https://web.tunecore.it/albums/1232294112" target="_blank" rel="noopener noreferrer">TuneCore</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="cta-actions" style="margin-top:24px;">
-          <a class="btn" href="musica.html">Apri archivio musicale</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="media-home">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Media e rassegna stampa</span>
-            <h2 class="section-title">Riferimenti pubblici</h2>
-          </div>
-          <p class="section-intro">
-            La rassegna stampa raccoglie articoli, segnalazioni e riferimenti pubblici relativi all’attività autoriale.
-          </p>
-        </div>
-
-        <div class="grid-2">
-          <article class="record-card">
-            <h3>Fidelity News</h3>
-            <p>
-              Articolo dedicato al profilo autoriale di Michele Bottino, con attenzione
-              al rapporto tra thriller, storie vere e voce narrativa personale.
-            </p>
-            <div class="record-footer">
-              <div class="record-id">Articolo online</div>
-              <a class="record-link" href="https://news.fidelityhouse.eu/arte/michele-bottino-lo-scrittore-siciliano-che-unisce-thriller-e-storie-vere-con-una-voce-originale-639972.html" target="_blank" rel="noopener noreferrer">Apri articolo</a>
-            </div>
-          </article>
-
-          <div class="section-panel">
-            <p>
-              La sezione media è concepita come archivio documentario aperto, predisposto
-              per l’inserimento ordinato di ulteriori articoli, recensioni, interviste e segnalazioni.
-            </p>
-            <p>
-              Ogni riferimento pubblico viene trattato come dato rilevante e non marginale,
-              secondo una logica di tracciabilità e ordinamento coerente con l’impianto complessivo del sito.
-            </p>
-          </div>
-        </div>
-
-        <div class="cta-actions" style="margin-top:24px;">
-          <a class="btn" href="media.html">Apri rassegna media</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="accesso-rapido">
-      <div class="container">
-        <div class="cta-panel">
-          <h2 class="section-title">Accesso rapido alle sezioni principali</h2>
-          <p>
-            Il sito è strutturato come archivio coerente della presenza autoriale, documentaria ed editoriale di Michele Bottino.
-          </p>
-          <div class="cta-actions">
-            <a class="btn" href="biografia.html">Biografia</a>
-            <a class="btn btn-secondary" href="curriculum.html">Formazione</a>
-            <a class="btn btn-secondary" href="ricerca.html">Ricerca</a>
-            <a class="btn btn-secondary" href="pubblicazioni.html">Pubblicazioni</a>
-            <a class="btn btn-secondary" href="bibliografia.html">Libri</a>
-            <a class="btn btn-secondary" href="musica.html">Musica</a>
-            <a class="btn btn-secondary" href="media.html">Media</a>
-            <a class="btn btn-secondary" href="contatti.html">Contatti</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>© 2026 Michele Bottino. Tutti i diritti riservati.</div>
-      <div>
-        Official Web Site:
-        <a href="https://michelebottino-autor.github.io/michelebottino">
-          michelebottino-autor.github.io/michelebottino
-        </a>
-      </div>
-      <div>
-        Contatti:
-        <a href="mailto:michelebottino.adc@gmail.com">michelebottino.adc@gmail.com</a>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
