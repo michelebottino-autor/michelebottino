@@ -1,3 +1,14 @@
 User-agent: *
 Allow: /
+
+# Evita scansioni inutili di file tecnici o di servizio
+Disallow: /LICENSE
+Disallow: /README.md
+
+# Se in futuro aggiungi cartelle tecniche o bozze, puoi sbloccarle o bloccarle qui
+# Disallow: /drafts/
+# Disallow: /private/
+# Disallow: /test/
+
+# Canonical sitemap del sito
 Sitemap: https://michelebottino-autor.github.io/michelebottino/sitemap.xml
