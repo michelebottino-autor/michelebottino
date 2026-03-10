@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michele Bottino | Official Web Site | Autore e Ricercatore indipendente</title>
+  <title>Michele Bottino | Official Web Site</title>
 
   <meta
     name="description"
-    content="Sito ufficiale di Michele Bottino. Autore, ricercatore indipendente e saggista. Archivio documentale delle pubblicazioni scientifiche, opere editoriali e produzione musicale."
+    content="Official Web Site di Michele Bottino. Autore, ricercatore indipendente e saggista. Archivio ufficiale di biografia, ricerca storico-documentaria, pubblicazioni scientifiche, bibliografia e produzione musicale."
   />
   <meta
     name="keywords"
-    content="Michele Bottino, autore, ricercatore indipendente, saggista, Calatabiano, Zenodo, ORCID, libri, ISBN, DOI, produzione musicale, TuneCore"
+    content="Michele Bottino, autore, ricercatore indipendente, saggista, Calatabiano, Zenodo, ORCID, bibliografia, musica, pubblicazioni scientifiche"
   />
   <meta name="author" content="Michele Bottino" />
   <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino" />
@@ -24,6 +24,7 @@
   />
   <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino" />
   <meta property="og:site_name" content="Michele Bottino" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Michele Bottino | Official Web Site" />
   <meta
@@ -41,11 +42,11 @@
         "name": "Michele Bottino",
         "givenName": "Michele",
         "familyName": "Bottino",
+        "birthDate": "1972",
         "birthPlace": {
           "@type": "Place",
           "name": "Catania, Italia"
         },
-        "birthDate": "1972",
         "jobTitle": [
           "Autore",
           "Ricercatore indipendente",
@@ -63,7 +64,7 @@
           "https://orcid.org/0009-0009-2797-9267",
           "https://iars.academia.edu/MicheleBottino"
         ],
-        "description": "Autore, ricercatore indipendente e saggista italiano. La sua attività si colloca all’intersezione tra ricerca storico-documentaria, analisi investigativa, produzione saggistica e narrativa, e scrittura musicale."
+        "description": "Autore, ricercatore indipendente e saggista italiano. La sua attività si sviluppa tra ricerca storico-documentaria, produzione editoriale e scrittura musicale."
       },
       {
         "@type": "WebSite",
@@ -85,7 +86,8 @@
         },
         "about": {
           "@id": "https://michelebottino-autor.github.io/michelebottino/#person"
-        }
+        },
+        "inLanguage": "it-IT"
       }
     ]
   }
@@ -96,17 +98,20 @@
       --bg: #0a0a0a;
       --bg-soft: #101010;
       --surface: #141414;
+      --surface-2: #191919;
       --text: #e5e5e5;
       --muted: #9e9e9e;
       --gold: #b8952e;
+      --gold-soft: rgba(184, 149, 46, 0.12);
       --border: #252525;
       --line: #1f1f1f;
       --shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
       --radius: 10px;
-      --max: 1220px;
+      --max: 1240px;
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -114,11 +119,14 @@
       background: linear-gradient(180deg, #0b0b0b 0%, #090909 100%);
       color: var(--text);
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.72;
       letter-spacing: 0.01em;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
       width: min(100% - 32px, var(--max));
@@ -184,7 +192,7 @@
     }
 
     .hero {
-      padding: 88px 0 56px;
+      padding: 88px 0 60px;
       border-bottom: 1px solid #121212;
       background:
         radial-gradient(circle at top left, rgba(184,149,46,0.08), transparent 28%),
@@ -193,7 +201,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 34px;
       align-items: start;
     }
@@ -208,16 +216,16 @@
     }
 
     h1 {
-      margin: 0 0 22px;
-      font-size: clamp(2.3rem, 4.6vw, 4.6rem);
-      line-height: 1.05;
+      margin: 0 0 18px;
+      font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+      line-height: 1.02;
       font-weight: 800;
       color: #fff;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
     }
 
     .hero-subtitle {
-      margin: 0 0 26px;
+      margin: 0 0 22px;
       font-size: 1rem;
       color: var(--gold);
       text-transform: uppercase;
@@ -225,9 +233,9 @@
     }
 
     .lead {
-      margin: 0 0 18px;
-      max-width: 72ch;
-      color: #d2d2d2;
+      margin: 0 0 16px;
+      max-width: 76ch;
+      color: #d4d4d4;
       font-size: 1rem;
     }
 
@@ -249,7 +257,7 @@
       background: var(--gold);
       color: #111;
       font-weight: 700;
-      transition: transform 0.16s ease, opacity 0.2s ease;
+      transition: transform 0.16s ease, opacity 0.2s ease, background 0.2s ease;
     }
 
     .btn:hover,
@@ -267,14 +275,17 @@
     .hero-card,
     .feature-card,
     .record-card,
-    .bio-panel {
+    .section-panel,
+    .cta-panel {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .hero-card { padding: 26px; }
+    .hero-card {
+      padding: 26px;
+    }
 
     .hero-card h2,
     .section-title {
@@ -325,7 +336,7 @@
     }
 
     section.section {
-      padding: 66px 0;
+      padding: 68px 0;
       border-bottom: 1px solid #121212;
     }
 
@@ -348,7 +359,7 @@
 
     .section-intro {
       margin: 0;
-      max-width: 72ch;
+      max-width: 74ch;
       color: var(--muted);
       font-size: 0.96rem;
     }
@@ -366,7 +377,7 @@
 
     .feature-card,
     .record-card,
-    .bio-panel {
+    .section-panel {
       padding: 22px;
     }
 
@@ -375,14 +386,21 @@
       margin: 0 0 12px;
       font-size: 1rem;
       color: #fff;
+      line-height: 1.35;
     }
 
     .feature-card p,
     .record-card p,
-    .bio-panel p {
+    .section-panel p {
       margin: 0 0 14px;
       color: var(--muted);
       font-size: 0.93rem;
+    }
+
+    .feature-card p:last-child,
+    .record-card p:last-child,
+    .section-panel p:last-child {
+      margin-bottom: 0;
     }
 
     .card-meta,
@@ -390,6 +408,9 @@
       margin-top: 14px;
       padding-top: 14px;
       border-top: 1px solid var(--line);
+    }
+
+    .card-meta {
       font-size: 0.78rem;
       color: var(--gold);
       text-transform: uppercase;
@@ -409,16 +430,12 @@
       font-size: 0.78rem;
       color: var(--gold);
       word-break: break-word;
-      text-transform: none;
-      letter-spacing: 0;
     }
 
     .record-link {
       font-size: 0.88rem;
       color: #d8d8d8;
       border-bottom: 1px solid transparent;
-      text-transform: none;
-      letter-spacing: 0;
     }
 
     .record-link:hover,
@@ -428,10 +445,51 @@
       outline: none;
     }
 
-    .bio-panel p:last-child,
-    .feature-card p:last-child,
-    .record-card p:last-child {
-      margin-bottom: 0;
+    .mini-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .mini-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mini-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .mini-item span:first-child {
+      color: #d7d7d7;
+      font-size: 0.93rem;
+    }
+
+    .mini-item span:last-child {
+      color: var(--gold);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .cta-panel {
+      padding: 28px;
+      background: linear-gradient(180deg, #121212 0%, #151515 100%);
+    }
+
+    .cta-panel p {
+      margin: 0 0 18px;
+      color: #d3d3d3;
+      font-size: 0.96rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     .footer {
@@ -459,11 +517,13 @@
       outline: none;
     }
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1180px) {
       .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .hero-grid,
-      .grid-2 { grid-template-columns: 1fr; }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 720px) {
@@ -473,18 +533,31 @@
         padding: 14px 0;
       }
 
-      .nav { gap: 14px; }
-      .hero { padding-top: 54px; }
+      .nav {
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
       .section-head {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .grid-4,
       .grid-3 {
         grid-template-columns: 1fr;
       }
+
       .footer-inner {
         flex-direction: column;
+      }
+
+      .mini-item {
+        flex-direction: column;
+        gap: 4px;
       }
     }
   </style>
@@ -533,7 +606,8 @@
 
           <div class="hero-actions">
             <a class="btn" href="pubblicazioni.html">Archivio scientifico</a>
-            <a class="btn btn-secondary" href="bibliografia.html">Bibliografia editoriale</a>
+            <a class="btn btn-secondary" href="bibliografia.html">Catalogo editoriale</a>
+            <a class="btn btn-secondary" href="musica.html">Produzione musicale</a>
           </div>
         </div>
 
@@ -578,142 +652,332 @@
       </div>
     </section>
 
-    <section class="section" id="aree">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-kicker">Aree di attività</span>
-            <h2 class="section-title">Ambiti principali</h2>
-          </div>
-          <p class="section-intro">
-            Il sito raccoglie in forma unitaria ricerca storico-documentaria, produzione editoriale,
-            scrittura saggistica e attività autoriale musicale.
-          </p>
-        </div>
-
-        <div class="grid-4">
-          <article class="feature-card">
-            <h3>Ricerca storico-documentaria</h3>
-            <p>
-              Analisi delle fonti archivistiche relative alla Sicilia orientale tra XIV e XVII secolo,
-              con particolare attenzione al territorio di Calatabiano.
-            </p>
-            <div class="card-meta">Fonti primarie · Metodo critico</div>
-          </article>
-
-          <article class="feature-card">
-            <h3>Pubblicazioni scientifiche</h3>
-            <p>
-              Studi pubblicati su Zenodo con DOI permanenti, fondati su trascrizione diplomatica,
-              analisi prosopografica e ricostruzione storico-istituzionale.
-            </p>
-            <div class="card-meta">Zenodo · DOI · ORCID</div>
-          </article>
-
-          <article class="feature-card">
-            <h3>Opere editoriali</h3>
-            <p>
-              Catalogo bibliografico con ISBN: saggistica, narrativa, riflessione filosofica,
-              indagine storica e testi a carattere introspettivo.
-            </p>
-            <div class="card-meta">ISBN · Amazon Store</div>
-          </article>
-
-          <article class="feature-card">
-            <h3>Produzione musicale</h3>
-            <p>
-              Testi musicali distribuiti tramite TuneCore e presenti sulle principali piattaforme
-              digitali, con identificatori UPC e release ID.
-            </p>
-            <div class="card-meta">TuneCore · Spotify · Apple Music</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="profilo">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="section-kicker">Profilo</span>
-            <h2 class="section-title">Biografia essenziale</h2>
+            <h2 class="section-title">Quadro generale</h2>
           </div>
           <p class="section-intro">
-            Il profilo dell’autore si colloca tra ricerca documentaria, produzione saggistica,
-            narrativa e scrittura musicale, con un metodo fondato sulla centralità delle fonti.
+            Il sito è organizzato come archivio unitario della presenza autoriale, documentaria ed editoriale.
           </p>
         </div>
 
-        <div class="bio-panel">
-          <p>
-            Michele Bottino è uno scrittore, ricercatore indipendente e autore multidisciplinare italiano,
-            la cui attività si colloca all’intersezione tra ricerca storico-documentaria, analisi investigativa,
-            produzione saggistica e narrativa, e scrittura musicale.
-          </p>
-          <p>
-            Il suo lavoro si caratterizza per un approccio metodologico che integra lo studio delle fonti
-            archivistiche, l’analisi storica critica e l’utilizzo di strumenti digitali applicati alla ricerca
-            umanistica, con particolare attenzione allo studio delle strutture sociali, economiche e istituzionali
-            della Sicilia tra il tardo Medioevo e la prima Età Moderna.
-          </p>
-          <p>
-            Parallelamente alla ricerca storica, Bottino sviluppa una produzione letteraria articolata che comprende
-            saggistica investigativa, narrativa introspettiva, riflessione filosofica e testi musicali distribuiti
-            sulle principali piattaforme digitali.
-          </p>
+        <div class="grid-4">
+          <article class="feature-card">
+            <h3>Biografia</h3>
+            <p>
+              Profilo ufficiale dell’autore, con inquadramento generale dell’attività
+              tra ricerca storico-documentaria, produzione editoriale e scrittura musicale.
+            </p>
+            <div class="card-meta">Profilo pubblico</div>
+          </article>
+
+          <article class="feature-card">
+            <h3>Formazione</h3>
+            <p>
+              Percorsi di studio, certificazioni tecniche, riconoscimenti documentati
+              e presenza accademica digitale, esposti con formulazione rigorosa e non ambigua.
+            </p>
+            <div class="card-meta">Formazione e documentazione</div>
+          </article>
+
+          <article class="feature-card">
+            <h3>Ricerca</h3>
+            <p>
+              Ambiti, fonti e metodo della ricerca storico-documentaria sulla Sicilia orientale,
+              con particolare attenzione al territorio di Calatabiano.
+            </p>
+            <div class="card-meta">Metodo e fonti</div>
+          </article>
+
+          <article class="feature-card">
+            <h3>Rassegna media</h3>
+            <p>
+              Archivio degli articoli, delle segnalazioni e dei riferimenti pubblici relativi
+              all’attività autoriale e culturale.
+            </p>
+            <div class="card-meta">Rassegna stampa</div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="formazione-riepilogo">
+    <section class="section" id="ricerca-home">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="section-kicker">Formazione e profilo documentario</span>
-            <h2 class="section-title">Percorsi di studio, certificazioni e riconoscimenti</h2>
+            <span class="section-kicker">Ricerca storico-documentaria</span>
+            <h2 class="section-title">Asse scientifico del sito</h2>
           </div>
           <p class="section-intro">
-            La formazione comprende scienze sociali, criminologia, digital humanities,
-            psicologia investigativa e sicurezza informatica. I riconoscimenti eventualmente citati
-            sono riportati in forma documentaria e non come titoli accademici ordinari.
+            La ricerca costituisce uno dei nuclei centrali dell’archivio e si fonda su fonti primarie e metodo critico.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="section-panel">
+            <p>
+              L’attività di ricerca di Michele Bottino si concentra principalmente sull’analisi delle fonti archivistiche
+              relative alla storia territoriale della Sicilia orientale tra XIV e XVII secolo, con particolare attenzione
+              a Calatabiano e alla sua evoluzione istituzionale, economica ed ecclesiastica.
+            </p>
+            <p>
+              Il lavoro si fonda su trascrizione diplomatica dei documenti, analisi prosopografica,
+              studio della microtoponomastica storica e ricostruzione delle strutture feudali e istituzionali.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Assi principali di ricerca</h3>
+            <div class="mini-list">
+              <div class="mini-item">
+                <span>Continuità giuridica del territorio</span>
+                <span>XIV–XVII sec.</span>
+              </div>
+              <div class="mini-item">
+                <span>Strutture feudali e patrimoniali</span>
+                <span>Analisi strutturale</span>
+              </div>
+              <div class="mini-item">
+                <span>Topografia ecclesiastica</span>
+                <span>Fonti religiose</span>
+              </div>
+              <div class="mini-item">
+                <span>Reti prosopografiche</span>
+                <span>Soggetti e relazioni</span>
+              </div>
+              <div class="mini-item">
+                <span>Microtoponomastica storica</span>
+                <span>Spazio e pertinenze</span>
+              </div>
+            </div>
+            <div class="record-footer">
+              <div class="record-id">Archivio scientifico con DOI</div>
+              <a class="record-link" href="ricerca.html">Apri sezione ricerca</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pubblicazioni-home">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Pubblicazioni scientifiche</span>
+            <h2 class="section-title">Record con DOI</h2>
+          </div>
+          <p class="section-intro">
+            Le pubblicazioni sono archiviate su Zenodo e collegate al profilo ORCID dell’autore.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="record-card">
-            <h3>Percorsi Open University</h3>
+            <h3>Storia Critica del Territorio di Calatabiano (XIV–XVII Secolo)</h3>
             <p>
-              Criminologia, digital humanities, forensic science, psicologia investigativa
-              e cybercrime studies.
+              Ricostruzione critica e documentaria del territorio di Calatabiano,
+              con particolare attenzione alla continuità giuridica e alle strutture feudali.
             </p>
             <div class="record-footer">
-              <div class="record-id">2006–2024</div>
-              <a class="record-link" href="curriculum.html">Apri sezione</a>
+              <div class="record-id">DOI: 10.5281/zenodo.18805142</div>
+              <a class="record-link" href="https://doi.org/10.5281/zenodo.18805142" target="_blank" rel="noopener noreferrer">Apri DOI</a>
             </div>
           </article>
 
           <article class="record-card">
-            <h3>Certificazioni tecniche</h3>
+            <h3>Le chiese medievali di Calatabiano (CT)</h3>
             <p>
-              Percorsi documentati in ambito sicurezza informatica ed ethical hacking.
+              Studio sistematico delle strutture ecclesiastiche documentate tra XIII e XVIII secolo,
+              fondato su fonti primarie archivistiche.
             </p>
             <div class="record-footer">
-              <div class="record-id">ID certificato disponibile</div>
-              <a class="record-link" href="curriculum.html">Apri sezione</a>
+              <div class="record-id">DOI: 10.5281/zenodo.18822734</div>
+              <a class="record-link" href="https://doi.org/10.5281/zenodo.18822734" target="_blank" rel="noopener noreferrer">Apri DOI</a>
             </div>
           </article>
 
           <article class="record-card">
-            <h3>Conferimenti e riconoscimenti</h3>
+            <h3>L'Egemonia dell'Oro Bianco</h3>
             <p>
-              Sezione documentaria dedicata ai conferimenti ricevuti, presentati con formulazione
-              neutra e senza implicare titoli accademici ordinari.
+              Sintesi documentaria e critica dei Processi 184-334 e del Corpus Ecclesiasticum di Calatabiano,
+              con focus sulla produzione della canna da zucchero.
             </p>
             <div class="record-footer">
-              <div class="record-id">Profilo documentario</div>
-              <a class="record-link" href="curriculum.html">Apri sezione</a>
+              <div class="record-id">DOI: 10.5281/zenodo.18872989</div>
+              <a class="record-link" href="https://doi.org/10.5281/zenodo.18872989" target="_blank" rel="noopener noreferrer">Apri DOI</a>
             </div>
           </article>
+        </div>
+
+        <div class="cta-actions" style="margin-top:24px;">
+          <a class="btn" href="pubblicazioni.html">Vedi tutte le pubblicazioni</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="editoria-home">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Catalogo editoriale</span>
+            <h2 class="section-title">Bibliografia essenziale</h2>
+          </div>
+          <p class="section-intro">
+            Il catalogo bibliografico raccoglie opere con ISBN in ambito saggistico, narrativo e introspettivo.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="record-card">
+            <h3>EUROPA: Anatomia di un crimine</h3>
+            <p>
+              Saggio dedicato alle dinamiche di potere politico ed economico nel contesto europeo.
+            </p>
+            <div class="record-footer">
+              <div class="record-id">ISBN-13: 979-8335804790</div>
+              <a class="record-link" href="https://www.amazon.it/dp/B0DF65D7S4" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <h3>Calatabiano Sacra</h3>
+            <p>
+              Opera dedicata alla dimensione religiosa, storica e simbolica del territorio di Calatabiano.
+            </p>
+            <div class="record-footer">
+              <div class="record-id">ISBN-13: 979-8325126840</div>
+              <a class="record-link" href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <h3>Stige: Una lettera senza destinatario</h3>
+            <p>
+              Narrazione drammatica e introspettiva costruita attorno a memoria, dolore e redenzione.
+            </p>
+            <div class="record-footer">
+              <div class="record-id">ISBN-13: 979-8324733476</div>
+              <a class="record-link" href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" rel="noopener noreferrer">Scheda Amazon</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-actions" style="margin-top:24px;">
+          <a class="btn" href="bibliografia.html">Apri bibliografia completa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="musica-home">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Produzione musicale</span>
+            <h2 class="section-title">Singoli 2025</h2>
+          </div>
+          <p class="section-intro">
+            La sezione musicale raccoglie i singoli distribuiti tramite TuneCore con testi di Michele Bottino.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="record-card">
+            <h3>Un’altra Notte a Metà</h3>
+            <p>Singolo pubblicato il 31/05/2025. Testi di Michele Bottino.</p>
+            <div class="record-footer">
+              <div class="record-id">UPC: 859708060164 · Release ID: 1232306426</div>
+              <a class="record-link" href="https://web.tunecore.it/albums/1232306426" target="_blank" rel="noopener noreferrer">TuneCore</a>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <h3>Riconquistarti</h3>
+            <p>Singolo pubblicato il 28/05/2025. Testi di Michele Bottino.</p>
+            <div class="record-footer">
+              <div class="record-id">UPC: 859707617000 · Release ID: 1232291774</div>
+              <a class="record-link" href="https://web.tunecore.it/albums/1232291774" target="_blank" rel="noopener noreferrer">TuneCore</a>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <h3>Casanova</h3>
+            <p>Singolo pubblicato il 28/05/2025. Testi di Michele Bottino.</p>
+            <div class="record-footer">
+              <div class="record-id">UPC: 859707617109 · Release ID: 1232294112</div>
+              <a class="record-link" href="https://web.tunecore.it/albums/1232294112" target="_blank" rel="noopener noreferrer">TuneCore</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-actions" style="margin-top:24px;">
+          <a class="btn" href="musica.html">Apri archivio musicale</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media-home">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">Media e rassegna stampa</span>
+            <h2 class="section-title">Riferimenti pubblici</h2>
+          </div>
+          <p class="section-intro">
+            La rassegna stampa raccoglie articoli, segnalazioni e riferimenti pubblici relativi all’attività autoriale.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="record-card">
+            <h3>Fidelity News</h3>
+            <p>
+              Articolo dedicato al profilo autoriale di Michele Bottino, con attenzione
+              al rapporto tra thriller, storie vere e voce narrativa personale.
+            </p>
+            <div class="record-footer">
+              <div class="record-id">Articolo online</div>
+              <a class="record-link" href="https://news.fidelityhouse.eu/arte/michele-bottino-lo-scrittore-siciliano-che-unisce-thriller-e-storie-vere-con-una-voce-originale-639972.html" target="_blank" rel="noopener noreferrer">Apri articolo</a>
+            </div>
+          </article>
+
+          <div class="section-panel">
+            <p>
+              La sezione media è concepita come archivio documentario aperto, predisposto
+              per l’inserimento ordinato di ulteriori articoli, recensioni, interviste e segnalazioni.
+            </p>
+            <p>
+              Ogni riferimento pubblico viene trattato come dato rilevante e non marginale,
+              secondo una logica di tracciabilità e ordinamento coerente con l’impianto complessivo del sito.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-actions" style="margin-top:24px;">
+          <a class="btn" href="media.html">Apri rassegna media</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="accesso-rapido">
+      <div class="container">
+        <div class="cta-panel">
+          <h2 class="section-title">Accesso rapido alle sezioni principali</h2>
+          <p>
+            Il sito è strutturato come archivio coerente della presenza autoriale, documentaria ed editoriale di Michele Bottino.
+          </p>
+          <div class="cta-actions">
+            <a class="btn" href="biografia.html">Biografia</a>
+            <a class="btn btn-secondary" href="curriculum.html">Formazione</a>
+            <a class="btn btn-secondary" href="ricerca.html">Ricerca</a>
+            <a class="btn btn-secondary" href="pubblicazioni.html">Pubblicazioni</a>
+            <a class="btn btn-secondary" href="bibliografia.html">Libri</a>
+            <a class="btn btn-secondary" href="musica.html">Musica</a>
+            <a class="btn btn-secondary" href="media.html">Media</a>
+            <a class="btn btn-secondary" href="contatti.html">Contatti</a>
+          </div>
         </div>
       </div>
     </section>
