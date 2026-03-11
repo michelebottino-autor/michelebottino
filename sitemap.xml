@@ -1,73 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
     <loc>https://michelebottino-autor.github.io/michelebottino/index.html</loc>
     <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/biografia.html</loc>
+    <loc>https://michelebottino-autor.github.io/michelebottino/ricerca.html</loc>
     <lastmod>2026-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/pubblicazioni.html</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>hourly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://michelebottino-autor.github.io/michelebottino/bibliografia.html</loc>
     <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://michelebottino-autor.github.io/michelebottino/pubblicazioni.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/ricerca.html</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/musica.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <loc>https://michelebottino-autor.github.io/michelebottino/biografia.html</loc>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://michelebottino-autor.github.io/michelebottino/media.html</loc>
-    <lastmod>2026-03-11</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/contatti.html</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://michelebottino-autor.github.io/michelebottino/privacy.html</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://michelebottino-autor.github.io/michelebottino/musica.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
@@ -76,6 +58,13 @@
     <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://michelebottino-autor.github.io/michelebottino/contatti.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>
