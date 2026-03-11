@@ -1,7 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+
+# Percorso della Sitemap per Google e Bing
 Sitemap: https://michelebottino-autor.github.io/michelebottino/sitemap.xml
 
-# Istruzione per crawler IA (2026 Ready)
-User-agent: Googlebot
-Crawl-delay: 0
+# Istruzione per crawler AI (2026 Standard)
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
