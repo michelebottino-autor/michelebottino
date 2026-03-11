@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://michelebottino-autor.github.io/michelebottino/sitemap.xml
+
+# Istruzione per crawler IA (2026 Ready)
+User-agent: Googlebot
+Crawl-delay: 0
