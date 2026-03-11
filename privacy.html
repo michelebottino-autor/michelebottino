@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Michele Bottino</title>
+    <meta name="description" content="Informativa privacy del sito ufficiale di Michele Bottino.">
+    <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/privacy.html">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy Policy | Michele Bottino">
+    <meta property="og:description" content="Informativa privacy del sito ufficiale di Michele Bottino.">
+    <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/privacy.html">
+    <meta property="og:site_name" content="Michele Bottino">
+
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --panel: #121821;
+            --border: #273244;
+            --text: #e7edf5;
+            --muted: #aeb9c8;
+            --accent: #d4af37;
+            --accent-hover: #e6c55a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: linear-gradient(180deg, #0b0f14 0%, #101722 100%);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(7, 10, 14, 0.92);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            min-height: 74px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            margin: 0;
+            font-size: 1.35rem;
+            color: #ffffff;
+            letter-spacing: 0.04em;
+        }
+
+        .brand-subtitle {
+            margin: 4px 0 0 0;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            font-size: 0.96rem;
+            color: #f2f5f9;
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        main {
+            padding: 56px 0 70px;
+        }
+
+        .hero {
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 999px;
+            color: var(--accent);
+            font-size: 0.84rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        h1 {
+            margin: 18px 0 12px;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            color: #ffffff;
+        }
+
+        .lead {
+            max-width: 860px;
+            font-size: 1.08rem;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .panel {
+            background: rgba(18, 24, 33, 0.92);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+            margin-top: 26px;
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .panel p {
+            margin: 0 0 16px 0;
+        }
+
+        .panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 0.97rem;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            background: #0a0d12;
+            padding: 26px 0;
+        }
+
+        .footer-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 14px 24px;
+            align-items: center;
+        }
+
+        .footer-text {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 18px;
+        }
+
+        .footer-links a {
+            font-size: 0.94rem;
+        }
+
+        @media (max-width: 860px) {
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 0;
+            }
+
+            nav ul {
+                gap: 12px 16px;
+            }
+
+            .panel {
+                padding: 22px;
+            }
+
+            .footer-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container topbar">
+        <div class="brand">
+            <h2 class="brand-title">Michele Bottino</h2>
+            <p class="brand-subtitle">Autore, Saggista e Ricercatore indipendente</p>
+        </div>
+
+        <nav aria-label="Navigazione principale">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li><a href="pubblicazioni.html">Pubblicazioni</a></li>
+                <li><a href="ricerca.html">Ricerca</a></li>
+                <li><a href="musica.html">Musica</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="bibliografia.html">Bibliografia</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <section class="hero" aria-labelledby="privacy-title">
+            <span class="eyebrow">Informativa</span>
+            <h1 id="privacy-title">Privacy Policy</h1>
+            <p class="lead">
+                Questa informativa descrive le modalità generali di funzionamento del sito ufficiale di Michele Bottino,
+                pubblicato a fini informativi, culturali, bibliografici e documentari.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="titolare">
+            <h2 id="titolare">1. Titolare del sito</h2>
+            <p>
+                Il sito ufficiale è riferito a <strong>Michele Bottino</strong>.
+            </p>
+            <p>
+                Contatto email: <a href="mailto:michelebottino.adc@gmail.com">michelebottino.adc@gmail.com</a>
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="tipologia">
+            <h2 id="tipologia">2. Natura del sito</h2>
+            <p>
+                Il presente sito ha finalità esclusivamente informative e di presentazione pubblica dell’attività autoriale,
+                saggistica, storico-documentaria e musicale di Michele Bottino.
+            </p>
+            <p>
+                Il sito non offre registrazione utenti, aree riservate, procedure di acquisto diretto, sistemi di commento
+                pubblici o raccolta automatizzata di dati personali tramite moduli interni.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="dati">
+            <h2 id="dati">3. Dati personali trattati</h2>
+            <p>
+                La semplice consultazione delle pagine del sito non comporta, per quanto di competenza editoriale del titolare,
+                la raccolta diretta di dati personali identificativi mediante form di registrazione o moduli di contatto interni.
+            </p>
+            <p>
+                Eventuali dati personali possono essere trasmessi volontariamente dall’utente esclusivamente attraverso strumenti
+                esterni di comunicazione, come l’invio spontaneo di email all’indirizzo indicato nella pagina contatti.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="email">
+            <h2 id="email">4. Comunicazioni inviate via email</h2>
+            <p>
+                Qualora un utente contatti l’autore tramite posta elettronica, i dati trasmessi volontariamente saranno utilizzati
+                unicamente per rispondere alla richiesta ricevuta o per dare seguito al contenuto della comunicazione.
+            </p>
+            <p>
+                Tali dati non vengono diffusi pubblicamente e non sono utilizzati per finalità di profilazione commerciale.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="cookie">
+            <h2 id="cookie">5. Cookie e tecnologie di tracciamento</h2>
+            <p>
+                Il sito, nella sua struttura editoriale statica, non utilizza cookie di profilazione propri né strumenti interni
+                finalizzati al monitoraggio commerciale dell’utente.
+            </p>
+            <p>
+                Eventuali componenti tecniche connesse all’infrastruttura di hosting o ai servizi esterni raggiunti tramite link
+                possono essere disciplinate dalle rispettive policy dei fornitori terzi.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="linkesterni">
+            <h2 id="linkesterni">6. Collegamenti verso siti esterni</h2>
+            <p>
+                Il sito può contenere collegamenti a piattaforme esterne, tra cui repository scientifici, profili accademici,
+                store editoriali, piattaforme di streaming musicale e social network.
+            </p>
+            <p>
+                L’apertura di tali collegamenti comporta l’uscita dal presente dominio. Per il trattamento dei dati effettuato
+                da tali piattaforme si applicano esclusivamente le rispettive informative privacy e condizioni di utilizzo.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="hosting">
+            <h2 id="hosting">7. Hosting e pubblicazione</h2>
+            <p>
+                Il sito è pubblicato attraverso infrastruttura di hosting statico collegata a GitHub Pages. Eventuali dati tecnici
+                generati dalla normale navigazione internet possono essere trattati dal fornitore dell’infrastruttura secondo le
+                proprie condizioni di servizio e le proprie policy di sicurezza.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="diritti">
+            <h2 id="diritti">8. Diritti dell’interessato</h2>
+            <p>
+                Nei limiti applicabili alla natura del sito e del trattamento eventualmente posto in essere tramite comunicazioni
+                dirette, l’interessato può richiedere informazioni, aggiornamento, rettifica o cancellazione dei dati trasmessi
+                volontariamente contattando il titolare all’indirizzo email indicato nella presente pagina.
+            </p>
+        </section>
+
+        <section class="panel" aria-labelledby="aggiornamenti">
+            <h2 id="aggiornamenti">9. Aggiornamenti dell’informativa</h2>
+            <p>
+                La presente informativa può essere aggiornata in qualsiasi momento per esigenze editoriali, tecniche o normative.
+            </p>
+            <p class="note">
+                Data ultimo aggiornamento: 11/03/2026
+            </p>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-wrap">
+        <div class="footer-text">
+            © Michele Bottino — Official Web Site
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="contatti.html">Contatti</a>
+            <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
