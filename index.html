@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michele Bottino | Sito Ufficiale</title>
+
+  <meta name="description" content="Sito ufficiale di Michele Bottino. Autore, ricercatore indipendente e autore di testi musicali.">
+  <meta name="author" content="Michele Bottino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Michele Bottino | Sito Ufficiale">
+  <meta property="og:description" content="Autore, ricercatore indipendente e autore di testi musicali.">
+  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/">
+  <meta property="og:site_name" content="Michele Bottino">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --bg-soft:#121925;
+      --panel:#18202d;
+      --text:#eef2f7;
+      --muted:#bcc6d4;
+      --line:rgba(255,255,255,.08);
+      --accent:#d5b06a;
+      --shadow:0 18px 44px rgba(0,0,0,.24);
+      --radius:20px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(120,160,255,.08), transparent 25%),
+        radial-gradient(circle at top right, rgba(213,176,106,.08), transparent 24%),
+        linear-gradient(180deg,#091018 0%,#0b0f14 100%);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(92%, var(--max));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(14px);
+      background:rgba(11,15,20,.78);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--panel),#10151f);
+      border:1px solid var(--line);
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:.05em;
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+
+    .brand-copy strong{
+      display:block;
+      font-size:1rem;
+      line-height:1.1;
+    }
+
+    .brand-copy span{
+      display:block;
+      font-size:.82rem;
+      color:var(--muted);
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .menu a{
+      padding:10px 14px;
+      border-radius:999px;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition:.22s ease;
+      font-size:.95rem;
+    }
+
+    .menu a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+    }
+
+    .menu .cta{
+      color:#111;
+      font-weight:700;
+      background:linear-gradient(135deg,var(--accent),#efd28d);
+      border:none;
+    }
+
+    .hero{
+      padding:70px 0 26px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:20px;
+      align-items:stretch;
+    }
+
+    .card,
+    .stat,
+    .tile,
+    .book,
+    .research-card,
+    .music-card,
+    .profile-card,
+    .press-card,
+    .contact-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-main{
+      padding:40px;
+    }
+
+    .hero-side{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      justify-content:space-between;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:.84rem;
+      margin-bottom:18px;
+    }
+
+    h1,h2,h3{
+      margin:0 0 14px;
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    h1{
+      font-size:clamp(2.3rem,4.2vw,4.8rem);
+      max-width:12ch;
+    }
+
+    .subtitle{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:clamp(1rem,1.3vw,1.18rem);
+      max-width:60ch;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:22px;
+    }
+
+    .btn{
+      min-height:48px;
+      padding:0 18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600;
+      transition:.22s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.07);
+    }
+
+    .btn-primary{
+      color:#111;
+      border:none;
+      background:linear-gradient(135deg,var(--accent),#efd28d);
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .stat{
+      padding:18px;
+    }
+
+    .stat strong{
+      display:block;
+      color:var(--accent);
+      font-size:1.1rem;
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .hero-side p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .tag-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .tag{
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:.88rem;
+    }
+
+    section{
+      padding:18px 0 0;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:64ch;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .tile,
+    .research-card,
+    .music-card,
+    .profile-card,
+    .press-card,
+    .contact-card{
+      padding:24px;
+    }
+
+    .icon{
+      width:50px;
+      height:50px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--accent);
+      font-size:1.18rem;
+      margin-bottom:16px;
+    }
+
+    .tile p,
+    .book p,
+    .research-card p,
+    .music-card p,
+    .profile-card p,
+    .press-card p,
+    .contact-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+
+    .mini-link{
+      color:var(--accent);
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+    }
+
+    .books-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .book{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .book-header{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+
+    .book-badge{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--accent);
+      font-size:1.1rem;
+    }
+
+    .book-meta{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.025);
+      padding:10px 12px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:600;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    details p{
+      margin-top:10px;
+      font-size:.95rem;
+    }
+
+    .research-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .profiles-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      margin-bottom:26px;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 110px;
+      color:var(--muted);
+      font-size:.92rem;
+      margin-top:28px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:12px 18px;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+      transition:.22s ease;
+    }
+
+    .footer-links a:hover{
+      color:var(--text);
+    }
+
+    .mobile-dock{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:14px;
+      width:min(94%,560px);
+      z-index:1200;
+      display:none;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+      padding:10px;
+      border-radius:24px;
+      background:rgba(11,15,20,.88);
+      border:1px solid var(--line);
+      backdrop-filter:blur(18px);
+      box-shadow:var(--shadow);
+    }
+
+    .mobile-dock a{
+      min-height:58px;
+      border-radius:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:4px;
+      color:var(--muted);
+      font-size:.74rem;
+      text-align:center;
+      padding:6px;
+    }
+
+    .mobile-dock a:hover,
+    .mobile-dock a.active{
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+    }
+
+    .mobile-dock .dot{
+      font-size:1.06rem;
+      line-height:1;
+    }
+
+    @media (max-width:1120px){
+      .hero-grid,
+      .books-grid,
+      .grid-3,
+      .profiles-grid,
+      .contact-wrap,
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-grid > :first-child{
+        grid-column:1 / -1;
+      }
+    }
+
+    @media (max-width:780px){
+      .menu{
+        display:none;
+      }
+
+      .hero{
+        padding-top:34px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .tile,
+      .book,
+      .research-card,
+      .music-card,
+      .profile-card,
+      .press-card,
+      .contact-card{
+        padding:22px;
+      }
+
+      .hero-stats,
+      .books-grid,
+      .grid-3,
+      .grid-2,
+      .profiles-grid,
+      .contact-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-links{
+        justify-content:flex-start;
+      }
+
+      .mobile-dock{
+        display:grid;
+      }
+
+      body{
+        padding-bottom:110px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Vai alla home page">
+        <div class="brand-mark">MB</div>
+        <div class="brand-copy">
+          <strong>Michele Bottino</strong>
+          <span>Sito Ufficiale</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Menu principale">
+        <a href="index.html">Home</a>
+        <a href="autore.html">Autore</a>
+        <a href="opere.html">Opere</a>
+        <a href="ricerca.html">Ricerca</a>
+        <a href="musica.html">Musica</a>
+        <a href="media.html">Media</a>
+        <a href="contatti.html" class="cta">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <article class="card hero-main">
+          <div class="eyebrow">⌘ Archivio digitale ufficiale</div>
+          <h1>Michele Bottino</h1>
+          <p class="subtitle">
+            Autore, ricercatore indipendente e autore di testi musicali. Il sito raccoglie in forma ordinata
+            produzione editoriale, pubblicazioni scientifiche, discografia e profili ufficiali pubblici.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="autore.html">◉ Profilo autore</a>
+            <a class="btn" href="opere.html">✦ Esplora le opere</a>
+            <a class="btn" href="ricerca.html">⌘ Vai alla ricerca</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>9 libri</strong>
+              <span>pubblicazioni editoriali archiviate</span>
+            </div>
+            <div class="stat">
+              <strong>5 DOI</strong>
+              <span>pubblicazioni scientifiche su Zenodo</span>
+            </div>
+            <div class="stat">
+              <strong>11 singoli</strong>
+              <span>testi musicali distribuiti nel 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card hero-side">
+          <div>
+            <h2>Funzione del sito</h2>
+            <p>
+              Questa home page funge da nodo centrale dell’identità pubblica dell’autore e collega
+              produzione editoriale, ricerca documentaria, presenza accademica e contenuti musicali.
+            </p>
+          </div>
+
+          <div class="tag-list" aria-label="Ambiti principali">
+            <span class="tag">Narrativa</span>
+            <span class="tag">Saggistica</span>
+            <span class="tag">Ricerca storica</span>
+            <span class="tag">Digital humanities</span>
+            <span class="tag">Testi musicali</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Profilo sintetico</h2>
+            <p>
+              Michele Bottino, nato a Catania nel 1972, opera tra scrittura, ricerca storico-documentaria e
+              produzione di testi musicali. L’attività si sviluppa in forma indipendente, con attenzione alla
+              documentazione delle fonti e alla distinzione tra dato attestato e interpretazione.
+            </p>
+          </div>
+          <a class="btn" href="autore.html">Leggi il profilo completo</a>
+        </div>
+
+        <div class="grid-3">
+          <article class="tile">
+            <div class="icon">✦</div>
+            <h3>Produzione editoriale</h3>
+            <p>
+              Opere narrative e saggistiche pubblicate con catalogo editoriale associato al profilo autore Amazon.
+            </p>
+            <a class="mini-link" href="opere.html">Apri la pagina opere →</a>
+          </article>
+
+          <article class="tile">
+            <div class="icon">⌘</div>
+            <h3>Ricerca indipendente</h3>
+            <p>
+              Attività di ricerca fondata su fonti archivistiche primarie, con pubblicazioni scientifiche
+              rese disponibili tramite DOI e repository pubblici.
+            </p>
+            <a class="mini-link" href="ricerca.html">Apri la pagina ricerca →</a>
+          </article>
+
+          <article class="tile">
+            <div class="icon">♪</div>
+            <h3>Testi musicali</h3>
+            <p>
+              Produzione di testi per singoli distribuiti tramite piattaforme digitali. In questa sede il ruolo
+              documentato è quello di autore dei testi.
+            </p>
+            <a class="mini-link" href="musica.html">Apri la pagina musica →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Pubblicazioni in evidenza</h2>
+            <p>
+              Selezione iniziale di tre titoli rappresentativi della produzione dell’autore: narrativa recente,
+              ricerca legata al territorio e opera simbolica di riferimento.
+            </p>
+          </div>
+          <a class="btn" href="opere.html">Vedi il catalogo completo</a>
+        </div>
+
+        <div class="books-grid">
+          <article class="book">
+            <div class="book-header">
+              <div class="book-badge">✦</div>
+              <div>
+                <h3>Stige: Una lettera senza destinatario</h3>
+                <div class="book-meta">Pubblicazione in evidenza</div>
+              </div>
+            </div>
+            <details>
+              <summary>Descrizione sintetica</summary>
+              <p>Narrazione epistolare di forte intensità emotiva, costruita come confessione senza destinatario. Il testo affronta memoria, dolore e redenzione attraverso una struttura drammatica e introspettiva.</p>
+            </details>
+            <a class="mini-link" href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" rel="noopener noreferrer">Pagina del libro →</a>
+          </article>
+
+          <article class="book">
+            <div class="book-header">
+              <div class="book-badge">⌘</div>
+              <div>
+                <h3>Calatabiano Sacra</h3>
+                <div class="book-meta">Tra ricerca e pubblicazione editoriale</div>
+              </div>
+            </div>
+            <details>
+              <summary>Descrizione sintetica</summary>
+              <p>Ricostruzione documentaria e devozionale dedicata alle tradizioni religiose e alla memoria storica del territorio di Calatabiano, con attenzione alle fonti e alla continuità della memoria locale.</p>
+            </details>
+            <a class="mini-link" href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank" rel="noopener noreferrer">Pagina del libro →</a>
+          </article>
+
+          <article class="book">
+            <div class="book-header">
+              <div class="book-badge">◉</div>
+              <div>
+                <h3>Il deposito delle anime</h3>
+                <div class="book-meta">Opera narrativa di riferimento</div>
+              </div>
+            </div>
+            <details>
+              <summary>Descrizione sintetica</summary>
+              <p>Opera a carattere metafisico che indaga il destino dell’esistenza e il significato dell’esperienza umana oltre la dimensione materiale, con forte orientamento simbolico.</p>
+            </details>
+            <a class="mini-link" href="https://www.amazon.it/dp/B0D47M24V1" target="_blank" rel="noopener noreferrer">Pagina del libro →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Pubblicazioni scientifiche</h2>
+            <p>
+              Produzione scientifica pubblica collegata a DOI e repository, con focus sulla ricostruzione documentaria
+              del territorio di Calatabiano e delle sue strutture ecclesiastiche e istituzionali.
+            </p>
+          </div>
+          <a class="btn" href="ricerca.html">Apri la sezione ricerca</a>
+        </div>
+
+        <div class="research-list">
+          <article class="research-card">
+            <h3>Le chiese medievali di Calatabiano (CT): evidenze documentarie e continuità istituzionale, XIII–XVIII secolo</h3>
+            <p>Analisi sistematica delle strutture religiose documentate, basata esclusivamente su fonti primarie archivistiche.</p>
+            <a class="mini-link" href="https://doi.org/10.5281/zenodo.18822734" target="_blank" rel="noopener noreferrer">Apri DOI →</a>
+            <span class="meta">DOI 10.5281/zenodo.18822734</span>
+          </article>
+
+          <article class="research-card">
+            <h3>Storia Critica del Territorio di Calatabiano (XIV–XVII Secolo)</h3>
+            <p>Ricostruzione documentaria del territorio, della continuità giuridica e delle strutture feudali ed ecclesiastiche.</p>
+            <a class="mini-link" href="https://doi.org/10.5281/zenodo.18805142" target="_blank" rel="noopener noreferrer">Apri DOI →</a>
+            <span class="meta">DOI 10.5281/zenodo.18805142</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Produzione musicale</h2>
+            <p>
+              Sezione dedicata alla produzione di testi musicali distribuiti nel 2025. La pagina completa raccoglie
+              discografia, identificatori distributivi e collegamenti alle piattaforme pubbliche.
+            </p>
+          </div>
+          <a class="btn" href="musica.html">Apri la sezione musica</a>
+        </div>
+
+        <div class="grid-2">
+          <article class="music-card">
+            <h3>Discografia 2025</h3>
+            <p>Un’altra Notte a Metà · Riconquistarrti · Casanova · Notte Di Mezza Estate · Dovevi solo Aspettare · Parlami Ancora · Vivo da Re · Spento ma resto vivo · Un Sogno che resta · Nel respiro di te · Senza fare Rumore.</p>
+            <a class="mini-link" href="musica.html">Vedi dettagli completi →</a>
+          </article>
+
+          <article class="music-card">
+            <h3>Canale video musicale</h3>
+            <p>La presenza multimediale musicale è collegata a un canale YouTube pubblico dedicato alla presentazione video dei contenuti.</p>
+            <a class="mini-link" href="https://youtube.com/channel/UCxnPYKas6JqM9h5HrAqwrpQ" target="_blank" rel="noopener noreferrer">Apri YouTube →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Profili ufficiali</h2>
+            <p>
+              Nodi pubblici dell’identità digitale dell’autore: editoriale, accademica, scientifica e multimediale.
+            </p>
+          </div>
+        </div>
+
+        <div class="profiles-grid">
+          <article class="profile-card">
+            <h3>Amazon Author</h3>
+            <p>Pagina autore editoriale con catalogo pubblico dei libri associati al nome Michele Bottino.</p>
+            <a class="mini-link" href="https://www.amazon.it/Michele-Bottino/e/B09RB5HFYM" target="_blank" rel="noopener noreferrer">Apri profilo →</a>
+          </article>
+
+          <article class="profile-card">
+            <h3>ORCID</h3>
+            <p>Profilo identificativo accademico e scientifico collegato alle pubblicazioni e alla ricerca documentaria.</p>
+            <a class="mini-link" href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">Apri profilo →</a>
+          </article>
+
+          <article class="profile-card">
+            <h3>Academia.edu</h3>
+            <p>Profilo accademico con presentazione pubblica del lavoro di ricerca e collegamenti ai temi di studio.</p>
+            <a class="mini-link" href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Apri profilo →</a>
+          </article>
+
+          <article class="profile-card">
+            <h3>Zenodo</h3>
+            <p>Repository scientifico collegato ai DOI delle pubblicazioni archivistiche e documentarie.</p>
+            <a class="mini-link" href="https://zenodo.org" target="_blank" rel="noopener noreferrer">Apri piattaforma →</a>
+          </article>
+
+          <article class="profile-card">
+            <h3>YouTube</h3>
+            <p>Canale multimediale utilizzato per la presentazione video del versante musicale.</p>
+            <a class="mini-link" href="https://youtube.com/channel/UCxnPYKas6JqM9h5HrAqwrpQ" target="_blank" rel="noopener noreferrer">Apri canale →</a>
+          </article>
+
+          <article class="profile-card">
+            <h3>Sito ufficiale</h3>
+            <p>Nodo centrale dell’identità digitale pubblica, destinato a raccogliere in modo ordinato le varie attività.</p>
+            <a class="mini-link" href="https://michelebottino-autor.github.io/michelebottino" target="_blank" rel="noopener noreferrer">Apri sito →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Rassegna stampa e media</h2>
+            <p>
+              Riferimenti pubblici esterni che menzionano l’autore e documentano la presenza mediatica del progetto.
+            </p>
+          </div>
+          <a class="btn" href="media.html">Apri la sezione media</a>
+        </div>
+
+        <article class="press-card">
+          <h3>Fidelity News</h3>
+          <p>Articolo dedicato all’autore: “Michele Bottino: lo scrittore siciliano che unisce thriller e storie vere con una voce originale”.</p>
+          <a class="mini-link" href="https://news.fidelityhouse.eu/arte/michele-bottino-lo-scrittore-siciliano-che-unisce-thriller-e-storie-vere-con-una-voce-originale-639972.html" target="_blank" rel="noopener noreferrer">Apri articolo →</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Contatti</h2>
+            <p>
+              Per richieste editoriali, informazioni, comunicazioni o collaborazioni, utilizza la pagina contatti con modulo dedicato.
+              L’indirizzo email dell’autore non viene esposto nelle pagine pubbliche del sito.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-wrap">
+          <article class="contact-card">
+            <h3>Modulo di contatto</h3>
+            <p>
+              Il sito utilizza una pagina dedicata all’invio dei messaggi, con struttura conforme alla gestione
+              della privacy e senza pubblicazione dell’indirizzo email in chiaro.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="contatti.html">✉ Contatta l’autore</a>
+            </div>
+          </article>
+
+          <aside class="contact-card">
+            <div>
+              <h3>Canali ufficiali</h3>
+              <p>Amazon · ORCID · Academia · Zenodo · YouTube</p>
+            </div>
+            <div>
+              <h3>Tutela dei dati</h3>
+              <p>Le informazioni trasmesse tramite modulo saranno trattate esclusivamente per la gestione del contatto.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        © Michele Bottino — Tutti i diritti riservati.<br>
+        Progetto, struttura, contenuti e design del sito: Michele Bottino.<br>
+        È vietata la riproduzione totale o parziale senza autorizzazione scritta.
+      </div>
+
+      <nav class="footer-links" aria-label="Collegamenti legali e di servizio">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="note-legali.html">Note Legali</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </footer>
+
+  <nav class="mobile-dock" aria-label="Navigazione mobile">
+    <a class="active" href="index.html">
+      <span class="dot">⌂</span>
+      <span>Home</span>
+    </a>
+    <a href="autore.html">
+      <span class="dot">◉</span>
+      <span>Autore</span>
+    </a>
+    <a href="opere.html">
+      <span class="dot">✦</span>
+      <span>Opere</span>
+    </a>
+    <a href="ricerca.html">
+      <span class="dot">⌘</span>
+      <span>Ricerca</span>
+    </a>
+    <a href="contatti.html">
+      <span class="dot">✉</span>
+      <span>Contatti</span>
+    </a>
+  </nav>
+</body>
+</html>
