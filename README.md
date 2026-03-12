@@ -1,20 +1,23 @@
 # Michele Bottino — Sito Ufficiale
 
-Repository del sito web ufficiale di **Michele Bottino**, autore e ricercatore indipendente.
+Repository del sito ufficiale di **Michele Bottino**, autore, ricercatore indipendente e autore di testi musicali.
 
-Il sito è pubblicato tramite **GitHub Pages** ed è progettato come portale informativo che raccoglie:
+Il progetto è concepito come sito statico HTML5 pronto per pubblicazione reale su **GitHub Pages**, senza CMS, senza database e senza dipendenze da framework esterni.
+
+Il sito raccoglie in forma ordinata:
 
 - attività editoriale
-- pubblicazioni
-- ricerca documentaria
-- archivio digitale delle opere
-- collegamenti ai profili accademici
-- presenza multimediale
+- profilo autore
+- pubblicazioni scientifiche
+- archivio digitale dei riferimenti
+- presenza media e collegamenti pubblici
+- modulo contatti
 
 ---
 
-# Struttura del sito
+## URL di pubblicazione
 
-Il sito è interamente statico ed è costruito con **HTML5**, senza dipendenze da framework esterni.
+Sito ufficiale pubblicato su GitHub Pages:
 
-Struttura delle pagine:
+```text
+https://michelebottino-autor.github.io/michelebottino/
