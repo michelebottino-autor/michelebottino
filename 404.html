@@ -3,206 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michele Bottino | Pagina non trovata</title>
-<meta name="description" content="Pagina non trovata nel sito ufficiale di Michele Bottino.">
-<meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#0d1118">
+<title>Pagina non trovata | Michele Bottino</title>
+<meta name="description" content="Errore 404 - La pagina richiesta non è stata trovata nel sito ufficiale di Michele Bottino.">
 <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/404.html">
 
 <style>
+
 :root{
---bg:#0d1118;
---panel:#151c27;
---text:#eef2f7;
---muted:#b6c0cd;
---accent:#d3ad6b;
---line:rgba(255,255,255,.08);
---radius:22px;
---shadow:0 24px 60px rgba(0,0,0,.30);
---max:1100px;
+--bg:#0c0f14;
+--card:#151a22;
+--accent:#c6a769;
+--text:#e8e8e8;
+--muted:#9ca3af;
+--border:#2a303a;
 }
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
-margin:0;
-font-family:Georgia,"Times New Roman",Times,serif;
-background:linear-gradient(180deg,#0b1016,#0d1118);
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+background:var(--bg);
 color:var(--text);
-line-height:1.7;
-display:flex;
-flex-direction:column;
-min-height:100vh;
-}
-
-a{text-decoration:none;color:inherit}
-
-.container{
-width:min(92%,var(--max));
-margin:auto;
+line-height:1.6;
 }
 
 header{
-border-bottom:1px solid var(--line);
-background:#0d1118;
+background:#090c11;
+border-bottom:1px solid var(--border);
 }
 
-.navbar{
+.nav{
+max-width:1100px;
+margin:auto;
 display:flex;
-align-items:center;
 justify-content:space-between;
-min-height:70px;
+align-items:center;
+padding:16px;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.brand-mark{
-width:42px;
-height:42px;
-border-radius:12px;
-background:#1a2230;
-display:flex;
-align-items:center;
-justify-content:center;
+.logo{
+font-weight:600;
+letter-spacing:1px;
 color:var(--accent);
-font-weight:bold;
+text-decoration:none;
 }
 
 .menu{
 display:flex;
-gap:14px;
+gap:18px;
 flex-wrap:wrap;
 }
 
 .menu a{
-padding:8px 12px;
-border-radius:18px;
-color:var(--muted);
-font-size:.9rem;
+color:var(--text);
+text-decoration:none;
+font-size:14px;
+opacity:.85;
 }
 
 .menu a:hover{
-background:#1a2230;
-color:var(--text);
+color:var(--accent);
 }
 
-main{
-flex:1;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:60px 0;
-}
-
-.box{
-max-width:620px;
+.container{
+max-width:900px;
+margin:auto;
+padding:80px 20px;
 text-align:center;
-background:var(--panel);
-border:1px solid var(--line);
-border-radius:var(--radius);
-padding:50px;
-box-shadow:var(--shadow);
 }
 
-.box h1{
-font-size:3.5rem;
-margin-top:0;
+.error{
+font-size:110px;
+font-weight:700;
+color:var(--accent);
+margin-bottom:20px;
 }
 
-.box p{
+h1{
+font-size:32px;
+margin-bottom:14px;
+}
+
+p{
 color:var(--muted);
+margin-bottom:30px;
 }
 
-.button{
+.btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-border-radius:20px;
+padding:12px 22px;
 background:var(--accent);
 color:#000;
-font-weight:bold;
+text-decoration:none;
+font-weight:600;
+border-radius:6px;
 }
 
-.button:hover{
-opacity:.9;
+.btn:hover{
+opacity:.85;
 }
 
 footer{
-border-top:1px solid var(--line);
-padding:25px 0;
-font-size:.9rem;
+margin-top:80px;
+padding:30px;
+border-top:1px solid var(--border);
+text-align:center;
+font-size:13px;
+color:var(--muted);
 }
 
-.footer-grid{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+@media(max-width:720px){
+
+.menu{
+justify-content:center;
+margin-top:10px;
+}
+
+.nav{
+flex-direction:column;
 gap:12px;
 }
 
-.footer-links a{
-margin-right:14px;
-color:var(--muted);
+.error{
+font-size:80px;
 }
 
-.footer-links a:hover{
-color:var(--text);
 }
 
-.mobile-nav{
-display:none;
-}
-
-@media(max-width:760px){
-
-.menu{display:none}
-
-.mobile-nav{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-position:fixed;
-bottom:10px;
-left:50%;
-transform:translateX(-50%);
-width:95%;
-background:#0d1118;
-border:1px solid var(--line);
-border-radius:16px;
-padding:10px;
-}
-
-.mobile-nav a{
-font-size:.7rem;
-text-align:center;
-color:var(--muted);
-}
-
-.mobile-nav a:hover{
-color:var(--text);
-}
-
-body{padding-bottom:90px}
-
-}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="container navbar">
+<div class="nav">
 
-<div class="brand">
-<div class="brand-mark">MB</div>
-<div>
-<strong>Michele Bottino</strong><br>
-<small style="color:#9aa5b3">Sito ufficiale</small>
-</div>
-</div>
+<a class="logo" href="index.html">Michele Bottino</a>
 
 <nav class="menu">
 <a href="index.html">Home</a>
@@ -217,55 +157,26 @@ body{padding-bottom:90px}
 </div>
 </header>
 
-<main>
+<main class="container">
 
-<div class="box">
+<div class="error">404</div>
 
-<h1>404</h1>
-
-<p>
-La pagina che stai cercando non è disponibile oppure è stata spostata.
-</p>
+<h1>Pagina non trovata</h1>
 
 <p>
-Puoi tornare alla pagina principale del sito ufficiale.
+La pagina richiesta non è disponibile oppure è stata spostata.
 </p>
 
-<a href="index.html" class="button">Torna alla Home</a>
-
-</div>
+<a class="btn" href="index.html">Torna alla Home</a>
 
 </main>
 
 <footer>
 
-<div class="container footer-grid">
-
-<div>
-© <span id="year"></span> Michele Bottino — Tutti i diritti riservati.
-</div>
-
-<div class="footer-links">
-<a href="privacy.html">Privacy</a>
-<a href="cookie-policy.html">Cookie</a>
-<a href="note-legali.html">Note legali</a>
-<a href="accessibility.html">Accessibilità</a>
-</div>
-
-</div>
+© Michele Bottino – Sito ufficiale  
+Web design, struttura e contenuti: Michele Bottino
 
 </footer>
-
-<nav class="mobile-nav">
-<a href="index.html">Home</a>
-<a href="autore.html">Autore</a>
-<a href="opere.html">Opere</a>
-<a href="media.html">Media</a>
-</nav>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
