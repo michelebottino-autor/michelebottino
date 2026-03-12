@@ -1,5 +1,8 @@
 Contact: mailto:michelebottino.adc@gmail.com
-Expires: 2030-01-01T00:00:00.000Z
-Preferred-Languages: it
-Canonical: https://michelebottino-autor.github.io/michelebottino/security.txt
-Policy: https://michelebottino-autor.github.io/michelebottino/contatti.html
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: it, en
+Policy: https://michelebottino-autor.github.io/michelebottino/privacy.html
+
+Canonical: https://michelebottino-autor.github.io/michelebottino/.well-known/security.txt
+
+Acknowledgments: https://michelebottino-autor.github.io/michelebottino/
