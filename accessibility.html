@@ -3,213 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accessibilità | Michele Bottino</title>
-<meta name="description" content="Dichiarazione informativa sull’accessibilità del sito ufficiale di Michele Bottino.">
+<title>Michele Bottino | Accessibilità</title>
+<meta name="description" content="Dichiarazione di accessibilità del sito ufficiale di Michele Bottino. Informazioni sugli standard adottati e sull'impegno per una navigazione accessibile.">
 <meta name="author" content="Michele Bottino">
-<meta name="robots" content="noindex, follow">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d1118">
 <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/accessibility.html">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Accessibilità | Michele Bottino">
-<meta property="og:description" content="Informazioni sull’accessibilità del sito ufficiale di Michele Bottino.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Michele Bottino | Accessibilità">
+<meta property="og:description" content="Informazioni sull'accessibilità del sito ufficiale di Michele Bottino.">
 <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/accessibility.html">
+<meta property="og:site_name" content="Michele Bottino">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Michele Bottino | Accessibilità">
+<meta name="twitter:description" content="Dichiarazione di accessibilità del sito ufficiale di Michele Bottino.">
 
 <style>
 :root{
---bg:#0b0f14;
---panel:#17212c;
---panel2:#1d2835;
---text:#eef3f8;
---muted:#b7c2cf;
---line:rgba(255,255,255,.09);
---accent:#d6b06c;
+--bg:#0d1118;
+--panel:#151c27;
+--text:#eef2f7;
+--muted:#b6c0cd;
+--accent:#d3ad6b;
+--line:rgba(255,255,255,.08);
+--shadow:0 24px 60px rgba(0,0,0,.30);
 --radius:22px;
---shadow:0 18px 48px rgba(0,0,0,.28);
---max:1100px;
+--max:1200px;
 }
+
 *{box-sizing:border-box}
-html{-webkit-tap-highlight-color:transparent}
+
 body{
 margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-background:linear-gradient(180deg,#081019,#0b0f14);
+font-family:Georgia,"Times New Roman",Times,serif;
+background:linear-gradient(180deg,#0b1016,#0d1118);
 color:var(--text);
-line-height:1.6;
+line-height:1.7;
 }
+
+a{text-decoration:none;color:inherit}
+
 .container{
 width:min(92%,var(--max));
 margin:auto;
 }
-a{
-color:inherit;
-text-decoration:none;
-}
+
 header{
+background:#0d1118;
+border-bottom:1px solid var(--line);
 position:sticky;
 top:0;
-z-index:1000;
-background:rgba(11,15,20,.9);
-border-bottom:1px solid var(--line);
-backdrop-filter:blur(14px);
+z-index:100;
 }
+
 .navbar{
 display:flex;
 align-items:center;
 justify-content:space-between;
-min-height:72px;
-gap:16px;
+min-height:70px;
 }
+
 .brand{
 display:flex;
 align-items:center;
-gap:12px;
-min-width:0;
+gap:10px;
 }
-.logo{
+
+.brand-mark{
 width:42px;
 height:42px;
 border-radius:12px;
-background:linear-gradient(135deg,var(--panel2),#111);
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:700;
+background:#1a2230;
 color:var(--accent);
-flex:0 0 auto;
+font-weight:bold;
 }
-.brand-text{
-display:flex;
-flex-direction:column;
-min-width:0;
-}
-.brand-text strong{
-font-size:1rem;
-line-height:1.05;
-}
-.brand-text span{
-font-size:.8rem;
-color:var(--muted);
-}
+
 .menu{
 display:flex;
-gap:10px;
+gap:14px;
 flex-wrap:wrap;
 }
+
 .menu a{
-padding:8px 14px;
-border-radius:999px;
-font-size:.92rem;
+padding:8px 12px;
+border-radius:20px;
 color:var(--muted);
-border:1px solid transparent;
-transition:.2s ease;
+font-size:.9rem;
 }
+
 .menu a:hover,
-.menu a:focus-visible,
 .menu a.active{
-background:rgba(255,255,255,.06);
-border-color:var(--line);
+background:#1a2230;
 color:var(--text);
-outline:none;
 }
-.menu a.cta{
-background:linear-gradient(135deg,var(--accent),#efcc8a);
-color:#111;
-border:none;
-font-weight:600;
+
+.hero{
+padding:70px 0 30px;
 }
-main{
-padding:56px 0 40px;
-}
-.card{
-background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
+
+.hero-box{
+background:linear-gradient(180deg,#1a2230,#151c27);
 border:1px solid var(--line);
 border-radius:var(--radius);
+padding:40px;
 box-shadow:var(--shadow);
-padding:34px;
-margin-bottom:24px;
 }
+
 h1{
 margin-top:0;
-font-size:2.5rem;
-line-height:1.1;
+font-size:2.6rem;
 }
+
 h2{
-margin-top:0;
-font-size:1.3rem;
-line-height:1.15;
+margin-top:28px;
+font-size:1.4rem;
 }
-p, li{
+
+p,li{
 color:var(--muted);
 }
+
 ul{
-margin:0;
 padding-left:22px;
 }
-.section-list{
-display:grid;
-gap:18px;
-}
-.notice{
-padding:18px 20px;
-border-radius:16px;
+
+.section{
+margin-top:22px;
 background:var(--panel);
 border:1px solid var(--line);
+border-radius:var(--radius);
+padding:26px;
 }
+
 footer{
-border-top:1px solid var(--line);
-padding:30px 0 90px;
 margin-top:40px;
+border-top:1px solid var(--line);
+padding:30px 0;
+font-size:.9rem;
 }
+
 .footer-grid{
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
-gap:16px;
+gap:12px;
 }
-.footer-grid a{
+
+.footer-links a{
+margin-right:14px;
 color:var(--muted);
-font-size:.9rem;
 }
-.footer-grid a:hover{
+
+.footer-links a:hover{
 color:var(--text);
 }
+
 .mobile-nav{
+display:none;
+}
+
+@media(max-width:760px){
+
+.menu{display:none}
+
+.mobile-nav{
+display:grid;
+grid-template-columns:repeat(4,1fr);
 position:fixed;
 bottom:10px;
 left:50%;
 transform:translateX(-50%);
-background:rgba(11,15,20,.9);
+width:95%;
+background:#0d1118;
 border:1px solid var(--line);
-border-radius:20px;
+border-radius:16px;
 padding:10px;
-display:none;
-grid-template-columns:repeat(7,1fr);
-gap:6px;
-width:min(95%,700px);
-backdrop-filter:blur(14px);
-z-index:1200;
 }
+
 .mobile-nav a{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
 font-size:.7rem;
-color:var(--muted);
-padding:6px;
-min-height:52px;
 text-align:center;
-border-radius:14px;
+color:var(--muted);
 }
-.mobile-nav a.active{
+
+.mobile-nav a:hover{
 color:var(--text);
-background:rgba(255,255,255,.06);
 }
-@media(max-width:900px){
-.menu{display:none}
-.mobile-nav{display:grid}
-body{padding-bottom:110px}
-.card{padding:24px}
+
+body{padding-bottom:90px}
+
 }
 </style>
 </head>
@@ -219,116 +208,122 @@ body{padding-bottom:110px}
 <header>
 <div class="container navbar">
 
-<a href="index.html" class="brand" aria-label="Vai alla home page">
-<div class="logo">MB</div>
-<div class="brand-text">
-<strong>Michele Bottino</strong>
-<span>Sito ufficiale</span>
+<div class="brand">
+<div class="brand-mark">MB</div>
+<div>
+<strong>Michele Bottino</strong><br>
+<small style="color:#9aa5b3">Sito ufficiale</small>
 </div>
-</a>
+</div>
 
-<nav class="menu" aria-label="Menu principale">
+<nav class="menu">
 <a href="index.html">Home</a>
 <a href="autore.html">Autore</a>
 <a href="opere.html">Opere</a>
 <a href="ricerca.html">Ricerca</a>
 <a href="archivio.html">Archivio</a>
 <a href="media.html">Media</a>
-<a href="contatti.html" class="cta">Contatti</a>
+<a href="contatti.html">Contatti</a>
 </nav>
 
 </div>
 </header>
 
-<main>
-<div class="container">
+<main class="container">
 
-<section class="card">
+<section class="hero">
+<div class="hero-box">
+
 <h1>Accessibilità</h1>
-<p>
-Questa pagina descrive gli accorgimenti adottati per migliorare l’accessibilità del sito ufficiale di Michele Bottino e indica le modalità con cui è possibile segnalare eventuali difficoltà di consultazione.
-</p>
-</section>
 
-<section class="card">
-<h2>Impostazione generale</h2>
-<div class="section-list">
-<div class="notice">
 <p>
-Il sito è stato progettato come struttura statica leggera, con codice HTML semantico, contenuti testuali leggibili, navigazione coerente tra le pagine e layout responsive compatibile con dispositivi desktop e mobili.
+Il sito ufficiale di Michele Bottino è progettato con l'obiettivo di rendere
+la navigazione il più possibile chiara, leggibile e accessibile a tutti gli utenti,
+indipendentemente dal dispositivo utilizzato o dalle eventuali limitazioni tecniche.
 </p>
-</div>
-<div class="notice">
-<p>
-La navigazione principale è mantenuta uniforme in tutte le pagine e ogni sezione contiene un footer coerente con i collegamenti essenziali del sito.
-</p>
-</div>
+
 </div>
 </section>
 
-<section class="card">
-<h2>Accorgimenti adottati</h2>
+<section class="section">
+
+<h2>Principi di accessibilità</h2>
+
+<p>
+La struttura del sito è sviluppata seguendo criteri di semplicità,
+leggibilità tipografica e organizzazione logica delle informazioni.
+</p>
+
 <ul>
-<li>uso di HTML5 con struttura ordinata dei contenuti;</li>
-<li>gerarchia dei titoli chiara e coerente;</li>
-<li>testi ad alto contrasto su sfondo scuro;</li>
-<li>layout responsive per smartphone, tablet e desktop;</li>
-<li>collegamenti interni e esterni identificabili;</li>
-<li>menu di navigazione uniforme in tutto il sito;</li>
-<li>assenza di elementi animati invasivi o autoplay;</li>
-<li>assenza di dipendenze pesanti che compromettano la leggibilità.</li>
+<li>struttura HTML semantica;</li>
+<li>layout responsive per dispositivi mobili;</li>
+<li>contrasto cromatico adeguato tra testo e sfondo;</li>
+<li>navigazione lineare e menu coerente in tutte le pagine;</li>
+<li>testi leggibili e organizzati per sezioni.</li>
 </ul>
+
 </section>
 
-<section class="card">
-<h2>Limiti attuali</h2>
+<section class="section">
+
+<h2>Compatibilità</h2>
+
 <p>
-Il sito è in continuo aggiornamento. Alcuni aspetti di accessibilità possono essere ulteriormente migliorati, soprattutto in relazione a future espansioni del progetto, all’integrazione di nuove sezioni e all’eventuale introduzione di contenuti multimediali o immagini.
+Il sito è progettato per funzionare correttamente con i principali browser moderni
+e su dispositivi desktop, tablet e smartphone.
 </p>
+
 </section>
 
-<section class="card">
+<section class="section">
+
+<h2>Limitazioni tecniche</h2>
+
+<p>
+Essendo un sito statico, alcune funzionalità avanzate di accessibilità
+possono dipendere dalle impostazioni del browser o del dispositivo utilizzato.
+</p>
+
+</section>
+
+<section class="section">
+
 <h2>Segnalazioni</h2>
+
 <p>
-Se durante la navigazione vengono riscontrate difficoltà di accesso ai contenuti, problemi di leggibilità o ostacoli tecnici, è possibile segnalarli tramite la pagina contatti del sito.
+Eventuali difficoltà di navigazione o suggerimenti per migliorare
+l’accessibilità del sito possono essere comunicati tramite la
+pagina <a href="contatti.html" style="color:#d3ad6b">Contatti</a>.
 </p>
-<p>
-Per inviare una segnalazione utilizzare la sezione:
-<a href="contatti.html">Contatti</a>
-</p>
+
 </section>
 
-</div>
 </main>
 
 <footer>
+
 <div class="container footer-grid">
 
 <div>
-© <span id="year"></span> Michele Bottino — Tutti i diritti riservati
+© <span id="year"></span> Michele Bottino — Tutti i diritti riservati.
 </div>
 
-<div>
+<div class="footer-links">
+<a href="privacy.html">Privacy</a>
+<a href="cookie-policy.html">Cookie</a>
+<a href="note-legali.html">Note legali</a>
+<a href="accessibility.html">Accessibilità</a>
+</div>
+
+</div>
+
+</footer>
+
+<nav class="mobile-nav">
 <a href="index.html">Home</a>
 <a href="autore.html">Autore</a>
 <a href="opere.html">Opere</a>
-<a href="ricerca.html">Ricerca</a>
-<a href="archivio.html">Archivio</a>
 <a href="media.html">Media</a>
-<a href="contatti.html">Contatti</a>
-</div>
-
-</div>
-</footer>
-
-<nav class="mobile-nav" aria-label="Navigazione mobile">
-<a href="index.html">⌂<span>Home</span></a>
-<a href="autore.html">◉<span>Autore</span></a>
-<a href="opere.html">✦<span>Opere</span></a>
-<a href="ricerca.html">⌘<span>Ricerca</span></a>
-<a href="archivio.html">▣<span>Archivio</span></a>
-<a href="media.html">⌁<span>Media</span></a>
-<a href="contatti.html">✉<span>Contatti</span></a>
 </nav>
 
 <script>
