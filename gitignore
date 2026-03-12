@@ -1,3 +1,25 @@
+# OS files
 .DS_Store
 Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# Editor directories
+.vscode/
+.idea/
+
+# Node / build systems (future proof)
+node_modules/
+dist/
+build/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# System metadata
 desktop.ini
