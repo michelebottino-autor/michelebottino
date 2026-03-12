@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Note Legali | Michele Bottino</title>
 
-<meta name="description" content="Note legali del sito ufficiale di Michele Bottino. Copyright, condizioni d'uso, tutela dei contenuti e limitazioni di responsabilità.">
+<meta name="description" content="Note legali del sito ufficiale di Michele Bottino. Copyright, titolarità dei contenuti, condizioni d'uso e limitazioni di responsabilità.">
 <meta name="author" content="Michele Bottino">
 <meta name="robots" content="index, follow">
 <meta name="copyright" content="© Michele Bottino">
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Note Legali | Michele Bottino">
-<meta property="og:description" content="Copyright, titolarità del sito, condizioni d'uso e tutela dei contenuti del sito ufficiale di Michele Bottino.">
+<meta property="og:description" content="Note legali del sito ufficiale di Michele Bottino.">
 <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/note-legali.html">
 <meta property="og:site_name" content="Michele Bottino">
 
@@ -45,4 +45,510 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:
 radial-gradient(circle at top left, rgba(120,160,255,.08), transparent 25%),
-radial-gradient(circle at top right, rgba(213,176,106,.
+radial-gradient(circle at top right, rgba(213,176,106,.08), transparent 24%),
+linear-gradient(180deg,#091018 0%,#0b0f14 100%);
+color:var(--text);
+line-height:1.7;
+overflow-x:hidden;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:92%;
+max-width:var(--max);
+margin:auto;
+}
+
+.topbar{
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(14px);
+background:rgba(11,15,20,.82);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+min-height:74px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.brand-mark{
+width:46px;
+height:46px;
+border-radius:14px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,var(--panel2),#10151f);
+border:1px solid var(--line);
+color:var(--accent);
+font-weight:700;
+letter-spacing:.05em;
+box-shadow:var(--shadow);
+}
+
+.brand-copy strong{
+display:block;
+font-size:1rem;
+line-height:1.1;
+}
+
+.brand-copy span{
+display:block;
+font-size:.82rem;
+color:var(--muted);
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.menu a{
+padding:10px 14px;
+border-radius:999px;
+color:var(--muted);
+border:1px solid transparent;
+transition:.22s ease;
+font-size:.95rem;
+}
+
+.menu a:hover,
+.menu a:focus-visible{
+color:var(--text);
+border-color:var(--line);
+background:rgba(255,255,255,.04);
+outline:none;
+}
+
+.menu .cta{
+color:#111;
+font-weight:700;
+background:linear-gradient(135deg,var(--accent),#efd28d);
+border:none;
+}
+
+.hero{
+padding:64px 0 24px;
+}
+
+.hero-card,
+.legal-card{
+background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
+border:1px solid var(--line);
+border-radius:20px;
+box-shadow:var(--shadow);
+}
+
+.hero-card{
+padding:38px;
+}
+
+.legal-card{
+padding:30px;
+margin-bottom:18px;
+}
+
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 12px;
+border-radius:999px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.04);
+color:var(--muted);
+font-size:.84rem;
+margin-bottom:18px;
+}
+
+h1,h2{
+margin:0 0 14px;
+line-height:1.08;
+letter-spacing:-.03em;
+}
+
+h1{
+font-size:clamp(2rem,4vw,3.6rem);
+max-width:12ch;
+}
+
+h2{
+font-size:1.35rem;
+}
+
+p{
+margin:0 0 14px;
+color:var(--muted);
+}
+
+ul{
+margin:0;
+padding-left:20px;
+color:var(--muted);
+}
+
+li{
+margin-bottom:10px;
+}
+
+strong{
+color:var(--text);
+}
+
+.note{
+padding:14px 16px;
+border:1px solid var(--line);
+border-radius:12px;
+background:rgba(255,255,255,.03);
+color:var(--muted);
+font-size:.95rem;
+}
+
+.footer{
+border-top:1px solid var(--line);
+padding:24px 0 110px;
+color:var(--muted);
+font-size:.92rem;
+margin-top:28px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:18px;
+align-items:start;
+}
+
+.footer-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+gap:12px 18px;
+}
+
+.footer-links a{
+color:var(--muted);
+transition:.22s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible{
+color:var(--text);
+outline:none;
+}
+
+.mobile-dock{
+position:fixed;
+left:50%;
+transform:translateX(-50%);
+bottom:14px;
+width:min(94%,560px);
+z-index:1200;
+display:none;
+grid-template-columns:repeat(5,1fr);
+gap:8px;
+padding:10px;
+border-radius:24px;
+background:rgba(11,15,20,.88);
+border:1px solid var(--line);
+backdrop-filter:blur(18px);
+box-shadow:var(--shadow);
+}
+
+.mobile-dock a{
+min-height:58px;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:4px;
+color:var(--muted);
+font-size:.74rem;
+text-align:center;
+padding:6px;
+}
+
+.mobile-dock a:hover,
+.mobile-dock a.active{
+background:rgba(255,255,255,.06);
+color:var(--text);
+}
+
+.mobile-dock .dot{
+font-size:1.06rem;
+line-height:1;
+}
+
+@media (max-width:780px){
+.menu{
+display:none;
+}
+
+.hero{
+padding-top:34px;
+}
+
+.hero-card,
+.legal-card{
+padding:22px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.footer-links{
+justify-content:flex-start;
+}
+
+.mobile-dock{
+display:grid;
+}
+
+body{
+padding-bottom:110px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+<div class="container nav">
+<a class="brand" href="index.html" aria-label="Vai alla home page">
+<div class="brand-mark">MB</div>
+<div class="brand-copy">
+<strong>Michele Bottino</strong>
+<span>Sito Ufficiale</span>
+</div>
+</a>
+
+<nav class="menu" aria-label="Menu principale">
+<a href="index.html">Home</a>
+<a href="autore.html">Autore</a>
+<a href="opere.html">Opere</a>
+<a href="ricerca.html">Ricerca</a>
+<a href="musica.html">Musica</a>
+<a href="media.html">Media</a>
+<a href="contatti.html" class="cta">Contatti</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+<article class="hero-card">
+<div class="eyebrow">© Titolarità e condizioni d'uso</div>
+<h1>Note Legali</h1>
+<p>
+La presente pagina disciplina la titolarità del sito ufficiale di Michele Bottino, le condizioni d’uso dei contenuti pubblicati, il regime di copyright e i limiti di responsabilità relativi al materiale e ai collegamenti presenti nel sito.
+</p>
+</article>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<article class="legal-card">
+<h2>1. Titolarità del sito</h2>
+<p>
+Il sito ufficiale dedicato a <strong>Michele Bottino</strong> costituisce il nodo centrale della sua identità digitale pubblica e della sua attività editoriale, documentaria e di comunicazione online.
+</p>
+<p>
+Salvo diversa indicazione espressa, il progetto complessivo del sito, la struttura delle pagine, l’organizzazione dei contenuti, l’impianto editoriale, il layout, la selezione dei materiali e la configurazione generale del portale sono attribuiti a <strong>Michele Bottino</strong>.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>2. Copyright</h2>
+<p>
+Tutti i contenuti presenti nel sito, inclusi a titolo esemplificativo ma non esaustivo:
+</p>
+<ul>
+<li>testi descrittivi, biografici ed editoriali;</li>
+<li>schede delle opere;</li>
+<li>apparato informativo e descrittivo;</li>
+<li>struttura del sito e organizzazione dei contenuti;</li>
+<li>grafica, layout, selezione dei blocchi e impianto visivo;</li>
+<li>documentazione tecnica e struttura redazionale;</li>
+</ul>
+<p>
+sono protetti dalle norme applicabili in materia di diritto d’autore e di tutela della proprietà intellettuale.
+</p>
+<p class="note">
+<strong>© Michele Bottino — Tutti i diritti riservati.</strong><br>
+Progetto, struttura, contenuti e design del sito: Michele Bottino.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>3. Divieto di riproduzione</h2>
+<p>
+È vietata la riproduzione, distribuzione, pubblicazione, trasmissione, modifica, rielaborazione, diffusione o riutilizzo, totale o parziale, dei contenuti del sito senza preventiva autorizzazione scritta del titolare.
+</p>
+<p>
+Il divieto si applica anche alla ripresa sistematica dei testi, all’estrazione organizzata del contenuto, alla duplicazione della struttura redazionale del sito e alla ripubblicazione su altri portali, blog, archivi o piattaforme digitali.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>4. Uso consentito</h2>
+<p>
+La consultazione del sito è consentita esclusivamente per finalità personali, informative, di lettura, studio o semplice fruizione dei contenuti pubblici.
+</p>
+<p>
+Non è consentito utilizzare il sito o i suoi contenuti per finalità ingannevoli, per creare siti derivati o imitativi, per produrre copie non autorizzate o per sfruttamento commerciale non autorizzato.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>5. Paternità del progetto del sito</h2>
+<p>
+Ai fini della presente struttura progettuale, la paternità del sito, la sua ideazione, la sua articolazione interna e la sua titolarità editoriale sono da intendersi riferite a <strong>Michele Bottino</strong>.
+</p>
+<p>
+Ogni riferimento a webmaster, web designer, ideazione del portale, impianto dei contenuti e progetto complessivo del sito deve intendersi attribuito, salvo diversa indicazione futura, a Michele Bottino.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>6. Contenuti di terzi e fonti esterne</h2>
+<p>
+Nel sito possono comparire riferimenti a piattaforme, repository, archivi, profili pubblici, testate giornalistiche, marketplace editoriali o servizi di terzi.
+</p>
+<p>
+Tali riferimenti sono inseriti a scopo informativo, documentario o di collegamento pubblico e rimangono di titolarità dei rispettivi proprietari.
+</p>
+<p>
+Restano pertanto di esclusiva pertinenza dei rispettivi titolari:
+</p>
+<ul>
+<li>marchi, loghi e denominazioni di piattaforme esterne;</li>
+<li>contenuti ospitati su servizi terzi;</li>
+<li>interfacce, pagine prodotto, profili, DOI, repository o cataloghi non gestiti direttamente dal sito.</li>
+</ul>
+</article>
+
+<article class="legal-card">
+<h2>7. Collegamenti esterni</h2>
+<p>
+Il sito può contenere collegamenti a risorse esterne, inclusi profili autore, piattaforme accademiche, repository scientifici, marketplace editoriali, piattaforme musicali e testate informative.
+</p>
+<p>
+Il titolare del sito non è responsabile del contenuto, dell’aggiornamento, delle politiche privacy, delle condizioni d’uso o dell’eventuale indisponibilità dei siti esterni collegati.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>8. Accuratezza dei contenuti</h2>
+<p>
+Il sito è costruito con finalità informative, documentarie ed editoriali. I contenuti sono redatti con attenzione alla coerenza delle fonti disponibili, ma non costituiscono garanzia assoluta di aggiornamento continuo o di completezza universale in ogni momento.
+</p>
+<p>
+Il titolare si riserva il diritto di modificare, aggiornare, integrare o rimuovere contenuti in qualsiasi momento senza obbligo di preavviso.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>9. Sicurezza e misure di deterrenza</h2>
+<p>
+Il sito adotta una configurazione tecnica statica e misure di deterrenza di base contro copia automatica, trascinamento improprio di contenuti e uso non autorizzato delle pagine.
+</p>
+<p>
+Tali misure hanno finalità di tutela elementare del contenuto, ma non costituiscono garanzia assoluta contro ogni forma di acquisizione tecnica di materiale pubblicamente visibile.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>10. Assenza di garanzia di disponibilità continua</h2>
+<p>
+Pur essendo perseguito un obiettivo di stabilità e continuità del servizio, il titolare non garantisce l’assenza di interruzioni, errori temporanei, sospensioni tecniche, malfunzionamenti o indisponibilità del sito dovuti a cause esterne, manutenzione, hosting o eventi non controllabili direttamente.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>11. Utilizzo dei contenuti a fini di citazione</h2>
+<p>
+Ogni eventuale uso consentito a fini di citazione, richiamo, recensione o riferimento deve avvenire in forma corretta, non deformante, non denigratoria e con chiaro riferimento alla fonte originaria.
+</p>
+<p>
+Resta comunque escluso ogni utilizzo che comporti riproduzione sostanziale del contenuto o appropriazione della struttura del sito.
+</p>
+</article>
+
+<article class="legal-card">
+<h2>12. Modifiche alle presenti note legali</h2>
+<p>
+Le presenti note legali possono essere aggiornate, integrate o modificate in qualunque momento per adeguamento tecnico, editoriale o normativo.
+</p>
+<p>
+La versione pubblicata sul sito al momento della consultazione è quella da considerarsi valida.
+</p>
+</article>
+
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+© Michele Bottino — Tutti i diritti riservati.<br>
+Progetto, struttura, contenuti e design del sito: Michele Bottino.<br>
+È vietata la riproduzione totale o parziale senza autorizzazione scritta.
+</div>
+
+<nav class="footer-links" aria-label="Collegamenti legali e di servizio">
+<a href="privacy.html">Privacy Policy</a>
+<a href="note-legali.html">Note Legali</a>
+<a href="contatti.html">Contatti</a>
+</nav>
+</div>
+</footer>
+
+<nav class="mobile-dock" aria-label="Navigazione mobile">
+<a href="index.html">
+<span class="dot">⌂</span>
+<span>Home</span>
+</a>
+<a href="autore.html">
+<span class="dot">◉</span>
+<span>Autore</span>
+</a>
+<a href="opere.html">
+<span class="dot">✦</span>
+<span>Opere</span>
+</a>
+<a href="ricerca.html">
+<span class="dot">⌘</span>
+<span>Ricerca</span>
+</a>
+<a class="active" href="note-legali.html">
+<span class="dot">©</span>
+<span>Legale</span>
+</a>
+</nav>
+
+</body>
+</html>
