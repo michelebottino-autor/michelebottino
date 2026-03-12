@@ -1,10 +1,19 @@
 /* TEAM */
 Author: Michele Bottino
-Site: michelebottino-autor.github.io/michelebottino
-Role: Autore, ricercatore indipendente, autore di testi musicali
+Role: Autore, ricercatore indipendente, progettazione e sviluppo del sito
+Website: https://michelebottino-autor.github.io/michelebottino
+Contact: michelebottino.adc@gmail.com
+Location: Italia
 
 /* SITE */
-Standards: HTML5, CSS3
+Site name: Michele Bottino – Official Web Site
+Description: Sito ufficiale dell'autore Michele Bottino dedicato alla produzione letteraria, alla ricerca documentaria e all'archivio digitale delle pubblicazioni.
+Technology: HTML5, CSS3, JavaScript
 Hosting: GitHub Pages
-Language: it-IT
-Repository Type: Static Website
+
+/* COPYRIGHT */
+Copyright © Michele Bottino. Tutti i contenuti del sito, la struttura, il design e il codice sono di proprietà dell'autore salvo diversa indicazione.
+
+Duplicazione, riproduzione o distribuzione non autorizzata dei contenuti è vietata.
+
+Last update: 2026
