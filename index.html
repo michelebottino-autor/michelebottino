@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Michele Bottino | Official Web Site</title>
+  <meta name="description" content="Sito ufficiale di Michele Bottino. Autore e ricercatore indipendente. Opere, ricerca storico-documentaria, pubblicazioni scientifiche, archivio digitale e area corsi online.">
+  <meta name="keywords" content="Michele Bottino, official website, autore, ricercatore indipendente, opere, ricerca storico-documentaria, Calatabiano, pubblicazioni scientifiche, corsi online">
+  <meta name="author" content="Michele Bottino">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0c1118">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Michele Bottino | Official Web Site">
+  <meta property="og:title" content="Michele Bottino | Official Web Site">
+  <meta property="og:description" content="Autore e ricercatore indipendente. Produzione editoriale, ricerca storico-documentaria, pubblicazioni scientifiche, archivio digitale e area corsi online.">
+  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Michele Bottino | Official Web Site">
+  <meta name="twitter:description" content="Autore e ricercatore indipendente. Produzione editoriale, ricerca storico-documentaria, pubblicazioni scientifiche, archivio digitale e area corsi online.">
+
+  <style>
+    :root{
+      --bg:#0a0f15;
+      --bg-2:#101722;
+      --panel:#151f2b;
+      --panel-2:#1b2734;
+      --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
+      --text:#edf3f9;
+      --muted:#b8c5d3;
+      --accent:#d7b56d;
+      --accent-2:#9fc2ff;
+      --max:1240px;
+      --radius:22px;
+      --shadow:0 22px 60px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(159,194,255,.09), transparent 30%),
+        radial-gradient(circle at 100% 0%, rgba(215,181,109,.09), transparent 28%),
+        linear-gradient(180deg, #090d12 0%, #0c1118 100%);
+      line-height:1.72;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:1200;
+      background:rgba(9,13,18,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:76px;
+    }
+
+    .site-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .site-brand-mark{
+      width:48px;
+      height:48px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      letter-spacing:.06em;
+      color:var(--accent);
+      background:linear-gradient(145deg, rgba(215,181,109,.15), rgba(159,194,255,.12));
+      border:1px solid var(--line-strong);
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+
+    .site-brand-text{
+      display:flex;
+      flex-direction:column;
+      min-width:0;
+    }
+
+    .site-brand-text strong{
+      font-size:1rem;
+      letter-spacing:.02em;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .site-brand-text span{
+      color:var(--muted);
+      font-size:.9rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:48px;
+      height:48px;
+      border:none;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      padding:0;
+      cursor:pointer;
+    }
+
+    .menu-toggle span{
+      display:block;
+      width:22px;
+      height:2px;
+      margin:5px auto;
+      background:var(--text);
+      border-radius:999px;
+      transition:.2s ease;
+    }
+
+    .site-nav{display:block}
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .menu a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:.95rem;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+
+    .menu a:hover,
+    .menu a:focus,
+    .menu a[aria-current="page"]{
+      color:var(--text);
+      background:rgba(255,255,255,.04);
+      border-color:rgba(255,255,255,.08);
+      outline:none;
+    }
+
+    .hero{
+      padding:74px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-main,
+    .hero-side,
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-main{
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-main::after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      bottom:-70px;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(215,181,109,.18), transparent 70%);
+      pointer-events:none;
+    }
+
+    .hero-side{
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.88rem;
+      color:var(--accent-2);
+      background:rgba(159,194,255,.08);
+      border:1px solid rgba(159,194,255,.14);
+      margin-bottom:22px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2.35rem, 5vw, 4.5rem);
+      line-height:1.06;
+      letter-spacing:-.03em;
+    }
+
+    .subtitle{
+      margin:0 0 18px;
+      max-width:62ch;
+      color:var(--muted);
+      font-size:clamp(1.03rem, 1.8vw, 1.3rem);
+    }
+
+    .hero-text{
+      margin:0;
+      max-width:76ch;
+      color:#d9e3ee;
+      font-size:1.02rem;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:13px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-weight:600;
+      transition:.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.06);
+      outline:none;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, rgba(215,181,109,.20), rgba(159,194,255,.14));
+      border-color:rgba(215,181,109,.22);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.025);
+    }
+
+    .mini-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+    }
+
+    .mini-card h2,
+    .mini-card h3{
+      margin:0 0 10px;
+      font-size:1rem;
+    }
+
+    .mini-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .stat{
+      padding:16px;
+      border-radius:18px;
+      background:var(--panel);
+      border:1px solid var(--line);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.08rem;
+      color:var(--accent);
+      margin-bottom:6px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    section.section{
+      padding:24px 0 8px;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:clamp(1.45rem, 2vw, 2rem);
+      letter-spacing:-.02em;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:64ch;
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+
+    .card{
+      padding:24px;
+      border-radius:22px;
+      min-height:100%;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.16rem;
+      letter-spacing:-.01em;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:#d8e2ec;
+      font-size:.82rem;
+      margin-bottom:12px;
+    }
+
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .link-box{
+      padding:18px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.012));
+      transition:.2s ease;
+    }
+
+    .link-box:hover,
+    .link-box:focus{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.05);
+      outline:none;
+    }
+
+    .link-box strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .link-box span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .note-box{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.025);
+      border:1px solid var(--line);
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:48px;
+      padding:30px 0 46px;
+      border-top:1px solid var(--line);
+      background:rgba(0,0,0,.12);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .footer-brand h2{
+      margin:0 0 8px;
+      font-size:1.18rem;
+    }
+
+    .footer-brand p{
+      margin:0;
+      max-width:65ch;
+      color:var(--muted);
+    }
+
+    .footer-links{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px 14px;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus{
+      color:var(--text);
+      outline:none;
+    }
+
+    .subfooter{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.92rem;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    @media (max-width:980px){
+      .menu-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+      }
+
+      .site-nav{
+        position:fixed;
+        top:86px;
+        right:16px;
+        width:min(320px, calc(100vw - 32px));
+        max-height:calc(100vh - 110px);
+        overflow:auto;
+        padding:14px;
+        border-radius:22px;
+        background:rgba(16,23,34,.98);
+        border:1px solid rgba(255,255,255,.08);
+        box-shadow:0 22px 60px rgba(0,0,0,.34);
+        display:none;
+      }
+
+      .site-nav.is-open{display:block}
+
+      .menu{
+        flex-direction:column;
+        align-items:stretch;
+        gap:8px;
+      }
+
+      .menu a{
+        width:100%;
+        justify-content:space-between;
+        padding:12px 14px;
+        border-radius:14px;
+        background:rgba(255,255,255,.03);
+        border-color:rgba(255,255,255,.06);
+        color:var(--text);
+      }
+    }
+
+    @media (max-width:1100px){
+      .hero-grid,
+      .footer-grid{grid-template-columns:1fr}
+      .links-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width:760px){
+      .header-inner{
+        min-height:70px;
+      }
+
+      .hero{
+        padding-top:36px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .card{
+        padding:20px;
+      }
+
+      .grid-2,
+      .grid-3,
+      .stats,
+      .links-grid,
+      .footer-links{
+        grid-template-columns:1fr;
+      }
+
+      .section-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Person",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/#person",
+        "name":"Michele Bottino",
+        "url":"https://michelebottino-autor.github.io/michelebottino/",
+        "jobTitle":"Autore e ricercatore indipendente",
+        "sameAs":[
+          "https://michelebottino-autor.github.io/michelebottino",
+          "https://orcid.org/0009-0009-2797-9267",
+          "https://iars.academia.edu/MicheleBottino",
+          "https://www.amazon.it/Michele-Bottino/e/B09RB5HFYM"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/#website",
+        "url":"https://michelebottino-autor.github.io/michelebottino/",
+        "name":"Michele Bottino | Official Web Site",
+        "publisher":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#person"
+        },
+        "inLanguage":"it-IT"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/#webpage",
+        "url":"https://michelebottino-autor.github.io/michelebottino/",
+        "name":"Michele Bottino | Official Web Site",
+        "isPartOf":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#website"
+        },
+        "about":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#person"
+        },
+        "description":"Sito ufficiale di Michele Bottino. Autore e ricercatore indipendente. Opere, ricerca storico-documentaria, pubblicazioni scientifiche, archivio digitale e area corsi online.",
+        "inLanguage":"it-IT"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#contenuto">Vai al contenuto principale</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-brand" href="index.html" aria-label="Vai alla homepage di Michele Bottino">
+        <span class="site-brand-mark" aria-hidden="true">MB</span>
+        <span class="site-brand-text">
+          <strong>Michele Bottino</strong>
+          <span>Official Web Site</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Apri il menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Navigazione principale">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="autore.html">Autore</a></li>
+          <li><a href="opere.html">Opere</a></li>
+          <li><a href="ricerca.html">Ricerca</a></li>
+          <li><a href="corsi-online.html">Corsi online</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="hero-main">
+          <div class="eyebrow">Official Web Site · Autore · Ricerca · Catalogo · Formazione</div>
+          <h1>Michele Bottino</h1>
+          <p class="subtitle">Autore e ricercatore indipendente. Produzione editoriale, ricerca storico-documentaria, pubblicazioni scientifiche, archivio digitale e area corsi online.</p>
+          <p class="hero-text">
+            Questo sito costituisce il riferimento ufficiale per l’identità pubblica di Michele Bottino e per l’accesso ordinato alle principali aree del progetto: profilo autore, catalogo delle opere, ricerca su fonti documentarie siciliane, pubblicazioni scientifiche, archivio dei materiali e futura area dedicata ai corsi online.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="autore.html">Profilo autore</a>
+            <a class="btn btn-secondary" href="opere.html">Catalogo opere</a>
+            <a class="btn btn-secondary" href="ricerca.html">Area ricerca</a>
+          </div>
+        </article>
+
+        <aside class="hero-side" aria-label="Sintesi del sito">
+          <div class="mini-card">
+            <h2>Funzione del sito</h2>
+            <p>La homepage presenta le aree principali del progetto e distribuisce la navigazione verso pagine dedicate, evitando sovrapposizioni e ripetizioni inutili.</p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Autore</strong>
+              <span>Profilo e identità pubblica</span>
+            </div>
+            <div class="stat">
+              <strong>Opere</strong>
+              <span>Libri cartacei ed ebook</span>
+            </div>
+            <div class="stat">
+              <strong>Ricerca</strong>
+              <span>Fonti storiche e Calatabiano</span>
+            </div>
+            <div class="stat">
+              <strong>Corsi</strong>
+              <span>Sezione predisposta e in sviluppo</span>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <h3>Navigazione</h3>
+            <p>Menu visibile su desktop e compatto su smartphone, con struttura semplice e coerente con l’impianto generale del sito.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="profilo-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="profilo-home">Profilo autore</h2>
+          </div>
+          <p>Sintesi essenziale dell’identità pubblica dell’autore, rinviando la trattazione estesa alla pagina dedicata.</p>
+        </div>
+
+        <article class="card">
+          <p>
+            Michele Bottino, nato a Catania nel 1972, è autore e ricercatore indipendente. La sua attività si sviluppa lungo un doppio asse stabile: da una parte la produzione editoriale; dall’altra la ricerca storico-documentaria fondata sull’analisi delle fonti archivistiche siciliane, con particolare attenzione al territorio di Calatabiano.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="autore.html">Leggi il profilo completo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="opere-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="opere-home">Opere</h2>
+          </div>
+          <p>La produzione editoriale è raccolta in una pagina distinta, organizzata per formato e repertorio del catalogo.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="tag">Libri cartacei</span>
+            <h3>Catalogo dei titoli cartacei</h3>
+            <p>La sezione opere distingue i libri cartacei già verificati e li organizza come repertorio editoriale coerente con il sito ufficiale.</p>
+            <a href="opere.html#libri-cartacei">Apri la sezione cartacei</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Ebook</span>
+            <h3>Catalogo dei titoli digitali</h3>
+            <p>Gli ebook vengono mantenuti distinti dai cartacei, così da evitare confusioni di formato e migliorare la chiarezza bibliografica.</p>
+            <a href="opere.html#ebook">Apri la sezione ebook</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Catalogo completo</span>
+            <h3>Repertorio editoriale del sito</h3>
+            <p>L’intera pagina opere raccoglie il catalogo disponibile e conserva anche i titoli già emersi ma ancora da riclassificare con precisione assoluta.</p>
+            <a href="opere.html">Vai alla pagina opere</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ricerca-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="ricerca-home">Ricerca storico-documentaria</h2>
+          </div>
+          <p>Area dedicata al metodo, alle fonti e alla ricostruzione territoriale e documentaria.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <span class="tag">Metodo</span>
+            <h3>Fonti, atti, continuità documentaria</h3>
+            <p>La ricerca è fondata sull’analisi delle fonti archivistiche siciliane, sulla descrizione degli atti e sulla valutazione rigorosa del loro valore attestativo.</p>
+            <a href="ricerca.html">Vai all’area ricerca</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Calatabiano</span>
+            <h3>Asse territoriale principale</h3>
+            <p>Un nucleo centrale del lavoro riguarda Calatabiano, le sue continuità giuridiche, ecclesiastiche e territoriali, i processi d’investitura e la documentazione connessa.</p>
+            <a href="ricerca.html">Approfondisci</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="scientifiche-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="scientifiche-home">Pubblicazioni scientifiche</h2>
+          </div>
+          <p>Le pubblicazioni con DOI sono raccolte in una sezione separata, distinta dal catalogo editoriale delle opere.</p>
+        </div>
+
+        <article class="card">
+          <p>
+            L’area scientifica del sito raccoglie i contributi pubblicati con DOI e li mantiene distinti rispetto ai libri del catalogo autore. In questo modo il sito separa con chiarezza la produzione editoriale, la ricerca documentaria e la formalizzazione scientifica dei risultati.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="pubblicazioni-scientifiche.html">Apri le pubblicazioni scientifiche</a>
+            <a class="btn btn-secondary" href="archivio.html">Vai all’archivio</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="corsi-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="corsi-home">Corsi online</h2>
+          </div>
+          <p>Nuova area del sito già predisposta strutturalmente, con contenuti ancora in lavorazione.</p>
+        </div>
+
+        <article class="card">
+          <span class="tag">Sezione in lavorazione</span>
+          <p>
+            L’area corsi online è già integrata nell’architettura del sito ed è stata predisposta per accogliere future pagine corso dedicate. In questa fase la sezione resta pubblica, raggiungibile e ordinata, ma non espone ancora titoli o programmi non definiti in forma ufficiale.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="corsi-online.html">Vai alla sezione corsi online</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="collegamenti-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="collegamenti-home">Riferimenti ufficiali</h2>
+          </div>
+          <p>Collegamenti esterni e nodi di identità digitale collegati al sito ufficiale.</p>
+        </div>
+
+        <div class="links-grid">
+          <a class="link-box" href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">
+            <strong>ORCID</strong>
+            <span>Identificativo accademico e profilo autore</span>
+          </a>
+
+          <a class="link-box" href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">
+            <strong>Academia.edu</strong>
+            <span>Profilo di ricerca e presenza nel circuito accademico</span>
+          </a>
+
+          <a class="link-box" href="https://www.amazon.it/Michele-Bottino/e/B09RB5HFYM" target="_blank" rel="noopener noreferrer">
+            <strong>Amazon Author</strong>
+            <span>Pagina autore e catalogo editoriale pubblico</span>
+          </a>
+
+          <a class="link-box" href="pubblicazioni-scientifiche.html">
+            <strong>Pubblicazioni / DOI</strong>
+            <span>Accesso ordinato all’area scientifica del sito</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="nota-home">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="nota-home">Nota di struttura</h2>
+          </div>
+          <p>Chiusura sintetica della homepage come pagina madre del sito.</p>
+        </div>
+
+        <div class="note-box">
+          Questa homepage svolge una funzione di sintesi e distribuzione. Le informazioni estese restano nelle pagine interne, così da mantenere la lettura più ordinata, evitare ripetizioni e conservare una gerarchia chiara tra profilo autore, opere, ricerca, pubblicazioni scientifiche, archivio e corsi online.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Michele Bottino</h2>
+          <p>
+            Sito ufficiale dedicato all’identità pubblica dell’autore, alla produzione editoriale, alla ricerca storico-documentaria, alle pubblicazioni scientifiche, all’archivio digitale e alla futura area formativa.
+          </p>
+        </div>
+
+        <div class="footer-links" aria-label="Collegamenti secondari">
+          <a href="index.html">Home</a>
+          <a href="autore.html">Autore</a>
+          <a href="opere.html">Opere</a>
+          <a href="ricerca.html">Ricerca</a>
+          <a href="pubblicazioni-scientifiche.html">Pubblicazioni scientifiche</a>
+          <a href="archivio.html">Archivio</a>
+          <a href="corsi-online.html">Corsi online</a>
+          <a href="contatti.html">Contatti</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="cookie.html">Cookie Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+
+      <div class="subfooter">
+        <span>© 2026 Michele Bottino — Tutti i diritti riservati.</span>
+        <span>Sito ufficiale dell'autore e ricercatore indipendente Michele Bottino.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector(".site-nav");
+
+      if (menuToggle && siteNav) {
+        menuToggle.addEventListener("click", function () {
+          const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+          menuToggle.setAttribute("aria-expanded", String(!expanded));
+          siteNav.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (window.innerWidth > 980) return;
+          const clickedInsideNav = siteNav.contains(event.target);
+          const clickedToggle = menuToggle.contains(event.target);
+
+          if (!clickedInsideNav && !clickedToggle) {
+            siteNav.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 980) {
+            siteNav.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
