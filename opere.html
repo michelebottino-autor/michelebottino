@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Michele Bottino | Opere</title>
+  <meta name="description" content="Catalogo delle opere di Michele Bottino. Narrativa, saggistica, titoli editoriali e collegamenti ufficiali alla pagina autore.">
+  <meta name="keywords" content="Michele Bottino, opere, libri, narrativa, saggistica, catalogo, Amazon autore">
+  <meta name="author" content="Michele Bottino">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0c1118">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/opere.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Michele Bottino | Official Web Site">
+  <meta property="og:title" content="Michele Bottino | Opere">
+  <meta property="og:description" content="Catalogo delle opere di Michele Bottino tra narrativa, scrittura saggistica e produzione editoriale.">
+  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/opere.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Michele Bottino | Opere">
+  <meta name="twitter:description" content="Catalogo delle opere di Michele Bottino tra narrativa, scrittura saggistica e produzione editoriale.">
+
+  <link rel="preconnect" href="https://www.amazon.it">
+  <link rel="preconnect" href="https://doi.org">
+  <link rel="preconnect" href="https://orcid.org">
+
+  <style>
+    :root{
+      --bg:#0a0f15;
+      --bg-2:#101722;
+      --panel:#151f2b;
+      --panel-2:#1b2734;
+      --line:rgba(255,255,255,.08);
+      --line-strong:rgba(255,255,255,.14);
+      --text:#edf3f9;
+      --muted:#b8c5d3;
+      --accent:#d7b56d;
+      --accent-2:#9fc2ff;
+      --max:1240px;
+      --radius:22px;
+      --shadow:0 22px 60px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(159,194,255,.09), transparent 30%),
+        radial-gradient(circle at 100% 0%, rgba(215,181,109,.09), transparent 28%),
+        linear-gradient(180deg, #090d12 0%, #0c1118 100%);
+      line-height:1.72;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(var(--max), calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(9,13,18,.76);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand-mark{
+      width:48px;
+      height:48px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      letter-spacing:.06em;
+      color:var(--accent);
+      background:linear-gradient(145deg, rgba(215,181,109,.15), rgba(159,194,255,.12));
+      border:1px solid var(--line-strong);
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+
+    .brand-text{
+      min-width:0;
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:1rem;
+      letter-spacing:.02em;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .brand-text span{
+      display:block;
+      color:var(--muted);
+      font-size:.9rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
+    nav a{
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:.95rem;
+      color:var(--muted);
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+
+    nav a:hover,
+    nav a:focus{
+      color:var(--text);
+      background:rgba(255,255,255,.04);
+      border-color:var(--line);
+      outline:none;
+    }
+
+    .hero{
+      padding:74px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .hero-main,
+    .hero-side,
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-main{
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-main::after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      bottom:-70px;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(215,181,109,.18), transparent 70%);
+      pointer-events:none;
+    }
+
+    .hero-side{
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.88rem;
+      color:var(--accent-2);
+      background:rgba(159,194,255,.08);
+      border:1px solid rgba(159,194,255,.14);
+      margin-bottom:22px;
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(2.2rem, 5vw, 4.2rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+
+    .subtitle{
+      margin:0 0 18px;
+      max-width:62ch;
+      color:var(--muted);
+      font-size:clamp(1.03rem, 1.8vw, 1.3rem);
+    }
+
+    .hero-text{
+      margin:0;
+      max-width:76ch;
+      color:#d9e3ee;
+      font-size:1.02rem;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:13px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      font-weight:600;
+      transition:.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.06);
+      outline:none;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, rgba(215,181,109,.20), rgba(159,194,255,.14));
+      border-color:rgba(215,181,109,.22);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.025);
+    }
+
+    .mini-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+    }
+
+    .mini-card h2,
+    .mini-card h3{
+      margin:0 0 10px;
+      font-size:1rem;
+    }
+
+    .mini-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .stat{
+      padding:16px;
+      border-radius:18px;
+      background:var(--panel);
+      border:1px solid var(--line);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.1rem;
+      color:var(--accent);
+      margin-bottom:6px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    section.section{
+      padding:24px 0 8px;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:clamp(1.45rem, 2vw, 2rem);
+      letter-spacing:-.02em;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:64ch;
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+
+    .card{
+      padding:24px;
+      border-radius:var(--radius);
+      min-height:100%;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.16rem;
+      letter-spacing:-.01em;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:12px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:#d8e2ec;
+      font-size:.82rem;
+    }
+
+    .prose p{
+      margin:0 0 16px;
+      color:#d6e1ec;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:18px;
+    }
+
+    .timeline{
+      display:grid;
+      gap:12px;
+    }
+
+    .timeline-item{
+      padding:16px 18px;
+      border-left:3px solid rgba(215,181,109,.55);
+      background:rgba(255,255,255,.025);
+      border-top:1px solid var(--line);
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      border-radius:0 16px 16px 0;
+    }
+
+    .timeline-item strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .timeline-item p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .catalog-note{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.025);
+      border:1px solid var(--line);
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:48px;
+      padding:30px 0 46px;
+      border-top:1px solid var(--line);
+      background:rgba(0,0,0,.12);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .footer-brand h2{
+      margin:0 0 8px;
+      font-size:1.18rem;
+    }
+
+    .footer-brand p{
+      margin:0;
+      max-width:65ch;
+      color:var(--muted);
+    }
+
+    .footer-links{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px 14px;
+    }
+
+    .footer-links a{
+      color:var(--muted);
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus{
+      color:var(--text);
+      outline:none;
+    }
+
+    .subfooter{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.92rem;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    @media (max-width:1100px){
+      .hero-grid,
+      .split,
+      .footer-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+    }
+
+    @media (max-width:760px){
+      .topbar-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      nav{
+        width:100%;
+        justify-content:flex-start;
+      }
+      .hero{padding-top:36px}
+      .hero-main,
+      .hero-side,
+      .card{padding:20px}
+      .grid-2,
+      .grid-3,
+      .stats{grid-template-columns:1fr}
+      .section-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      nav a{padding:9px 12px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Person",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/#person",
+        "name":"Michele Bottino",
+        "url":"https://michelebottino-autor.github.io/michelebottino/",
+        "jobTitle":"Autore e ricercatore indipendente",
+        "sameAs":[
+          "https://michelebottino-autor.github.io/michelebottino",
+          "https://orcid.org/0009-0009-2797-9267",
+          "https://iars.academia.edu/MicheleBottino",
+          "https://www.amazon.it/Michele-Bottino/e/B09RB5HFYM"
+        ]
+      },
+      {
+        "@type":"CollectionPage",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/opere.html#collection",
+        "url":"https://michelebottino-autor.github.io/michelebottino/opere.html",
+        "name":"Michele Bottino | Opere",
+        "isPartOf":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#website"
+        },
+        "about":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#person"
+        },
+        "inLanguage":"it-IT"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://michelebottino-autor.github.io/michelebottino/#website",
+        "url":"https://michelebottino-autor.github.io/michelebottino/",
+        "name":"Michele Bottino | Official Web Site",
+        "publisher":{
+          "@id":"https://michelebottino-autor.github.io/michelebottino/#person"
+        },
+        "inLanguage":"it-IT"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#contenuto">Vai al contenuto principale</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">MB</div>
+        <div class="brand-text">
+          <strong>Michele Bottino</strong>
+          <span>Official Web Site</span>
+        </div>
+      </div>
+
+      <nav aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="autore.html">Autore</a>
+        <a href="opere.html" aria-current="page">Opere</a>
+        <a href="ricerca.html">Ricerca</a>
+        <a href="pubblicazioni-scientifiche.html">Pubblicazioni scientifiche</a>
+        <a href="archivio.html">Archivio</a>
+        <a href="media.html">Media</a>
+        <a href="musica.html">Musica</a>
+        <a href="contatti.html">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="hero-main">
+          <div class="eyebrow">Catalogo editoriale · Narrativa · Saggistica · Pagina autore</div>
+          <h1>Opere</h1>
+          <p class="subtitle">Sezione bibliografica dedicata ai titoli editoriali di Michele Bottino, organizzati come catalogo pubblico del sito ufficiale.</p>
+          <p class="hero-text">
+            Questa pagina raccoglie le opere editoriali in una struttura ordinata e leggibile. La funzione non è soltanto elencare i libri, ma costruire un nodo bibliografico coerente con l’identità pubblica dell’autore, distinguendo narrativa, testi autobiografici, opere di taglio storico e rimandi alla distribuzione editoriale ufficiale.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.amazon.it/Michele-Bottino/e/B09RB5HFYM" target="_blank" rel="noopener noreferrer">Pagina autore Amazon</a>
+            <a class="btn btn-secondary" href="pubblicazioni-scientifiche.html">Pubblicazioni scientifiche</a>
+          </div>
+        </article>
+
+        <aside class="hero-side" aria-label="Sintesi catalogo opere">
+          <div class="mini-card">
+            <h2>Catalogo</h2>
+            <p>Le opere sono presentate come repertorio editoriale ufficiale del sito, distinto dall’area della ricerca e dalla sezione delle pubblicazioni scientifiche.</p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Narrativa</strong>
+              <span>Romanzi e scrittura d’indagine</span>
+            </div>
+            <div class="stat">
+              <strong>Saggistica</strong>
+              <span>Riflessione e testi di orientamento critico</span>
+            </div>
+            <div class="stat">
+              <strong>Storica</strong>
+              <span>Opere connesse a Calatabiano</span>
+            </div>
+            <div class="stat">
+              <strong>Catalogo</strong>
+              <span>Raccordo con la pagina autore ufficiale</span>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <h3>Funzione della pagina</h3>
+            <p>Sezione bibliografica del sito ufficiale, pensata per concentrare i titoli editoriali e distribuire i rimandi ai canali di consultazione e acquisto.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalogo-opere">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="catalogo-opere">Catalogo delle opere</h2>
+          </div>
+          <p>Selezione ordinata dei titoli editoriali pubblicamente verificabili associati a Michele Bottino.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="meta">
+              <span class="tag">Narrativa</span>
+              <span class="tag">Romanzo</span>
+            </div>
+            <h3>Stige: Una lettera senza destinatario</h3>
+            <p>Opera narrativa presentata come romanzo di indagine storica e psicologica. Il titolo appartiene al versante narrativo dell’autore ed è pubblicamente rintracciabile nei cataloghi Amazon.</p>
+            <div class="cta-row">
+              <a class="btn btn-secondary" href="https://www.amazon.it/Stige-Una-lettera-senza-destinatario/dp/B0G4PRRY69" target="_blank" rel="noopener noreferrer">Vai al titolo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <span class="tag">Ricerca storica</span>
+              <span class="tag">Calatabiano</span>
+            </div>
+            <h3>Calatabiano Sacra: Il mistero della luce sull'acqua</h3>
+            <p>Titolo orientato alla ricostruzione documentaria e storico-religiosa del territorio di Calatabiano, coerente con la linea di ricerca territoriale e con la centralità del dato attestato.</p>
+            <div class="cta-row">
+              <a class="btn btn-secondary" href="https://www.amazon.it/Calatabiano-Sacra-mistero-della-sullacqua/dp/B0FYXD5VNC" target="_blank" rel="noopener noreferrer">Vai al titolo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <span class="tag">Narrativa</span>
+              <span class="tag">Indagine</span>
+            </div>
+            <h3>Il deposito delle anime: Dietro l'ombra dell'occupante</h3>
+            <p>Titolo collocabile nell’area narrativa di tensione e d’indagine, con una costruzione che richiama memoria, ombra, conflitto interiore e sviluppo del racconto.</p>
+            <div class="cta-row">
+              <a class="btn btn-secondary" href="https://www.amazon.it/deposito-delle-anime-Dietro-delloccupante/dp/1729307965" target="_blank" rel="noopener noreferrer">Vai al titolo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta">
+              <span class="tag">Autobiografico</span>
+              <span class="tag">Racconto</span>
+            </div>
+            <h3>Per tutta la mia vita</h3>
+            <p>Racconto autobiografico che rappresenta un diverso registro espressivo all’interno della produzione editoriale, più direttamente orientato al vissuto e alla narrazione personale.</p>
+            <div class="cta-row">
+              <a class="btn btn-secondary" href="https://www.amazon.it/tutta-mia-vita-racconto-autobiografico/dp/1729078532" target="_blank" rel="noopener noreferrer">Vai al titolo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lettura-catalogo">
+      <div class="wrap split">
+        <div>
+          <div class="section-head">
+            <div>
+              <h2 id="lettura-catalogo">Lettura del catalogo</h2>
+            </div>
+          </div>
+
+          <article class="card prose">
+            <p>
+              La produzione editoriale di Michele Bottino si articola in registri differenti ma comunicanti: narrativa, scrittura autobiografica, riflessione saggistica e titoli connessi alla ricerca sul territorio e alla ricostruzione documentaria.
+            </p>
+            <p>
+              Il catalogo del sito non sostituisce la pagina distributiva esterna, ma la ordina e la incardina dentro il profilo ufficiale dell’autore. In questo modo la pagina <code>opere.html</code> assume una funzione bibliografica autonoma e rafforza l’identificazione pubblica tra autore, titoli e sito ufficiale.
+            </p>
+            <p>
+              La distinzione tra opere editoriali e pubblicazioni scientifiche è mantenuta in modo netto: i libri destinati alla circuitazione editoriale restano in questa pagina; i contributi con DOI sono raccolti nella sezione scientifica dedicata.
+            </p>
+          </article>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Assi del catalogo</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>Narrativa e indagine</strong>
+                <p>Romanzi e testi orientati alla tensione psicologica, all’ombra narrativa e alla ricostruzione del conflitto.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>Autobiografia e riflessione</strong>
+                <p>Scrittura più direttamente legata al vissuto, alla memoria e all’osservazione personale.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>Territorio e storia</strong>
+                <p>Opere che intercettano la linea di studio su Calatabiano e il rapporto tra scrittura e documento.</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="nota-catalogo">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="nota-catalogo">Nota editoriale</h2>
+          </div>
+          <p>Chiusura metodologica della pagina bibliografica.</p>
+        </div>
+
+        <div class="catalog-note">
+          Questa pagina raccoglie i titoli editoriali in forma ordinata e li collega alla presenza pubblica dell’autore. Eventuali ulteriori opere possono essere integrate successivamente, mantenendo la distinzione tra catalogo editoriale, ricerca storico-documentaria e pubblicazioni scientifiche.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Michele Bottino</h2>
+          <p>
+            Sito ufficiale dedicato all’identità pubblica dell’autore, alla produzione editoriale, alla ricerca storico-documentaria, alle pubblicazioni scientifiche e all’archivio digitale connesso.
+          </p>
+        </div>
+
+        <div class="footer-links" aria-label="Collegamenti secondari">
+          <a href="index.html">Home</a>
+          <a href="autore.html">Autore</a>
+          <a href="opere.html">Opere</a>
+          <a href="ricerca.html">Ricerca</a>
+          <a href="pubblicazioni-scientifiche.html">Pubblicazioni scientifiche</a>
+          <a href="archivio.html">Archivio</a>
+          <a href="media.html">Media</a>
+          <a href="musica.html">Musica</a>
+          <a href="contatti.html">Contatti</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+
+      <div class="subfooter">
+        <span>© Michele Bottino. Tutti i diritti riservati.</span>
+        <span>Official Web Site · Catalogo opere</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
