@@ -116,16 +116,7 @@ margin:auto;
 padding:44px 0;
 }
 
-.hero,
-.lesson-box,
-.note,
-.nav-box{
-background:var(--bg-soft);
-border:1px solid var(--line);
-border-radius:12px;
-padding:24px;
-margin-bottom:36px;
-}
+section{margin-bottom:42px}
 
 h1{
 font-size:2.3rem;
@@ -137,6 +128,17 @@ h2{
 border-bottom:1px solid var(--line);
 padding-bottom:8px;
 margin-bottom:16px;
+}
+
+.hero,
+.lesson-box,
+.note,
+.nav-box{
+background:var(--bg-soft);
+border:1px solid var(--line);
+border-radius:12px;
+padding:24px;
+margin-bottom:36px;
 }
 
 .lesson-box p,
@@ -232,6 +234,7 @@ width:100%;
 
 <nav class="site-nav">
 <a href="index.html">Home</a>
+<a href="catalogo-corsi.html">Catalogo</a>
 <a href="corsi-base.html">Corsi base</a>
 <a href="corsi-avanzati.html">Corsi avanzati</a>
 <a href="metodo.html">Metodo</a>
@@ -330,7 +333,7 @@ Se questa distinzione non viene rispettata, l'analisi perde chiarezza e solidit�
 
 <div class="note">
 <p>
-Prima di cercare un significato, chiediti sempre:
+Quando formuli una descrizione, chiediti sempre:
 </p>
 
 <ul>
@@ -352,11 +355,12 @@ Questa distinzione è il cuore del metodo.
 <div class="nav-box">
 <p>
 Questa è la terza lezione del corso di analisi documentale.
-La lezione successiva potrà introdurre il passaggio dalla descrizione alla lettura critica iniziale.
+La lezione successiva introduce il passaggio dalla descrizione alla lettura critica iniziale.
 </p>
 
 <a class="button" href="lezione-2-analisi-documentale.html">Lezione precedente</a>
 <a class="button" href="corso-analisi-documentale.html">Pagina del corso</a>
+<a class="button" href="catalogo-corsi.html">Catalogo corsi</a>
 </div>
 </section>
 
@@ -371,9 +375,11 @@ document.addEventListener("DOMContentLoaded",function(){
 const toggle=document.querySelector(".menu-toggle");
 const nav=document.querySelector(".site-nav");
 
-toggle.addEventListener("click",function(){
-nav.classList.toggle("open");
-});
+if (toggle && nav) {
+  toggle.addEventListener("click",function(){
+    nav.classList.toggle("open");
+  });
+}
 });
 </script>
 
