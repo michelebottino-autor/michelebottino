@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michele Bottino Formazione | Portale corsi</title>
+  <meta name="description" content="Portale formativo collegato al sito ufficiale di Michele Bottino. Corsi base e avanzati su analisi documentale, scrittura, letteratura, criminologia e metodo critico.">
+  <meta name="author" content="Michele Bottino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/formazione/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michele Bottino Formazione | Portale corsi">
+  <meta property="og:description" content="Percorsi base e avanzati su documenti, scrittura, letteratura, criminologia e metodo critico.">
+  <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/formazione/">
+  <meta property="og:site_name" content="Michele Bottino Formazione">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michele Bottino Formazione | Portale corsi">
+  <meta name="twitter:description" content="Portale formativo collegato al sito ufficiale di Michele Bottino.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Michele Bottino Formazione",
+    "url": "https://michelebottino-autor.github.io/michelebottino/formazione/",
+    "description": "Portale formativo collegato al sito ufficiale di Michele Bottino. Corsi base e avanzati su analisi documentale, scrittura, letteratura, criminologia e metodo critico.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Michele Bottino",
+      "url": "https://michelebottino-autor.github.io/michelebottino/"
+    },
+    "inLanguage": "it-IT"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0d1424;
+      --bg-soft:#111a2e;
+      --line:#273452;
+      --text:#ffffff;
+      --muted:#b9c2d0;
+      --accent:#7aa7ff;
+      --accent-dark:#1b2742;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.72;
+    }
+
+    a{color:var(--accent)}
+    a:hover{text-decoration:underline}
+
+    .site-header{
+      background:var(--bg-soft);
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .header-inner{
+      width:min(94%, var(--max));
+      margin:auto;
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      position:relative;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:bold;
+      min-width:0;
+    }
+
+    .brand:hover{text-decoration:none}
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      background:var(--accent-dark);
+      border:1px solid #32486f;
+      color:#ffffff;
+      flex-shrink:0;
+      font-size:14px;
+    }
+
+    .brand-text{
+      font-size:1rem;
+      line-height:1.2;
+      color:#ffffff;
+    }
+
+    .menu-toggle{
+      display:none;
+      background:var(--accent-dark);
+      color:#ffffff;
+      border:1px solid #32486f;
+      border-radius:8px;
+      padding:8px 12px;
+      font-size:20px;
+      cursor:pointer;
+    }
+
+    .site-nav{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .site-nav a{
+      color:var(--accent);
+      text-decoration:none;
+      font-size:15px;
+    }
+
+    .site-nav a:hover{text-decoration:underline}
+
+    .container{
+      width:min(94%, var(--max));
+      margin:auto;
+      padding:44px 0;
+    }
+
+    section{margin-bottom:42px}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.25fr 0.75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .panel,
+    .card,
+    .note{
+      background:var(--bg-soft);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:24px;
+    }
+
+    .panel p,
+    .card p,
+    .note p,
+    li{
+      color:#dde4ee;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:10px;
+      color:var(--accent);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:bold;
+    }
+
+    .lead{
+      font-size:1.06rem;
+      color:#e6ecf4;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .button{
+      display:inline-block;
+      padding:11px 16px;
+      background:var(--accent-dark);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      border:1px solid #32486f;
+    }
+
+    .button:hover{
+      background:#223253;
+      text-decoration:none;
+    }
+
+    h2{
+      margin:0 0 18px 0;
+      padding-bottom:10px;
+      border-bottom:1px solid var(--line);
+      font-size:1.75rem;
+    }
+
+    .grid-4,
+    .grid-2{
+      display:grid;
+      gap:22px;
+    }
+
+    .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+
+    .card h3{
+      margin:0 0 10px 0;
+      font-size:1.25rem;
+      line-height:1.28;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:12px;
+    }
+
+    .mini-list{
+      padding-left:20px;
+      margin:0;
+    }
+
+    footer{
+      background:#0a0f1c;
+      border-top:1px solid var(--line);
+      text-align:center;
+      padding:24px 20px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 980px){
+      .hero,
+      .grid-4,
+      .grid-2{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 900px){
+      .menu-toggle{display:block}
+
+      .site-nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:var(--bg-soft);
+        border-top:1px solid var(--line);
+        padding:16px 20px 20px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+      }
+
+      .site-nav.open{display:flex}
+
+      .site-nav a{
+        width:100%;
+        padding:6px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">MB</span>
+      <span class="brand-text">Michele Bottino Formazione</span>
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Apri il menu">☰</button>
+
+    <nav id="site-menu" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="catalogo-corsi.html">Catalogo</a>
+      <a href="corsi-base.html">Corsi base</a>
+      <a href="corsi-avanzati.html">Corsi avanzati</a>
+      <a href="metodo.html">Metodo</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale autore</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <article class="panel">
+      <span class="eyebrow">Portale formativo</span>
+      <p class="lead">
+        Questo spazio raccoglie i percorsi didattici sviluppati da Michele Bottino nell’ambito
+        dell’analisi documentale, della scrittura, della letteratura, della criminologia e del metodo critico.
+      </p>
+      <p>
+        Il portale è concepito come estensione organica del sito ufficiale dell’autore e ricercatore.
+        La formazione nasce in continuità con il lavoro di studio, scrittura e osservazione metodica
+        dei testi, dei documenti e dei casi.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href="catalogo-corsi.html">Catalogo corsi</a>
+        <a class="button" href="corsi-base.html">Corsi base</a>
+        <a class="button" href="corsi-avanzati.html">Corsi avanzati</a>
+        <a class="button" href="metodo.html">Metodo</a>
+        <a class="button" href="contatti.html">Contatti</a>
+      </div>
+    </article>
+
+    <aside class="panel">
+      <span class="eyebrow">Struttura</span>
+      <p>I percorsi sono organizzati in due livelli principali:</p>
+      <ul class="mini-list">
+        <li><strong>Base</strong>: introduzione ai concetti, al lessico e ai principi del metodo.</li>
+        <li><strong>Avanzato</strong>: approfondimento, confronto critico, applicazione strutturata.</li>
+      </ul>
+      <p class="meta">
+        Destinatari: giovani adulti e adulti dai 18 anni in su, studenti, ricercatori indipendenti,
+        autori, operatori culturali e lettori interessati a uno studio ordinato e rigoroso.
+      </p>
+    </aside>
+  </section>
+
+  <section>
+    <h2>Aree del portale</h2>
+
+    <div class="grid-4">
+      <article class="card">
+        <span class="eyebrow">Area 01</span>
+        <h3>Analisi documentale</h3>
+        <p>Lettura strutturale dei documenti, osservazione delle parti, distinzione tra dato e interpretazione, costruzione dell’analisi.</p>
+      </article>
+
+      <article class="card">
+        <span class="eyebrow">Area 02</span>
+        <h3>Letteratura e scrittura</h3>
+        <p>Struttura narrativa, architettura del testo, personaggi, coerenza interna del racconto e forma della restituzione scritta.</p>
+      </article>
+
+      <article class="card">
+        <span class="eyebrow">Area 03</span>
+        <h3>Criminologia</h3>
+        <p>Lettura critica dei casi, osservazione delle dinamiche, distinzione tra fatto, narrazione e ipotesi interpretativa.</p>
+      </article>
+
+      <article class="card">
+        <span class="eyebrow">Area 04</span>
+        <h3>Metodo critico e ricerca</h3>
+        <p>Uso delle fonti, confronto delle evidenze, ordine del ragionamento, costruzione del testo analitico.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Percorsi in evidenza</h2>
+
+    <div class="grid-2">
+      <article class="card">
+        <span class="eyebrow">Corso base attivo</span>
+        <h3>Corso di analisi documentale</h3>
+        <p>Primo percorso realmente sviluppato della piattaforma, con pagina madre del corso e primo blocco di lezioni già disponibile.</p>
+        <a class="button" href="corso-analisi-documentale.html">Apri il corso</a>
+      </article>
+
+      <article class="card">
+        <span class="eyebrow">Strumento di orientamento</span>
+        <h3>Catalogo generale dei corsi</h3>
+        <p>Pagina indice dell’intera piattaforma, utile per comprendere struttura, livelli e direzione di crescita del portale.</p>
+        <a class="button" href="catalogo-corsi.html">Apri il catalogo</a>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Metodo del portale</h2>
+    <div class="note">
+      <p>
+        Tutti i percorsi si fondano su una sequenza stabile: identificazione dell’oggetto di studio,
+        descrizione degli elementi osservabili, confronto, interpretazione critica e restituzione chiara
+        del risultato. Le discipline cambiano, ma l’ordine del lavoro analitico resta costante.
+      </p>
+      <a class="button" href="metodo.html">Leggi il metodo</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Collegamento con il sito ufficiale</h2>
+    <div class="note">
+      <p>
+        Il portale formativo è collegato direttamente al sito ufficiale di Michele Bottino, dove sono raccolte
+        pubblicazioni, attività di ricerca e profilo pubblico dell’autore.
+      </p>
+      <a class="button" href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Vai al sito ufficiale</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Portale formativo collegato al sito ufficiale di Michele Bottino
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("open");
+      const expanded = nav.classList.contains("open");
+      toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+  }
+});
+</script>
+
+</body>
+</html>
