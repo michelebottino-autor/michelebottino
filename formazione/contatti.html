@@ -129,6 +129,7 @@ section{margin-bottom:42px}
 h1{
 font-size:clamp(2rem,4vw,2.8rem);
 margin-bottom:12px;
+line-height:1.2;
 }
 
 h2{
@@ -162,10 +163,6 @@ grid-template-columns:repeat(2,1fr);
 gap:22px;
 }
 
-.card h3{
-margin-top:0;
-}
-
 .contact-box{
 background:var(--bg-soft);
 border:1px solid var(--line);
@@ -186,6 +183,7 @@ margin-bottom:4px;
 
 .value{
 font-size:16px;
+color:#dde4ee;
 }
 
 .button{
@@ -267,6 +265,7 @@ grid-template-columns:1fr;
 
 <nav class="site-nav">
 <a href="index.html">Home</a>
+<a href="catalogo-corsi.html">Catalogo</a>
 <a href="corsi-base.html">Corsi base</a>
 <a href="corsi-avanzati.html">Corsi avanzati</a>
 <a href="metodo.html">Metodo</a>
@@ -375,11 +374,11 @@ document.addEventListener("DOMContentLoaded", function () {
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 
-toggle.addEventListener("click", function () {
-
-nav.classList.toggle("open");
-
-});
+if (toggle && nav) {
+  toggle.addEventListener("click", function () {
+    nav.classList.toggle("open");
+  });
+}
 
 });
 
