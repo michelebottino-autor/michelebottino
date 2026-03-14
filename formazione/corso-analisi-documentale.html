@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Corso di analisi documentale | Michele Bottino Formazione</title>
+
+<meta name="description" content="Corso base di analisi documentale del portale Michele Bottino Formazione. Struttura del documento, osservazione delle parti, metodo di lettura critica e primi strumenti di analisi.">
+
+<meta name="author" content="Michele Bottino">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/formazione/corso-analisi-documentale.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Corso di analisi documentale | Michele Bottino Formazione">
+<meta property="og:description" content="Corso base dedicato alla struttura del documento, all'osservazione e alla lettura critica delle fonti.">
+<meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/formazione/corso-analisi-documentale.html">
+<meta property="og:site_name" content="Michele Bottino Formazione">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Corso di analisi documentale | Michele Bottino Formazione">
+<meta name="twitter:description" content="Corso base di analisi documentale del portale Michele Bottino Formazione.">
+
+<style>
+:root{
+--bg:#0d1424;
+--bg-soft:#111a2e;
+--line:#273452;
+--text:#ffffff;
+--muted:#b9c2d0;
+--accent:#7aa7ff;
+--accent-dark:#1b2742;
+--max:1180px;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.72;
+}
+
+a{color:var(--accent)}
+a:hover{text-decoration:underline}
+
+.site-header{
+background:var(--bg-soft);
+border-bottom:1px solid var(--line);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.header-inner{
+width:min(94%, var(--max));
+margin:auto;
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:16px;
+position:relative;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--text);
+text-decoration:none;
+font-weight:bold;
+}
+
+.brand-mark{
+width:38px;
+height:38px;
+border-radius:10px;
+display:grid;
+place-items:center;
+background:var(--accent-dark);
+border:1px solid #32486f;
+color:#fff;
+font-size:14px;
+}
+
+.brand-text{
+font-size:1rem;
+line-height:1.2;
+}
+
+.menu-toggle{
+display:none;
+background:var(--accent-dark);
+color:#fff;
+border:1px solid #32486f;
+border-radius:8px;
+padding:8px 12px;
+font-size:20px;
+cursor:pointer;
+}
+
+.site-nav{
+display:flex;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.site-nav a{
+color:var(--accent);
+text-decoration:none;
+font-size:15px;
+}
+
+.container{
+width:min(94%, var(--max));
+margin:auto;
+padding:44px 0;
+}
+
+section{margin-bottom:42px}
+
+h1{
+font-size:clamp(2rem,4vw,2.8rem);
+margin-bottom:12px;
+}
+
+h2{
+border-bottom:1px solid var(--line);
+padding-bottom:10px;
+margin-bottom:18px;
+}
+
+.hero,
+.card,
+.note,
+.meta-box{
+background:var(--bg-soft);
+border:1px solid var(--line);
+border-radius:12px;
+padding:24px;
+}
+
+.hero p,
+.card p,
+.note p,
+.meta-box p,
+li{
+color:#dde4ee;
+}
+
+.lead{
+font-size:1.05rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.meta-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.meta-box strong{
+display:block;
+color:var(--accent);
+margin-bottom:8px;
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
+}
+
+.label{
+display:inline-block;
+margin-bottom:10px;
+color:var(--accent);
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
+font-weight:bold;
+}
+
+.card h3{
+margin-top:0;
+margin-bottom:10px;
+}
+
+.card ul{
+padding-left:20px;
+margin:0;
+}
+
+.button{
+display:inline-block;
+padding:11px 16px;
+margin:12px 10px 0 0;
+background:var(--accent-dark);
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+border:1px solid #32486f;
+}
+
+.button:hover{
+background:#223253;
+text-decoration:none;
+}
+
+footer{
+background:#0a0f1c;
+border-top:1px solid var(--line);
+text-align:center;
+padding:24px 20px;
+color:var(--muted);
+font-size:14px;
+}
+
+@media (max-width:900px){
+.menu-toggle{display:block}
+
+.site-nav{
+display:none;
+position:absolute;
+top:72px;
+left:0;
+right:0;
+background:var(--bg-soft);
+border-top:1px solid var(--line);
+padding:16px 20px 20px;
+flex-direction:column;
+align-items:flex-start;
+gap:12px;
+}
+
+.site-nav.open{display:flex}
+
+.site-nav a{
+width:100%;
+padding:6px 0;
+}
+}
+
+@media (max-width:860px){
+.grid,
+.meta-grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+
+<a class="brand" href="index.html">
+<span class="brand-mark">MB</span>
+<span class="brand-text">Michele Bottino Formazione</span>
+</a>
+
+<button class="menu-toggle" aria-expanded="false">☰</button>
+
+<nav class="site-nav">
+<a href="index.html">Home</a>
+<a href="corsi-base.html">Corsi base</a>
+<a href="corsi-avanzati.html">Corsi avanzati</a>
+<a href="metodo.html">Metodo</a>
+<a href="contatti.html">Contatti</a>
+<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale autore</a>
+</nav>
+
+</div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+
+<h1>Corso di analisi documentale</h1>
+
+<p class="lead">
+Questo corso introduce alla lettura strutturale del documento e alla costruzione di un primo metodo
+di osservazione critica. È il corso di accesso più coerente per chi desidera comprendere come si analizza
+un testo documentario senza confondere dati, struttura e interpretazione.
+</p>
+
+<p>
+Il percorso è pensato come corso base e costituisce la soglia di ingresso all'area documentale del portale.
+Successivamente potrà essere esteso con lezioni singole, materiali di supporto e moduli avanzati.
+</p>
+
+<a class="button" href="corsi-base.html">Torna ai corsi base</a>
+
+</section>
+
+<section>
+
+<h2>Dati essenziali</h2>
+
+<div class="meta-grid">
+
+<div class="meta-box">
+<strong>Livello</strong>
+<p>Base</p>
+</div>
+
+<div class="meta-box">
+<strong>Area</strong>
+<p>Analisi documentale</p>
+</div>
+
+<div class="meta-box">
+<strong>Destinatari</strong>
+<p>Studenti, appassionati, operatori culturali, ricercatori indipendenti</p>
+</div>
+
+<div class="meta-box">
+<strong>Fascia d’età</strong>
+<p>Dai 18 anni in su</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Obiettivi del corso</h2>
+
+<div class="card">
+<ul>
+<li>comprendere che cos’è un documento in senso anal
