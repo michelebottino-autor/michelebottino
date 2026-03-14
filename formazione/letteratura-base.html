@@ -6,44 +6,98 @@
 
 <title>Fondamenti di scrittura narrativa | Michele Bottino Formazione</title>
 
-<meta name="description" content="Corso base di scrittura narrativa del portale Michele Bottino Formazione. Struttura del racconto, costruzione dei personaggi e organizzazione della narrazione.">
+<meta name="description" content="Corso base di letteratura e scrittura del portale Michele Bottino Formazione. Struttura del racconto, costruzione dei personaggi e organizzazione della narrazione.">
 <meta name="author" content="Michele Bottino">
 <meta name="robots" content="index, follow">
 
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/formazione/letteratura-base.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fondamenti di scrittura narrativa | Michele Bottino Formazione">
+<meta property="og:description" content="Corso base di letteratura e scrittura dedicato alla struttura del racconto, ai personaggi e ai principi fondamentali della narrazione.">
+<meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/formazione/letteratura-base.html">
+<meta property="og:site_name" content="Michele Bottino Formazione">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fondamenti di scrittura narrativa | Michele Bottino Formazione">
+<meta name="twitter:description" content="Corso base di letteratura e scrittura del portale Michele Bottino Formazione.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Fondamenti di scrittura narrativa",
+  "description": "Corso base di letteratura e scrittura dedicato alla struttura del racconto, alla costruzione dei personaggi, all'ordine narrativo e ai principi fondamentali della scrittura.",
+  "provider": {
+    "@type": "Person",
+    "name": "Michele Bottino",
+    "url": "https://michelebottino-autor.github.io/michelebottino/"
+  },
+  "educationalLevel": "Base",
+  "inLanguage": "it-IT",
+  "url": "https://michelebottino-autor.github.io/michelebottino/formazione/letteratura-base.html"
+}
+</script>
+
 <style>
+:root{
+--bg:#0d1424;
+--bg-soft:#111a2e;
+--card:#121d33;
+--line:#273452;
+--text:#ffffff;
+--muted:#b9c2d0;
+--accent:#7aa7ff;
+--accent-dark:#1b2742;
+--max:1080px;
+}
+
+*{
+box-sizing:border-box;
+}
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0d1424;
-color:#ffffff;
 margin:0;
-line-height:1.7;
+font-family:Arial, Helvetica, sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.72;
+}
+
+a{
+color:var(--accent);
+}
+
+a:hover{
+text-decoration:underline;
 }
 
 header{
-background:#111a2e;
-padding:24px;
+background:var(--bg-soft);
+border-bottom:1px solid var(--line);
+padding:24px 20px;
 text-align:center;
-border-bottom:1px solid #2a3550;
 }
 
 header h1{
 margin:0;
-font-size:32px;
+font-size:clamp(2rem,4vw,2.8rem);
+line-height:1.2;
 }
 
 header p{
-color:#b9c2d0;
-margin-top:6px;
+margin-top:8px;
+color:var(--muted);
 }
 
 nav{
-margin-top:16px;
+margin-top:18px;
 }
 
 nav a{
-color:#7aa7ff;
-margin:0 10px;
+display:inline-block;
+margin:6px 10px;
+color:var(--accent);
 text-decoration:none;
 font-size:15px;
 }
@@ -53,259 +107,308 @@ text-decoration:underline;
 }
 
 .container{
-max-width:1000px;
+width:min(94%,var(--max));
 margin:auto;
-padding:40px 20px;
+padding:42px 0;
 }
 
-.section{
-margin-bottom:50px;
+section{
+margin-bottom:40px;
 }
 
 h2{
-border-bottom:1px solid #2a3550;
+margin:0 0 18px 0;
 padding-bottom:10px;
+border-bottom:1px solid var(--line);
+font-size:1.75rem;
 }
 
-.card{
-background:#111a2e;
-border:1px solid #1f2b48;
-border-radius:10px;
+.hero,
+.box,
+.module,
+.meta-box{
+background:var(--bg-soft);
+border:1px solid var(--line);
+border-radius:12px;
 padding:24px;
-margin-top:20px;
+}
+
+.hero p,
+.box p,
+.module p,
+.meta-box p,
+li{
+color:#dde4ee;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
 }
 
 .meta-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(2,1fr);
 gap:18px;
-margin-top:22px;
-}
-
-.meta-box{
-background:#111a2e;
-border:1px solid #1f2b48;
-border-radius:10px;
-padding:18px;
 }
 
 .meta-box strong{
 display:block;
-color:#7aa7ff;
-margin-bottom:6px;
-font-size:13px;
+color:var(--accent);
+margin-bottom:8px;
+font-size:12px;
 text-transform:uppercase;
+letter-spacing:.08em;
 }
 
-.module{
-background:#111a2e;
-border:1px solid #1f2b48;
-border-radius:10px;
-padding:20px;
-margin-bottom:16px;
+.label{
+display:inline-block;
+margin-bottom:10px;
+color:var(--accent);
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
+font-weight:bold;
+}
+
+.lead{
+font-size:1.05rem;
+color:#e6ecf4;
 }
 
 .module h3{
-margin-top:0;
-font-size:20px;
+margin:0 0 10px 0;
+font-size:1.22rem;
+line-height:1.3;
+}
+
+ul{
+padding-left:20px;
+margin:0;
 }
 
 .button{
 display:inline-block;
-padding:10px 16px;
-background:#1b2742;
-color:#ffffff;
-border:1px solid #32486f;
-border-radius:6px;
+padding:11px 16px;
+margin:16px 10px 0 0;
+background:var(--accent-dark);
+color:#fff;
 text-decoration:none;
-margin-right:10px;
-margin-top:16px;
+border-radius:8px;
+border:1px solid #32486f;
 }
 
 .button:hover{
 background:#223253;
+text-decoration:none;
 }
 
 footer{
 background:#0a0f1c;
+border-top:1px solid var(--line);
 text-align:center;
-padding:25px;
-border-top:1px solid #2a3550;
-color:#b9c2d0;
+padding:24px 20px;
+color:var(--muted);
+font-size:14px;
 }
 
+@media (max-width:860px){
+.grid,
+.meta-grid{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <h1>Fondamenti di scrittura narrativa</h1>
-
-<p>Corso base di letteratura e narrazione</p>
+<p>Corso base di letteratura e scrittura</p>
 
 <nav>
 <a href="index.html">Home</a>
+<a href="docente.html">Docente</a>
+<a href="metodo.html">Metodo</a>
+<a href="catalogo-corsi.html">Catalogo</a>
 <a href="corsi-base.html">Corsi base</a>
 <a href="corsi-avanzati.html">Corsi avanzati</a>
-<a href="metodo.html">Metodo</a>
 <a href="materiali.html">Materiali</a>
-<a href="https://michelebottino-autor.github.io/michelebottino" target="_blank">
-Sito ufficiale autore
-</a>
+<a href="iscrizione.html">Iscrizione</a>
+<a href="contatti.html">Contatti</a>
+<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale autore</a>
 </nav>
-
 </header>
 
+<main class="container">
 
-<div class="container">
-
-<section class="section">
-
-<h2>Presentazione del corso</h2>
-
-<div class="card">
-
-<p>
-Il corso introduce ai principi fondamentali della narrazione e della scrittura narrativa.
-L'obiettivo è comprendere come nasce una storia, quali sono gli elementi essenziali di
-un racconto e come organizzare in modo coerente una struttura narrativa.
+<section>
+<div class="hero">
+<span class="label">Corso base</span>
+<p class="lead">
+Questo percorso introduce ai principi fondamentali della scrittura narrativa e della struttura del racconto.
+Il corso è pensato per chi desidera comprendere come nasce una storia, quali sono i suoi elementi costitutivi
+e come si organizza una narrazione coerente.
 </p>
-
 <p>
-Il percorso è rivolto a chi desidera avvicinarsi alla scrittura in modo consapevole,
-sviluppando una maggiore comprensione della costruzione dei testi narrativi.
+L’obiettivo non è soltanto scrivere, ma imparare a riconoscere le strutture della narrazione:
+funzione dei personaggi, ordine degli eventi, ritmo del racconto e coerenza della costruzione testuale.
 </p>
-
 </div>
-
 </section>
 
-
-<section class="section">
-
+<section>
 <h2>Dati essenziali</h2>
 
 <div class="meta-grid">
-
 <div class="meta-box">
 <strong>Area</strong>
-Letteratura e scrittura
+<p>Letteratura e scrittura</p>
 </div>
 
 <div class="meta-box">
 <strong>Livello</strong>
-Base
+<p>Base</p>
 </div>
 
 <div class="meta-box">
 <strong>Destinatari</strong>
-Lettori, aspiranti autori, studenti
+<p>Lettori, aspiranti autori, studenti, appassionati di narrativa</p>
 </div>
 
 <div class="meta-box">
 <strong>Fascia d’età</strong>
-Dai 18 anni in su
+<p>Dai 18 anni in su</p>
 </div>
-
 </div>
-
 </section>
 
+<section>
+<h2>Finalità del corso</h2>
 
-<section class="section">
+<div class="box">
+<p>
+Il corso fornisce una base di orientamento per comprendere come si struttura un testo narrativo.
+È destinato a chi vuole sviluppare consapevolezza nella lettura e nella costruzione di storie,
+acquisendo un primo lessico tecnico e una visione ordinata della narrazione.
+</p>
+</div>
+</section>
 
+<section>
 <h2>Obiettivi formativi</h2>
 
-<div class="card">
-
+<div class="box">
 <ul>
-<li>comprendere la struttura di base di un racconto</li>
-<li>analizzare il ruolo dei personaggi</li>
-<li>imparare a organizzare una narrazione coerente</li>
-<li>sviluppare consapevolezza nella scrittura</li>
+<li>comprendere la struttura fondamentale del racconto;</li>
+<li>riconoscere la funzione narrativa dei personaggi;</li>
+<li>imparare a ordinare gli eventi in una sequenza coerente;</li>
+<li>sviluppare attenzione al ritmo e alla forma del testo;</li>
+<li>acquisire i primi strumenti di scrittura narrativa consapevole.</li>
 </ul>
-
 </div>
-
 </section>
 
+<section>
+<h2>Competenze in uscita</h2>
 
-<section class="section">
+<div class="grid">
+<div class="box">
+<p>Al termine del percorso il partecipante sarà in grado di:</p>
+<ul>
+<li>riconoscere gli elementi principali di una storia;</li>
+<li>individuare inizio, sviluppo e conclusione di un racconto;</li>
+<li>descrivere il ruolo di un personaggio nella struttura narrativa;</li>
+<li>impostare una breve costruzione narrativa coerente.</li>
+</ul>
+</div>
 
+<div class="box">
+<p>Il corso sviluppa in particolare:</p>
+<ul>
+<li>consapevolezza della forma narrativa;</li>
+<li>attenzione alla coerenza del racconto;</li>
+<li>capacità di osservazione delle strutture testuali;</li>
+<li>primo orientamento alla scrittura come costruzione ordinata.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
 <h2>Programma del corso</h2>
 
 <div class="module">
-
-<h3>Modulo 1 · La struttura del racconto</h3>
-
+<span class="label">Modulo 1</span>
+<h3>La struttura del racconto</h3>
 <p>
-Elementi fondamentali della narrazione, inizio, sviluppo e conclusione.
-Comprensione della sequenza narrativa.
+Elementi fondamentali della narrazione: inizio, sviluppo e conclusione.
+Comprensione della sequenza narrativa e della funzione dell’ordine degli eventi.
 </p>
-
 </div>
 
 <div class="module">
-
-<h3>Modulo 2 · Personaggi e funzione narrativa</h3>
-
+<span class="label">Modulo 2</span>
+<h3>Personaggi e funzione narrativa</h3>
 <p>
-Costruzione del personaggio, ruolo nella storia e relazione con gli eventi narrativi.
+Costruzione del personaggio, ruolo nella storia e rapporto con gli eventi narrativi.
+Prime nozioni sulla funzione dei personaggi nella dinamica del racconto.
 </p>
-
 </div>
 
 <div class="module">
-
-<h3>Modulo 3 · Ordine e ritmo della narrazione</h3>
-
+<span class="label">Modulo 3</span>
+<h3>Ordine e ritmo della narrazione</h3>
 <p>
-Organizzazione degli eventi, gestione del ritmo e coerenza della struttura narrativa.
+Organizzazione degli eventi, gestione del ritmo e coerenza interna della struttura narrativa.
+Introduzione al rapporto tra costruzione e leggibilità del testo.
 </p>
-
 </div>
 
 <div class="module">
-
-<h3>Modulo 4 · Prime tecniche di scrittura</h3>
-
+<span class="label">Modulo 4</span>
+<h3>Prime tecniche di scrittura</h3>
 <p>
-Esercizi di costruzione narrativa e analisi di brevi strutture testuali.
+Esercizi introduttivi di costruzione narrativa e analisi di brevi strutture testuali.
+La scrittura come forma di ordine, scelta e coerenza.
 </p>
-
 </div>
-
 </section>
 
+<section>
+<h2>Impostazione didattica</h2>
 
-<section class="section">
-
-<h2>Metodo didattico</h2>
-
-<div class="card">
-
+<div class="box">
 <p>
-Il corso utilizza un approccio analitico basato sull'osservazione della struttura
-dei testi narrativi e sulla comprensione degli elementi che compongono una storia.
+Il corso utilizza contenuti testuali strutturati, esempi narrativi, analisi di strutture e progressione
+ordinata delle nozioni. L’impostazione è finalizzata a costruire un primo sguardo critico sulla narrazione
+e a introdurre una scrittura più consapevole.
 </p>
-
 </div>
+</section>
+
+<section>
+<h2>Nota metodologica</h2>
+
+<div class="box">
+<p>
+Il percorso segue il metodo generale del portale: identificazione dell’oggetto di studio,
+descrizione della struttura, osservazione delle funzioni interne, confronto tra gli elementi
+e restituzione ordinata della lettura.
+</p>
 
 <a class="button" href="corsi-base.html">Torna ai corsi base</a>
-
+<a class="button" href="catalogo-corsi.html">Vai al catalogo</a>
 <a class="button" href="index.html">Torna alla home del portale</a>
-
+</div>
 </section>
 
-</div>
-
+</main>
 
 <footer>
-
 Portale formativo collegato al sito ufficiale di Michele Bottino
-
 </footer>
 
 </body>
