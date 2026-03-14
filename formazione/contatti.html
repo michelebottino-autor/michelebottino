@@ -6,7 +6,7 @@
 
 <title>Contatti | Michele Bottino Formazione</title>
 
-<meta name="description" content="Contatti del portale Michele Bottino Formazione. Informazioni sui corsi, percorsi didattici e attività formative.">
+<meta name="description" content="Contatti del portale Michele Bottino Formazione. Informazioni, comunicazioni e collegamenti con il sito ufficiale dell'autore.">
 <meta name="author" content="Michele Bottino">
 <meta name="robots" content="index, follow">
 
@@ -14,8 +14,9 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contatti | Michele Bottino Formazione">
-<meta property="og:description" content="Informazioni e contatti per i corsi del portale formativo.">
+<meta property="og:description" content="Pagina contatti del portale Michele Bottino Formazione.">
 <meta property="og:url" content="https://michelebottino-autor.github.io/michelebottino/formazione/contatti.html">
+<meta property="og:site_name" content="Michele Bottino Formazione">
 
 <meta name="twitter:card" content="summary">
 
@@ -41,24 +42,32 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.7;
+line-height:1.72;
+}
+
+a{
+color:var(--accent);
+}
+
+a:hover{
+text-decoration:underline;
 }
 
 header{
 background:var(--bg-soft);
 border-bottom:1px solid var(--line);
-padding:26px 20px;
+padding:24px 20px;
 text-align:center;
 }
 
 header h1{
 margin:0;
-font-size:2.5rem;
+font-size:clamp(2rem,4vw,2.7rem);
 }
 
 header p{
-color:var(--muted);
 margin-top:8px;
+color:var(--muted);
 }
 
 nav{
@@ -66,6 +75,7 @@ margin-top:18px;
 }
 
 nav a{
+display:inline-block;
 margin:6px 10px;
 color:var(--accent);
 text-decoration:none;
@@ -77,40 +87,53 @@ text-decoration:underline;
 }
 
 .container{
-width:min(94%, var(--max));
+width:min(94%,var(--max));
 margin:auto;
 padding:42px 0;
 }
 
-.section{
+section{
 margin-bottom:40px;
+}
+
+h2{
+margin:0 0 18px 0;
+padding-bottom:10px;
+border-bottom:1px solid var(--line);
+font-size:1.75rem;
 }
 
 .box{
 background:var(--bg-soft);
 border:1px solid var(--line);
-border-radius:10px;
-padding:26px;
+border-radius:12px;
+padding:24px;
 }
 
-h2{
-border-bottom:1px solid var(--line);
-padding-bottom:10px;
-margin-bottom:16px;
-}
-
-p{
+.box p,
+li{
 color:#dde4ee;
+}
+
+.label{
+display:inline-block;
+margin-bottom:10px;
+color:var(--accent);
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
+font-weight:bold;
 }
 
 .contact{
 font-size:1.05rem;
+margin-bottom:14px;
 }
 
 .button{
 display:inline-block;
-padding:12px 18px;
-margin-top:14px;
+padding:11px 16px;
+margin-top:16px;
 background:var(--accent-dark);
 color:#fff;
 text-decoration:none;
@@ -120,15 +143,16 @@ border:1px solid #32486f;
 
 .button:hover{
 background:#223253;
+text-decoration:none;
 }
 
 footer{
 background:#0a0f1c;
 border-top:1px solid var(--line);
 text-align:center;
-padding:22px;
-font-size:14px;
+padding:24px 20px;
 color:var(--muted);
+font-size:14px;
 }
 
 </style>
@@ -139,91 +163,101 @@ color:var(--muted);
 <header>
 
 <h1>Contatti</h1>
-<p>Informazioni sui percorsi formativi e sulle attività didattiche</p>
+<p>Comunicazioni e collegamenti del portale Michele Bottino Formazione</p>
 
 <nav>
-
 <a href="index.html">Home</a>
+<a href="docente.html">Docente</a>
 <a href="metodo.html">Metodo</a>
+<a href="catalogo-corsi.html">Catalogo</a>
 <a href="corsi-base.html">Corsi base</a>
 <a href="corsi-avanzati.html">Corsi avanzati</a>
 <a href="materiali.html">Materiali</a>
+<a href="iscrizione.html">Iscrizione</a>
 <a href="contatti.html">Contatti</a>
-
-<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank">Sito ufficiale autore</a>
-
+<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale autore</a>
 </nav>
 
 </header>
 
 <main class="container">
 
-<section class="section">
+<section>
 
 <div class="box">
 
-<h2>Informazioni</h2>
+<span class="label">Contatto principale</span>
 
-<p>
-Il portale Michele Bottino Formazione raccoglie percorsi didattici dedicati allo studio del metodo analitico, della lettura documentale, della struttura narrativa e dell’analisi dei casi.
+<p class="contact">
+Per comunicazioni relative ai corsi, alle attività formative o al portale è possibile utilizzare il contatto email ufficiale:
 </p>
 
-<p>
-I corsi sono strutturati in livelli progressivi e sono pensati per fornire strumenti di osservazione, interpretazione e restituzione critica applicabili a diverse aree di studio.
+<p class="contact">
+<strong>michelebottino.adc@gmail.com</strong>
 </p>
+
+<a class="button" href="mailto:michelebottino.adc@gmail.com?subject=Contatto%20-%20Portale%20Formazione%20Michele%20Bottino">
+Invia email
+</a>
 
 </div>
 
 </section>
 
+<section>
 
-<section class="section">
+<h2>Tipologia di comunicazioni</h2>
 
-<div class="box contact">
-
-<h2>Contatto diretto</h2>
-
-<p>
-Per informazioni sui corsi, sui percorsi formativi o per comunicazioni relative alle attività del portale è possibile utilizzare il contatto ufficiale.
-</p>
-
-<p>
-Email di riferimento:
-</p>
-
-<p>
-<strong>michelebottino.adc@gmail.com</strong>
-</p>
-
-<p>
-Le richieste possono riguardare:
-</p>
+<div class="box">
 
 <ul>
-<li>informazioni sui corsi</li>
-<li>partecipazione ai percorsi formativi</li>
-<li>proposte di collaborazione</li>
-<li>attività culturali e didattiche</li>
+<li>informazioni sui corsi disponibili;</li>
+<li>richieste relative ai percorsi base e avanzati;</li>
+<li>domande sui contenuti formativi;</li>
+<li>proposte di collaborazione culturale o didattica;</li>
+<li>richieste relative ai materiali e alle attività del portale.</li>
 </ul>
 
 </div>
 
 </section>
 
+<section>
 
-<section class="section">
+<h2>Collegamento con il sito ufficiale</h2>
 
 <div class="box">
 
-<h2>Collegamenti</h2>
-
 <p>
-Il portale formativo è collegato al sito ufficiale dell’autore e ricercatore Michele Bottino, dove sono raccolte pubblicazioni, progetti editoriali e attività di ricerca.
+Il portale formativo è direttamente collegato al sito ufficiale dell’autore Michele Bottino.
+Attraverso il sito principale è possibile consultare pubblicazioni, attività di ricerca,
+progetti editoriali e contenuti collegati al lavoro dell'autore.
 </p>
 
-<a class="button" href="https://michelebottino-autor.github.io/michelebottino/" target="_blank">
+<a class="button" href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">
 Vai al sito ufficiale
 </a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Nota organizzativa</h2>
+
+<div class="box">
+
+<p>
+Il portale Michele Bottino Formazione rappresenta una piattaforma in evoluzione.
+Le comunicazioni ricevute attraverso questa pagina permettono di orientare lo sviluppo
+dei corsi e dei materiali in modo coerente con le esigenze degli utenti.
+</p>
+
+<p>
+Le risposte vengono fornite nei tempi compatibili con le attività editoriali e di ricerca
+dell’autore.
+</p>
 
 </div>
 
