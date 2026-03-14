@@ -24,7 +24,6 @@
 <meta name="twitter:description" content="Percorsi avanzati del portale Michele Bottino Formazione.">
 
 <style>
-
 :root{
 --bg:#0d1424;
 --bg-soft:#111a2e;
@@ -265,14 +264,13 @@ grid-template-columns:1fr;
 <button class="menu-toggle" aria-expanded="false">☰</button>
 
 <nav class="site-nav">
-
 <a href="index.html">Home</a>
+<a href="catalogo-corsi.html">Catalogo</a>
 <a href="corsi-base.html">Corsi base</a>
 <a href="corsi-avanzati.html">Corsi avanzati</a>
 <a href="metodo.html">Metodo</a>
 <a href="contatti.html">Contatti</a>
-<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank">Sito ufficiale autore</a>
-
+<a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale autore</a>
 </nav>
 
 </div>
@@ -421,20 +419,18 @@ Portale formativo collegato al sito ufficiale di Michele Bottino
 </footer>
 
 <script>
+document.addEventListener("DOMContentLoaded",function(){
 
-document.addEventListener("DOMContentLoaded", function () {
+const toggle=document.querySelector(".menu-toggle");
+const nav=document.querySelector(".site-nav");
 
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".site-nav");
-
-toggle.addEventListener("click", function () {
-
-nav.classList.toggle("open");
+if (toggle && nav) {
+  toggle.addEventListener("click",function(){
+    nav.classList.toggle("open");
+  });
+}
 
 });
-
-});
-
 </script>
 
 </body>
