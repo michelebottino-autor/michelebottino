@@ -1,23 +1,59 @@
-# Michele Bottino — Sito Ufficiale
+Michele Bottino — Official Web Site
 
-Repository del sito ufficiale di **Michele Bottino**, autore, ricercatore indipendente e autore di testi musicali.
+Sito ufficiale di Michele Bottino, autore e ricercatore indipendente.
 
-Il progetto è concepito come sito statico HTML5 pronto per pubblicazione reale su **GitHub Pages**, senza CMS, senza database e senza dipendenze da framework esterni.
+Il sito costituisce il nodo centrale della presenza digitale dell’autore e raccoglie in un unico spazio:
 
-Il sito raccoglie in forma ordinata:
+- biografia ufficiale
+- catalogo delle opere pubblicate
+- attività di ricerca storico-documentaria
+- archivio delle pubblicazioni scientifiche
 
-- attività editoriale
-- profilo autore
-- pubblicazioni scientifiche
-- archivio digitale dei riferimenti
-- presenza media e collegamenti pubblici
-- modulo contatti
+Il progetto è pubblicato come sito statico tramite GitHub Pages.
 
----
+Struttura del sito
 
-## URL di pubblicazione
+Il sito è composto dalle seguenti pagine principali:
 
-Sito ufficiale pubblicato su GitHub Pages:
+- "index.html" — homepage istituzionale
+- "autore.html" — biografia completa dell’autore
+- "opere.html" — catalogo delle opere editoriali e scientifiche
+- "ricerca.html" — area dedicata ai progetti di ricerca storica
+- "archivio.html" — archivio delle pubblicazioni e dei documenti scientifici
+- "contatti.html" — contatti ufficiali
+- "privacy.html" — informativa privacy
 
-```text
-https://michelebottino-autor.github.io/michelebottino/
+File tecnici inclusi nel progetto:
+
+- "robots.txt"
+- "sitemap.xml"
+- "manifest.json"
+- "404.html"
+
+Finalità del progetto
+
+Il sito ha funzione informativa ed editoriale.
+Raccoglie e organizza l’attività di scrittura e ricerca dell’autore, con particolare attenzione allo studio delle fonti archivistiche siciliane e alla ricostruzione storico-documentaria del territorio di Calatabiano.
+
+Identità digitale
+
+Il sito è collegato ai principali profili pubblici dell’autore:
+
+- ORCID
+- Academia.edu
+- Zenodo
+- Amazon Author Page
+
+Questa rete di collegamenti consente di mantenere una identità digitale coerente tra pubblicazioni scientifiche, attività di ricerca e produzione editoriale.
+
+Pubblicazione
+
+Il sito è pubblicato tramite GitHub Pages all’indirizzo:
+
+https://michelebottino-autor.github.io/michelebottino
+
+Licenza
+
+I contenuti testuali del sito, salvo diversa indicazione, sono riservati all’autore.
+
+© Michele Bottino
