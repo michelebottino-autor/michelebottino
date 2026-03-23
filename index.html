@@ -1,612 +1,71 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michele Bottino | Autore, scrittore, ricercatore indipendente</title>
-<meta name="description" content="Sito ufficiale di Michele Bottino, autore, scrittore e ricercatore indipendente. Opere, testi musicali, ricerca storico-documentaria, SOSA, pubblicazioni e contatti.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#0f172a">
-<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/">
-<meta property="og:title" content="Michele Bottino | Autore, scrittore, ricercatore indipendente">
-<meta property="og:description" content="Opere, testi musicali, ricerca storico-documentaria, SOSA, pubblicazioni e contatti.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="it_IT">
-<meta name="twitter:card" content="summary">
-<style>
-:root{
---bg:#0b1220;
---bg-2:#0f172a;
---panel:#162033;
---panel-2:#1e293b;
---line:#334155;
---line-soft:rgba(255,255,255,.08);
---text:#e5e7eb;
---muted:#cbd5e1;
---muted-2:#94a3b8;
---accent:#93c5fd;
---accent-strong:#60a5fa;
---max:1180px;
---radius:18px;
---shadow:0 12px 32px rgba(0,0,0,.22);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-margin:0;
-font-family:Georgia,"Times New Roman",serif;
-line-height:1.7;
-color:var(--text);
-background:
-radial-gradient(circle at top left, rgba(96,165,250,.10), transparent 26%),
-radial-gradient(circle at top right, rgba(147,197,253,.08), transparent 24%),
-linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-}
-img{max-width:100%;display:block;height:auto}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{
-width:min(var(--max), calc(100% - 32px));
-margin:0 auto;
-}
-.skip-link{
-position:absolute;
-left:-9999px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
-}
-.skip-link:focus{
-position:fixed;
-left:16px;
-top:16px;
-width:auto;
-height:auto;
-padding:10px 14px;
-background:#fff;
-color:#000;
-border-radius:10px;
-z-index:9999;
-}
-.site-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(11,18,32,.92);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--line-soft);
-}
-.header-inner{
-min-height:78px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:18px;
-}
-.brand{
-display:flex;
-flex-direction:column;
-min-width:0;
-color:#fff;
-text-decoration:none;
-}
-.brand:hover{text-decoration:none}
-.brand-title{
-font-size:1.15rem;
-font-weight:700;
-letter-spacing:.02em;
-}
-.brand-subtitle{
-color:var(--muted);
-font-size:.92rem;
-white-space:nowrap;
-overflow:hidden;
-text-overflow:ellipsis;
-}
-.desktop-nav ul,
-.mobile-nav ul,
-.submenu ul{
-list-style:none;
-margin:0;
-padding:0;
-}
-.desktop-nav > ul{
-display:flex;
-align-items:center;
-gap:18px;
-}
-.desktop-nav li{position:relative}
-.desktop-nav a{
-color:var(--text);
-font-size:.97rem;
-}
-.desktop-nav .submenu{
-display:none;
-position:absolute;
-top:100%;
-left:0;
-min-width:230px;
-background:var(--panel-2);
-border:1px solid var(--line-soft);
-border-radius:14px;
-box-shadow:var(--shadow);
-padding:10px;
-}
-.desktop-nav li:hover > .submenu{display:block}
-.desktop-nav .submenu a{
-display:block;
-padding:8px 10px;
-border-radius:10px;
-}
-.desktop-nav .submenu a:hover{
-text-decoration:none;
-background:rgba(255,255,255,.05);
-}
-.nav-toggle{
-display:none;
-background:none;
-border:1px solid var(--line-soft);
-color:var(--text);
-border-radius:12px;
-padding:10px 12px;
-cursor:pointer;
-font-size:1rem;
-}
-.mobile-nav{
-display:none;
-border-top:1px solid var(--line-soft);
-padding:8px 0 14px;
-}
-.mobile-nav.open{display:block}
-.mobile-nav > .container > ul > li{
-border-bottom:1px solid rgba(255,255,255,.06);
-}
-.mobile-nav a,
-.submenu-toggle{
-display:block;
-width:100%;
-background:none;
-border:none;
-color:var(--text);
-text-align:left;
-padding:13px 0;
-font-size:1rem;
-cursor:pointer;
-}
-.mobile-submenu{
-display:none;
-padding:0 0 10px 14px;
-}
-.mobile-submenu.open{display:block}
-.mobile-submenu a{
-color:var(--muted);
-padding:8px 0;
-font-size:.96rem;
-}
-.hero{
-padding:72px 0 42px;
-}
-.hero-grid{
-display:grid;
-grid-template-columns:1.35fr .95fr;
-gap:24px;
-align-items:stretch;
-}
-.hero-main,
-.hero-side{
-background:linear-gradient(180deg, rgba(30,41,59,.92), rgba(15,23,42,.96));
-border:1px solid var(--line-soft);
-border-radius:24px;
-padding:28px;
-box-shadow:var(--shadow);
-}
-.eyebrow{
-margin:0 0 10px;
-color:var(--muted);
-text-transform:uppercase;
-letter-spacing:.09em;
-font-size:.78rem;
-}
-.hero h1{
-margin:0 0 16px;
-font-size:clamp(2.1rem, 5vw, 3.4rem);
-line-height:1.1;
-color:#fff;
-}
-.hero p{
-margin:0 0 14px;
-color:var(--muted);
-font-size:1.03rem;
-}
-.formula{
-margin:18px 0 0;
-padding:14px 16px;
-border:1px solid rgba(147,197,253,.22);
-background:rgba(147,197,253,.06);
-border-radius:14px;
-color:#fff;
-font-family:"Courier New",monospace;
-font-size:.95rem;
-overflow:auto;
-}
-.cta-row{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-margin-top:22px;
-}
-.btn{
-display:inline-block;
-padding:11px 15px;
-border-radius:12px;
-border:1px solid var(--line-soft);
-color:#fff;
-background:rgba(255,255,255,.03);
-transition:.2s ease;
-}
-.btn:hover{
-text-decoration:none;
-background:rgba(255,255,255,.06);
-transform:translateY(-1px);
-}
-.btn.primary{
-background:linear-gradient(180deg, rgba(96,165,250,.22), rgba(59,130,246,.15));
-border-color:rgba(147,197,253,.30);
-}
-.section{
-padding:18px 0 38px;
-}
-.section-title{
-margin:0 0 16px;
-padding-bottom:10px;
-border-bottom:1px solid var(--line-soft);
-font-size:1.6rem;
-color:#fff;
-}
-.section-intro{
-margin:0 0 18px;
-color:var(--muted);
-max-width:820px;
-}
-.grid{
-display:grid;
-gap:20px;
-}
-.grid-3{
-grid-template-columns:repeat(3,1fr);
-}
-.grid-2{
-grid-template-columns:repeat(2,1fr);
-}
-.card{
-background:linear-gradient(180deg, rgba(22,32,51,.92), rgba(15,23,42,.98));
-border:1px solid var(--line-soft);
-border-radius:20px;
-padding:22px;
-box-shadow:var(--shadow);
-min-height:100%;
-}
-.card h2,
-.card h3{
-margin:0 0 12px;
-color:#fff;
-}
-.card p{
-margin:0 0 14px;
-color:var(--muted);
-}
-.card p:last-child{margin-bottom:0}
-.list-clean{
-margin:0;
-padding-left:18px;
-}
-.list-clean li{
-margin:0 0 8px;
-color:var(--muted);
-}
-.pathway{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:14px;
-margin-top:18px;
-}
-.pathway-step{
-background:rgba(255,255,255,.03);
-border:1px solid var(--line-soft);
-border-radius:16px;
-padding:14px;
-text-align:center;
-color:#fff;
-font-size:.95rem;
-}
-.highlight{
-background:linear-gradient(180deg, rgba(96,165,250,.08), rgba(147,197,253,.04));
-border:1px solid rgba(147,197,253,.18);
-}
-.site-footer{
-margin-top:26px;
-border-top:1px solid var(--line-soft);
-padding:28px 0 38px;
-color:var(--muted);
-font-size:.95rem;
-}
-.footer-grid{
-display:grid;
-grid-template-columns:1.15fr .85fr;
-gap:18px;
-}
-.footer-links{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-.footer-links a{
-color:var(--muted);
-}
-.footer-links a:hover{
-color:#fff;
-}
-@media (max-width: 1040px){
-.desktop-nav{display:none}
-.nav-toggle{display:block}
-.hero-grid,
-.grid-3,
-.grid-2,
-.footer-grid,
-.pathway{
-grid-template-columns:1fr;
-}
-}
-</style>
-</head>
-<body>
-<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+Vai al contenuto principale
+Michele Bottino
+Autore · Testi musicali · Ricerca · SOSA
+☰ Menu
+Sito ufficiale
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-title">Michele Bottino</span>
-      <span class="brand-subtitle">Autore · Testi musicali · Ricerca · SOSA</span>
-    </a>
+Michele Bottino
+Autore, scrittore e ricercatore indipendente. La produzione autoriale, i testi musicali, la ricerca storico-documentaria e lo sviluppo del framework SOSA confluiscono in un percorso di lavoro fondato su rigore, continuità e verificabilità.
 
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
+Tra narrativa, scrittura testuale, ricerca sulle fonti e formalizzazione metodologica, il lavoro di Michele Bottino si muove su un asse unitario: costruire contenuti solidi, leggibili e controllabili, senza dispersione tra ambiti diversi.
 
-    <nav class="desktop-nav" aria-label="Menu principale desktop">
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="autore.html">Autore</a></li>
-        <li>
-          <a href="opere.html">Opere</a>
-          <div class="submenu">
-            <ul>
-              <li><a href="libri.html">Libri</a></li>
-              <li><a href="testi-musicali.html">Testi musicali</a></li>
-              <li><a href="scritti.html">Scritti</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="ricerca.html">Ricerca</a>
-          <div class="submenu">
-            <ul>
-              <li><a href="progetti.html">Progetti</a></li>
-              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="sosa.html">SOSA</a>
-          <div class="submenu">
-            <ul>
-              <li><a href="sosa-overview.html">Overview</a></li>
-              <li><a href="sosa-architecture.html">Architettura</a></li>
-              <li><a href="sosa-modules.html">Moduli</a></li>
-              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
-              <li><a href="sosa-method.html">Metodo</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <a href="corsi.html">Corsi</a>
-          <div class="submenu">
-            <ul>
-              <li><a href="corso-sosa.html">Corso SOSA</a></li>
-              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="open-science.html">Open Science</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-      </ul>
-    </nav>
-  </div>
+SYSTEM = DELIVER(MVU(EXECUTE(INPUT, CE(SCL), STATE)))
+Esplora le opere
+Vai alla ricerca
+Accedi a SOSA
+Accessi principali
+Profilo autore
+Libri e opere editoriali
+Testi musicali
+Ricerca storico-documentaria
+Overview del framework SOSA
+Zenodo, DOI, ORCID e profili pubblici
+Aree principali
+Scrittura, opere, ricerca e metodo convivono in sezioni distinte, unite da uno stesso criterio di chiarezza e di controllo del contenuto.
 
-  <nav class="mobile-nav" id="mobileNav" aria-label="Menu principale mobile">
-    <div class="container">
-      <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="autore.html">Autore</a></li>
-        <li>
-          <button class="submenu-toggle" data-target="mobileOpere" aria-expanded="false">Opere</button>
-          <div class="mobile-submenu" id="mobileOpere">
-            <ul>
-              <li><a href="libri.html">Libri</a></li>
-              <li><a href="testi-musicali.html">Testi musicali</a></li>
-              <li><a href="scritti.html">Scritti</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <button class="submenu-toggle" data-target="mobileRicerca" aria-expanded="false">Ricerca</button>
-          <div class="mobile-submenu" id="mobileRicerca">
-            <ul>
-              <li><a href="progetti.html">Progetti</a></li>
-              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <button class="submenu-toggle" data-target="mobileSosa" aria-expanded="false">SOSA</button>
-          <div class="mobile-submenu" id="mobileSosa">
-            <ul>
-              <li><a href="sosa-overview.html">Overview</a></li>
-              <li><a href="sosa-architecture.html">Architettura</a></li>
-              <li><a href="sosa-modules.html">Moduli</a></li>
-              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
-              <li><a href="sosa-method.html">Metodo</a></li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <button class="submenu-toggle" data-target="mobileCorsi" aria-expanded="false">Corsi</button>
-          <div class="mobile-submenu" id="mobileCorsi">
-            <ul>
-              <li><a href="corso-sosa.html">Corso SOSA</a></li>
-              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="open-science.html">Open Science</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+Autore
+Profilo biografico e linea di lavoro di Michele Bottino, con accesso diretto ai principali ambiti dell’attività autoriale e di ricerca.
 
-<main id="contenuto">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-main">
-        <p class="eyebrow">Sito ufficiale</p>
-        <h1>Michele Bottino</h1>
-        <p>Autore, scrittore e ricercatore indipendente. La produzione autoriale, i testi musicali, la ricerca storico-documentaria e lo sviluppo del framework SOSA confluiscono in un percorso di lavoro fondato su rigore, continuità e verificabilità.</p>
-        <p>Tra narrativa, scrittura testuale, ricerca sulle fonti e formalizzazione metodologica, il lavoro di Michele Bottino si muove su un asse unitario: costruire contenuti solidi, leggibili e controllabili, senza dispersione tra ambiti diversi.</p>
-        <div class="formula">SYSTEM = DELIVER(MVU(EXECUTE(INPUT, CE(SCL), STATE)))</div>
-        <div class="cta-row">
-          <a class="btn primary" href="opere.html">Esplora le opere</a>
-          <a class="btn" href="ricerca.html">Vai alla ricerca</a>
-          <a class="btn" href="sosa.html">Accedi a SOSA</a>
-        </div>
-      </div>
+Vai alla pagina Autore
 
-      <aside class="hero-side">
-        <h2>Accessi principali</h2>
-        <ul class="list-clean">
-          <li><a href="autore.html">Profilo autore</a></li>
-          <li><a href="libri.html">Libri e opere editoriali</a></li>
-          <li><a href="testi-musicali.html">Testi musicali</a></li>
-          <li><a href="ricerca.html">Ricerca storico-documentaria</a></li>
-          <li><a href="sosa-overview.html">Overview del framework SOSA</a></li>
-          <li><a href="open-science.html">Zenodo, DOI, ORCID e profili pubblici</a></li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+Opere
+Libri, testi musicali e scritti raccolti in percorsi distinti, con una presentazione ordinata della produzione pubblica.
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Aree principali</h2>
-      <p class="section-intro">Scrittura, opere, ricerca e metodo convivono in sezioni distinte, unite da uno stesso criterio di chiarezza e di controllo del contenuto.</p>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Autore</h3>
-          <p>Profilo biografico e linea di lavoro di Michele Bottino, con accesso diretto ai principali ambiti dell’attività autoriale e di ricerca.</p>
-          <p><a href="autore.html">Vai alla pagina Autore</a></p>
-        </article>
-        <article class="card">
-          <h3>Opere</h3>
-          <p>Libri, testi musicali e scritti raccolti in percorsi distinti, con una presentazione ordinata della produzione pubblica.</p>
-          <p><a href="opere.html">Vai a Opere</a></p>
-        </article>
-        <article class="card">
-          <h3>Ricerca</h3>
-          <p>Studi storico-documentari, progetti archivistici, pubblicazioni e lavori costruiti su fonti, riscontri e documentazione verificabile.</p>
-          <p><a href="ricerca.html">Vai a Ricerca</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
+Vai a Opere
 
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">SOSA</h2>
-      <div class="card highlight">
-        <p>SOSA — System Operating Writing Assistant — è il quadro metodologico sviluppato per governare la generazione assistita in modo deterministico, con vincoli espliciti, verifica formale e rilascio controllato dell’output.</p>
-        <p>Architettura, modello di stato, enforcement dei vincoli, linguaggio strutturato, esecuzione e validazione convergono in una sequenza operativa definita e replicabile.</p>
-        <div class="pathway">
-          <div class="pathway-step">Position</div>
-          <div class="pathway-step">Pre-Control</div>
-          <div class="pathway-step">Generation</div>
-          <div class="pathway-step">Validation</div>
-          <div class="pathway-step">Delivery</div>
-        </div>
-        <div class="cta-row">
-          <a class="btn primary" href="sosa.html">Pagina SOSA</a>
-          <a class="btn" href="sosa-publications.html">Pubblicazioni SOSA</a>
-          <a class="btn" href="corso-sosa.html">Corso SOSA</a>
-        </div>
-      </div>
-    </div>
-  </section>
+Ricerca
+Studi storico-documentari, progetti archivistici, pubblicazioni e lavori costruiti su fonti, riscontri e documentazione verificabile.
 
-  <section class="section">
-    <div class="container grid grid-2">
-      <article class="card">
-        <h2>Open Science</h2>
-        <p>Pubblicazioni scientifiche, DOI, ORCID, profili pubblici e materiali in accesso aperto rendono tracciabile il lavoro di ricerca e ne permettono la consultazione in ambienti verificabili.</p>
-        <p><a href="open-science.html">Vai a Open Science</a></p>
-      </article>
-      <article class="card">
-        <h2>Corsi</h2>
-        <p>Percorsi formativi dedicati ai metodi, ai sistemi e alle applicazioni sviluppate nel quadro del progetto, con un primo asse centrato su SOSA.</p>
-        <p><a href="corsi.html">Vai a Corsi</a></p>
-      </article>
-    </div>
-  </section>
-</main>
+Vai a Ricerca
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <p><strong>© 2026 Michele Bottino</strong></p>
-      <p>Tutti i contenuti presenti su questo sito sono protetti da diritto d’autore. È vietata la riproduzione, anche parziale, senza autorizzazione.</p>
-    </div>
-    <div>
-      <div class="footer-links">
-        <a href="note-legali.html">Note legali</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="cookie.html">Cookie</a>
-        <a href="copyright.html">Copyright</a>
-      </div>
-    </div>
-  </div>
-</footer>
+SOSA
+SOSA — System Operating Writing Assistant — è il quadro metodologico sviluppato per governare la generazione assistita in modo deterministico, con vincoli espliciti, verifica formale e rilascio controllato dell’output.
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const navToggle = document.getElementById("navToggle");
-  const mobileNav = document.getElementById("mobileNav");
+Architettura, modello di stato, enforcement dei vincoli, linguaggio strutturato, esecuzione e validazione convergono in una sequenza operativa definita e replicabile.
 
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener("click", function () {
-      const expanded = this.getAttribute("aria-expanded") === "true";
-      this.setAttribute("aria-expanded", String(!expanded));
-      mobileNav.classList.toggle("open");
-    });
-  }
+Position
+Pre-Control
+Generation
+Validation
+Delivery
+Pagina SOSA
+Pubblicazioni SOSA
+Corso SOSA
+Open Science
+Pubblicazioni scientifiche, DOI, ORCID, profili pubblici e materiali in accesso aperto rendono tracciabile il lavoro di ricerca e ne permettono la consultazione in ambienti verificabili.
 
-  document.querySelectorAll(".submenu-toggle").forEach(function (button) {
-    button.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-target");
-      const panel = document.getElementById(targetId);
-      if (!panel) return;
-      const expanded = this.getAttribute("aria-expanded") === "true";
-      this.setAttribute("aria-expanded", String(!expanded));
-      panel.classList.toggle("open");
-    });
-  });
-});
-</script>
-</body>
-</html>
+Vai a Open Science
+
+Corsi
+Percorsi formativi dedicati ai metodi, ai sistemi e alle applicazioni sviluppate nel quadro del progetto, con un primo asse centrato su SOSA.
+
+Vai a Corsi
+
+© 2026 Michele Bottino
+
+Tutti i contenuti presenti su questo sito sono protetti da diritto d’autore. È vietata la riproduzione, anche parziale, senza autorizzazione.
+
+Note legali
+Privacy
+Cookie
+Copyright
