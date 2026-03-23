@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Opere | Michele Bottino</title>
-<meta name="description" content="Area Opere del sito ufficiale di Michele Bottino. Libri, testi musicali e scritti organizzati per tipologia e funzione, con struttura distinta rispetto a ricerca e sistema SOSA.">
+<title>Autore | Michele Bottino</title>
+<meta name="description" content="Profilo ufficiale di Michele Bottino, autore, scrittore e ricercatore indipendente. Attività autoriale, testi musicali, ricerca storico-documentaria e framework SOSA.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0f172a">
-<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/opere.html">
-<meta property="og:title" content="Opere | Michele Bottino">
-<meta property="og:description" content="Libri, testi musicali e scritti di Michele Bottino, organizzati per tipologia e funzione.">
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/autore.html">
+<meta property="og:title" content="Autore | Michele Bottino">
+<meta property="og:description" content="Profilo ufficiale di Michele Bottino, autore, scrittore e ricercatore indipendente.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary">
@@ -185,11 +185,11 @@ padding:8px 0;
 font-size:.96rem;
 }
 .hero{
-padding:72px 0 38px;
+padding:72px 0 42px;
 }
 .hero-grid{
 display:grid;
-grid-template-columns:1.3fr .9fr;
+grid-template-columns:1.35fr .95fr;
 gap:24px;
 align-items:stretch;
 }
@@ -210,7 +210,7 @@ font-size:.78rem;
 }
 .hero h1{
 margin:0 0 16px;
-font-size:clamp(2rem, 5vw, 3.2rem);
+font-size:clamp(2.1rem, 5vw, 3.2rem);
 line-height:1.1;
 color:#fff;
 }
@@ -218,14 +218,6 @@ color:#fff;
 margin:0 0 14px;
 color:var(--muted);
 font-size:1.03rem;
-}
-.kicker{
-margin:18px 0 0;
-padding:14px 16px;
-border:1px solid rgba(147,197,253,.22);
-background:rgba(147,197,253,.06);
-border-radius:14px;
-color:#fff;
 }
 .cta-row{
 display:flex;
@@ -325,10 +317,6 @@ color:var(--muted);
 .footer-links a:hover{
 color:#fff;
 }
-.note{
-font-size:.95rem;
-color:var(--muted-2);
-}
 @media (max-width: 1040px){
 .desktop-nav{display:none}
 .nav-toggle{display:block}
@@ -356,9 +344,9 @@ grid-template-columns:1fr;
     <nav class="desktop-nav" aria-label="Menu principale desktop">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="autore.html">Autore</a></li>
+        <li><a href="autore.html" aria-current="page">Autore</a></li>
         <li>
-          <a href="opere.html" aria-current="page">Opere</a>
+          <a href="opere.html">Opere</a>
           <div class="submenu">
             <ul>
               <li><a href="libri.html">Libri</a></li>
@@ -407,7 +395,7 @@ grid-template-columns:1fr;
     <div class="container">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="autore.html">Autore</a></li>
+        <li><a href="autore.html" aria-current="page">Autore</a></li>
         <li>
           <button class="submenu-toggle" data-target="mobileOpere" aria-expanded="false">Opere</button>
           <div class="mobile-submenu" id="mobileOpere">
@@ -459,26 +447,26 @@ grid-template-columns:1fr;
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-main">
-        <p class="eyebrow">Area Opere</p>
-        <h1>Libri, testi musicali e scritti</h1>
-        <p>Questa pagina raccoglie l’area autoriale del sito e ne definisce l’ordine interno. Le opere sono distribuite in sezioni distinte per evitare sovrapposizioni tra catalogo librario, attività legata ai testi musicali e altri materiali di scrittura. La funzione di questa pagina non è sostituire le sottosezioni, ma offrire un accesso ordinato alle diverse tipologie di contenuto.</p>
-        <p>Il sito mantiene separata l’area delle opere dall’area della ricerca e dall’area SOSA, così da non confondere produzione autoriale, pubblicazioni scientifiche e sviluppo metodologico.</p>
-        <div class="kicker">La sezione Opere è il nodo di accesso alla produzione scritta e testuale pubblica di Michele Bottino.</div>
+        <p class="eyebrow">Profilo</p>
+        <h1>Michele Bottino</h1>
+        <p>Autore, scrittore e ricercatore indipendente.</p>
+        <p>La sua attività attraversa la narrativa, la scrittura testuale e la ricerca storico-documentaria, con un’attenzione costante alla coerenza interna del testo, alla solidità delle fonti e alla leggibilità del risultato finale.</p>
+        <p>Accanto al lavoro autoriale, ha sviluppato SOSA, un sistema orientato al controllo della generazione testuale assistita attraverso vincoli espliciti, procedure verificabili e validazione dell’output.</p>
         <div class="cta-row">
-          <a class="btn primary" href="libri.html">Vai a Libri</a>
-          <a class="btn" href="testi-musicali.html">Vai a Testi musicali</a>
-          <a class="btn" href="scritti.html">Vai a Scritti</a>
+          <a class="btn primary" href="opere.html">Vai alle opere</a>
+          <a class="btn" href="ricerca.html">Vai alla ricerca</a>
+          <a class="btn" href="open-science.html">Open Science</a>
         </div>
       </div>
 
       <aside class="hero-side">
-        <h2>Accessi diretti</h2>
+        <h2>Riferimenti</h2>
         <ul class="list-clean">
-          <li><a href="libri.html">Catalogo libri</a></li>
-          <li><a href="testi-musicali.html">Area testi musicali</a></li>
-          <li><a href="scritti.html">Scritti e testi selezionati</a></li>
-          <li><a href="autore.html">Profilo autore</a></li>
-          <li><a href="ricerca.html">Area ricerca</a></li>
+          <li><a href="https://michelebottino-autor.github.io/michelebottino/" target="_blank" rel="noopener noreferrer">Sito ufficiale</a></li>
+          <li><a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Academia.edu</a></li>
+          <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
+          <li><a href="sosa.html">Framework SOSA</a></li>
           <li><a href="contatti.html">Contatti ufficiali</a></li>
         </ul>
       </aside>
@@ -487,57 +475,19 @@ grid-template-columns:1fr;
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Struttura della sezione</h2>
-      <p class="section-intro">L’area Opere è costruita su tre nuclei distinti. Ogni nucleo ha una funzione autonoma e rimanda a una pagina dedicata, in modo da mantenere ordine interno, coerenza bibliografica e chiarezza di consultazione.</p>
+      <h2 class="section-title">Linee di lavoro</h2>
       <div class="grid grid-3">
         <article class="card">
-          <h3>Libri</h3>
-          <p>La pagina dedicata ai libri raccoglie il catalogo editoriale e i progetti librari presentati come opere strutturate. Qui vanno collocate le pubblicazioni e le schede principali delle opere in forma libraria, separate dagli altri materiali.</p>
-          <p><a href="libri.html">Apri la sezione Libri</a></p>
-        </article>
-        <article class="card">
-          <h3>Testi musicali</h3>
-          <p>La pagina dei testi musicali raccoglie l’attività autoriale riferita ai brani pubblicati o attribuiti, trattandola come linea specifica della produzione testuale. Questa distinzione impedisce che il materiale musicale venga assorbito in modo improprio dal catalogo dei libri.</p>
-          <p><a href="testi-musicali.html">Apri la sezione Testi musicali</a></p>
-        </article>
-        <article class="card">
-          <h3>Scritti</h3>
-          <p>La pagina degli scritti accoglie testi non collocati nel catalogo librario e non riconducibili all’area musicale. Rientrano qui materiali d’autore, testi selezionati, interventi e altre forme di scrittura presentate come contenuti autonomi.</p>
-          <p><a href="scritti.html">Apri la sezione Scritti</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Criterio editoriale</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Separazione delle funzioni</h3>
-          <p>Nel sito ogni area ha un compito preciso. La pagina Opere non incorpora profilo autore, apparati di ricerca o documentazione metodologica. Serve invece a ordinare la produzione autoriale e a indirizzare il lettore verso la tipologia corretta di contenuto. Questo criterio riduce ripetizioni, evita dispersioni e mantiene leggibile l’architettura generale del progetto.</p>
-        </article>
-        <article class="card">
-          <h3>Continuità di consultazione</h3>
-          <p>Il visitatore deve poter passare dalla panoramica generale alla pagina specifica senza cambiare linguaggio visivo, menu o logica di navigazione. Per questo l’area Opere conserva la stessa struttura grafica della home e delle altre pagine del sito, ma restringe il campo alla sola produzione scritta e testuale.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Collegamenti con le altre aree</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Autore</h3>
-          <p>La pagina Autore presenta il profilo generale e collega tra loro le attività di scrittura, i testi musicali, la ricerca e SOSA. La pagina Opere ne rappresenta invece il ramo specificamente dedicato ai contenuti autoriali pubblici.</p>
-          <p><a href="autore.html">Vai alla pagina Autore</a></p>
+          <h3>Scrittura</h3>
+          <p>La scrittura occupa un asse centrale del lavoro di Michele Bottino, tra narrativa, testi d’autore e costruzione di opere sviluppate con attenzione al ritmo, alla tenuta strutturale e alla precisione della lingua.</p>
         </article>
         <article class="card">
           <h3>Ricerca</h3>
-          <p>L’area di ricerca è distinta dall’area delle opere. I materiali storico-documentari, i progetti archivistici e le pubblicazioni scientifiche restano raccolti nelle pagine dedicate, senza essere confusi con il catalogo autoriale.</p>
-          <p><a href="ricerca.html">Vai alla pagina Ricerca</a></p>
+          <p>La ricerca si concentra soprattutto su materiali documentari, fonti archivistiche, ricostruzione storica e verifica delle evidenze, con particolare attenzione alla continuità tra dato, interpretazione e restituzione pubblica.</p>
+        </article>
+        <article class="card">
+          <h3>Metodo</h3>
+          <p>Il lavoro metodologico si traduce nello sviluppo di sistemi di controllo della scrittura assistita, tra cui SOSA, orientati alla definizione dei vincoli, alla gestione dello stato e alla validazione dell’output finale.</p>
         </article>
       </div>
     </div>
@@ -545,10 +495,44 @@ grid-template-columns:1fr;
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Nota di sistema</h2>
+      <h2 class="section-title">Ambiti</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Opere e testi</h3>
+          <p>Libri, testi musicali e altri scritti sono raccolti in aree distinte, così da mantenere una consultazione chiara e una separazione netta tra la produzione autoriale e gli altri campi di attività.</p>
+          <p><a href="opere.html">Vai a Opere</a></p>
+        </article>
+        <article class="card">
+          <h3>Ricerca e pubblicazioni</h3>
+          <p>Progetti documentari, studi e pubblicazioni con riferimenti verificabili trovano collocazione nell’area di ricerca e nella sezione Open Science, dove sono raccolti anche i profili pubblici e gli identificativi collegati.</p>
+          <p><a href="ricerca.html">Vai a Ricerca</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">SOSA</h2>
       <div class="card">
-        <p>Questa pagina svolge una funzione di ordinamento. Le informazioni di dettaglio, le schede delle opere, i crediti, le eventuali pubblicazioni musicali e gli altri materiali testuali devono essere collocati nelle rispettive pagine interne. In questo modo il sito mantiene una gerarchia stabile: profilo generale, area opere, area ricerca, area SOSA, area formativa, contatti e file di sistema.</p>
-        <p class="note">I contenuti testuali sono costruiti in paragrafi continui, senza salti di riga artificiali, in conformità con il vincolo tipografico definito per l’intero sito.</p>
+        <p>SOSA — System Operating Writing Assistant — è il sistema sviluppato per governare la generazione testuale assistita in modo controllato. Il modello integra definizione dei vincoli, esecuzione, verifica e consegna finale dell’output, con una struttura orientata alla stabilità del risultato.</p>
+        <p><a href="sosa.html">Vai a SOSA</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Contatti</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:michelebottino.adc@gmail.com">michelebottino.adc@gmail.com</a></p>
+        </article>
+        <article class="card">
+          <h3>Profili pubblici</h3>
+          <p><a href="open-science.html">ORCID, DOI, Academia.edu e riferimenti aperti</a></p>
+        </article>
       </div>
     </div>
   </section>
