@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Libri | Michele Bottino</title>
-<meta name="description" content="Libri di Michele Bottino. Narrativa, opere editoriali e percorsi di scrittura raccolti nel sito ufficiale.">
+<meta name="description" content="Libri di Michele Bottino. Narrativa, saggistica, ricerca e opere editoriali raccolte nel sito ufficiale.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0f172a">
 <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/libri.html">
 <meta property="og:title" content="Libri | Michele Bottino">
-<meta property="og:description" content="Narrativa e opere editoriali di Michele Bottino.">
+<meta property="og:description" content="Narrativa, saggistica, ricerca e opere editoriali di Michele Bottino.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary">
@@ -174,20 +174,24 @@ button,input{font:inherit}
 .section{margin-top:16px}
 .section-grid{display:grid;gap:16px}
 .section-grid.two{grid-template-columns:repeat(2,1fr)}
-.section-grid.three{grid-template-columns:repeat(3,1fr)}
 .card{
   padding:22px;background:linear-gradient(180deg, rgba(22,32,51,.94), rgba(15,23,42,.99));border:1px solid var(--line-soft);border-radius:22px;box-shadow:var(--shadow-soft);
 }
 .card h2,.card h3{margin:0 0 10px;color:#fff}
 .card p{margin:0 0 8px;color:var(--muted)}
 .card p:last-child{margin-bottom:0}
-.card .link-row{margin-top:12px}
 .book-entry{
   padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
 }
 .book-entry + .book-entry{margin-top:12px}
 .book-entry strong{display:block;color:#fff;margin-bottom:6px;font-size:1.04rem}
 .book-meta{color:var(--muted-2);font-size:.92rem}
+.link-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
 .search-results{
   display:none;margin-top:12px;padding:12px;border-radius:16px;border:1px solid var(--line-soft);background:rgba(255,255,255,.03);
 }
@@ -226,7 +230,7 @@ button,input{font:inherit}
 }
 @media (max-width:860px){
   .hero{padding:28px 0 14px}
-  .hero-grid,.section-grid.two,.section-grid.three,.footer-grid{grid-template-columns:1fr}
+  .hero-grid,.section-grid.two,.footer-grid{grid-template-columns:1fr}
   .hero-main{padding:24px 20px 22px}
   .hero-side{padding:18px}
   .container{width:min(var(--max), calc(100% - 20px))}
@@ -327,7 +331,7 @@ button,input{font:inherit}
 
     <div class="drawer-meta">
       <a href="https://www.facebook.com/michelebottinoautor/" target="_blank" rel="noopener noreferrer">Facebook ufficiale ↗</a>
-      <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+      <a href="https://www.amazon.it/s?k=Michele+Bottino" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
       <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Academia.edu ↗</a>
     </div>
   </div>
@@ -339,8 +343,8 @@ button,input{font:inherit}
       <section class="panel hero-main" aria-labelledby="books-title">
         <p class="eyebrow">Opere in forma libraria</p>
         <h1 id="books-title">Libri</h1>
-        <p>I libri di Michele Bottino attraversano narrativa, tensione psicologica e osservazione del reale. La forma libraria raccoglie opere costruite come unità autonome, capaci di mantenere identità, tono e direzione interna senza dispersione.</p>
-        <p>La scrittura si muove tra noir, thriller psicologico e racconto a forte densità tematica, con attenzione al dato umano, alle fratture del presente e alla persistenza della memoria nel racconto. 1</p>
+        <p>I libri di Michele Bottino attraversano saggistica d'inchiesta, narrativa introspettiva, ricerca storica, tensione psicologica e racconto simbolico. Ogni titolo mantiene una propria identità tematica, ma rientra in una linea editoriale coerente e riconoscibile.</p>
+        <p>La forma libraria raccoglie opere costruite come unità autonome, capaci di tenere insieme densità concettuale, direzione narrativa e attenzione al nucleo umano del testo.</p>
 
         <div class="cta-row">
           <a class="btn primary" href="opere.html">Torna a Opere</a>
@@ -376,7 +380,7 @@ button,input{font:inherit}
           <h3>Profili pubblici</h3>
           <div class="side-links">
             <a href="https://www.facebook.com/michelebottinoautor/" target="_blank" rel="noopener noreferrer">Facebook ufficiale ↗</a>
-            <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+            <a href="https://www.amazon.it/s?k=Michele+Bottino" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
             <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Academia.edu ↗</a>
           </div>
         </div>
@@ -386,46 +390,106 @@ button,input{font:inherit}
 
   <section class="main-content">
     <div class="container">
-      <div class="section section-grid two">
+      <div class="section">
         <article class="card">
-          <h2>Catalogo</h2>
+          <h2>Bibliografia completa</h2>
 
           <div class="book-entry">
-            <strong>G.P.G. – I fantasmi della notte</strong>
-            <div class="book-meta">Noir / narrativa</div>
-            <p>Una narrazione che guarda al mondo della sicurezza privata attraverso una prospettiva interna e non convenzionale. 2</p>
+            <strong>EUROPA: Anatomia di un crimine</strong>
+            <div class="book-meta">ISBN-13: 979-8335804790</div>
+            <p>Un'analisi spietata e documentata sulle dinamiche di potere che governano il Vecchio Continente. Il saggio esplora le zone d'ombra della politica e dell'economia, mettendo a nudo i meccanismi che spesso sacrificano la sovranità dei popoli sull'altare di interessi sovranazionali.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0DF65D7S4" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
           </div>
 
           <div class="book-entry">
-            <strong>Scomparsi – Il commercio della vergogna</strong>
-            <div class="book-meta">Narrativa / tema civile</div>
-            <p>Un titolo centrato sul tema delle sparizioni di minori, trattato con una scrittura asciutta e incisiva. 3</p>
+            <strong>L’Uomo Consapevole: Il risveglio della coscienza tra filosofia e realtà</strong>
+            <div class="book-meta">ISBN-13: 979-8327178380</div>
+            <p>Un viaggio filosofico verso il risveglio della coscienza. L'opera invita il lettore a scardinare i condizionamenti sociali e mentali per ritrovare la propria essenza autentica, proponendo un percorso di consapevolezza necessario per navigare la complessità del mondo moderno.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D5S7M5G8" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
           </div>
 
           <div class="book-entry">
-            <strong>Il deposito delle anime</strong>
-            <div class="book-meta">Narrativa / tensione psicologica</div>
-            <p>Un percorso più interiore, segnato dal confronto con memoria, identità e conflitto. 4</p>
+            <strong>Oniro: Dove la realtà si dissolve nel sogno</strong>
+            <div class="book-meta">ISBN-13: 979-8328172820</div>
+            <p>In questo racconto di confine, i limiti tra la veglia e la dimensione onirica si fanno labili. Un’opera narrativa che esplora il subconscio, dove i desideri e le paure più profonde prendono forma, costringendo il protagonista e il lettore a interrogarsi su cosa sia davvero reale.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D6V4KHLG" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
           </div>
-        </article>
 
-        <article class="card">
-          <h2>Direzione narrativa</h2>
-          <p>La linea narrativa si fonda su una scrittura che non separa tensione, osservazione e densità tematica. I libri si muovono entro un territorio in cui il reale resta presente anche quando la costruzione del racconto assume maggiore intensità simbolica o psicologica. 5</p>
-          <div class="link-row"><a href="opere.html">Vai alla panoramica opere</a></div>
+          <div class="book-entry">
+            <strong>Intrighi Invisibili: L’oscura verità dietro il potere</strong>
+            <div class="book-meta">ISBN-13: 979-8326162311</div>
+            <p>Un thriller che scava dietro le quinte del potere. Tra cospirazioni silenziose e verità nascoste, la narrazione segue il filo di una rete invisibile che manipola gli eventi globali, portando alla luce un'oscura realtà che pochi hanno il coraggio di guardare in faccia.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D4N6MC5L" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
+
+          <div class="book-entry">
+            <strong>Il deposito delle anime: Dietro le quinte dell’esistenza</strong>
+            <div class="book-meta">ISBN-13: 979-8325608933</div>
+            <p>Un'opera metafisica che indaga il senso ultimo dell'esistenza. Attraverso una riflessione profonda e spirituale, Bottino esplora il destino delle anime e ciò che risiede dietro le quinte della vita materiale, offrendo una visione suggestiva del ciclo vitale.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D47M24V1" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
+
+          <div class="book-entry">
+            <strong>Calatabiano Sacra: Il mistero della fede e le sue radici</strong>
+            <div class="book-meta">ISBN-13: 979-8325126840</div>
+            <p>Una ricerca storica e devozionale dedicata al mistero della fede nel contesto locale. Il libro ricostruisce le radici sacre di un territorio, intrecciando tradizioni popolari, archeologia e spiritualità per svelare l'identità profonda di una comunità.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D3LYP2K7" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
+
+          <div class="book-entry">
+            <strong>Stige: Una lettera senza destinatario</strong>
+            <div class="book-meta">ISBN-13: 979-8324733476</div>
+            <p>Una narrazione intensa e drammatica che prende la forma di una confessione a cuore aperto. È il racconto di un dolore che cerca redenzione, un viaggio emotivo attraverso l'oblio e la memoria, rappresentati dal simbolismo del fiume infernale.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D38K7X6W" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
+
+          <div class="book-entry">
+            <strong>L’Enigma: Alla ricerca della verità</strong>
+            <div class="book-meta">ISBN-13: 979-8324225025</div>
+            <p>Un saggio investigativo che sfida le cronache ufficiali. L'autore analizza simboli, documenti e tracce del passato per risolvere misteri storici rimasti irrisolti, portando il lettore a dubitare delle certezze acquisite sulla storia antica e medievale.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D2VLYB52" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
+
+          <div class="book-entry">
+            <strong>Per tutta la mia vita: Un racconto d’amore</strong>
+            <div class="book-meta">ISBN-13: 979-8323497645</div>
+            <p>Un racconto biografico intimo e toccante. Al centro della narrazione c'è l'amore inteso come forza motrice dell'intera esistenza, capace di resistere al tempo e alle prove più difficili, celebrando la bellezza dei legami umani più puri.</p>
+            <div class="link-row">
+              <a href="https://www.amazon.it/dp/B0D25H999L" target="_blank" rel="noopener noreferrer">Amazon ↗</a>
+            </div>
+          </div>
         </article>
       </div>
 
       <div class="section section-grid two">
         <article class="card">
-          <h2>Continuità autoriale</h2>
-          <p>La forma libraria rappresenta uno dei nuclei centrali del lavoro di Michele Bottino. Nel sito ufficiale, la produzione editoriale convive con ricerca storico-documentaria e archivio digitale in una struttura unitaria. 6</p>
+          <h2>Linea editoriale</h2>
+          <p>La produzione libraria di Michele Bottino si muove tra saggistica d'inchiesta, narrativa introspettiva, thriller, ricerca storica e scrittura simbolica. Ogni opera mantiene una propria autonomia tematica, ma rientra in una linea coerente, riconoscibile per densità, tensione e attenzione al nucleo umano del racconto.</p>
         </article>
 
         <article class="card">
           <h2>Consultazione</h2>
-          <p>Il catalogo dei libri resta distinto dai testi musicali, dagli altri scritti e dalle pubblicazioni scientifiche, così da preservare chiarezza di lettura e coerenza di collocazione interna.</p>
-          <div class="link-row"><a href="scritti.html">Vai a Scritti</a></div>
+          <p>Il catalogo librario resta distinto dai testi musicali, dagli altri scritti e dalle pubblicazioni scientifiche, così da preservare chiarezza di lettura e coerenza di collocazione interna nel sito.</p>
+          <div class="link-row">
+            <a href="opere.html">Vai a Opere</a>
+            <a href="scritti.html">Vai a Scritti</a>
+          </div>
         </article>
       </div>
 
@@ -492,11 +556,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchIndex = [
     {title:"Autore", url:"autore.html", keywords:"autore profilo biografia michele bottino"},
     {title:"Opere", url:"opere.html", keywords:"opere libri testi musicali scritti"},
-    {title:"Libri", url:"libri.html", keywords:"libri narrativa gpg scomparsi deposito anime"},
-    {title:"Testi musicali", url:"testi-musicali.html", keywords:"musica testi musicali canzoni"},
+    {title:"Libri", url:"libri.html", keywords:"libri europa uomo consapevole oniro intrighi invisibili deposito delle anime calatabiano sacra stige enigma per tutta la mia vita"},
+    {title:"Testi musicali", url:"testi-musicali.html", keywords:"testi musicali un'altra notte a metà riconquistarti casanova"},
     {title:"Scritti", url:"scritti.html", keywords:"scritti racconti testi autore"},
     {title:"Ricerca", url:"ricerca.html", keywords:"ricerca storico documentaria archivistica"},
-    {title:"Archivio", url:"archivio.html", keywords:"archivio doi orcid academia repertorio"},
+    {title:"Archivio", url:"archivio.html", keywords:"archivio doi orcid academia repertorio stampa"},
     {title:"SOSA", url:"sosa.html", keywords:"sosa system operating writing assistant"},
     {title:"Contatti", url:"contatti.html", keywords:"contatti modulo messaggi"}
   ];
