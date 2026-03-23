@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opere | Michele Bottino</title>
+<meta name="description" content="Area Opere del sito ufficiale di Michele Bottino. Libri, testi musicali e scritti organizzati per tipologia e funzione, con struttura distinta rispetto a ricerca e sistema SOSA.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/opere.html">
+<meta property="og:title" content="Opere | Michele Bottino">
+<meta property="og:description" content="Libri, testi musicali e scritti di Michele Bottino, organizzati per tipologia e funzione.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<style>
+:root{
+--bg:#0b1220;
+--bg-2:#0f172a;
+--panel:#162033;
+--panel-2:#1e293b;
+--line:#334155;
+--line-soft:rgba(255,255,255,.08);
+--text:#e5e7eb;
+--muted:#cbd5e1;
+--muted-2:#94a3b8;
+--accent:#93c5fd;
+--accent-strong:#60a5fa;
+--max:1180px;
+--radius:18px;
+--shadow:0 12px 32px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.7;
+color:var(--text);
+background:
+radial-gradient(circle at top left, rgba(96,165,250,.10), transparent 26%),
+radial-gradient(circle at top right, rgba(147,197,253,.08), transparent 24%),
+linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{
+width:min(var(--max), calc(100% - 32px));
+margin:0 auto;
+}
+.skip-link{
+position:absolute;
+left:-9999px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+.skip-link:focus{
+position:fixed;
+left:16px;
+top:16px;
+width:auto;
+height:auto;
+padding:10px 14px;
+background:#fff;
+color:#000;
+border-radius:10px;
+z-index:9999;
+}
+.site-header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(11,18,32,.92);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line-soft);
+}
+.header-inner{
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+}
+.brand{
+display:flex;
+flex-direction:column;
+min-width:0;
+color:#fff;
+text-decoration:none;
+}
+.brand:hover{text-decoration:none}
+.brand-title{
+font-size:1.15rem;
+font-weight:700;
+letter-spacing:.02em;
+}
+.brand-subtitle{
+color:var(--muted);
+font-size:.92rem;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.desktop-nav ul,
+.mobile-nav ul,
+.submenu ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+.desktop-nav > ul{
+display:flex;
+align-items:center;
+gap:18px;
+}
+.desktop-nav li{position:relative}
+.desktop-nav a{
+color:var(--text);
+font-size:.97rem;
+}
+.desktop-nav .submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:230px;
+background:var(--panel-2);
+border:1px solid var(--line-soft);
+border-radius:14px;
+box-shadow:var(--shadow);
+padding:10px;
+}
+.desktop-nav li:hover > .submenu{display:block}
+.desktop-nav .submenu a{
+display:block;
+padding:8px 10px;
+border-radius:10px;
+}
+.desktop-nav .submenu a:hover{
+text-decoration:none;
+background:rgba(255,255,255,.05);
+}
+.nav-toggle{
+display:none;
+background:none;
+border:1px solid var(--line-soft);
+color:var(--text);
+border-radius:12px;
+padding:10px 12px;
+cursor:pointer;
+font-size:1rem;
+}
+.mobile-nav{
+display:none;
+border-top:1px solid var(--line-soft);
+padding:8px 0 14px;
+}
+.mobile-nav.open{display:block}
+.mobile-nav > .container > ul > li{
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-nav a,
+.submenu-toggle{
+display:block;
+width:100%;
+background:none;
+border:none;
+color:var(--text);
+text-align:left;
+padding:13px 0;
+font-size:1rem;
+cursor:pointer;
+}
+.mobile-submenu{
+display:none;
+padding:0 0 10px 14px;
+}
+.mobile-submenu.open{display:block}
+.mobile-submenu a{
+color:var(--muted);
+padding:8px 0;
+font-size:.96rem;
+}
+.hero{
+padding:72px 0 38px;
+}
+.hero-grid{
+display:grid;
+grid-template-columns:1.3fr .9fr;
+gap:24px;
+align-items:stretch;
+}
+.hero-main,
+.hero-side{
+background:linear-gradient(180deg, rgba(30,41,59,.92), rgba(15,23,42,.96));
+border:1px solid var(--line-soft);
+border-radius:24px;
+padding:28px;
+box-shadow:var(--shadow);
+}
+.eyebrow{
+margin:0 0 10px;
+color:var(--muted);
+text-transform:uppercase;
+letter-spacing:.09em;
+font-size:.78rem;
+}
+.hero h1{
+margin:0 0 16px;
+font-size:clamp(2rem, 5vw, 3.2rem);
+line-height:1.1;
+color:#fff;
+}
+.hero p{
+margin:0 0 14px;
+color:var(--muted);
+font-size:1.03rem;
+}
+.kicker{
+margin:18px 0 0;
+padding:14px 16px;
+border:1px solid rgba(147,197,253,.22);
+background:rgba(147,197,253,.06);
+border-radius:14px;
+color:#fff;
+}
+.cta-row{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:22px;
+}
+.btn{
+display:inline-block;
+padding:11px 15px;
+border-radius:12px;
+border:1px solid var(--line-soft);
+color:#fff;
+background:rgba(255,255,255,.03);
+transition:.2s ease;
+}
+.btn:hover{
+text-decoration:none;
+background:rgba(255,255,255,.06);
+transform:translateY(-1px);
+}
+.btn.primary{
+background:linear-gradient(180deg, rgba(96,165,250,.22), rgba(59,130,246,.15));
+border-color:rgba(147,197,253,.30);
+}
+.section{
+padding:18px 0 38px;
+}
+.section-title{
+margin:0 0 16px;
+padding-bottom:10px;
+border-bottom:1px solid var(--line-soft);
+font-size:1.6rem;
+color:#fff;
+}
+.section-intro{
+margin:0 0 18px;
+color:var(--muted);
+max-width:860px;
+}
+.grid{
+display:grid;
+gap:20px;
+}
+.grid-3{
+grid-template-columns:repeat(3,1fr);
+}
+.grid-2{
+grid-template-columns:repeat(2,1fr);
+}
+.card{
+background:linear-gradient(180deg, rgba(22,32,51,.92), rgba(15,23,42,.98));
+border:1px solid var(--line-soft);
+border-radius:20px;
+padding:22px;
+box-shadow:var(--shadow);
+min-height:100%;
+}
+.card h2,
+.card h3{
+margin:0 0 12px;
+color:#fff;
+}
+.card p{
+margin:0 0 14px;
+color:var(--muted);
+}
+.card p:last-child{margin-bottom:0}
+.list-clean{
+margin:0;
+padding-left:18px;
+}
+.list-clean li{
+margin:0 0 8px;
+color:var(--muted);
+}
+.site-footer{
+margin-top:26px;
+border-top:1px solid var(--line-soft);
+padding:28px 0 38px;
+color:var(--muted);
+font-size:.95rem;
+}
+.footer-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:18px;
+}
+.footer-links{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+.footer-links a{
+color:var(--muted);
+}
+.footer-links a:hover{
+color:#fff;
+}
+.note{
+font-size:.95rem;
+color:var(--muted-2);
+}
+@media (max-width: 1040px){
+.desktop-nav{display:none}
+.nav-toggle{display:block}
+.hero-grid,
+.grid-3,
+.grid-2,
+.footer-grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-title">Michele Bottino</span>
+      <span class="brand-subtitle">Autore · Testi musicali · Ricerca · SOSA</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
+
+    <nav class="desktop-nav" aria-label="Menu principale desktop">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="autore.html">Autore</a></li>
+        <li>
+          <a href="opere.html" aria-current="page">Opere</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="libri.html">Libri</a></li>
+              <li><a href="testi-musicali.html">Testi musicali</a></li>
+              <li><a href="scritti.html">Scritti</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="ricerca.html">Ricerca</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="progetti.html">Progetti</a></li>
+              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="sosa.html">SOSA</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="sosa-overview.html">Overview</a></li>
+              <li><a href="sosa-architecture.html">Architettura</a></li>
+              <li><a href="sosa-modules.html">Moduli</a></li>
+              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
+              <li><a href="sosa-method.html">Metodo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="corsi.html">Corsi</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="corso-sosa.html">Corso SOSA</a></li>
+              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="open-science.html">Open Science</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu principale mobile">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="autore.html">Autore</a></li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileOpere" aria-expanded="false">Opere</button>
+          <div class="mobile-submenu" id="mobileOpere">
+            <ul>
+              <li><a href="libri.html">Libri</a></li>
+              <li><a href="testi-musicali.html">Testi musicali</a></li>
+              <li><a href="scritti.html">Scritti</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileRicerca" aria-expanded="false">Ricerca</button>
+          <div class="mobile-submenu" id="mobileRicerca">
+            <ul>
+              <li><a href="progetti.html">Progetti</a></li>
+              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileSosa" aria-expanded="false">SOSA</button>
+          <div class="mobile-submenu" id="mobileSosa">
+            <ul>
+              <li><a href="sosa-overview.html">Overview</a></li>
+              <li><a href="sosa-architecture.html">Architettura</a></li>
+              <li><a href="sosa-modules.html">Moduli</a></li>
+              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
+              <li><a href="sosa-method.html">Metodo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileCorsi" aria-expanded="false">Corsi</button>
+          <div class="mobile-submenu" id="mobileCorsi">
+            <ul>
+              <li><a href="corso-sosa.html">Corso SOSA</a></li>
+              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="open-science.html">Open Science</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="contenuto">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">Area Opere</p>
+        <h1>Libri, testi musicali e scritti</h1>
+        <p>Questa pagina raccoglie l’area autoriale del sito e ne definisce l’ordine interno. Le opere sono distribuite in sezioni distinte per evitare sovrapposizioni tra catalogo librario, attività legata ai testi musicali e altri materiali di scrittura. La funzione di questa pagina non è sostituire le sottosezioni, ma offrire un accesso ordinato alle diverse tipologie di contenuto.</p>
+        <p>Il sito mantiene separata l’area delle opere dall’area della ricerca e dall’area SOSA, così da non confondere produzione autoriale, pubblicazioni scientifiche e sviluppo metodologico.</p>
+        <div class="kicker">La sezione Opere è il nodo di accesso alla produzione scritta e testuale pubblica di Michele Bottino.</div>
+        <div class="cta-row">
+          <a class="btn primary" href="libri.html">Vai a Libri</a>
+          <a class="btn" href="testi-musicali.html">Vai a Testi musicali</a>
+          <a class="btn" href="scritti.html">Vai a Scritti</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <h2>Accessi diretti</h2>
+        <ul class="list-clean">
+          <li><a href="libri.html">Catalogo libri</a></li>
+          <li><a href="testi-musicali.html">Area testi musicali</a></li>
+          <li><a href="scritti.html">Scritti e testi selezionati</a></li>
+          <li><a href="autore.html">Profilo autore</a></li>
+          <li><a href="ricerca.html">Area ricerca</a></li>
+          <li><a href="contatti.html">Contatti ufficiali</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Struttura della sezione</h2>
+      <p class="section-intro">L’area Opere è costruita su tre nuclei distinti. Ogni nucleo ha una funzione autonoma e rimanda a una pagina dedicata, in modo da mantenere ordine interno, coerenza bibliografica e chiarezza di consultazione.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Libri</h3>
+          <p>La pagina dedicata ai libri raccoglie il catalogo editoriale e i progetti librari presentati come opere strutturate. Qui vanno collocate le pubblicazioni e le schede principali delle opere in forma libraria, separate dagli altri materiali.</p>
+          <p><a href="libri.html">Apri la sezione Libri</a></p>
+        </article>
+        <article class="card">
+          <h3>Testi musicali</h3>
+          <p>La pagina dei testi musicali raccoglie l’attività autoriale riferita ai brani pubblicati o attribuiti, trattandola come linea specifica della produzione testuale. Questa distinzione impedisce che il materiale musicale venga assorbito in modo improprio dal catalogo dei libri.</p>
+          <p><a href="testi-musicali.html">Apri la sezione Testi musicali</a></p>
+        </article>
+        <article class="card">
+          <h3>Scritti</h3>
+          <p>La pagina degli scritti accoglie testi non collocati nel catalogo librario e non riconducibili all’area musicale. Rientrano qui materiali d’autore, testi selezionati, interventi e altre forme di scrittura presentate come contenuti autonomi.</p>
+          <p><a href="scritti.html">Apri la sezione Scritti</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Criterio editoriale</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Separazione delle funzioni</h3>
+          <p>Nel sito ogni area ha un compito preciso. La pagina Opere non incorpora profilo autore, apparati di ricerca o documentazione metodologica. Serve invece a ordinare la produzione autoriale e a indirizzare il lettore verso la tipologia corretta di contenuto. Questo criterio riduce ripetizioni, evita dispersioni e mantiene leggibile l’architettura generale del progetto.</p>
+        </article>
+        <article class="card">
+          <h3>Continuità di consultazione</h3>
+          <p>Il visitatore deve poter passare dalla panoramica generale alla pagina specifica senza cambiare linguaggio visivo, menu o logica di navigazione. Per questo l’area Opere conserva la stessa struttura grafica della home e delle altre pagine del sito, ma restringe il campo alla sola produzione scritta e testuale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Collegamenti con le altre aree</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Autore</h3>
+          <p>La pagina Autore presenta il profilo generale e collega tra loro le attività di scrittura, i testi musicali, la ricerca e SOSA. La pagina Opere ne rappresenta invece il ramo specificamente dedicato ai contenuti autoriali pubblici.</p>
+          <p><a href="autore.html">Vai alla pagina Autore</a></p>
+        </article>
+        <article class="card">
+          <h3>Ricerca</h3>
+          <p>L’area di ricerca è distinta dall’area delle opere. I materiali storico-documentari, i progetti archivistici e le pubblicazioni scientifiche restano raccolti nelle pagine dedicate, senza essere confusi con il catalogo autoriale.</p>
+          <p><a href="ricerca.html">Vai alla pagina Ricerca</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Nota di sistema</h2>
+      <div class="card">
+        <p>Questa pagina svolge una funzione di ordinamento. Le informazioni di dettaglio, le schede delle opere, i crediti, le eventuali pubblicazioni musicali e gli altri materiali testuali devono essere collocati nelle rispettive pagine interne. In questo modo il sito mantiene una gerarchia stabile: profilo generale, area opere, area ricerca, area SOSA, area formativa, contatti e file di sistema.</p>
+        <p class="note">I contenuti testuali sono costruiti in paragrafi continui, senza salti di riga artificiali, in conformità con il vincolo tipografico definito per l’intero sito.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>© 2026 Michele Bottino</strong></p>
+      <p>Tutti i contenuti presenti su questo sito sono protetti da diritto d’autore. È vietata la riproduzione, anche parziale, senza autorizzazione.</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="note-legali.html">Note legali</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookie.html">Cookie</a>
+        <a href="copyright.html">Copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.getElementById("navToggle");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", function () {
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!expanded));
+      mobileNav.classList.toggle("open");
+    });
+  }
+
+  document.querySelectorAll(".submenu-toggle").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const panel = document.getElementById(targetId);
+      if (!panel) return;
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!expanded));
+      panel.classList.toggle("open");
+    });
+  });
+});
+</script>
+</body>
+</html>
