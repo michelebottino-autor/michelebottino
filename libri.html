@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libri | Michele Bottino</title>
+<meta name="description" content="Catalogo libri e opere in forma libraria di Michele Bottino. Area dedicata alla produzione editoriale, distinta da testi musicali, scritti, ricerca e framework SOSA.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/libri.html">
+<meta property="og:title" content="Libri | Michele Bottino">
+<meta property="og:description" content="Catalogo libri e opere in forma libraria di Michele Bottino.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<style>
+:root{
+--bg:#0b1220;
+--bg-2:#0f172a;
+--panel:#162033;
+--panel-2:#1e293b;
+--line:#334155;
+--line-soft:rgba(255,255,255,.08);
+--text:#e5e7eb;
+--muted:#cbd5e1;
+--muted-2:#94a3b8;
+--accent:#93c5fd;
+--accent-strong:#60a5fa;
+--max:1180px;
+--shadow:0 12px 32px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.7;
+color:var(--text);
+background:
+radial-gradient(circle at top left, rgba(96,165,250,.10), transparent 26%),
+radial-gradient(circle at top right, rgba(147,197,253,.08), transparent 24%),
+linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
+.skip-link{
+position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{
+position:fixed;left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#fff;color:#000;border-radius:10px;z-index:9999;
+}
+.site-header{
+position:sticky;top:0;z-index:1000;background:rgba(11,18,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);
+}
+.header-inner{
+min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.brand{
+display:flex;flex-direction:column;min-width:0;color:#fff;text-decoration:none;
+}
+.brand:hover{text-decoration:none}
+.brand-title{font-size:1.15rem;font-weight:700;letter-spacing:.02em}
+.brand-subtitle{
+color:var(--muted);font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.desktop-nav ul,
+.mobile-nav ul,
+.submenu ul{list-style:none;margin:0;padding:0}
+.desktop-nav > ul{
+display:flex;align-items:center;gap:18px;
+}
+.desktop-nav li{position:relative}
+.desktop-nav a{color:var(--text);font-size:.97rem}
+.desktop-nav .submenu{
+display:none;position:absolute;top:100%;left:0;min-width:230px;background:var(--panel-2);border:1px solid var(--line-soft);border-radius:14px;box-shadow:var(--shadow);padding:10px;
+}
+.desktop-nav li:hover > .submenu{display:block}
+.desktop-nav .submenu a{
+display:block;padding:8px 10px;border-radius:10px;
+}
+.desktop-nav .submenu a:hover{
+text-decoration:none;background:rgba(255,255,255,.05);
+}
+.nav-toggle{
+display:none;background:none;border:1px solid var(--line-soft);color:var(--text);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:1rem;
+}
+.mobile-nav{
+display:none;border-top:1px solid var(--line-soft);padding:8px 0 14px;
+}
+.mobile-nav.open{display:block}
+.mobile-nav > .container > ul > li{
+border-bottom:1px solid rgba(255,255,255,.06);
+}
+.mobile-nav a,
+.submenu-toggle{
+display:block;width:100%;background:none;border:none;color:var(--text);text-align:left;padding:13px 0;font-size:1rem;cursor:pointer;
+}
+.mobile-submenu{
+display:none;padding:0 0 10px 14px;
+}
+.mobile-submenu.open{display:block}
+.mobile-submenu a{
+color:var(--muted);padding:8px 0;font-size:.96rem;
+}
+.hero{padding:72px 0 38px}
+.hero-grid{
+display:grid;grid-template-columns:1.3fr .9fr;gap:24px;align-items:stretch;
+}
+.hero-main,
+.hero-side,
+.card{
+background:linear-gradient(180deg, rgba(30,41,59,.92), rgba(15,23,42,.96));border:1px solid var(--line-soft);border-radius:24px;padding:28px;box-shadow:var(--shadow);
+}
+.eyebrow{
+margin:0 0 10px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;
+}
+.hero h1{
+margin:0 0 16px;font-size:clamp(2rem, 5vw, 3.2rem);line-height:1.1;color:#fff;
+}
+.hero p{margin:0 0 14px;color:var(--muted);font-size:1.03rem}
+.kicker{
+margin:18px 0 0;padding:14px 16px;border:1px solid rgba(147,197,253,.22);background:rgba(147,197,253,.06);border-radius:14px;color:#fff;
+}
+.cta-row{
+display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;
+}
+.btn{
+display:inline-block;padding:11px 15px;border-radius:12px;border:1px solid var(--line-soft);color:#fff;background:rgba(255,255,255,.03);transition:.2s ease;
+}
+.btn:hover{
+text-decoration:none;background:rgba(255,255,255,.06);transform:translateY(-1px);
+}
+.btn.primary{
+background:linear-gradient(180deg, rgba(96,165,250,.22), rgba(59,130,246,.15));border-color:rgba(147,197,253,.30);
+}
+.section{padding:18px 0 38px}
+.section-title{
+margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line-soft);font-size:1.6rem;color:#fff;
+}
+.section-intro{
+margin:0 0 18px;color:var(--muted);max-width:860px;
+}
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card h2,
+.card h3{margin:0 0 12px;color:#fff}
+.card p{margin:0 0 14px;color:var(--muted)}
+.card p:last-child{margin-bottom:0}
+.list-clean{margin:0;padding-left:18px}
+.list-clean li{margin:0 0 8px;color:var(--muted)}
+.note{font-size:.95rem;color:var(--muted-2)}
+.site-footer{
+margin-top:26px;border-top:1px solid var(--line-soft);padding:28px 0 38px;color:var(--muted);font-size:.95rem;
+}
+.footer-grid{
+display:grid;grid-template-columns:1.15fr .85fr;gap:18px;
+}
+.footer-links{
+display:flex;flex-wrap:wrap;gap:10px;
+}
+.footer-links a{color:var(--muted)}
+.footer-links a:hover{color:#fff}
+@media (max-width: 1040px){
+.desktop-nav{display:none}
+.nav-toggle{display:block}
+.hero-grid,
+.grid-3,
+.grid-2,
+.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-title">Michele Bottino</span>
+      <span class="brand-subtitle">Autore · Testi musicali · Ricerca · SOSA</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
+
+    <nav class="desktop-nav" aria-label="Menu principale desktop">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="autore.html">Autore</a></li>
+        <li>
+          <a href="opere.html">Opere</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="libri.html" aria-current="page">Libri</a></li>
+              <li><a href="testi-musicali.html">Testi musicali</a></li>
+              <li><a href="scritti.html">Scritti</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="ricerca.html">Ricerca</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="progetti.html">Progetti</a></li>
+              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="sosa.html">SOSA</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="sosa-overview.html">Overview</a></li>
+              <li><a href="sosa-architecture.html">Architettura</a></li>
+              <li><a href="sosa-modules.html">Moduli</a></li>
+              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
+              <li><a href="sosa-method.html">Metodo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="corsi.html">Corsi</a>
+          <div class="submenu">
+            <ul>
+              <li><a href="corso-sosa.html">Corso SOSA</a></li>
+              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="open-science.html">Open Science</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu principale mobile">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="autore.html">Autore</a></li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileOpere" aria-expanded="false">Opere</button>
+          <div class="mobile-submenu" id="mobileOpere">
+            <ul>
+              <li><a href="libri.html" aria-current="page">Libri</a></li>
+              <li><a href="testi-musicali.html">Testi musicali</a></li>
+              <li><a href="scritti.html">Scritti</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileRicerca" aria-expanded="false">Ricerca</button>
+          <div class="mobile-submenu" id="mobileRicerca">
+            <ul>
+              <li><a href="progetti.html">Progetti</a></li>
+              <li><a href="ricerca-pubblicazioni.html">Pubblicazioni di ricerca</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileSosa" aria-expanded="false">SOSA</button>
+          <div class="mobile-submenu" id="mobileSosa">
+            <ul>
+              <li><a href="sosa-overview.html">Overview</a></li>
+              <li><a href="sosa-architecture.html">Architettura</a></li>
+              <li><a href="sosa-modules.html">Moduli</a></li>
+              <li><a href="sosa-publications.html">Pubblicazioni</a></li>
+              <li><a href="sosa-method.html">Metodo</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button class="submenu-toggle" data-target="mobileCorsi" aria-expanded="false">Corsi</button>
+          <div class="mobile-submenu" id="mobileCorsi">
+            <ul>
+              <li><a href="corso-sosa.html">Corso SOSA</a></li>
+              <li><a href="corsi-avanzati.html">Percorsi futuri</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="open-science.html">Open Science</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main id="contenuto">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <p class="eyebrow">Catalogo libri</p>
+        <h1>Opere in forma libraria</h1>
+        <p>Questa pagina raccoglie il ramo librario del sito ufficiale di Michele Bottino. La sua funzione è ordinare le opere editoriali e i progetti presentati in forma di libro, mantenendoli distinti dai testi musicali, dagli altri scritti, dalla ricerca storico-documentaria e dalla documentazione metodologica legata a SOSA. La pagina non assorbe contenuti esterni al catalogo, ma definisce uno spazio autonomo, leggibile e coerente con l’architettura generale del sito.</p>
+        <p>Il catalogo librario è pensato come area di consultazione ordinata. Ogni opera dovrà essere collocata con scheda chiara, dati essenziali e posizione corretta all’interno del sistema complessivo. In questa fase la pagina fissa struttura, criterio editoriale e collegamenti interni.</p>
+        <div class="kicker">La sezione Libri costituisce il punto di accesso stabile alle opere editoriali e ai progetti in forma libraria.</div>
+        <div class="cta-row">
+          <a class="btn primary" href="opere.html">Torna a Opere</a>
+          <a class="btn" href="autore.html">Vai a Autore</a>
+          <a class="btn" href="contatti.html">Contatti</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <h2>Accessi collegati</h2>
+        <ul class="list-clean">
+          <li><a href="opere.html">Panoramica Opere</a></li>
+          <li><a href="testi-musicali.html">Testi musicali</a></li>
+          <li><a href="scritti.html">Scritti</a></li>
+          <li><a href="ricerca.html">Ricerca</a></li>
+          <li><a href="open-science.html">Open Science</a></li>
+          <li><a href="contatti.html">Contatti ufficiali</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Funzione della pagina</h2>
+      <p class="section-intro">La pagina `libri.html` non è una semplice lista, ma il nodo dedicato alla produzione editoriale in forma libraria. Serve a distinguere il catalogo dei libri da tutte le altre linee di attività presenti nel sito, mantenendo un ordine stabile e una consultazione pulita.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Catalogo</h3>
+          <p>In questa area vanno raccolte le opere già pubblicate o presentate come volumi, con schede ordinate, titoli verificati, stato editoriale e rinvii interni coerenti. Il catalogo deve restare distinto da ogni forma di promozione generica o accumulo disordinato di materiali.</p>
+        </article>
+        <article class="card">
+          <h3>Progetti librari</h3>
+          <p>Accanto ai titoli già strutturati, la pagina può ospitare progetti in forma libraria chiaramente distinti, purché trattati con precisione e senza confonderli con testi brevi, articoli o materiali di ricerca. Ogni progetto dovrà avere una collocazione esplicita e leggibile.</p>
+        </article>
+        <article class="card">
+          <h3>Ordine editoriale</h3>
+          <p>Il criterio dominante resta la separazione per funzione. Qui entrano solo opere librarie. Tutto ciò che appartiene ai testi musicali, agli scritti non librari o alla ricerca deve restare nelle rispettive pagine, così da preservare coerenza interna e chiarezza di navigazione.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Struttura consigliata delle schede</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Dati essenziali</h3>
+          <p>Ogni scheda libro dovrà contenere almeno titolo, tipologia, stato dell’opera, breve presentazione e collegamento eventuale alla pagina di approfondimento o al canale di riferimento. Questa impostazione evita schede vaghe, riduce ridondanze e consente al sito di crescere senza perdere controllo editoriale.</p>
+        </article>
+        <article class="card">
+          <h3>Uniformità</h3>
+          <p>Le schede dovranno mantenere lo stesso impianto visivo e la stessa densità informativa. L’obiettivo non è moltiplicare testo descrittivo, ma fornire informazioni coerenti, leggibili e omogenee, così che il catalogo appaia come una sezione stabile del sito e non come un insieme eterogeneo di blocchi disallineati.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Rapporto con le altre aree</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Con la pagina Opere</h3>
+          <p>La pagina Opere svolge funzione di panoramica generale. La pagina Libri ne costituisce una diramazione specifica e ne approfondisce soltanto la componente editoriale. Il rapporto tra le due pagine deve restare gerarchico: panoramica generale da un lato, catalogo librario dall’altro.</p>
+          <p><a href="opere.html">Vai a Opere</a></p>
+        </article>
+        <article class="card">
+          <h3>Con la ricerca</h3>
+          <p>Le opere librarie non devono confondersi con le pubblicazioni di ricerca, con i DOI o con l’area Open Science. Anche quando esistono punti di contatto tra scrittura e ricerca, il sito deve mantenere la distinzione tra catalogo editoriale e documentazione scientifica.</p>
+          <p><a href="ricerca-pubblicazioni.html">Vai a Pubblicazioni di ricerca</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Impostazione del catalogo</h2>
+      <div class="card">
+        <p>In questa fase il catalogo è definito come struttura. Le opere potranno essere inserite progressivamente con schede rigorose, evitando riempitivi, duplicazioni e sovrapposizioni con altre sezioni del sito. La pagina ha quindi una funzione di base architetturale: prepara uno spazio ordinato in cui collocare i titoli in forma libraria secondo criteri costanti di presentazione, leggibilità e continuità editoriale.</p>
+        <p class="note">I contenuti di questa pagina rispettano il vincolo tipografico globale del sito: paragrafi continui, nessun salto di riga artificiale, separazione soltanto per sezioni e titoli.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p><strong>© 2026 Michele Bottino</strong></p>
+      <p>Tutti i contenuti presenti su questo sito sono protetti da diritto d’autore. È vietata la riproduzione, anche parziale, senza autorizzazione.</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <a href="note-legali.html">Note legali</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookie.html">Cookie</a>
+        <a href="copyright.html">Copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.getElementById("navToggle");
+  const mobileNav = document.getElementById("mobileNav");
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", function () {
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!expanded));
+      mobileNav.classList.toggle("open");
+    });
+  }
+
+  document.querySelectorAll(".submenu-toggle").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const panel = document.getElementById(targetId);
+      if (!panel) return;
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", String(!expanded));
+      panel.classList.toggle("open");
+    });
+  });
+});
+</script>
+</body>
+</html>
