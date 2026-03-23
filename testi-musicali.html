@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Testi musicali | Michele Bottino</title>
-<meta name="description" content="Testi musicali di Michele Bottino. Scrittura per la musica, singoli e percorso autoriale collegato al sito ufficiale.">
+<meta name="description" content="Testi musicali di Michele Bottino. Catalogo dei singoli, scrittura per la musica e riferimenti pubblici collegati al percorso autoriale.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#0f172a">
 <link rel="canonical" href="https://michelebottino-autor.github.io/michelebottino/testi-musicali.html">
 <meta property="og:title" content="Testi musicali | Michele Bottino">
-<meta property="og:description" content="Scrittura per la musica e singoli collegati al percorso autoriale di Michele Bottino.">
+<meta property="og:description" content="Catalogo dei singoli e scrittura per la musica di Michele Bottino.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary">
@@ -174,7 +174,6 @@ button,input{font:inherit}
 .section{margin-top:16px}
 .section-grid{display:grid;gap:16px}
 .section-grid.two{grid-template-columns:repeat(2,1fr)}
-.section-grid.three{grid-template-columns:repeat(3,1fr)}
 .card{
   padding:22px;background:linear-gradient(180deg, rgba(22,32,51,.94), rgba(15,23,42,.99));border:1px solid var(--line-soft);border-radius:22px;box-shadow:var(--shadow-soft);
 }
@@ -188,6 +187,12 @@ button,input{font:inherit}
 .track-entry + .track-entry{margin-top:12px}
 .track-entry strong{display:block;color:#fff;margin-bottom:6px;font-size:1.04rem}
 .track-meta{color:var(--muted-2);font-size:.92rem}
+.link-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
 .search-results{
   display:none;margin-top:12px;padding:12px;border-radius:16px;border:1px solid var(--line-soft);background:rgba(255,255,255,.03);
 }
@@ -226,7 +231,7 @@ button,input{font:inherit}
 }
 @media (max-width:860px){
   .hero{padding:28px 0 14px}
-  .hero-grid,.section-grid.two,.section-grid.three,.footer-grid{grid-template-columns:1fr}
+  .hero-grid,.section-grid.two,.footer-grid{grid-template-columns:1fr}
   .hero-main{padding:24px 20px 22px}
   .hero-side{padding:18px}
   .container{width:min(var(--max), calc(100% - 20px))}
@@ -327,8 +332,8 @@ button,input{font:inherit}
 
     <div class="drawer-meta">
       <a href="https://www.facebook.com/michelebottinoautor/" target="_blank" rel="noopener noreferrer">Facebook ufficiale ↗</a>
-      <a href="https://orcid.org/0009-0009-2797-9267" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
-      <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Academia.edu ↗</a>
+      <a href="https://open.spotify.com/artist/0jUAfrDV2YkcwFNbEn2sX9" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+      <a href="https://music.apple.com/us/artist/michele-bottino/1815506113" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
     </div>
   </div>
 </div>
@@ -339,8 +344,8 @@ button,input{font:inherit}
       <section class="panel hero-main" aria-labelledby="music-title">
         <p class="eyebrow">Scrittura per la musica</p>
         <h1 id="music-title">Testi musicali</h1>
-        <p>I testi musicali rappresentano una linea autonoma del lavoro di Michele Bottino. La scrittura per la musica conserva la stessa attenzione al nucleo emotivo, alla precisione del lessico e alla coerenza interna che caratterizza il resto della produzione autoriale. 1</p>
-        <p>Tra i titoli richiamati pubblicamente compaiono <em>Un’altra Notte a Metà</em>, <em>Angelo caduto</em> e <em>Senza fare Rumore</em>; Spotify conferma la presenza almeno di <em>Un’altra Notte a Metà</em> e <em>Senza fare Rumore</em> tra le uscite del 2025. 2</p>
+        <p>I testi musicali rappresentano una linea autonoma del lavoro di Michele Bottino. La scrittura per la musica conserva attenzione al nucleo emotivo, alla precisione del lessico e alla continuità interna del testo.</p>
+        <p>Il catalogo qui raccolto documenta i singoli pubblicati nel 2025 e i relativi collegamenti alle piattaforme pubbliche di distribuzione.</p>
 
         <div class="cta-row">
           <a class="btn primary" href="opere.html">Torna a Opere</a>
@@ -377,7 +382,7 @@ button,input{font:inherit}
           <div class="side-links">
             <a href="https://www.facebook.com/michelebottinoautor/" target="_blank" rel="noopener noreferrer">Facebook ufficiale ↗</a>
             <a href="https://open.spotify.com/artist/0jUAfrDV2YkcwFNbEn2sX9" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
-            <a href="https://iars.academia.edu/MicheleBottino" target="_blank" rel="noopener noreferrer">Academia.edu ↗</a>
+            <a href="https://music.apple.com/us/artist/michele-bottino/1815506113" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
           </div>
         </div>
       </aside>
@@ -386,48 +391,133 @@ button,input{font:inherit}
 
   <section class="main-content">
     <div class="container">
-      <div class="section section-grid two">
+      <div class="section">
         <article class="card">
-          <h2>Brani richiamati pubblicamente</h2>
+          <h2>Catalogo completo</h2>
 
           <div class="track-entry">
             <strong>Un’altra Notte a Metà</strong>
-            <div class="track-meta">Singolo · 2025</div>
-            <p>Titolo richiamato nella presentazione Fidelity News e presente su Spotify come singolo del 2025. 3</p>
-            <div class="link-row"><a href="https://open.spotify.com/album/7tevKrkG2G5bKmBJr6scgH" target="_blank" rel="noopener noreferrer">Apri su Spotify ↗</a></div>
+            <div class="track-meta">Singolo · 31/05/2025 · UPC 859708060164</div>
+            <p>Testo musicale pubblicato e distribuito su piattaforme digitali.</p>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232306426" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/7tevKrkG2G5bKmBJr6scgH" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1818425032?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Riconquistarti</strong>
+            <div class="track-meta">Singolo · 28/05/2025 · UPC 859707617000</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232291774" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/7B6tNtPLvcgXLrWbCJrLON" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="https://music.apple.com/us/artist/michele-bottino/1815506113" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Casanova</strong>
+            <div class="track-meta">Singolo · 28/05/2025 · UPC 859707617109</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232294112" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/2jEcc8ueUmrZ5Y835vT8KP" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1817369701?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Notte Di Mezza Estate</strong>
+            <div class="track-meta">Singolo · 22/05/2025 · UPC 859707075114</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232262446" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/2yElqeuU1aoQ8UCL4nR7Xr" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1816151787?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Dovevi solo aspettare</strong>
+            <div class="track-meta">Singolo · 21/05/2025 · UPC 859706965843</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232257824" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/3uHSU60JiEDFXs9NDy5Dr6" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815850386?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Parlami Ancora</strong>
+            <div class="track-meta">Singolo · 20/05/2025 · UPC 859706826458</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232253636" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/1WVY3UCIUbmW7SVeductj1" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815573200?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Vivo da Re</strong>
+            <div class="track-meta">Singolo · 20/05/2025 · UPC 859706965867</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232255188" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/461KE91YZOtRMhFUG5JWX7" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815850449?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Spento ma resto vivo</strong>
+            <div class="track-meta">Singolo · 14/05/2025 · UPC 859706826403</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232226767" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/6Otbon2kqQPYYRH0GtbLeu" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815573121?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Un sogno che resta</strong>
+            <div class="track-meta">Singolo · 12/05/2025 · UPC 859706325272</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232217415" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/7qGzhaDTGtrkvSiGNzf8i0" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815573377?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
+          </div>
+
+          <div class="track-entry">
+            <strong>Nel respiro di te</strong>
+            <div class="track-meta">Singolo · 07/05/2025 · UPC 859706091535</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232197259" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/663LDTIugQh9te8WN6vUEC" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815573344?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
           </div>
 
           <div class="track-entry">
             <strong>Senza fare Rumore</strong>
-            <div class="track-meta">Singolo · 2025</div>
-            <p>Brano presente su Spotify e richiamato anche nella comunicazione pubblica collegata alla pagina Facebook ufficiale. 4</p>
-            <div class="link-row"><a href="https://open.spotify.com/album/4RcMK7n1kYBpMacyODsWeE" target="_blank" rel="noopener noreferrer">Apri su Spotify ↗</a></div>
+            <div class="track-meta">Singolo · 01/05/2025 · UPC 859706092075</div>
+            <div class="link-row">
+              <a href="https://web.tunecore.it/albums/1232168255" target="_blank" rel="noopener noreferrer">Album page ↗</a>
+              <a href="https://open.spotify.com/album/4RcMK7n1kYBpMacyODsWeE" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+              <a href="http://itunes.apple.com/album/id1815572791?ls=1&app=itunes" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+            </div>
           </div>
-
-          <div class="track-entry">
-            <strong>Angelo caduto</strong>
-            <div class="track-meta">Titolo richiamato pubblicamente</div>
-            <p>Il titolo è citato nell’articolo Fidelity News tra i testi musicali associati al percorso autoriale di Michele Bottino. 5</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>Linea di scrittura</h2>
-          <p>La scrittura musicale conserva temi affini a quelli della narrativa: inquietudine, solitudine, ascolto, tensione emotiva e concretezza espressiva. Questa continuità è segnalata nell’articolo di profilo pubblicato da Fidelity News. 6</p>
-          <div class="link-row"><a href="opere.html">Vai alla panoramica opere</a></div>
         </article>
       </div>
 
       <div class="section section-grid two">
         <article class="card">
-          <h2>Presenza pubblica</h2>
-          <p>La pagina Facebook ufficiale e i profili musicali pubblici funzionano come riferimenti esterni per la diffusione dei brani e dei testi collegati. La pagina Facebook “Michele Bottino Autore” risulta attiva, e Spotify mostra il profilo artista con uscite del 2025. 7</p>
+          <h2>Linea di scrittura</h2>
+          <p>La scrittura musicale conserva temi affini a quelli della narrativa: inquietudine, ascolto, tensione emotiva, solitudine e concretezza espressiva. I brani mantengono una linea coerente con il resto del percorso autoriale, pur operando in un formato differente.</p>
         </article>
 
         <article class="card">
-          <h2>Continuità autoriale</h2>
-          <p>I testi musicali restano distinti dai libri e dagli altri scritti, ma appartengono allo stesso nucleo di lavoro che il sito organizza tra scrittura, ricerca e archivio pubblico. ([michelebottino-autor.github.io](https://michelebottino-autor.github.io/michelebottino/))</p>
-          <div class="link-row"><a href="scritti.html">Vai a Scritti</a></div>
+          <h2>Presenza pubblica</h2>
+          <p>Facebook, Spotify, Apple Music e TuneCore costituiscono i riferimenti esterni principali per la diffusione e la tracciabilità pubblica dei singoli collegati al lavoro testuale di Michele Bottino.</p>
+          <div class="link-row"><a href="archivio.html">Vai all’archivio</a></div>
         </article>
       </div>
 
@@ -495,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {title:"Autore", url:"autore.html", keywords:"autore profilo biografia michele bottino"},
     {title:"Opere", url:"opere.html", keywords:"opere libri testi musicali scritti"},
     {title:"Libri", url:"libri.html", keywords:"libri narrativa gpg scomparsi deposito anime"},
-    {title:"Testi musicali", url:"testi-musicali.html", keywords:"testi musicali musica un'altra notte a metà senza fare rumore angelo caduto"},
+    {title:"Testi musicali", url:"testi-musicali.html", keywords:"testi musicali un'altra notte a metà riconquistarti casanova notte di mezza estate dovevi solo aspettare parlami ancora vivo da re spento ma resto vivo un sogno che resta nel respiro di te senza fare rumore"},
     {title:"Scritti", url:"scritti.html", keywords:"scritti racconti testi autore"},
     {title:"Ricerca", url:"ricerca.html", keywords:"ricerca storico documentaria archivistica"},
     {title:"Archivio", url:"archivio.html", keywords:"archivio doi orcid academia repertorio stampa"},
